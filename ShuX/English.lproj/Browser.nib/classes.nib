@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {browserSelectionChanged = id; docSetChanged = id; openSelection = id; }; 
+            CLASS = BrowserController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                arrayController = id; 
+                browser = id; 
+                docSetPopup = id; 
+                gotoCombo = id; 
+                openButton = id; 
+                toolbarDocSetPopup = id; 
+                toolbarGotoCombo = id; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

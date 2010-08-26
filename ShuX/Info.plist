@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>org.camelbones.shux.poddocument</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://shux.camelbones.org</string>
+			<key>UTTypeDescription</key>
+			<string>Perl POD document</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+                <string>public.perl-script</string>
+                <string>public.shell-script</string>
+                <string>public.script</string>
+                <string>public.source-code</string>
+				<string>public.plain-text</string>
+				<string>public.text</string>
+				<string>public.data</string>
+				<string>public.item</string>
+				<string>public.content</string>				
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>pod</string>
+					<string>pm</string>
+					<string>pl</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>pod</string>
+				<string>pm</string>
+				<string>pl</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>ShuX</string>
+			<key>CFBundleTypeName</key>
+			<string>PODDocument</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.camelbones.shux.poddocument</string>
+                <string>public.perl-script</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSDocumentClass</key>
+			<string>MyDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>ShuX</string>
+	<key>CFBundleIconFile</key>
+	<string>ShuX</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.camelbones.ShuX3</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>3.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>

@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AA07753F09162CBC006B7979 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA07753E09162CBC006B7979 /* WebKit.framework */; };
+		AA0AEE7E07E5E2E4009380BE /* TipController.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE7D07E5E2E4009380BE /* TipController.pm */; };
+		AA0AEE8207E5E50A009380BE /* Tips.nib in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE8007E5E50A009380BE /* Tips.nib */; };
+		AA0AEE8407E5E516009380BE /* Icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE8307E5E516009380BE /* Icon.tiff */; };
+		AA0AEE9607E61B3E009380BE /* ShuXParser.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE9507E61B3E009380BE /* ShuXParser.pm */; };
+		AA254AF505B66F05003DBAE8 /* main.pl in Resources */ = {isa = PBXBuildFile; fileRef = AA254AF405B66F05003DBAE8 /* main.pl */; };
+		AA5D938F07E3702800B49583 /* MutableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5D938D07E3702800B49583 /* MutableTransformer.m */; };
+		AA6328E207DE0D3E0066164F /* MyDocument.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA6328E107DE0D3E0066164F /* MyDocument.pm */; };
+		AA63291807DE0EC20066164F /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = AA63291607DE0EC20066164F /* MyDocument.nib */; };
+		AA778D2507E7483300BCB774 /* ShuX.icns in Resources */ = {isa = PBXBuildFile; fileRef = AA778D2407E7483300BCB774 /* ShuX.icns */; };
+		AA7D8F2A07E4B59F005A3398 /* Browser.nib in Resources */ = {isa = PBXBuildFile; fileRef = AA7D8F2807E4B59F005A3398 /* Browser.nib */; };
+		AA7D8F2E07E4B7EF005A3398 /* BrowserController.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA7D8F2D07E4B7EF005A3398 /* BrowserController.pm */; };
+		AA975F2F07E31F3200D1F95A /* AppDelegate.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA975F2E07E31F3200D1F95A /* AppDelegate.pm */; };
+		AA975F3D07E3216100D1F95A /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = AA975F3B07E3216100D1F95A /* Preferences.nib */; };
+		AA975F4707E323DC00D1F95A /* PrefController.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA975F4607E323DC00D1F95A /* PrefController.pm */; };
+		AAA0622A07F4632E00B95D08 /* intro.pod in Resources */ = {isa = PBXBuildFile; fileRef = AAA0622907F4632E00B95D08 /* intro.pod */; };
+		AAB88E9E0A18450D00990D73 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB88E9D0A18450D00990D73 /* CamelBones.framework */; };
+		AAB88EA10A18452D00990D73 /* CamelBones.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AAB88E9D0A18450D00990D73 /* CamelBones.framework */; };
+		AAE6417D07E671B800122D6D /* Tips.txt in Resources */ = {isa = PBXBuildFile; fileRef = AAE6417C07E671B800122D6D /* Tips.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AACBCF040A049272006C25A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = PODImporter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA52384B07EA204700D012BA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AAB88EA10A18452D00990D73 /* CamelBones.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* ShuX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA07753E09162CBC006B7979 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		AA0AEE7D07E5E2E4009380BE /* TipController.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = TipController.pm; sourceTree = "<group>"; };
+		AA0AEE8107E5E50A009380BE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Tips.nib; sourceTree = "<group>"; };
+		AA0AEE8307E5E516009380BE /* Icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Icon.tiff; sourceTree = "<group>"; };
+		AA0AEE9507E61B3E009380BE /* ShuXParser.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = ShuXParser.pm; sourceTree = "<group>"; };
+		AA254AF405B66F05003DBAE8 /* main.pl */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.perl; path = main.pl; sourceTree = "<group>"; };
+		AA5D938C07E3702800B49583 /* MutableTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableTransformer.h; sourceTree = "<group>"; };
+		AA5D938D07E3702800B49583 /* MutableTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableTransformer.m; sourceTree = "<group>"; };
+		AA6328E107DE0D3E0066164F /* MyDocument.pm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.perl; path = MyDocument.pm; sourceTree = "<group>"; };
+		AA63291707DE0EC20066164F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MyDocument.nib; sourceTree = "<group>"; };
+		AA778D2407E7483300BCB774 /* ShuX.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ShuX.icns; sourceTree = "<group>"; };
+		AA7D8F2907E4B59F005A3398 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Browser.nib; sourceTree = "<group>"; };
+		AA7D8F2D07E4B7EF005A3398 /* BrowserController.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = BrowserController.pm; sourceTree = "<group>"; };
+		AA975F2E07E31F3200D1F95A /* AppDelegate.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = AppDelegate.pm; sourceTree = "<group>"; };
+		AA975F3C07E3216100D1F95A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
+		AA975F4607E323DC00D1F95A /* PrefController.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = PrefController.pm; sourceTree = "<group>"; };
+		AAA0622907F4632E00B95D08 /* intro.pod */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = intro.pod; sourceTree = "<group>"; };
+		AAB88E9D0A18450D00990D73 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = /Developer/CamelBones/Frameworks/CamelBones.framework; sourceTree = "<absolute>"; };
+		AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PODImporter.xcodeproj; path = PODImporter/PODImporter.xcodeproj; sourceTree = "<group>"; };
+		AAE6417C07E671B800122D6D /* Tips.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				AA07753F09162CBC006B7979 /* WebKit.framework in Frameworks */,
+				AAB88E9E0A18450D00990D73 /* CamelBones.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA0AEE9507E61B3E009380BE /* ShuXParser.pm */,
+				AA0AEE7D07E5E2E4009380BE /* TipController.pm */,
+				AA7D8F2D07E4B7EF005A3398 /* BrowserController.pm */,
+				AA975F4607E323DC00D1F95A /* PrefController.pm */,
+				AA975F2E07E31F3200D1F95A /* AppDelegate.pm */,
+				AA6328E107DE0D3E0066164F /* MyDocument.pm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* ShuX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ShuX3 */ = {
+			isa = PBXGroup;
+			children = (
+				AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				AA5D938907E3700A00B49583 /* Objective-C Classes */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = ShuX3;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA254AF405B66F05003DBAE8 /* main.pl */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA63291607DE0EC20066164F /* MyDocument.nib */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				AA975F3B07E3216100D1F95A /* Preferences.nib */,
+				AA7D8F2807E4B59F005A3398 /* Browser.nib */,
+				AA0AEE8007E5E50A009380BE /* Tips.nib */,
+				AAA0622907F4632E00B95D08 /* intro.pod */,
+				AAE6417C07E671B800122D6D /* Tips.txt */,
+				AA778D2407E7483300BCB774 /* ShuX.icns */,
+				AA0AEE8307E5E516009380BE /* Icon.tiff */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAB88E9D0A18450D00990D73 /* CamelBones.framework */,
+				AA07753E09162CBC006B7979 /* WebKit.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA5D938907E3700A00B49583 /* Objective-C Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA5D938C07E3702800B49583 /* MutableTransformer.h */,
+				AA5D938D07E3702800B49583 /* MutableTransformer.m */,
+			);
+			name = "Objective-C Classes";
+			sourceTree = "<group>";
+		};
+		AACBCF010A049272006C25A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AACBCF050A049272006C25A6 /* PODImporter.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* ShuX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAD8D37A090E90EB00944F38 /* Build configuration list for PBXNativeTarget "ShuX" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				AA52384B07EA204700D012BA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShuX;
+			productInstallPath = "$(HOME)/Applications";
+			productName = ShuX3;
+			productReference = 8D1107320486CEB800E47090 /* ShuX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = AAD8D37E090E90EB00944F38 /* Build configuration list for PBXProject "ShuX3" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ShuX3 */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AACBCF010A049272006C25A6 /* Products */;
+					ProjectRef = AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* ShuX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AACBCF050A049272006C25A6 /* PODImporter.mdimporter */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PODImporter.mdimporter;
+			remoteRef = AACBCF040A049272006C25A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				AA254AF505B66F05003DBAE8 /* main.pl in Resources */,
+				AA6328E207DE0D3E0066164F /* MyDocument.pm in Resources */,
+				AA63291807DE0EC20066164F /* MyDocument.nib in Resources */,
+				AA975F2F07E31F3200D1F95A /* AppDelegate.pm in Resources */,
+				AA975F3D07E3216100D1F95A /* Preferences.nib in Resources */,
+				AA975F4707E323DC00D1F95A /* PrefController.pm in Resources */,
+				AA7D8F2A07E4B59F005A3398 /* Browser.nib in Resources */,
+				AA7D8F2E07E4B7EF005A3398 /* BrowserController.pm in Resources */,
+				AA0AEE7E07E5E2E4009380BE /* TipController.pm in Resources */,
+				AA0AEE8207E5E50A009380BE /* Tips.nib in Resources */,
+				AA0AEE8407E5E516009380BE /* Icon.tiff in Resources */,
+				AA0AEE9607E61B3E009380BE /* ShuXParser.pm in Resources */,
+				AAE6417D07E671B800122D6D /* Tips.txt in Resources */,
+				AA778D2507E7483300BCB774 /* ShuX.icns in Resources */,
+				AAA0622A07F4632E00B95D08 /* intro.pod in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				AA5D938F07E3702800B49583 /* MutableTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		AA0AEE8007E5E50A009380BE /* Tips.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0AEE8107E5E50A009380BE /* English */,
+			);
+			name = Tips.nib;
+			sourceTree = "<group>";
+		};
+		AA63291607DE0EC20066164F /* MyDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA63291707DE0EC20066164F /* English */,
+			);
+			name = MyDocument.nib;
+			sourceTree = "<group>";
+		};
+		AA7D8F2807E4B59F005A3398 /* Browser.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA7D8F2907E4B59F005A3398 /* English */,
+			);
+			name = Browser.nib;
+			sourceTree = "<group>";
+		};
+		AA975F3B07E3216100D1F95A /* Preferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA975F3C07E3216100D1F95A /* English */,
+			);
+			name = Preferences.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAD8D37B090E90EB00944F38 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SYSTEM_DEVELOPER_DIR)/CamelBones/Frameworks",
+					"$(SYSTEM_DEVELOPER_DIR)/CamelBones/Bundle-Frameworks",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = ShuX;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Deployment;
+		};
+		AAD8D37C090E90EB00944F38 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SYSTEM_DEVELOPER_DIR)/CamelBones/Frameworks",
+					"$(SYSTEM_DEVELOPER_DIR)/CamelBones/Bundle-Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = ShuX;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		AAD8D37D090E90EB00944F38 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SYSTEM_DEVELOPER_DIR)/CamelBones/Frameworks",
+					"$(SYSTEM_DEVELOPER_DIR)/CamelBones/Bundle-Frameworks",
+				);
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = ShuX;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		AAD8D37F090E90EB00944F38 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Deployment;
+		};
+		AAD8D380090E90EB00944F38 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		AAD8D381090E90EB00944F38 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAD8D37A090E90EB00944F38 /* Build configuration list for PBXNativeTarget "ShuX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAD8D37B090E90EB00944F38 /* Deployment */,
+				AAD8D37C090E90EB00944F38 /* Development */,
+				AAD8D37D090E90EB00944F38 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		AAD8D37E090E90EB00944F38 /* Build configuration list for PBXProject "ShuX3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAD8D37F090E90EB00944F38 /* Deployment */,
+				AAD8D380090E90EB00944F38 /* Development */,
+				AAD8D381090E90EB00944F38 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

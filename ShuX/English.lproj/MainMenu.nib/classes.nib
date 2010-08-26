@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {CLASS = AppDelegate; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                openDonate = id; 
+                openIntro = id; 
+                printPod = id; 
+                showPreferences = id; 
+                toggleDocSetWindow = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

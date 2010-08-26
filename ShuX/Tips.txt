@@ -1,0 +1,2 @@
+ShuX and CamelBones are free software - but donations are helpful! Choose "Donate" in the ShuX menu.
+Be patient! Depending on the speed of your Mac, huge PODs (like perlfunc) may take a few seconds to parse.

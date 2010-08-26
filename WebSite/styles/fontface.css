@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "Garamond";
+	src: url( fonts/igaramond.eot ); /* IE */
+	src: local("Garamond Premier Pro"), url( fonts/igaramond.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "Palatino";
+	src: url( fonts/palatino.eot ); /* IE */
+	src: local("Palatino"), url( fonts/palatino.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "Inconsolata";
+	src: url( fonts/inconsolata.eot ); /* IE */
+	src: local("Inconsolata"), url( fonts/inconsolata.ttf ) format("truetype"); /* non-IE */
+}
+
+@font-face {
+	font-family: "Charcoal";
+	src: url( fonts/virtue.eot ); /* IE */
+	src: local("Charcoal CY"), url( fonts/virtue.ttf ) format("truetype"); /* non-IE */
+}

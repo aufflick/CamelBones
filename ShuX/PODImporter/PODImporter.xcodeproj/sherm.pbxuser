@@ -1,0 +1,103 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Deployment;
+		activeBuildStyle = 014CEA3F0018CDD111CA2923 /* Development */;
+		activeTarget = 8D57630D048677EA00EA77CD /* PODImporter */;
+		addToTargets = (
+			8D57630D048677EA00EA77CD /* PODImporter */,
+		);
+		breakpointsGroup = AACBCEE20A049174006C25A6 /* XCBreakpointsBucket */;
+		codeSenseManager = AACBCEE10A049174006C25A6 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					306,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					126,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 169547675;
+			PBXWorkspaceStateSaveDate = 169547675;
+		};
+		sourceControlManager = AACBCEE00A049174006C25A6 /* Source Control */;
+		userBuildSettings = {
+			OBJROOT = /Users/sherm/Projects/CBApplications/ShuX3/build;
+			SYMROOT = /Users/sherm/Projects/CBApplications/ShuX3/build;
+		};
+	};
+	2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {863, 854}}";
+			sepNavSelRange = "{2345, 0}";
+			sepNavVisRect = "{{0, 0}, {863, 827}}";
+			sepNavWindowFrame = "{{360, 39}, {908, 956}}";
+		};
+	};
+	8D57630D048677EA00EA77CD /* PODImporter */ = {
+		activeExec = 0;
+	};
+	AACBCEE00A049174006C25A6 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	AACBCEE10A049174006C25A6 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	AACBCEE20A049174006C25A6 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+	C88FB7D7067446EC006EBB30 /* schema.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1154, 827}}";
+			sepNavSelRange = "{879, 0}";
+			sepNavVisRect = "{{0, 0}, {863, 827}}";
+			sepNavWindowFrame = "{{38, 20}, {908, 956}}";
+		};
+	};
+}

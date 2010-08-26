@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	If your application does not already define a UTI, you may want to declare it
+	here, so that your documents are recognized by systems which do not have your
+	application installed.
+
+	To export this declaration, fill in the fields with your application's 
+	information, and uncomment the block of XML.
+	-->
+	
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>org.camelbones.shux.poddocument</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://shux.camelbones.org</string>
+			<key>UTTypeDescription</key>
+			<string>Perl POD document</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+                <string>public.perl-script</string>
+                <string>public.shell-script</string>
+                <string>public.script</string>
+                <string>public.source-code</string>
+				<string>public.plain-text</string>
+				<string>public.text</string>
+				<string>public.data</string>
+				<string>public.item</string>
+				<string>public.content</string>				
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>pod</string>
+					<string>pm</string>
+					<string>pl</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>MDImporter</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.camelbones.shux.poddocument</string>
+                <string>public.perl-script</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>PodImporter</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.camelbones.shux.podimporter</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>E30DA92B-B835-4B90-B48F-FFBC34CFC058</key>
+		<string>MetadataImporterPluginFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>8B08C4BF-415B-11D8-B3F9-0003936726FC</key>
+		<array>
+			<string>E30DA92B-B835-4B90-B48F-FFBC34CFC058</string>
+		</array>
+	</dict>
+	<key>CFPlugInUnloadFunction</key>
+	<string></string>
+</dict>
+</plist>

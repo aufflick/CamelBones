@@ -1,0 +1,193 @@
+=head1 Introduction to ShuX
+
+=head2 What is ShuX?
+
+ShuX is a Cocoa-based Mac OS X update to the MacPerl Shuck tool. Naturally,
+if you've never used MacPerl or Shuck, that's not extraordinarily helpful
+to know. :-)
+
+ShuX (and Shuck) is a POD reader. POD is Perl's "plain old documentation"
+format. All of the documentation that ships with Perl - and there is a LOT
+of it - is delivered in POD format. The docs for a module are written in POD
+format, and embedded within the module's .pm file.
+
+Perl also includes a command-line "perldoc" utility to read PODs, and they're
+also converted to man pages at install-time. But these formats are not ideal,
+for a number of reasons. For one thing, it's difficult to use the command-line
+tools to browse a nicely-formatted hierarchical list of all the available
+documentation. Instead, you have to know the name of the POD you want to view.
+For another, they're command-line tools, and while fixed-width Monaco is a
+wonderful font for working in a shell and/or editing code, it's much less ideal
+for reading documentation.
+
+=head2 The Browser window
+
+=head3 Main section
+
+The main section of the browser window contains a hierarchical list of all the
+available documentation within the current DocSet. (See "Working with Document
+Sets" later.) The list is divided into four sections: PODs, Core, CPAN, and
+Vendor:
+
+=over
+
+=item *
+
+B<PODs>
+
+This section lists all of the "basic" Perl documentation, such as
+"perlfunc" or "perlvar".
+
+=item *
+
+B<Core>
+
+This is where you'll find documentation for the "core" modules - that
+is, modules that are included with Perl.
+
+=item *
+
+B<CPAN>
+
+Documentation for modules that were installed later, separately from
+Perl itself, is found here.
+
+=item *
+
+B<Vendor>
+
+Perl's "Vendor" directory for modules is not commonly used. When it
+is, it usually points to a network-mounted location where modules have been
+installed for use by a number of machines.
+
+=back
+
+A number of actions will open a POD listed in the browser: You can double-click
+it. You can select it, then click the "Open" button. Finally, pressing the
+"Return" or "Enter" key will open the current selection.
+
+=head3 Toolbar
+
+The toolbar has two controls: A combo box labeled "Enter POD Name", and a popup
+list labeled "Document Set". The "Document Set" popup lists all of the
+configured DocSets, and is used to select the one displayed in the main browser
+section. (See "Working with Document Sets" later for more about those.)
+
+The combo box is used to search for PODs in the browser. To use it, first enter
+some text, then use the down-arrow key or click the triangle to drop down the
+list. The list will show the PODs matching the text you've entered. The matching
+is filtered by wildcards, and ends with an implicit "*". For example, entering
+"perl" will list all the PODs whose name begins with "perl", entering "Net::"
+will display PODs in the "Net" package.
+
+Selecting one of the entries in the combo box list will cause that POD to be
+selected in the main browser.
+
+=head2 The Document Window
+
+There's not much to be said about the document window at the moment. That will
+change. :-)
+
+=head2 Working with Document Sets
+
+Document Sets are primarily of interest to those who have multiple copies of
+Perl installed on their machines. Put simply, a Document Set is the set of
+documentation for an installation of Perl and its modules.
+
+The "Document Set" popup in the Browser window is used to choose which of the
+available Document Sets is displayed in the main section of that window.
+
+In document windows, the name of the Document Set that was used to open a
+document is displayed in the window's title bar.
+
+Document Sets are managed using the "Document Sets" pane in the Preferences
+panel - see below.
+
+=head2 Preferences
+
+The Preferences panel has three panes:
+
+=over
+
+=item *
+
+B<Document Sets>
+
+This pane has a popup list which displays all of the currently available
+Document Sets. There is one DocSet available by default, it is named
+"* Default *", and reflects the configuration of the Perl being used to
+run ShuX. It cannot be deleted or changed. Other DocSets can be added,
+their paths can be edited, or they can be deleted.
+
+Under the popup list are three buttons:
+
+=over
+
+=item *
+
+B<Delete>
+
+Use this button to delete the currently selected DocSet.
+
+=item *
+
+B<Add>
+
+This adds a DocSet whose items are completely blank.
+
+=item *
+
+B<Perl...>
+
+This adds a DocSet, and prompts you to select a "perl" binary. That "perl"
+will be queried for its configuration information, and the result used to
+provide information for the new DocSet.
+
+=back
+
+=item *
+
+B<Appearance>
+
+Nothing here yet.
+
+=item *
+
+B<Application>
+
+There are two sections to this pane:
+
+=over
+
+=item *
+
+B<Startup>
+
+The check boxes in this section determine what is displayed automatically
+when ShuX is started up.
+
+=item *
+
+B<HTML Cache>
+
+ShuX works by translating POD documents into HTML, and then displaying that
+HTML in a window. The translation can be a time-consuming process, especially
+for large documents such as "perlfunc", so the generated HTML is cached.
+
+In this section, there are options for specifying the directory used by ShuX
+for its cache, for forcing the cache to be cleared when ShuX exits, and for
+clearing the cache immediately.
+
+=back
+
+=back
+
+=head2 Etc.
+
+The defaults domain used by ShuX is org.dot-app.ShuX3.
+
+=head2 Copyright, Credits, and Licensing
+
+ShuX and CamelBones are copyright E<copy> 2005 Sherm Pendley.
+
+The ShuX "corn" logo is copyright E<copy> 2005 Alex Robinson.

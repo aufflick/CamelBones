@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {clearHTMLCache = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addDocSet = id; 
+                choosePerl = id; 
+                deleteDocSet = id; 
+                selectDocSet = id; 
+                typePopupChanged = id; 
+            }; 
+            CLASS = PrefController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = id; 
+                archField = id; 
+                arrayController = id; 
+                coreField = id; 
+                cpanField = id; 
+                deleteButton = id; 
+                docSetPopup = id; 
+                nameField = id; 
+                podField = id; 
+                typePopup = id; 
+                vendorField = id; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}
