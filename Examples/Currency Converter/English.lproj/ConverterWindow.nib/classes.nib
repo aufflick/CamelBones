@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {convertButtonClicked = id; }; 
+            CLASS = CBPerlObject; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {Window = id; dollarField = id; rateField = id; totalField = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {convert = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {convertButtonClicked = id; }; 
+            CLASS = WindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {DollarField = id; RateField = id; TotalField = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

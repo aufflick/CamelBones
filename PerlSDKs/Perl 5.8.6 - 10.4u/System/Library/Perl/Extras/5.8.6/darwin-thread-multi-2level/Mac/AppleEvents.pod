@@ -1,0 +1,924 @@
+=head1 NAME
+
+Mac::AppleEvents - Macintosh Toolbox Interface to the Apple Event Manager
+
+=head1 SYNOPSIS
+
+	use Mac::AppleEvents;
+
+
+=head1 DESCRIPTION
+
+Access to Inside Macintosh is essential for proper use of these functions.
+Explanations of terms, processes and procedures are provided there.
+Any attempt to use these functions without guidance can cause severe errors in 
+your machine, including corruption of data. B<You have been warned.>
+
+=head2 Constants: AppleEvent Descriptor Types
+
+=over 4
+
+=item  typeBoolean 
+
+A boolean.
+
+=item  typeTrue 
+
+A boolean True value.
+
+=item  typeFalse 
+
+A boolean False value.
+
+=item  typeChar 
+
+A string.
+
+=item  typeShortInteger 
+
+A 16 bit integer.
+
+=item  typeInteger 
+
+=item  typeLongInteger 
+
+A 32 bit integer.
+
+=item  typeMagnitude 
+
+An unsigned 32 bit integer.
+
+=item  typeShortFloat 
+
+A single precision floating point number.
+
+=item  typeFloat 
+
+=item  typeLongFloat 
+
+A double precision floating point number.
+
+=item  typeExtended 
+
+An extended double precision floating point number.
+
+=item  typeComp 
+
+A 64 bit number.
+
+=item  typeAEList 
+
+An AppleEvent list.
+
+=item  typeAERecord 
+
+An AppleEvent record.
+
+=item  typeAppleEvent 
+
+An AppleEvent.
+
+=item  typeFSS 
+
+A file specification record.
+
+=item  typeAlias 
+
+A file alias record.
+
+=item  typeEnumerated 
+
+An enumeration literal (4 byte character).
+
+=item  typeType 
+
+An AppleEvent type (4 byte character).
+
+=item  typeAppParameters 
+
+An application launch parameter record.
+
+=item  typeProperty 
+
+A property keyword (4 byte character).
+
+=item  typeKeyword 
+
+A keyword (4 byte character).
+
+=item  typeSectionH 
+
+An Edition Manager section handle.
+
+=item  typeWildCard 
+
+An arbitrary value.
+
+=item  typeApplSignature 
+
+An application signature (4 byte character).
+
+=item  typeQDRectangle 
+
+A QuickDraw rectangle.
+
+=item  typeFixed 
+
+A fixed point value.
+
+=item  typeSessionID 
+
+A PPC Toolbox session ID.
+
+=item  typeTargetID 
+
+A target ID record.
+
+=item  typeProcessSerialNumber 
+
+A process serial number.
+
+=item  typeNull 
+
+No data.
+
+=back
+
+=head2 Constants: Parameter and Attribute Keywords
+
+=over 4
+
+=item  keyDirectObject 
+
+The direct object parameter.
+
+=item  keyErrorNumber 
+
+Error number.
+
+=item  keyErrorString 
+
+Error string.
+
+=item  keyProcessSerialNumber 
+
+Process serial number.
+
+=item  keyTransactionIDAttr 
+
+Transaction ID.
+
+=item  keyReturnIDAttr 
+
+Return ID.
+
+=item  keyEventClassAttr 
+
+Event class.
+
+=item  keyEventIDAttr 
+
+Event ID.
+
+=item  keyAddressAttr 
+
+Destination address.
+
+=item  keyOptionalKeywordAttr 
+
+List of optional keywords.
+
+=item  keyTimeoutAttr 
+
+Timeout limit.
+
+=item  keyInteractLevelAttr 
+
+Interaction level.
+
+=item  keyEventSourceAttr 
+
+Event source address.
+
+=item  keyMissedKeywordAttr 
+
+List of mandatory keywords not used.
+
+=item  keyOriginalAddressAttr 
+
+Original source address.
+
+=item  keyPreDispatch 
+
+Install handler before dispatching.
+
+=item  keySelectProc 
+
+Enable/Disable OSL.
+
+=item  keyAERecorderCount 
+
+Number of processes recording AppleEvents.
+
+=item  keyAEVersion 
+
+AppleEvent Manager version.
+
+=back
+
+=head2 Constants: Core AppleEvent Suite
+
+=over 4
+
+=item  kCoreEventClass 
+
+Core Suite Event class.
+
+=item  kAEOpenApplication 
+
+Open application without documents.
+
+=item  kAEOpenDocuments 
+
+Open documents.
+
+=item  kAEPrintDocuments 
+
+Print documents.
+
+=item  kAEQuitApplication 
+
+Quit application.
+
+=item  kAEAnswer 
+
+AppleEvent answer event.
+
+=item  kAEApplicationDied 
+
+Launched application has ended.
+
+=back
+
+=head2 Constants: Miscellaneous
+
+=over 4
+
+=item  kAENoReply 
+
+=item  kAEQueueReply 
+
+=item  kAEWaitReply 
+
+=item  kAENeverInteract 
+
+=item  kAECanInteract 
+
+=item  kAEAlwaysInteract 
+
+=item  kAECanSwitchLayer 
+
+=item  kAEDontReconnect 
+
+=item  kAEWantReceipt 
+
+=item  kAEDontRecord 
+
+=item  kAEDontExecute 
+
+=item  kAEInteractWithSelf 
+
+=item  kAEInteractWithLocal 
+
+=item  kAEInteractWithAll 
+
+AppleEvent sendMode flags.
+
+=item  kAENormalPriority 
+
+=item  kAEHighPriority 
+
+AppleEvent priority values.
+
+=item  kAEStartRecording 
+
+=item  kAEStopRecording 
+
+=item  kAENotifyStartRecording 
+
+=item  kAENotifyStopRecording 
+
+=item  kAENotifyRecording 
+
+Recording events.
+
+=item  kAutoGenerateReturnID 
+
+=item  kAnyTransactionID 
+
+=item  kAEDefaultTimeout 
+
+=item  kNoTimeOut 
+
+Special values for return ID, transaction ID, and timeout.
+
+=item  kAENoDispatch 
+
+=item  kAEUseStandardDispatch 
+
+=item  kAEDoNotIgnoreHandler 
+
+=item  kAEIgnoreAppPhacHandler 
+
+=item  kAEIgnoreAppEventHandler 
+
+=item  kAEIgnoreSysPhacHandler 
+
+=item  kAEIgnoreSysEventHandler 
+
+=item  kAEIngoreBuiltInEventHandler 
+
+=item  kAEDontDisposeOnResume 
+
+Options for C<AEResumeTheCurrentEvent()>.
+
+=back
+
+=head2 Variables
+
+=over 4
+
+=item %AppleEvent
+
+An array of application-wide event handlers.
+
+   $AppleEvent{"aevt", "odoc"} = \&OpenDocument;
+
+=item %SysAppleEvent
+
+An arrary of system-wide event handlers.
+
+=back
+
+=head2 AEDesc
+
+AEDesc is a Perl package that encapsulates an AppleEvent Descriptor.
+It uses the OO methods of Perl5 to make building and parsing data structures
+easier.
+
+=over 4
+
+=item new TYPE, HANDLE
+
+=item new TYPE, DATA
+
+=item new TYPE
+
+=item new
+
+Create a new AppleEvent descriptor.
+Sets the type and data to TYPE (default is 'null'), and HANDLE or DATA 
+(default is empty).
+
+	$desc = new AEDesc("aevt", $event);
+
+=item type TYPE
+
+=item type
+
+Return the type from the AEDesc structure.  
+If TYPE is present, make it the new type.
+
+=item data HANDLE
+
+=item data
+
+Return the data from the AEDesc structure. If HANDLE is present, make
+it the new data.
+
+B<Warning>: If using Mac OS X, you must dispose of the result on your own.
+This is because in Mac OS, we returned the handle from the AEDesc itself,
+but now we must return a copy.  So in Mac OS we could do:
+
+	print $desc->data->get;
+
+Now we must do:
+
+	my $handle = $desc->data;
+	print $handle->get;
+	$handle->dispose;
+
+Normally, you don't want to call C<data> directly anyway, and you would
+use C<get> instead.
+
+=item get
+
+Return the data of the AEDesc structure in a smartly unpacked way.
+
+=back
+
+=head2 AEKeyDesc
+
+AEKeyDesc is a Perl package that encapsulates an AppleEvent keyword.
+It uses the OO methods of Perl5 to make building and parsing data structures
+easier.
+
+=over 4
+
+=item new KEY, TYPE, HANDLE
+
+=item new KEY, TYPE, DATA
+
+=item new KEY, TYPE
+
+=item new KEY
+
+=item new
+
+Creates a new AppleEvent keyword descriptor.
+Sets the keyword, type and data to KEY (default is zero),
+TYPE (default is 'null'), and HANDLE or DATA (default is empty).
+
+=item key KEY
+
+=item key
+
+Return the keyword of the AEKeyDesc structure.
+If KEY is present, make it the new keyword.
+
+=item type TYPE
+
+=item type
+
+Return the type from the AEKeyDesc structure.  If TYPE is present, make it the new type.
+
+=item data HANDLE
+
+=item data
+
+Return the data from the AEKeyDesc structure. If HANDLE is present, make
+it the new data.
+
+=item get
+
+Return the contents in a smartly unpacked way.
+
+=back
+
+=head2 Raw AppleEvent Interface
+
+=over 4
+
+=item AECreateDesc TYPE, DATA
+
+The AECreateDesc function creates a new descriptor record that incorporates the
+specified data.
+
+=item AECoerce TYPE, DATA, NEWTYPE
+
+=item AECoerceDesc DESC, NEWTYPE
+
+The AECoerceDesc function attempts to create a new descriptor record by coercing
+the specified descriptor record. AECoerce attempts the same with a Perl data string.
+
+=item AEDisposeDesc DESC
+
+Deallocate the memory used by a descriptor record. 
+
+	if ( !AEDisposeDesc($desc) ) {
+		# error occurred
+	}
+
+=item AEDuplicateDesc DESC
+
+Creates a new descriptor record by copying the
+descriptor record from the parameter $DESC.
+
+	$newDesc = AEDuplicateDesc($desc);
+	if ( defined $newDesc ) {
+		# do something productive
+	}
+
+=item AECreateList FACTOR, BOOL
+
+The AECreateList function creates an empty descriptor list (BOOL is 0),
+or AE record (BOOL is nonzero). FACTOR contains the common prefix for each
+descriptor or is empty.
+
+	$list = AECreateList("", 0);
+	if ( defined $list ) {
+		# do something productive
+	}
+
+=item AECountItems DESCLIST
+
+Count the number of descriptor records in any descriptor list. The result
+is C<undef> if the list is invalid.
+
+=item AEPut DESCLIST, INDEX, TYPE, HANDLE
+
+=item AEPutDesc DESCLIST, INDEX, DESC
+
+Add a descriptor record to any descriptor list. AEPut will manufacture the 
+record to add it to the list.
+Return zero if an error was detected.
+
+=item AEPutKey DESCLIST, KEY, TYPE, HANDLE
+
+=item AEPutKeyDesc DESCLIST, KEY, DESC
+
+Add a descriptor record and a keyword to an AE record. AEPutKey will manufacture the 
+record to add it to the AE record.
+Return zero if an error was detected.
+
+=item AEGetNthDesc DESCLIST, INDEX [, TYPE]
+
+The AEGetNthDesc function returns a specified descriptor record from a specified
+descriptor list. The result is an AEDesc object and the keyword from a keyword
+specified list.
+
+	($Desc, $Key) = AEGetNthDesc($DescList, $i);
+	if ( defined $Desc ) {
+		# do something productive
+	}
+
+=item AEGetKeyDesc DESCLIST, KEY [, TYPE]
+
+The AEGetKeyDesc function returns a keyword-specified descriptor record from
+a specified descriptor record.	The result is an AEDesc object.
+
+=item AEDeleteItem DESCLIST, INDEX
+
+Delete a descriptor record from a descriptor list. All subsequent descriptor
+records will then move up one place.
+
+=item AEPutParam EVENT, KEY, TYPE, HANDLE
+
+=item AEPutParamDesc EVENT, KEY, DESC
+
+Add a descriptor record and a keyword to an Apple event as an Apple event
+parameter. AEPutParam creates the descriptor record.
+
+=item AEGetParamDesc EVENT, KEY [, TYPE]
+
+The AEGetParamDesc function returns the descriptor
+record for a specified Apple event parameter, which it attempts to coerce to the
+descriptor type specified by TYPE (default is no coercion). 
+
+=item AEDeleteParam EVENT, KEY
+
+Delete an Apple event parameter.
+Return zero if an error was detected.
+
+=item AEGetAttributeDesc EVENT, KEY, TYPE
+
+The AEGetAttributeDesc function returns the descriptor
+record for the Apple event attribute with the specified keyword.
+
+=item AEPutAttribute EVENT, KEY, TYPE, HANDLE
+
+=item AEPutAttributeDesc EVENT, KEY, DESC
+
+The AEPutAttributeDesc function takes a descriptor record and a keyword and adds
+them to an Apple event as an attribute.
+AEPutAttribute creates the record from TYPE and HANDLE. 
+Return zero if an error was detected.
+
+=item AECreateAppleEvent CLASS, EVENTID, DESC [, RETURNID [, TRANSACTIONID ] ]
+
+The AECreateAppleEvent function creates an Apple event and returns it.
+TRANSACTIONID defaults to zero.
+RETURNID defaults to kAutoGenerateReturnID.
+
+=item AESend EVENT, SENDMODE [, SENDPRIORITY [, TIMEOUT ] ]
+
+Send the Apple Event EVENT. 
+TIMEOUT defaults to kAEDefaultTimeout.
+SENDPRIORITY defaults to kAENormalPriority.
+Returns the reply if SENDMODE was kAEWaitReply.
+
+=item AEResetTimer REPLY
+
+The Apple Event Manager for the server
+application uses the default reply to send a Reset Timer event to the client
+application; the Apple Event Manager for the client application's computer
+intercepts this Apple event and resets the client application's timer for the
+Apple event.
+
+=item AESuspendTheCurrentEvent EVENT
+
+After a server application makes a successful call to the
+AESuspendTheCurrentEvent function, it is no longer required to return a result or
+a reply for the Apple event that was being handled. The result is zero if no error
+was detected.
+
+=item AEResumeTheCurrentEvent EVENT [, FLAGS, REFCON]
+
+The Apple Event
+Manager resumes handling the specified Apple event using the handler specified in
+the FLAGS parameter, if any. If FLAGS and REFCON are missing, 
+AEResumeTheCurrentEvent simply informs the Apple Event Manager that
+the specified event has been handled.
+
+=item AEGetTheCurrentEvent
+
+Get the Apple event that is currently being handled. 
+
+=item AESetTheCurrentEvent EVENT
+
+There is usually no reason for your application to use the AESetTheCurrentEvent
+function.
+
+=item AEGetInteractionAllowed
+
+The AEGetInteractionAllowed function returns a value
+that indicates the user interaction preferences for responding to an Apple event.
+The result is C<undef> if an error was detected.
+
+=item AESetInteractionAllowed LEVEL
+
+The AESetInteractionAllowed function sets the user interaction level for a server
+application's response to an Apple event. The result is zero if no error was detected.
+
+=item AEInstallEventHandler CLASS, EVENTID, HANDLER, HANDLERREFCON [, SYSTEM]
+
+The AEInstallEventHandler function creates an entry in the Apple event dispatch
+table. You must supply parameters that specify the event class, the event ID, the
+address of the handler that handles Apple events of the specified event class and
+event ID, and whether the handler is to be added to the system Apple event
+dispatch table or your application's Apple event dispatch table. You can also
+specify a reference constant that the Apple Event Manager passes to your handler
+whenever your handler processes an Apple event.
+
+	if (!AEInstallEventHandler(kCoreEventClass, kAEOpenDocuments, 'OpenDocument', 0) ) {
+		# an error occurred.
+	}
+
+A much more uniform (and Perl-ish) method is available using the hash arrays
+%AppleEvent and %SysAppleEvent to bind handlers to event types.
+
+	$AppleEvent{kCoreEventClass, kAEOpenDocuments} = 'OpenDocument';
+	...
+	delete $AppleEvent{kCoreEventClass, kAEOpenDocuments};
+
+=item AERemoveEventHandler CLASS, EVENTID [, SYSTEM]
+
+The AERemoveEventHandler function removes the Apple event dispatch table entry
+you specify in the parameters CLASS, EVENTID, and SYSTEM. 
+
+=item AEGetEventHandler CLASS, EVENTID [, SYSTEM]
+
+The AEGetEventHandler function returns the handler and handlerrefcon for
+the specified class and event. 
+
+	($proc, $refcon) = AEGetEventHandler("aevt", "oapp");
+
+=item AEManagerInfo KEY
+
+Obtain information about the version of the Apple Event Manager currently
+available or the number of processes that are currently recording Apple events. 
+The result is C<undef> if an error occurred.
+
+=back
+
+=head2 AEGizmos Build/Print
+
+The Apple Event Gizmos were developed by Jens Peter Alfke at Apple as a vastly
+speeded up AE library. Consult the AEGizmo documentation for details of usage
+of the library. The Build/Print facility uses a formatting convention similar
+to scanf/printf to put things together.
+
+=over 4
+
+=item AEBuild FORMAT, PARM, ...
+
+Build an AppleEvent descriptor using the format per the Gizmo documentation
+and return it.
+
+=item AEBuildParameters EVENT, FORMAT, PARM, ...
+
+Build parameters for an existing AppleEvent EVENT.
+
+	if (!AEBuildParameters($reply, $format, $parm1, $parm2) ) {
+		# an error occurred
+	}
+
+=item AEBuildAppleEvent CLASS, ID, ADDRESSTYPE, ADDRESS, RETURNID, TRANSACTIONID, FORMAT, PARMS, ...
+
+Construct an AppleEvent from the format and parameters and return it.
+
+=item AEPrint DESC
+
+Return a string version of the descriptor record. The result is C<undef>
+if an error occurred.
+
+=back
+
+=head2 AEGizmos Subdescriptors
+
+The Apple Event Gizmos subdescriptor approach uses a dictionary method for
+extracting and constructing descriptors.  Parsing an Apple Event using the
+dictionary is very time efficient, and translating to and from the dictionary
+tables is quick and efficient.
+
+=over 4
+
+=item AEDescToSubDesc DESC
+
+B<Mac OS only.>
+
+Translate DESC to a subdescriptor (dictionary entry). 
+Return the subdescriptor.
+
+=item AEGetSubDescType SUBDESC
+
+B<Mac OS only.>
+
+Return the type of the subdescriptor.
+
+=item AEGetSubDescBasicType SUBDESC
+
+B<Mac OS only.>
+
+Return the basic type of the subdescriptor. Differs from AEGetSubDescType
+in handling of coerced records.
+
+=item AESubDescIsListOrRecord SUBDESC
+
+B<Mac OS only.>
+
+Return nonzero if the subdescriptor is a list or record.
+
+=item AEGetSubDescData SUBDESC
+
+B<Mac OS only.>
+
+Returns the data of the subdescriptor. 
+
+=item AESubDescToDesc SUBDESC, DESIREDTYPE
+
+B<Mac OS only.>
+
+Translate the subdescriptor back to a descriptor of the desired type.
+
+=item AECountSubDescItems SUBDESC
+
+B<Mac OS only.>
+
+Counts the number of subdescriptor items.
+
+=item AEGetNthSubDesc SUBDESC,INDEX
+
+B<Mac OS only.>
+
+Returns the item INDEX of the subdescriptor and its type if the subdescriptor
+represented a record and not a list.
+
+=item AEGetKeySubDesc SUBDESC,KW
+
+B<Mac OS only.>
+
+Returns the keyword indexed item from the subdescriptor.
+
+=back
+
+=head2 AEStream
+
+The Apple Event Gizmos streams approach uses a streaming model for building 
+a sequence of descriptors.
+
+=over 4
+
+=item new AEStream
+
+=item AEStream::Open 
+
+Return a new AEStream.
+
+=item new AEStream(CLASS, ID, ADDRESSTYPE, ADDRESS [, RETURNID [, TRANSACTIONID ] ])
+
+=item AEStream::CreateEvent CLASS, ID, ADDRESSTYPE, ADDRESS, RETURNID, TRANSACTIONID
+
+Create an AEStream attached to a new AppleEvent.
+
+=item new AEStream(EVENT)
+
+=item AEStream::OpenEvent EVENT
+
+Opens the stream on the $EVENT.
+Return C<undef> if an error was detected.
+
+=item Close
+
+Return the descriptor corresponding to the stream, and close it out.
+
+	$stream->Close;
+
+=item Abort STREAM
+
+Abort the streaming process, and close it out.
+
+	$stream->Abort;
+
+=item OpenDesc TYPE
+
+Start building a descriptor of the given type.
+Return zero if an error was detected.
+
+	if ( $stream->OpenDesc($type) ) {
+		# Long messy calculation that demonstrates the usefullness of this code
+		if ( $stream->WriteData($calculatedData) 
+		 &&  $stream->CloseDesc()
+		){
+			# then, my work here is done
+		}
+	}
+
+=item WriteData DATA
+
+Add data to the descriptor.
+
+=item CloseDesc
+
+Finish up the descriptor.
+
+=item WriteDesc TYPE, DATA
+
+Add the arbitrary data with the given type as a descriptor to the stream.
+
+=item WriteAEDesc STREAM, AEDESC
+
+Add an Apple Event descriptor to the stream.
+
+=item OpenList
+
+Start building a list of AppleEvent descriptors in the stream.
+
+=item CloseList STREAM
+
+Return zero if an error was detected.
+
+	if ( $stream->OpenList() ) {
+		for $desc (@descList) {
+			croak unless $stream->WriteAEDesc($desc);
+		}
+		die unless $stream->CloseList();
+	}
+
+=item OpenRecord [TYPE]
+
+Start the process of building a record, to be coerced to the given type.
+=cut
+MacOSRet
+OpenRecord(stream, type=typeAERecord)
+	AEStream	&stream
+	OSType	type
+	CODE:
+	RETVAL = AEStream_OpenRecord(&stream, type);
+	OUTPUT:
+	stream
+
+=item SetRecordType TYPE
+
+Change the record type.
+
+=item CloseRecord STREAM
+
+Close the record currently under construction.
+
+	if ( $stream->OpenRecord(typeAErecord) ) {
+		for $kdesc (@descList) {
+			die unless $stream->WriteKey($kdesc->key) and 
+					$stream->WriteAEDesc($kdesc->desc);
+		}
+		die unless $stream->CloseRecord();
+	}
+
+=item WriteKeyDesc KEY, TYPE, DATA
+
+Add the keyword descriptor to the stream.
+
+=item OpenKeyDesc KEY, TYPE
+
+Open a descriptor with the given type and key.
+Use CloseDesc() to close it.
+
+=item WriteKey  KEY
+
+Add the keyword to the immediately following descriptor.
+Return zero if an error was detected.
+
+=item OptionalParam KEY
+
+Adds the keyword to the list of optional attributes.
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>,
+documentation by Bob Dalgleish E<lt>bob.dalgleish@sasknet.sk.caE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

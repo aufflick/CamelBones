@@ -1,0 +1,124 @@
+// !$*UTF8*$!
+{
+	84893BF80DCCF7A000B48051 /* Perl Module (5.8.6) */ = {
+		activeExec = 0;
+	};
+	84893C050DCCF7A400B48051 /* Perl Module (5.8.1) */ = {
+		activeExec = 0;
+	};
+	AA50E2050C87571F004DA7BD /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = AA7F61620DCCFBA900D20E5E /* All */;
+		codeSenseManager = AAB4A3C01201E994005D75E3 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					596,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 303060065;
+			PBXWorkspaceStateSaveDate = 303060065;
+		};
+		perUserProjectItems = {
+			AACEB8CE12105492008B96DD /* PBXTextBookmark */ = AACEB8CE12105492008B96DD /* PBXTextBookmark */;
+			AACEB8CF12105492008B96DD /* PBXTextBookmark */ = AACEB8CF12105492008B96DD /* PBXTextBookmark */;
+		};
+		sourceControlManager = AAB4A3BF1201E994005D75E3 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	AA50E3AC0C875DB7004DA7BD /* CBPerl.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1125, 7280}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 877}";
+		};
+	};
+	AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */ = {
+		activeExec = 0;
+	};
+	AA50E5470C877635004DA7BD /* darwin-thread-multi-2level-5.8.1 */ = {
+		activeExec = 0;
+	};
+	AA6C32080CCC962000306BD7 /* Leopard */ = {
+		activeExec = 0;
+	};
+	AA6C32B50CCC9DB000306BD7 /* Perl Module (5.8.8) */ = {
+		activeExec = 0;
+	};
+	AA7F613A0DCCFBA300D20E5E /* Tiger */ = {
+		activeExec = 0;
+	};
+	AA7F614E0DCCFBA600D20E5E /* Panther */ = {
+		activeExec = 0;
+	};
+	AA7F61620DCCFBA900D20E5E /* All */ = {
+		activeExec = 0;
+	};
+	AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */ = {
+		activeExec = 0;
+	};
+	AAB4A3BF1201E994005D75E3 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	AAB4A3C01201E994005D75E3 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	AACEB8CE12105492008B96DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */;
+		name = "CBPerl.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 172;
+		vrLoc = 0;
+	};
+	AACEB8CF12105492008B96DD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */;
+		name = "CBPerl.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 0;
+	};
+	FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */ = {
+		activeExec = 0;
+	};
+	FFE3611F1057214100F0CA90 /* Perl Module (5.8.9) */ = {
+		activeExec = 0;
+	};
+	FFE361381057267700F0CA90 /* Snow Leopard */ = {
+		activeExec = 0;
+	};
+	FFE9CE900D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8 */ = {
+		activeExec = 0;
+	};
+}

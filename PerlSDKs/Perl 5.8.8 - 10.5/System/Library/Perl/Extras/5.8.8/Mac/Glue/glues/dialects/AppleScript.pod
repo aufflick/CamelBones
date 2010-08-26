@@ -1,0 +1,2074 @@
+=head1 NAME
+
+AppleScript Glue - Control AppleScript app (__APPID__)
+
+=head1 SYNOPSIS
+
+    use Mac::Glue;
+    my $obj = new Mac::Glue 'AppleScript';
+
+=head1 DESCRIPTION
+
+See C<Mac::Glue> for complete documentation on base usage and framework.
+
+=head2 Events
+
+=over 4
+
+=item $obj->(obj )
+
+Concatenation (ascr/ccat)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->activate()
+
+Bring the targeted application program to the front (misc/actv)
+
+
+=item $obj->and(obj )
+
+Logical conjunction (ascr/AND )
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->as(obj )
+
+Coercion (ascr/coer)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->call_subroutine(****, [about => ****, above => ****, against => ****, apart_from => ****, around => ****, aside_from => ****, at => ****, below => ****, beneath => ****, beside => ****, between => ****, by => ****, for => ****, from => ****, given => ****, instead_of => ****, into => ****, on => ****, onto => ****, out_of => ****, over => ****, since => ****, through => ****, thru => ****, to => ****, under => ****, with => type, without => type])
+
+A subroutine call (ascr/psbr)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+    about (abou): a preposition
+    above (abve): a preposition
+    against (agst): a preposition
+    apart_from (aprt): a preposition
+    around (arnd): a preposition
+    aside_from (asdf): a preposition
+    at (at  ): a preposition
+    below (belw): a preposition
+    beneath (bnth): a preposition
+    beside (bsid): a preposition
+    between (btwn): a preposition
+    by (by  ): a preposition
+    for (for ): a preposition
+    from (from): a preposition
+    given (givn): parameter:value pairs, comma-separated
+    instead_of (isto): a preposition
+    into (into): a preposition
+    on (on  ): a preposition
+    onto (onto): a preposition
+    out_of (outo): a preposition
+    over (over): a preposition
+    since (snce): a preposition
+    through (thgh): a preposition
+    thru (thru): a preposition
+    to (to  ): a preposition
+    under (undr): a preposition
+    with (with): formal parameter set to true if matching actual parameter is provided
+    without (wout): formal parameter set to false if matching actual parmeter is provided
+
+
+=item $obj->class_info(type, [in => intl])
+
+(optional) Get information about an object class (core/qobj)
+
+Reply type: gcli
+
+Parameters:
+
+    direct object (----): the object class about which information is requested
+    in (wrcd): the human language and script system in which to return information
+
+
+=item $obj->close(obj , [saving => savo, saving_in => file])
+
+Close an object (core/clos)
+
+Parameters:
+
+    direct object (----): the object to close
+    saving (savo): specifies whether changes should be saved before closing
+    saving_in (kfil): the file or alias in which to save the object
+
+
+=item $obj->contains(obj )
+
+Containment (ascr/cont)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->count(obj , [each => type])
+
+Return the number of elements of an object (core/cnte)
+
+Reply type: long
+
+Parameters:
+
+    direct object (----): the object whose elements are to be counted
+    each (kocl): if specified, restricts counting to objects of this class
+
+
+=item $obj->data_size(obj , [as => type])
+
+(optional) Return the size in bytes of an object (core/dsiz)
+
+Reply type: long
+
+Parameters:
+
+    direct object (----): the object whose data size is to be returned
+    as (rtyp): the data type for which the size is calculated
+
+
+=item $obj->delete(obj )
+
+Delete an object from its container. Note this does not work on script variables, only on elements of application classes. (core/delo)
+
+Parameters:
+
+    direct object (----): the element to delete
+
+
+=item $obj->div(obj )
+
+Quotient (ascr/div )
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->duplicate(obj , [to => insl, with_properties => reco])
+
+Duplicate one or more objects (core/clon)
+
+Reply type: obj 
+
+Parameters:
+
+    direct object (----): the object(s) to duplicate
+    to (insh): the new location for the object(s)
+    with_properties (prdt): the initial values for properties of the new object that are to be different from the original
+
+
+=item $obj->end_tell()
+
+Record or log an ‘end tell’ statement (ascr/tend)
+
+
+=item $obj->ends_with(obj )
+
+Ends with (ascr/ends)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->error(****, [from => ****, number => shor, partial_result => list, to => ****])
+
+Raise an error (ascr/err )
+
+Parameters:
+
+    direct object (----): 
+    from (erob): the object that caused the error
+    number (errn): an error number
+    partial_result (ptlr): any partial result occurring before the error
+    to (errt): the desired class for a failed coercion
+
+
+=item $obj->event_info(type, [in => intl])
+
+(optional) Get information about the Apple events in a suite (core/gtei)
+
+Reply type: evin
+
+Parameters:
+
+    direct object (----): the event class of the Apple events for which to return information
+    in (wrcd): the human language and script system in which to return information
+
+
+=item $obj->exists(obj )
+
+Verify if an object exists (core/doex)
+
+Reply type: bool
+
+Parameters:
+
+    direct object (----): the object in question
+
+
+=item $obj->idle()
+
+Sent to a script application when it is idle (misc/idle)
+
+Reply type: nmbr
+
+
+=item $obj->launch()
+
+Start an application for scripting (ascr/noop)
+
+
+=item $obj->log(TEXT)
+
+Cause a comment to be logged (ascr/cmnt)
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->make(new => type, [at => insl, with_data => ****, with_properties => reco])
+
+Make a new element (core/crel)
+
+Reply type: obj 
+
+Parameters:
+
+    direct object (----): 
+    new (kocl): the class of the new element
+    at (insh): the location at which to insert the element
+    with_data (data): the initial data for the element
+    with_properties (prdt): the initial values for the properties of the element
+
+
+=item $obj->mod(obj )
+
+Remainder (ascr/mod )
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->move(obj , to => insl)
+
+Move object(s) to a new location (core/move)
+
+Reply type: obj 
+
+Parameters:
+
+    direct object (----): the object(s) to move
+    to (insh): the new location for the object(s)
+
+
+=item $obj->negate(obj )
+
+Numeric negation (ascr/neg )
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->not(obj )
+
+Logical negation (ascr/NOT )
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->open(obj )
+
+Open the specified object(s) (aevt/odoc)
+
+Parameters:
+
+    direct object (----): list of objects to open
+
+
+=item $obj->or(obj )
+
+Logical disjunction (ascr/OR  )
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->print(obj )
+
+Print the specified object(s) (aevt/pdoc)
+
+Parameters:
+
+    direct object (----): list of objects to print
+
+
+=item $obj->quit([saving => savo])
+
+Quit an application (aevt/quit)
+
+Parameters:
+
+    direct object (----): 
+    saving (savo): specifies whether to save currently open documents
+
+
+=item $obj->reopen()
+
+Reactivate a running application.  Some applications will open a new untitled window if no window is open. (aevt/rapp)
+
+
+=item $obj->run()
+
+Run an application.  Most applications will open an empty, untitled window. (aevt/oapp)
+
+
+=item $obj->save(obj , [as => type, in => file])
+
+Save an object (core/save)
+
+Parameters:
+
+    direct object (----): the object to save, usually a document or window
+    as (fltp): the file type of the document in which to save the data
+    in (kfil): the file or alias in which to save the object
+
+
+=item $obj->select(obj )
+
+Make a selection (misc/slct)
+
+Parameters:
+
+    direct object (----): the object to select
+
+
+=item $obj->start_log()
+
+Start event logging in the script editor (ToyS/log1)
+
+
+=item $obj->starts_with(obj )
+
+Starts with (ascr/bgwt)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->stop_log()
+
+Stop event logging in the script editor (ToyS/log0)
+
+
+=item $obj->suite_info(type, [in => intl])
+
+(optional) Get information about event suite(s) (core/gtsi)
+
+Reply type: suin
+
+Parameters:
+
+    direct object (----): the suite for which to return information
+    in (wrcd): the human language and script system in which to return information
+
+
+=item $obj->tell()
+
+Record or log a ‘tell’ statement (ascr/tell)
+
+
+=back
+
+=head2 Classes
+
+=over 4
+
+=item  (undf)
+
+the undefined value
+
+=item adb_address (cadb)
+
+Addresses a device connected via Apple Desktop Bus
+
+Properties:
+
+    id (ID  /shor): the Apple Desktop Bus device ID
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+
+=item adb_addresses (cadb)
+
+=item address_specification (cadr)
+
+Unique designation of a device or service connected to this computer
+
+Properties:
+
+    conduit (pcon/econ): How the addressee is physically connected
+    properties (pALL/reco): property that allows getting and setting of multiple properties
+    protocol (pprt/epro): How to talk to this addressee
+
+=item address_specifications (cadr)
+
+=item alias (alis)
+
+a file on a disk or server.  The file must exist when you check the syntax of your script.
+
+Properties:
+
+    posix_path (psxp/TEXT): the POSIX path of the file (read-only)
+
+=item alias_or_string (sf  )
+
+an alias or string
+
+=item aliases (alis)
+
+=item anything (****)
+
+any class or reference
+
+=item app (capp)
+
+Short name for application
+
+=item appletalk_address (cat )
+
+Addresses a device or service connected via the AppleTalk protocol
+
+Properties:
+
+    appletalk_machine (patm/TEXT): the machine name part of the address
+    appletalk_type (patt/TEXT): the type part of the AppleTalk address
+    appletalk_zone (patz/TEXT): the zone part of the address
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+
+=item appletalk_addresses (cat )
+
+=item application (capp)
+
+An application program
+
+Properties:
+
+    applescript (ascr/scpt): the top-level script object (read-only)
+    clipboard (pcli/****): the contents of the clipboard for this application
+    days (days/long): the number of seconds in a day (read-only)
+    frontmost (pisf/bool): Is this the frontmost application? (read-only)
+    hours (hour/long): the number of seconds in an hour (read-only)
+    id (ID  /utxt): the bundle ID of the application (read-only)
+    linefeed (lnfd/cha ): a linefeed character (read-only)
+    minutes (min /long): the number of seconds in a minute (read-only)
+    name (pnam/utxt): the name of the application (read-only)
+    pi (pi  /doub): the constant pi (read-only)
+    print_depth (prdp/long): the maximum depth to print (read-only)
+    print_length (prln/long): the maximum length to print (read-only)
+    quote (quot/cha ): a quote character (read-only)
+    result (rslt/****): the last result of evaluation (read-only)
+    return (ret /cha ): a return character (read-only)
+    running (prun/bool): Is this application running? (read-only)
+    selection (sele/csel): the selection visible to the user.  Use the ‘select’ command to set a new selection; use ‘contents of selection’ to get or change information in the document.
+    space (spac/cha ): a space character (read-only)
+    tab (tab /cha ): a tab character (read-only)
+    text_item_delimiters (txdl/list): the text item delimiters of a string (read-only)
+    version (vers/utxt): the version of the application (read-only)
+    weeks (week/long): the number of seconds in a week (read-only)
+
+=item application_dictionary (aete)
+
+=item applications (capp)
+
+=item april (apr )
+
+the month of April
+
+=item arc (carc)
+
+An arc
+
+Properties:
+
+    arc_angle (parc/fixd): the angle of the arc in degrees
+    bounds (pbnd/qdrt): the smallest rectangle that contains the entire arc
+    definition_rect (pdrt/qdrt): the rectangle that contains the circle or oval used to define the arc
+    fill_color (flcl/cRGB): the fill color
+    fill_pattern (flpt/cpix): the fill pattern
+    pen_color (ppcl/cRGB): the pen color
+    pen_pattern (pppa/cpix): the pen pattern
+    pen_width (ppwd/shor): the pen width
+    start_angle (pang/fixd): the angle that defines the start of the arc, in degrees
+    transfer_mode (pptm/tran): the transfer mode
+
+=item arcs (carc)
+
+=item august (aug )
+
+the month of August
+
+=item boolean (bool)
+
+A true or false value
+
+=item booleans (bool)
+
+=item bounding_rectangle (qdrt)
+
+bounding rectangle
+
+=item bus_slot (cbus)
+
+Addresses a PC, PCI, or NuBus card
+
+Properties:
+
+    id (ID  /shor): the slot number
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+
+=item bus_slots (cbus)
+
+=item c_string (cstr)
+
+text followed by a null
+
+=item c_strings (cstr)
+
+=item cell (ccel)
+
+A cell
+
+Properties:
+
+    formula (pfor/ctxt): the formula of the cell
+    protection (ppro/prtn): Indicates whether value or formula in the cell can be changed
+
+=item cells (ccel)
+
+=item centimeters (cmtr)
+
+a distance measurement in SI centimeters
+
+=item centimetres (cmtr)
+
+a distance measurement in SI centimeters
+
+=item character (cha )
+
+A character
+
+Properties:
+
+    inheritance (c@#^/text): inherits some of its properties from this class (read-only)
+
+=item characters (cha )
+
+=item class (pcls)
+
+the type of a value
+
+Properties:
+
+    inheritance (c@#^/type_class): inherits some of its properties from this class (read-only)
+
+=item classes (pcls)
+
+=item color_table (clrt)
+
+=item column (ccol)
+
+A column
+
+Properties:
+
+    name (pnam/itxt): the name of the column
+
+=item columns (ccol)
+
+=item constant (enum)
+
+A constant value
+
+=item constants (enum)
+
+=item cubic_centimeters (ccmt)
+
+a volume measurement in SI cubic centimeters
+
+=item cubic_centimetres (ccmt)
+
+a volume measurement in SI cubic centimeters
+
+=item cubic_feet (cfet)
+
+a volume measurement in Imperial cubic feet
+
+=item cubic_inches (cuin)
+
+a volume measurement in Imperial cubic inches
+
+=item cubic_meters (cmet)
+
+a volume measurement in SI cubic meters
+
+=item cubic_metres (cmet)
+
+a volume measurement in SI cubic meters
+
+=item cubic_yards (cyrd)
+
+a distance measurement in Imperial cubic yards
+
+=item dash_style (tdas)
+
+=item data (rdat)
+
+an AppleScript raw data object
+
+=item date (ldt )
+
+Absolute date and time values
+
+Properties:
+
+    date_string (dstr/TEXT): the date portion of a date-time value as text (read-only)
+    day (day /long): the day of the month of a date (read-only)
+    hours (hour/long): the hours of a date-time value (read-only)
+    minutes (min /long): the minutes of a date-time value (read-only)
+    month (mnth/mnth): the month of a date (read-only)
+    seconds (scnd/long): the seconds of a date-time value (read-only)
+    short_date_string (shdt/TEXT): the date portion of a date-time value as text (read-only)
+    time (time/long): the time since midnight of a date (read-only)
+    time_string (tstr/TEXT): the time portion of a date-time value as text (read-only)
+    weekday (wkdy/wkdy): the day of a week of a date (read-only)
+    year (year/long): the year of a date (read-only)
+
+=item dates (ldt )
+
+=item december (dec )
+
+the month of December
+
+=item degrees_celsius (degc)
+
+a temperature measurement in SI degrees Celsius
+
+=item degrees_fahrenheit (degf)
+
+a temperature measurement in degrees Fahrenheit
+
+=item degrees_kelvin (degk)
+
+a temperature measurement in degrees Kelvin
+
+=item device_specification (cdev)
+
+A device connected to a computer
+
+Properties:
+
+    device_address (pdva/cadr): the address of the device (read-only)
+    device_type (pdvt/edvt): the kind of device (read-only)
+    properties (pALL/reco): property that allows getting and setting of multiple properties
+
+=item device_specifications (cdev)
+
+=item document (docu)
+
+A document of a scriptable application
+
+Properties:
+
+    modified (imod/bool): Has the document been modified since the last save? (read-only)
+
+=item documents (docu)
+
+=item double_integer (comp)
+
+=item drawing_area (cdrw)
+
+Container for graphics and supporting information
+
+Properties:
+
+    background_color (pbcl/cRGB): the color used to fill in unoccupied areas
+    background_pattern (pbpt/cpix): the pattern used to fill in unoccupied areas
+    color_table (cltb/clrt): the color table
+    default_font (ptxf/itxt): the name of the default font for text objects
+    default_location (pnel/QDpt): the default location of each new graphic object
+    default_size (ptps/fixd): the default size for text objects
+    name (pnam/itxt): the name
+    ordering (gobs/obj ): the ordered list of graphic objects in the drawing area
+    pixel_depth (pdpt/shor): the number of bits per pixel
+    rotation (prot/trot): the default rotation for objects in the drawing area
+    scale (pscl/fixd): the default scaling for objects in the drawing area
+    style (txst/tsty): the default text style for text objects
+    text_color (ptxc/cRGB): the default color for text objects
+    translation (ptrs/QDpt): the default repositioning for objects in the drawing area
+    update_on_change (pupd/bool): Redraw after each change?
+    writing_code (psct/intl): the script system and language of text objects in the drawing area (read-only)
+
+=item drawing_areas (cdrw)
+
+=item encoded_string (encs)
+
+text encoded using the Text Encoding Converter
+
+=item encoded_strings (encs)
+
+=item ethernet_address (cen )
+
+Addresses a device by its Ethernet address
+
+Properties:
+
+    id (ID  /long): the Ethernet address
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+
+=item ethernet_addresses (cen )
+
+=item event (evnt)
+
+an AppleEvents event
+
+=item events (evnt)
+
+=item extended_real (exte)
+
+=item february (feb )
+
+the month of February
+
+=item feet (feet)
+
+a distance measurement in Imperial feet
+
+=item file (file)
+
+a file on a disk or server
+
+Properties:
+
+    posix_path (psxp/TEXT): the POSIX path of the file (read-only)
+
+=item file_specification (fss )
+
+a file specification as used by the operating system
+
+Properties:
+
+    posix_path (psxp/TEXT): the POSIX path of the file (read-only)
+
+=item file_specifications (fss )
+
+=item files (file)
+
+=item firewire_address (cfw )
+
+Addresses a device on the FireWire bus
+
+Properties:
+
+    id (ID  /shor): the FireWire device ID
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+
+=item firewire_addresses (cfw )
+
+=item fixed (fixd)
+
+a real number
+
+=item fixed_point (fpnt)
+
+=item fixed_rectangle (frct)
+
+=item friday (fri )
+
+Friday
+
+=item gallons (galn)
+
+a volume measurement in Imperial gallons
+
+=item gif_picture (GIFf)
+
+=item grams (gram)
+
+a mass measurement in SI meters
+
+=item graphic_group (cpic)
+
+Group of graphics
+
+=item graphic_groups (cpic)
+
+=item graphic_line (glin)
+
+A graphic line
+
+Properties:
+
+    arrow_style (arro/arro): the arrow style
+    dash_style (pdst/tdas): the dash style
+    end_point (pend/QDpt): the ending point of the line
+    start_point (pstp/QDpt): the starting point of the line
+
+=item graphic_lines (glin)
+
+=item graphic_object (cgob)
+
+A graphic object
+
+=item graphic_objects (cgob)
+
+=item graphic_shape (cgsh)
+
+A graphic shape
+
+=item graphic_shapes (cgsh)
+
+=item graphic_text (cgtx)
+
+A series of characters within a drawing area
+
+Properties:
+
+    color (colr/cRGB): the color of the first character
+    font (font/ctxt): the name of the font of the first character
+    size (ptsz/fixd): the size in points of the first character
+    uniform_styles (ustl/tsty): the text styles that are uniform throughout the text
+
+=item handler (hand)
+
+an AppleScript event or subroutine handler
+
+=item handlers (hand)
+
+=item inches (inch)
+
+a distance measurement in Imperial inches
+
+=item insertion_point (cins)
+
+An insertion location between two objects
+
+=item insertion_points (cins)
+
+=item integer (long)
+
+An integral number
+
+=item integers (long)
+
+=item international_text (itxt)
+
+text that begins with a writing code
+
+=item ip_address (cip )
+
+Addresses a device or service via the Internet Protocol (IP)
+
+Properties:
+
+    dns_form (pdns/TEXT): the address in the form "apple.com"
+    id (ID  /TEXT): the address in the form "127.201.0.1"
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+    port (ppor/TEXT): the port number of the service or client being addressed
+
+=item ip_addresses (cip )
+
+=item item (cobj)
+
+An item of any type
+
+Properties:
+
+    id (ID  /long): the unique ID number of this object
+
+=item items (cobj)
+
+=item january (jan )
+
+the month of January
+
+=item jpeg_picture (JPEG)
+
+=item july (jul )
+
+the month of July
+
+=item june (jun )
+
+the month of June
+
+=item keystroke (kprs)
+
+a press of a key combination on a Macintosh keyboard
+
+Properties:
+
+    key (kMsg/cha ): the character for the key was pressed (ignoring modifiers)
+    key_kind (kknd/ekst): the kind of key that was pressed
+    modifiers (kMod/eMds): the modifier keys pressed in combination
+
+=item keystrokes (kprs)
+
+=item kilograms (kgrm)
+
+a mass measurement in SI kilograms
+
+=item kilometers (kmtr)
+
+a distance measurement in SI kilometers
+
+=item kilometres (kmtr)
+
+a distance measurement in SI kilometers
+
+=item line (clin)
+
+A line of text
+
+Properties:
+
+    inheritance (c@#^/text): inherits some of its properties from this class (read-only)
+    justification (pjst/just): the justification of the text
+
+=item lines (clin)
+
+=item linked_list (llst)
+
+An ordered collection of items
+
+Properties:
+
+    length (leng/long): the length of a list (read-only)
+
+=item linked_lists (llst)
+
+=item list (list)
+
+An ordered collection of items
+
+Properties:
+
+    length (leng/long): the length of a list (read-only)
+    rest (rest/list): all items of the list excluding first (read-only)
+    reverse (rvse/list): the items of the list in reverse order (read-only)
+
+=item list__record_or_text (lrs )
+
+a list, record or text
+
+=item list_or_record (lr  )
+
+a list or record
+
+=item list_or_string (ls  )
+
+a list or string
+
+=item lists (list)
+
+=item liters (litr)
+
+a volume measurement in SI liters
+
+=item litres (litr)
+
+a volume measurement in SI liters
+
+=item localtalk_address (clt )
+
+Addresses a device by its LocalTalk address
+
+Properties:
+
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+    network (pnet/shor): the LocalTalk network number
+    node (pnod/shor): the LocalTalk node number
+    socket (psoc/shor): the LocalTalk socket number
+
+=item localtalk_addresses (clt )
+
+=item location_reference (insl)
+
+=item long_fixed (lfxd)
+
+=item long_fixed_point (lfpt)
+
+=item long_fixed_rectangle (lfrc)
+
+=item long_point (lpnt)
+
+=item long_rectangle (lrct)
+
+=item machine (mach)
+
+a computer
+
+=item machine_location (mLoc)
+
+=item machines (mach)
+
+=item march (mar )
+
+the month of March
+
+=item may (may )
+
+the month of May
+
+=item menu (cmnu)
+
+=item menu_item (cmen)
+
+=item meters (metr)
+
+a distance measurement in SI meters
+
+=item metres (metr)
+
+a distance measurement in SI meters
+
+=item miles (mile)
+
+a distance measurement in Imperial miles
+
+=item missing_value (msng)
+
+unavailable value, such as properties missing from heterogeneous classes in a Whose clause
+
+=item missing_values (msng)
+
+=item monday (mon )
+
+Monday
+
+=item month (mnth)
+
+a month
+
+=item months (mnth)
+
+=item november (nov )
+
+the month of November
+
+=item null (null)
+
+=item number (nmbr)
+
+an integer or real number
+
+=item number__date_or_text (nds )
+
+a number, date or text
+
+=item number_or_date (nd  )
+
+a number or date
+
+=item number_or_string (ns  )
+
+a number or string
+
+=item numbers (nmbr)
+
+=item october (oct )
+
+the month of October
+
+=item ounces (ozs )
+
+a weight measurement in SI meters
+
+=item oval (covl)
+
+An oval
+
+=item ovals (covl)
+
+=item paragraph (cpar)
+
+A paragraph
+
+Properties:
+
+    inheritance (c@#^/text): inherits some of its properties from this class (read-only)
+
+=item paragraphs (cpar)
+
+=item pascal_string (pstr)
+
+text up to 255 characters preceded by a length byte
+
+=item pascal_strings (pstr)
+
+=item picture (PICT)
+
+A QuickDraw picture object
+
+=item pictures (PICT)
+
+=item pixel (cpxl)
+
+A pixel
+
+Properties:
+
+    color (colr/cRGB): the color
+
+=item pixel_map (cpix)
+
+A pixel map
+
+=item pixel_map_record (tpmm)
+
+=item pixel_maps (cpix)
+
+=item pixels (cpxl)
+
+=item plain_text (TEXT)
+
+a synonym for string
+
+=item point (QDpt)
+
+point coordinates
+
+=item polygon (cpgn)
+
+A polygon
+
+Properties:
+
+    point_list (ptlt/QDpt): the list of points that define the polygon
+
+=item polygons (cpgn)
+
+=item postscript_picture (EPS )
+
+=item pounds (lbs )
+
+a weight measurement in SI meters
+
+=item preposition (prep)
+
+an AppleEvents preposition
+
+=item prepositions (prep)
+
+=item properties (prop)
+
+=item property (prop)
+
+an AppleEvents property
+
+=item quarts (qrts)
+
+a volume measurement in Imperial quarts
+
+=item real (doub)
+
+A real number
+
+=item reals (doub)
+
+=item record (reco)
+
+A set of labeled items
+
+=item records (reco)
+
+=item rectangle (crec)
+
+A rectangle
+
+=item rectangles (crec)
+
+=item reference (obj )
+
+an AppleScript reference
+
+=item reference_form (kfrm)
+
+an AppleEvents key form
+
+=item reference_forms (kfrm)
+
+=item references (obj )
+
+=item rgb16_color (tr16)
+
+=item rgb96_color (tr96)
+
+=item rgb_color (cRGB)
+
+Three integers specifying red, green, blue color values
+
+=item rgb_colors (cRGB)
+
+=item rotation (trot)
+
+=item rounded_rectangle (crrc)
+
+A rounded rectangle
+
+Properties:
+
+    corner_curve_height (pchd/shor): the height of the oval used to define the shape of the rounded corners
+    corner_curve_width (pcwd/shor): the width of the oval used to define the shape of the rounded corners
+
+=item rounded_rectangles (crrc)
+
+=item row (crow)
+
+A row
+
+=item rows (crow)
+
+=item saturday (sat )
+
+Saturday
+
+=item scrap_styles (styl)
+
+=item script (scpt)
+
+An AppleScript script
+
+Properties:
+
+    name (pnam/TEXT): the name of the script (read-only)
+    parent (pare/scpt): its parent, i.e. the script that will handle events that this script doesn’t (read-only)
+
+=item scripts (scpt)
+
+=item scsi_address (cscs)
+
+Addresses a SCSI device
+
+Properties:
+
+    id (ID  /shor): the SCSI ID
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+    lun (pslu/shor): the SCSI logical unit number
+    scsi_bus (pscb/shor): the SCSI bus number
+
+=item scsi_addresses (cscs)
+
+=item seconds (scnd)
+
+more than one second
+
+=item selection_object (csel)
+
+A way to refer to the state of the current of the selection.  Use the ‘select’ command to make a new selection.
+
+Properties:
+
+    contents (pcnt/****): the information currently selected.  Use ‘contents of selection’ to get or change information in a document.
+
+=item september (sep )
+
+the month of September
+
+=item small_integer (shor)
+
+=item small_real (sing)
+
+=item sound (snd )
+
+a sound object on the clipboard
+
+=item sounds (snd )
+
+=item square_feet (sqft)
+
+an area measurement in Imperial square feet
+
+=item square_kilometers (sqkm)
+
+an area measurement in SI square kilometers
+
+=item square_kilometres (sqkm)
+
+an area measurement in SI square kilometers
+
+=item square_meters (sqrm)
+
+an area measurement in SI square meters
+
+=item square_metres (sqrm)
+
+an area measurement in SI square meters
+
+=item square_miles (sqmi)
+
+an area measurement in Imperial square miles
+
+=item square_yards (sqyd)
+
+an area measurement in Imperial square yards
+
+=item string (TEXT)
+
+a string of characters
+
+=item strings (TEXT)
+
+=item styled_clipboard_text (styl)
+
+clipboard text with font, size, and style information
+
+=item styled_text (STXT)
+
+text with font, size, and style information
+
+=item styled_unicode_text (sutx)
+
+styled text in the Unicode format
+
+=item sunday (sun )
+
+Sunday
+
+=item system_dictionary (aeut)
+
+=item table (ctbl)
+
+A table
+
+=item tables (ctbl)
+
+=item text (ctxt)
+
+Text
+
+Properties:
+
+    color (colr/cRGB): the color of the first character
+    font (font/ctxt): the name of the font of the first character
+    quoted_form (strq/ctxt): the text in quoted form (read-only)
+    size (ptsz/fixd): the size in points of the first character
+    style (txst/tsty): the text style of the first character of the first character
+    uniform_styles (ustl/tsty): the text styles that are uniform throughout the text
+    writing_code (psct/intl): the script system and language (read-only)
+
+Elements:
+
+    character, line, paragraph, text, word
+
+=item text_flow (cflo)
+
+A contiguous block of text.  Page layout applications call this a ‘story.’
+
+Properties:
+
+    inheritance (c@#^/text): inherits some of its properties from this class (read-only)
+    name (pnam/itxt): the name
+
+=item text_flows (cflo)
+
+=item text_item (citm)
+
+text between delimiters
+
+=item text_items (citm)
+
+=item text_style_info (tsty)
+
+On and Off styles of text run
+
+Properties:
+
+    off_styles (ofst/styl): the styles that are off for the text (read-only)
+    on_styles (onst/styl): the styles that are on for the text (read-only)
+
+=item text_style_infos (tsty)
+
+=item thursday (thu )
+
+Thursday
+
+=item tiff_picture (TIFF)
+
+=item token_ring_address (ctok)
+
+Addresses a device or service via the Token Ring protocol
+
+Properties:
+
+    id (ID  /shor): the Token Ring ID
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+
+=item token_ring_addresses (ctok)
+
+=item tuesday (tue )
+
+Tuesday
+
+=item type_class (type)
+
+the name of a particular class (or any four-character code)
+
+=item type_class_info (gcli)
+
+information about properties and elements of a class
+
+=item type_element_info (elin)
+
+=item type_event_info (evin)
+
+information about an event
+
+=item type_parameter_info (pmin)
+
+=item type_property_info (pinf)
+
+=item type_suite_info (suin)
+
+=item unicode_text (utxt)
+
+text in the Unicode format (cannot be viewed without conversion)
+
+=item unsigned_integer (magn)
+
+=item upper_case (case)
+
+Text with lower case converted to upper case
+
+=item usb_address (cusb)
+
+Addresses a device on the Universal Serial Bus
+
+Properties:
+
+    inheritance (c@#^/address_specification): inherits some of its properties from this class
+    name (pnam/TEXT): the USB device name
+
+=item usb_addresses (cusb)
+
+=item vector (vect)
+
+An ordered collection of items
+
+Properties:
+
+    length (leng/long): the length of a list (read-only)
+
+=item vectors (vect)
+
+=item version (vers)
+
+=item wednesday (wed )
+
+Wednesday
+
+=item weekday (wkdy)
+
+a weekday
+
+=item weekdays (wkdy)
+
+=item window (cwin)
+
+A window
+
+Properties:
+
+    bounds (pbnd/qdrt): the boundary rectangle for the window
+    closeable (hclb/bool): Does the window have a close box? (read-only)
+    floating (isfl/bool): Does the window float? (read-only)
+    index (pidx/long): the number of the window
+    modal (pmod/bool): Is the window modal? (read-only)
+    resizable (prsz/bool): Is the window resizable? (read-only)
+    titled (ptit/bool): Does the window have a title bar? (read-only)
+    visible (pvis/bool): Is the window visible?
+    zoomable (iszm/bool): Is the window zoomable? (read-only)
+    zoomed (pzum/bool): Is the window zoomed?
+
+=item windows (cwin)
+
+=item word (cwor)
+
+A word
+
+Properties:
+
+    inheritance (c@#^/text): inherits some of its properties from this class (read-only)
+
+=item words (cwor)
+
+=item writing_code (psct)
+
+codes that identify the language and script system
+
+=item writing_code_info (citl)
+
+script code and language code of text run
+
+Properties:
+
+    language_code (plcd/shor): the language code for the text (read-only)
+    script_code (pscd/shor): the script code for the text (read-only)
+
+=item writing_code_infos (citl)
+
+=item yards (yard)
+
+a distance measurement in Imperial yards
+
+=back
+
+=head2 Enumerations
+
+=over 4
+
+=item 'arro'
+
+=over 4
+
+=item no_arrow (arno)
+
+No arrow on line
+
+=item arrow_at_start (arst)
+
+Arrow at start of line
+
+=item arrow_at_both_ends (arbo)
+
+Arrow at both the start and the end of the line
+
+=item arrow_at_end (aren)
+
+Arrow at end of line
+
+=back
+
+=item 'boov'
+
+=over 4
+
+=item false (fals)
+
+the false boolean value
+
+=item true (true)
+
+the true boolean value
+
+=back
+
+=item 'cons'
+
+=over 4
+
+=item numeric_strings (nume)
+
+numeric strings
+
+=item white_space (whit)
+
+white space
+
+=item hyphens (hyph)
+
+hyphens
+
+=item diacriticals (diac)
+
+diacriticals
+
+=item application_responses (rmte)
+
+remote event replies
+
+=item punctuation (punc)
+
+punctuation
+
+=item case (case)
+
+case
+
+=back
+
+=item 'eMds'
+
+=over 4
+
+=item command_down (Kcmd)
+
+=item caps_lock_down (Kclk)
+
+=item control_down (Kctl)
+
+=item shift_down (Ksft)
+
+=item option_down (Kopt)
+
+=back
+
+=item 'econ'
+
+=over 4
+
+=item pds_slot (ecpd)
+
+=item usb (ecus)
+
+=item token_ring (etok)
+
+=item modem_port (ecmp)
+
+=item comm_slot (eccm)
+
+=item monitor_out (ecmn)
+
+=item audio_line_in (ecai)
+
+=item audio_out (ecao)
+
+=item firewire (ecfw)
+
+=item adb (eadb)
+
+=item pc_card (ecpc)
+
+=item localtalk (eclt)
+
+=item audio_line_out (ecal)
+
+=item scsi (ecsc)
+
+=item microphone (ecmi)
+
+=item nubus (enub)
+
+=item infrared (ecir)
+
+=item pci_bus (ecpi)
+
+=item video_out (ecvo)
+
+=item modem_printer_port (empp)
+
+=item ethernet (ecen)
+
+=item printer_port (ecpp)
+
+=item video_in (ecvi)
+
+=back
+
+=item 'edvt'
+
+=over 4
+
+=item pointing_device (edpd)
+
+=item dvd_drive (edvd)
+
+=item printer (edpr)
+
+=item lcd_display (edlc)
+
+=item modem (edmm)
+
+=item display (edds)
+
+=item hard_disk_drive (ehd )
+
+=item cd_rom_drive (ecd )
+
+=item pc_card (ecpc)
+
+=item mouse (emou)
+
+=item nubus_card (ednb)
+
+=item keyboard (ekbd)
+
+=item pci_card (edpi)
+
+=item microphone (ecmi)
+
+=item trackball (etrk)
+
+=item trackpad (edtp)
+
+=item video_monitor (edvm)
+
+=item speakers (edsp)
+
+=item storage_device (edst)
+
+=item floppy_disk_drive (efd )
+
+=back
+
+=item 'ekst'
+
+=over 4
+
+=item f6_key (ksa )
+
+=item forward_del_key (ksu )
+
+=item return_key (ks$ )
+
+=item f9_key (kse )
+
+=item page_up_key (kst )
+
+=item home_key (kss )
+
+=item f12_key (kso )
+
+=item f8_key (ksd )
+
+=item f15_key (ksq )
+
+=item f11_key (ksg )
+
+=item right_arrow_key (ks| )
+
+=item f5_key (ks` )
+
+=item down_arrow_key (ks} )
+
+=item tab_key (ks0 )
+
+=item clear_key (ksG )
+
+=item f7_key (ksb )
+
+=item escape_key (ks5 )
+
+=item enter_key (ksL )
+
+=item f4_key (ksv )
+
+=item left_arrow_key (ks{ )
+
+=item delete_key (ks3 )
+
+=item f2_key (ksx )
+
+=item help_key (ksr )
+
+=item f1_key (ksz )
+
+=item up_arrow_key (ks~ )
+
+=item f14_key (ksk )
+
+=item f3_key (ksc )
+
+=item f13_key (ksi )
+
+=item page_down_key (ksy )
+
+=item end_key (ksw )
+
+=item f10_key (ksm )
+
+=back
+
+=item 'epro'
+
+=over 4
+
+=item svga (epsg)
+
+=item usb (ecus)
+
+=item digital_audio (epda)
+
+=item bus (ebus)
+
+=item ip (epip)
+
+=item s_video (epsv)
+
+=item macintosh_video (epmv)
+
+=item adb (eadb)
+
+=item firewire (ecfw)
+
+=item pc_card (ecpc)
+
+=item appletalk (epat)
+
+=item scsi (ecsc)
+
+=item postscript (epps)
+
+=item nubus (enub)
+
+=item analog_audio (epau)
+
+=item serial (epsr)
+
+=item irda (epir)
+
+=item pci_bus (ecpi)
+
+=item irtalk (epit)
+
+=back
+
+=item 'just'
+
+=over 4
+
+=item left (left)
+
+Align with left margin
+
+=item right (rght)
+
+Align with right margin
+
+=item full (full)
+
+Align with both left and right margins
+
+=item center (cent)
+
+Align with center
+
+=back
+
+=item 'kfrm'
+
+=over 4
+
+=item named (name)
+
+keyform designating named access
+
+=item index (indx)
+
+keyform designating indexed access
+
+=item id (ID  )
+
+keyform designating access by unique identifier
+
+=back
+
+=item 'misc'
+
+=over 4
+
+=item current_application (cura)
+
+the current application
+
+=back
+
+=item 'prtn'
+
+=over 4
+
+=item formulas_protected (fpro)
+
+Can changes values but not formulas
+
+=item read_only (nmod)
+
+Can’t change values or formulas
+
+=item read_write (modf)
+
+Can change values and formulas
+
+=back
+
+=item 'savo'
+
+=over 4
+
+=item yes (yes )
+
+Save objects now
+
+=item no (no  )
+
+Do not save objects
+
+=item ask (ask )
+
+Ask the user whether to save
+
+=back
+
+=item 'styl'
+
+=over 4
+
+=item shadow (shad)
+
+Shadow
+
+=item subscript (sbsc)
+
+Subscript
+
+=item underline (undl)
+
+Underline
+
+=item bold (bold)
+
+Bold
+
+=item all_caps (alcp)
+
+All capital letters
+
+=item small_caps (smcp)
+
+Small caps
+
+=item superscript (spsc)
+
+Superscript
+
+=item outline (outl)
+
+Outline
+
+=item italic (ital)
+
+Italic
+
+=item condensed (cond)
+
+Condensed
+
+=item plain (plan)
+
+Plain
+
+=item strikethrough (strk)
+
+Strikethrough
+
+=item expanded (pexp)
+
+Expanded
+
+=item all_lowercase (lowc)
+
+Lowercase
+
+=item hidden (hidn)
+
+Hidden
+
+=back
+
+=item 'tran'
+
+=over 4
+
+=item add_pin_pixels (addp)
+
+=item not_or_pixels (ntor)
+
+=item blend_pixels (blnd)
+
+=item not_xor_pixels (nxor)
+
+=item ad_max_pixels (admx)
+
+=item sub_over_pixels (subo)
+
+=item add_over_pixels (addo)
+
+=item xor_pixels (xor )
+
+=item or_pixels (or  )
+
+=item not_bic_pixels (nbic)
+
+=item ad_min_pixels (admn)
+
+=item copy_pixels (cpy )
+
+=item not_copy_pixels (ncpy)
+
+=item bic_pixels (bic )
+
+=item sub_pin_pixels (subp)
+
+=back
+
+=back
+
+=head1 AUTHOR
+
+Glue created by root
+using F<gluemac> by Chris Nandor and the Mac::AETE modules
+by David C. Schooley.
+
+Copyright (c) 2008.  All rights reserved.  This program is
+free software; you can redistribute it and/or modify it under the terms
+of the Artistic License, distributed with Perl.
+
+=head1 SEE ALSO
+
+Mac::AppleEvents, Mac::AppleEvents::Simple, macperlcat, Inside Macintosh: 
+Interapplication Communication, Mac::Glue, Mac::AETE.
+
+=cut

@@ -1,0 +1,1404 @@
+=head1 NAME
+
+StandardAdditions Glue - Control StandardAdditions app (__APPID__)
+
+=head1 SYNOPSIS
+
+    use Mac::Glue;
+    my $obj = new Mac::Glue 'StandardAdditions';
+
+=head1 DESCRIPTION
+
+See C<Mac::Glue> for complete documentation on base usage and framework.
+
+=head2 Events
+
+=over 4
+
+=item $obj->adding_folder_items_to(alis, after_receiving => alis)
+
+Called after new items have been added to a folder (faco/fget)
+
+Parameters:
+
+    direct object (----): Folder receiving the new items
+    after_receiving (flst): a list of the items the folder received
+
+
+=item $obj->ascii_character(shor)
+
+Convert a number to an ASCII character (syso/ntoc)
+
+Reply type: TEXT
+
+Parameters:
+
+    direct object (----): the ASCII code of the specified character
+
+
+=item $obj->ascii_number(TEXT)
+
+Convert a character to its ASCII numeric value (syso/cton)
+
+Reply type: shor
+
+Parameters:
+
+    direct object (----): the character
+
+
+=item $obj->beep(long)
+
+Beep 1 or more times (syso/beep)
+
+Parameters:
+
+    direct object (----): number of times to beep
+
+
+=item $obj->choose_application([as => type, multiple_selections_allowed => bool, with_prompt => TEXT, with_title => TEXT])
+
+Choose an application on this machine or the network (syso/ppcb)
+
+Reply type: capp
+
+Parameters:
+
+    direct object (----): 
+    as (rtyp): the desired type of result.  May be application (the default) or alias.
+    multiple_selections_allowed (mlsl): Allow multiple items to be selected? (default is false)
+    with_prompt (prmp): the prompt to be displayed in the dialog box
+    with_title (appr): the dialog window title
+
+
+=item $obj->choose_color([default_color => cRGB])
+
+Choose a color (syso/chcl)
+
+Reply type: cRGB
+
+Parameters:
+
+    direct object (----): 
+    default_color (dcol): the default color
+
+
+=item $obj->choose_file([default_location => alis, invisibles => bool, multiple_selections_allowed => bool, of_type => TEXT, showing_package_contents => bool, with_prompt => TEXT])
+
+Choose a file on a disk or server (syso/stdf)
+
+Reply type: alis
+
+Parameters:
+
+    direct object (----): 
+    default_location (dflc): the default file location
+    invisibles (lfiv): Show invisible files and folders? (default is true)
+    multiple_selections_allowed (mlsl): Allow multiple items to be selected? (default is false)
+    of_type (ftyp): a list of file types or type identifiers. Only files of the specified types will be selectable.
+    showing_package_contents (shpc): Show the contents of packages? (Packages will be treated as folders. Default is false.)
+    with_prompt (prmp): the prompt to be displayed in the dialog box
+
+
+=item $obj->choose_file_name([default_location => alis, default_name => TEXT, with_prompt => TEXT])
+
+Get a new file reference from the user, without creating the file (syso/nwfl)
+
+Reply type: file
+
+Parameters:
+
+    direct object (----): 
+    default_location (dflc): the default file location
+    default_name (dfnm): the default name for the new file
+    with_prompt (prmt): the prompt to be displayed in the dialog box
+
+
+=item $obj->choose_folder([default_location => alis, invisibles => bool, multiple_selections_allowed => bool, showing_package_contents => bool, with_prompt => TEXT])
+
+Choose a folder on a disk or server (syso/stfl)
+
+Reply type: alis
+
+Parameters:
+
+    direct object (----): 
+    default_location (dflc): the default folder location
+    invisibles (lfiv): Show invisible files and folders? (default is false)
+    multiple_selections_allowed (mlsl): Allow multiple items to be selected? (default is false)
+    showing_package_contents (shpc): Show the contents of packages? (Packages will be treated as folders. Default is false.)
+    with_prompt (prmp): the prompt to be displayed in the dialog box
+
+
+=item $obj->choose_from_list(ns  , [cancel_button_name => TEXT, default_items => ns  , empty_selection_allowed => bool, multiple_selections_allowed => bool, ok_button_name => TEXT, with_prompt => TEXT, with_title => TEXT])
+
+Choose one or more items from a list (gtqp/chlt)
+
+Reply type: ns  
+
+Parameters:
+
+    direct object (----): a list of numbers and/or strings to display
+    cancel_button_name (cnbt): the name of the Cancel button
+    default_items (inSL): a list of items to initially select (an empty list if no selection)
+    empty_selection_allowed (empL): Can the user make no selection and then choose OK?
+    multiple_selections_allowed (mlsl): Allow multiple items to be selected?
+    ok_button_name (okbt): the name of the OK button
+    with_prompt (prmp): the prompt to be displayed in the dialog box
+    with_title (appr): the dialog window title
+
+
+=item $obj->choose_remote_application([with_prompt => TEXT, with_title => TEXT])
+
+Choose a running application on a remote machine or on this machine (syso/chra)
+
+Reply type: capp
+
+Parameters:
+
+    direct object (----): 
+    with_prompt (prmp): the prompt to be displayed above the list of applications
+    with_title (appr): the dialog window title
+
+
+=item $obj->choose_url([editable_url => bool, showing => essv])
+
+Choose a service on the Internet (syso/chur)
+
+Reply type: url 
+
+Parameters:
+
+    direct object (----): 
+    editable_url (pedu): Allow user to type in a URL?
+    showing (cusv): which network services to show
+
+
+=item $obj->clipboard_info([for => type])
+
+Return information about the clipboard (Jons/iClp)
+
+Reply type: list
+
+Parameters:
+
+    direct object (----): 
+    for (for ): restricts to information about only this data type
+
+
+=item $obj->close_access(****)
+
+Close a file that was opened for access (rdwr/clos)
+
+Parameters:
+
+    direct object (----): the file reference number, alias, or file reference of the file to close
+
+
+=item $obj->closing_folder_window_for(alis)
+
+Called after a folder window has been closed (faco/fclo)
+
+Parameters:
+
+    direct object (----): the folder that was closed
+
+
+=item $obj->computer(type, [has => long])
+
+Test attributes of this computer (fndr/gstl)
+
+Reply type: long
+
+Parameters:
+
+    direct object (----): the attribute to test
+    has (has ): test specific bits of response
+
+
+=item $obj->current_date()
+
+Return the current date and time (misc/curd)
+
+Reply type: ldt 
+
+
+=item $obj->delay(nmbr)
+
+Pause for a fixed amount of time (syso/dela)
+
+Parameters:
+
+    direct object (----): the number of seconds to delay (default is 0)
+
+
+=item $obj->display_alert(TEXT, [as => EAlT, buttons => TEXT, cancel_button => ns  , default_button => ns  , giving_up_after => long, message => TEXT])
+
+Display an alert (syso/disA)
+
+Reply type: aleR
+
+Parameters:
+
+    direct object (----): the alert text (will be displayed in emphasized system font)
+    as (as A): the type of alert (default is informational)
+    buttons (btns): a list of up to three button names
+    cancel_button (cbtn): the name or number of the cancel button
+    default_button (dflt): the name or number of the default button
+    giving_up_after (givu): number of seconds to wait before automatically dismissing the alert
+    message (mesS): the explanatory message (will be displayed in small system font)
+
+
+=item $obj->display_dialog(TEXT, [buttons => TEXT, cancel_button => ns  , default_answer => TEXT, default_button => ns  , giving_up_after => long, hidden_answer => bool, with_icon => file, with_title => TEXT])
+
+Display a dialog box, optionally requesting user input (syso/dlog)
+
+Reply type: askr
+
+Parameters:
+
+    direct object (----): the text to display in the dialog box
+    buttons (btns): a list of up to three button names
+    cancel_button (cbtn): the name or number of the cancel button
+    default_answer (dtxt): the default editable text
+    default_button (dflt): the name or number of the default button
+    giving_up_after (givu): number of seconds to wait before automatically dismissing the dialog
+    hidden_answer (htxt): Should editable text be displayed as bullets? (default is false)
+    with_icon (disp): Éor an alias or file reference to a Ô.icnsÕ file
+    with_title (appr): the dialog window title
+
+
+=item $obj->do_shell_script(TEXT, [administrator_privileges => bool, altering_line_endings => bool, as => type, password => TEXT, user_name => TEXT])
+
+Execute a shell script or command using the ÔshÕ shell (syso/exec)
+
+Parameters:
+
+    direct object (----): the command or shell script to execute.  Examples are ÔlsÕ or Ô/bin/ps -auxwwwÕ
+    administrator_privileges (badm): execute the command as the administrator
+    altering_line_endings (alen): change all line endings to Mac-style and trim a trailing one (default true)
+    as (rtyp): the desired type of result; default is Unicode text (UTF-8)
+    password (RApw): use this administrator password to avoid a password dialog
+    user_name (RAun): use this administrator account to avoid a password dialog (If this parameter is specified, the ÒpasswordÓ parameter must also be specified.)
+
+
+=item $obj->get_eof(****)
+
+Return the length, in bytes, of a file (rdwr/geof)
+
+Reply type: comp
+
+Parameters:
+
+    direct object (----): a file reference number, alias, or file reference of a file
+
+
+=item $obj->get_volume_settings()
+
+Get the sound output and input volume settings (syso/gtvl)
+
+Reply type: vlst
+
+
+=item $obj->handle_cgi_request(TEXT, [executing_by => TEXT, from_address => TEXT, from_browser => TEXT, from_client_ip_address => TEXT, from_server => TEXT, from_user => TEXT, from_virtual_host => TEXT, of_action_type => TEXT, of_content_type => TEXT, referred_by => TEXT, searching_for => TEXT, using_access_method => TEXT, using_action => TEXT, using_password => TEXT, via_port => TEXT, with_connection_id => long, with_full_request => TEXT, with_posted_data => TEXT, with_user_info => TEXT])
+
+Sent to a script to process a Common Gateway Interface request (WWW½/sdoc)
+
+Reply type: html
+
+Parameters:
+
+    direct object (----): the path of the URL
+    executing_by (scnm): the path to the script executing this CGI, in URL form
+    from_address (addr): the IP address of the entity making the request
+    from_browser (Agnt): the name of the client software
+    from_client_ip_address (Kcip): the Internet address of the client
+    from_server (svnm): the name of the server application sending this request
+    from_user (user): the user name associated with the request
+    from_virtual_host (DIRE): the URL of the root folder of the virtual host
+    of_action_type (Kact): either PREPROCESSOR, POSTPROCESSOR, CGI, or ACGI
+    of_content_type (ctyp): the MIME content type of POST arguments
+    referred_by (refr): the URL of the page the client used to link to the CGI
+    searching_for (kfor): the data for the GET method or data after the Ô?Õ in a POST method
+    using_access_method (meth): either ÔGETÕ or ÔPOSTÕ
+    using_action (Kapt): the path to the file or CGI
+    using_password (pass): the password sent with the request
+    via_port (svpt): the IP port number of the server
+    with_connection_id (Kcid): the ID of the connection from the server to the client
+    with_full_request (Kfrq): the full request as sent to the server
+    with_posted_data (post): the POST arguments
+    with_user_info (frmu): additional information about the user, usually the email address
+
+
+=item $obj->info_for(file, [size => bool])
+
+Return information for a file or folder (syso/nfo4)
+
+Reply type: asfe
+
+Parameters:
+
+    direct object (----): an alias or file reference to the file or folder
+    size (ptsz): Return the size of the file or folder? (default is true)
+
+
+=item $obj->list_disks()
+
+Return a list of the currently mounted volumes (ears/lvol)
+
+Reply type: utxt
+
+
+=item $obj->list_folder(file, [invisibles => bool])
+
+Return the contents of a specified folder (ears/lfdr)
+
+Reply type: utxt
+
+Parameters:
+
+    direct object (----): an alias or file reference to the folder
+    invisibles (lfiv): List invisible files? (default is true)
+
+
+=item $obj->load_script(file)
+
+Return a script object loaded from a specified file (syso/load)
+
+Reply type: scpt
+
+Parameters:
+
+    direct object (----): an alias or file reference to the file containing the script object
+
+
+=item $obj->localized_string(TEXT, [from_table => TEXT, in_bundle => file])
+
+Return the localized string for the specified key (syso/locS)
+
+Reply type: utxt
+
+Parameters:
+
+    direct object (----): the key
+    from_table (froT): the name of the strings file excluding the Ò.stringsÓ suffix (default is ÒLocalizableÓ)
+    in_bundle (in B): an alias or file reference to the bundle containing the strings file (default is the current application/script bundle)
+
+
+=item $obj->mount_volume(TEXT, on_server => TEXT, [as_user_name => TEXT, in_appletalk_zone => TEXT, with_password => TEXT])
+
+Mount the specified AppleShare volume (aevt/mvol)
+
+Parameters:
+
+    direct object (----): the name or URL path (starting with Ôafp://Õ) of the volume to mount
+    on_server (SRVR): the server on which the volume resides; omit if URL path provided
+    as_user_name (USER): the user name with which to log in to the server; omit for guest access
+    in_appletalk_zone (ZONE): the AppleTalk zone in which the server resides; omit if URL path provided
+    with_password (PASS): the password for the user name; omit for guest access
+
+
+=item $obj->moving_folder_window_for(alis, from => qdrt)
+
+Called after a folder window has been moved or resized (faco/fsiz)
+
+Parameters:
+
+    direct object (----): the folder whose window was moved or resized
+    from (fnsz): the previous coordinates of folder window (you can get the new coordinates from the Finder)
+
+
+=item $obj->offset(in => TEXT, of => TEXT)
+
+Find one piece of text inside another (syso/offs)
+
+Reply type: long
+
+Parameters:
+
+    direct object (----): 
+    in (psin): the target text to search in
+    of (psof): the source text to find the position of
+
+
+=item $obj->open_for_access(file, [write_permission => bool])
+
+Open a disk file for the read and write commands (rdwr/open)
+
+Reply type: shor
+
+Parameters:
+
+    direct object (----): the file or alias to open for access.  If the file does not exist, a new file is created.
+    write_permission (perm): whether to allow writing to the file.
+
+
+=item $obj->open_location(TEXT, [error_reporting => bool])
+
+Opens a URL with the appropriate program (GURL/GURL)
+
+Parameters:
+
+    direct object (----): the URL to open
+    error_reporting (errr): Should error conditions be reported in a dialog?
+
+
+=item $obj->opening_folder(alis)
+
+Called after a folder has been opened into a window (faco/fopn)
+
+Parameters:
+
+    direct object (----): the folder that was opened
+
+
+=item $obj->path_to(afdr, [as => type, folder_creation => bool, from => fldm])
+
+Return the full path to the specified folder (ears/ffdr)
+
+Reply type: alis
+
+Parameters:
+
+    direct object (----): the folder to return
+    as (rtyp): the type to return: alias or string (default is alias)
+    folder_creation (crfl): Create the folder if it doesnÕt exist? (default is true)
+    from (from): where to look for the indicated folder
+
+
+=item $obj->path_to_resource(TEXT, [in_bundle => file, in_directory => TEXT])
+
+Return the full path to the specified resource (syso/rpth)
+
+Reply type: alis
+
+Parameters:
+
+    direct object (----): the name of the requested resource
+    in_bundle (in B): an alias or file reference to the bundle containing the resource (default is the current application/script bundle)
+    in_directory (in D): the name of a subdirectory in the bundleÕs ÒResourcesÓ directory
+
+
+=item $obj->random_number(nmbr, [from => nmbr, to => nmbr, with_seed => nmbr])
+
+Generate a random number (syso/rand)
+
+Reply type: nmbr
+
+Parameters:
+
+    direct object (----): the upper limit (Default is 1.0. If this parameter is specified, the ÒfromÓ and ÒtoÓ parameters will be ignored.)
+    from (from): the lowest number to return (default is 0.0)
+    to (to  ): the highest number to return (default is 1.0)
+    with_seed (seed): a starting point for a repeatable sequence of random numbers
+
+
+=item $obj->read(****, [as => type, before => TEXT, for => comp, from => comp, to => comp, until => TEXT, using_delimiter => TEXT, using_delimiters => TEXT])
+
+Read data from a file that has been opened for access (rdwr/read)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): the file reference number, alias, or file reference of the file to read
+    as (as  ): the form in which to read and return data
+    before (rbfr): Éor read up to but not including this characterÉ
+    for (rdfr): the number of bytes to read from current position; if omitted, read until the end of the fileÉ
+    from (rdfm): starting from this position; if omitted, start at last position read from
+    to (rdto): Éor stop at this positionÉ
+    until (rdut): Éor read up to and including this character
+    using_delimiter (deli): the value that separates items to readÉ
+    using_delimiters (deli): Éor a list of values that separate items to read
+
+
+=item $obj->removing_folder_items_from(alis, after_losing => alis)
+
+Called after items have been removed from a folder (faco/flos)
+
+Parameters:
+
+    direct object (----): the folder losing the items
+    after_losing (flst): a list of the items the folder lost.  For permanently deleted items, only the names (in strings) are provided.
+
+
+=item $obj->round(doub, [rounding => olie])
+
+Round number to integer (syso/rond)
+
+Reply type: long
+
+Parameters:
+
+    direct object (----): the number to round
+    rounding (dire): the rounding direction; if omitted, rounds to nearest.  Òto nearestÓ rounds .5 cases to the nearest even integer in order to decrease cumulative errors.  To always round .5 away from zero, use Òas taught in school.Ó
+
+
+=item $obj->run_script(scpt, [in => TEXT, with_parameters => ****])
+
+Run a specified script or script file (syso/dsct)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): the script text (or an alias or file reference to a script file) to run
+    in (scsy): the scripting component to use; default is the current scripting component
+    with_parameters (plst): a list of parameters
+
+
+=item $obj->say(TEXT, [displaying => TEXT, saving_to => ****, using => TEXT, waiting_until_completion => bool])
+
+Speak the given text (syso/ttos)
+
+Parameters:
+
+    direct object (----): the text to speak, which can include intonation characters
+    displaying (DISP): the text to display in the feedback window (if different). Ignored unless Speech Recognition is on.
+    saving_to (stof): the alias, file reference or path string of an AIFF file (existing or not) to contain the sound output.
+    using (VOIC): the voice to speak with.
+    waiting_until_completion (wfsp): wait for speech to complete before returning (default is true). Ignored unless Speech Recognition is on.
+
+
+=item $obj->scripting_components()
+
+Return a list of all scripting components (e.g. AppleScript) (syso/cpls)
+
+Reply type: TEXT
+
+
+=item $obj->set_eof(****, to => comp)
+
+Set the length, in bytes, of a file (rdwr/seof)
+
+Parameters:
+
+    direct object (----): a file reference number, alias, or file reference of a file
+    to (set2): the new length of the file, in bytes.  Any data beyond this position is lost.
+
+
+=item $obj->set_the_clipboard_to(****)
+
+Place data on an applicationÕs clipboard. Use inside a ÔtellÕ block and activate the application first (Jons/pClp)
+
+Parameters:
+
+    direct object (----): the data to place on the clipboard
+
+
+=item $obj->set_volume(nmbr, [alert_volume => shor, input_volume => shor, output_muted => bool, output_volume => shor])
+
+Set the sound output and/or input volume (aevt/stvl)
+
+Parameters:
+
+    direct object (----): the sound output volume, a real number from 0 to 7 (This parameter is deprecated; if specified, all other parameters will be ignored.)
+    alert_volume (alvl): the alert volume, an integer from 0 to 100
+    input_volume (invl): the sound input volume, an integer from 0 to 100
+    output_muted (mute): Should the sound output be muted?
+    output_volume (ouvl): the sound output volume, an integer from 0 to 100
+
+
+=item $obj->store_script(scpt, [in => file, replacing => savo])
+
+Store a script object into a file (syso/stor)
+
+Parameters:
+
+    direct object (----): the script object to store
+    in (fpth): an alias or file reference to the file to store the script object in
+    replacing (savo): control display of the Save As dialog
+
+
+=item $obj->summarize(****, [in => long])
+
+Summarize the specified text or text file (fbcs/summ)
+
+Reply type: TEXT
+
+Parameters:
+
+    direct object (----): the text (or an alias or file reference to a text file) to summarize
+    in (in  ): the number of sentences desired in the summary
+
+
+=item $obj->system_attribute(****, [has => long])
+
+Test attributes of this computer (fndr/gstl)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): the attribute to test (either a ÒGestaltÓ value or a shell environment variable).
+    has (has ): test specific bits of response (ignored for environment variables)
+
+
+=item $obj->system_info()
+
+Get information about the system (syso/sigt)
+
+Reply type: sirr
+
+
+=item $obj->the_clipboard([as => type])
+
+Return the contents of an applicationÕs clipboard.  Use in a ÔtellÕ block after activating the application (Jons/gClp)
+
+Reply type: ****
+
+Parameters:
+
+    direct object (----): 
+    as (rtyp): the type of data desired
+
+
+=item $obj->time_to_gmt()
+
+Return the difference between local time and GMT (Universal Time) (syso/GMT )
+
+Reply type: long
+
+
+=item $obj->write(****, to => ****, [as => type, for => comp, starting_at => comp])
+
+Write data to a file that was opened for access with write permission (rdwr/writ)
+
+Parameters:
+
+    direct object (----): the data to write to the file
+    to (refn): the file reference number, alias, or file reference of the file to write to
+    as (as  ): how to write the data: as text, data, list, etc.
+    for (nmwr): the number of bytes to write; if not specified, write all the data provided
+    starting_at (wrat): start writing at this position in the file
+
+
+=back
+
+=head2 Classes
+
+=over 4
+
+=item alert_reply (aleR)
+
+Reply record for the Ôdisplay alertÕ command
+
+Properties:
+
+    button_returned (bhit/utxt): name of button chosen (empty if Ôgiving up afterÕ was supplied and alert timed out) (read-only)
+    gave_up (gavu/bool): Did the alert time out? (present only if Ôgiving up afterÕ was supplied) (read-only)
+
+=item dialog_reply (askr)
+
+Reply record for the Ôdisplay dialogÕ command
+
+Properties:
+
+    button_returned (bhit/utxt): name of button chosen (empty if Ôgiving up afterÕ was supplied and dialog timed out) (read-only)
+    gave_up (gavu/bool): Did the dialog time out? (present only if Ôgiving up afterÕ was supplied) (read-only)
+    text_returned (ttxt/utxt): text entered (present only if Ôdefault answerÕ was supplied) (read-only)
+
+=item file_information (asfe)
+
+Reply record for the Ôinfo forÕ command
+
+Properties:
+
+    alias (alis/bool): Is the item an alias file? (read-only)
+    bundle_identifier (bnid/utxt): the itemÕs bundle identifier (if the item is a package) (read-only)
+    busy_status (bzst/bool): Is the item currently in use? (read-only)
+    creation_date (ascd/ldt ): the date the item was created (read-only)
+    default_application (asda/alis): the application that normally opens this kind of item (read-only)
+    displayed_name (dnam/utxt): the user-visible name of the item (read-only)
+    extension_hidden (hidx/bool): Is the itemÕs name extension hidden from the user? (read-only)
+    file_creator (asct/TEXT): the creator type of the item (read-only)
+    file_type (asty/TEXT): the file type of the item (read-only)
+    folder (asdr/bool): Is the item a folder? (read-only)
+    folder_window (asfw/qdrt): the coordinates of the folderÕs window (if the item is a folder) (read-only)
+    icon_position (asip/QDpt): the coordinates of the itemÕs icon in its window or on the desktop (read-only)
+    kind (kind/utxt): the kind of the item (read-only)
+    locked (aslk/bool): Is the item locked? (read-only)
+    long_version (aslv/TEXT): the itemÕs long version string (from the FinderÕs ÔGet InfoÕ box) (read-only)
+    modification_date (asmo/ldt ): the date the item was last modified (read-only)
+    name (pnam/utxt): the name of the item (read-only)
+    name_extension (nmxt/utxt): the name extension of the item (such as ÒtxtÓ) (read-only)
+    package_folder (ispk/bool): Is the item a package (a folder treated as a file?) (read-only)
+    short_name (cfbn/utxt): the short name (CFBundleName) of the item (if the item is an application) (read-only)
+    short_version (assv/TEXT): the itemÕs short version string (from the FinderÕs ÔGet InfoÕ box) (read-only)
+    size (ptsz/long): the size of the item in bytes (read-only)
+    type_identifier (utid/utxt): the itemÕs type identifier (read-only)
+    visible (pvis/bool): Is the item visible? (read-only)
+
+=item ftp_item (ftp )
+
+An item on an FTP server
+
+Properties:
+
+    kind (kind/TEXT): the kind of the FTP item (directory or file) (read-only)
+    name (pnam/TEXT): the name of the FTP item (read-only)
+    properties (pALL/reco): property that allows getting and setting of multiple properties
+    url (pURL/url ): the universal resource locator for this item (read-only)
+
+=item ftp_items (ftp )
+
+=item internet_address (IPAD)
+
+An Internet or Intranet address for the TCP/IP protocol
+
+Properties:
+
+    dns_form (pDNS/TEXT): the Domain Name System form of the address (e.g. apple.com)
+    dotted_decimal_form (pipd/TEXT): the dotted-decimal form of the address (e.g. 17.255.1.1)
+    port (ppor/long): the port number of the requested TCP/IP service
+    properties (pALL/reco): property that allows getting and setting of multiple properties
+
+=item internet_addresses (IPAD)
+
+=item posix_file (psxf)
+
+A file object specified with a POSIX (slash)-style pathname.
+
+Properties:
+
+    posix_path (psxp/utxt): the POSIX (slash)-style path of a file or alias object (read-only)
+
+=item system_information (sirr)
+
+Reply record for the Ôsystem infoÕ command
+
+Properties:
+
+    applescript_studio_version (sikv/utxt): the AppleScript Studio version (read-only)
+    applescript_version (siav/utxt): the AppleScript version (read-only)
+    boot_volume (sibv/utxt): the boot volume (read-only)
+    computer_name (sicn/utxt): the computer name (read-only)
+    cpu_speed (sics/long): the clock speed of the CPU in MHz (read-only)
+    cpu_type (sict/utxt): the CPU type (read-only)
+    home_directory (home/alis): the current userÕs home directory (read-only)
+    host_name (ldsa/utxt): the host name (read-only)
+    ipv4_address (siip/utxt): the IPv4 address (read-only)
+    long_user_name (siln/utxt): the current userÕs long name (read-only)
+    physical_memory (sipm/long): the amount of physical RAM in MB (read-only)
+    primary_ethernet_address (siea/utxt): the primary Ethernet address (read-only)
+    short_user_name (sisn/utxt): the current userÕs short name (read-only)
+    system_version (sisv/utxt): the system version (read-only)
+    user_id (siid/long): the current userÕs ID (read-only)
+    user_locale (siul/utxt): the current userÕs locale (read-only)
+
+=item url (url )
+
+A Uniform Resource Locator or Uniform Resource ID (URI)
+
+Properties:
+
+    host (HOST/IPAD): the host specified by this URL (read-only)
+    name (pnam/TEXT): a name given to this URL, usually the name of the page it refers to (read-only)
+    password (RApw/TEXT): the password by which to access this URL (read-only)
+    path (FTPc/TEXT): the location of the target on the host (read-only)
+    properties (pALL/reco): property that allows getting and setting of multiple properties
+    scheme (pusc/esch): the access scheme (read-only)
+    user_name (RAun/TEXT): the user name by which to access this URL (read-only)
+
+=item volume_settings (vlst)
+
+Reply record for the Ôget volume settingsÕ command
+
+Properties:
+
+    alert_volume (alvl/shor): the alert volume (as a percentage of the output volume) (read-only)
+    input_volume (invl/shor): the sound input volume (read-only)
+    output_muted (mute/bool): Is the sound output muted? (read-only)
+    output_volume (ouvl/shor): the sound output volume (read-only)
+
+=item web_page (html)
+
+A web page in HyperText Markup Language form
+
+Properties:
+
+    name (pnam/TEXT): the name of the web page (read-only)
+    properties (pALL/reco): property that allows getting and setting of multiple properties
+    text_encoding (ptxe/TEXT): the text encoding method used for this page (read-only)
+    url (pURL/url ): the universal resource locator for this page (read-only)
+
+=item web_pages (html)
+
+=back
+
+=head2 Enumerations
+
+=over 4
+
+=item 'EAlT'
+
+=over 4
+
+=item informational (infA)
+
+=item critical (criT)
+
+=item warning (warN)
+
+=back
+
+=item 'afdm'
+
+=over 4
+
+=item scripting_additions_folder (Äscr)
+
+The Scripting Additions folder
+
+=item editors_folder (oded)
+
+The OpenDoc Editors folder
+
+=item shared_libraries_folder (Älib)
+
+The Shared Libraries folder
+
+=item modem_scripts_folder (Ämod)
+
+The Modem Scripts folder
+
+=item at_ease_documents_folder (docs)
+
+The At Ease Documents folder
+
+=item printmonitor_folder (prnt)
+
+The PrintMonitor Documents folder
+
+=item at_ease_applications (apps)
+
+The At Ease Applications folder
+
+=item trash_folder (trsh)
+
+The Trash folder
+
+=item control_panels_folder (ctrl)
+
+The Control Panels folder
+
+=item fonts_folder (font)
+
+The Fonts folder
+
+=item desktop_folder (desk)
+
+The user's Desktop folder
+
+=item startup (empz)
+
+The StartupItems folder
+
+=item help_folder (Ählp)
+
+The Help folder
+
+=item folder_action_scripts_folder (fasf)
+
+The user's Folder Action Scripts folder
+
+=item editors (oded)
+
+The OpenDoc Editors folder
+
+=item internet_plugins_folder (Änet)
+
+The Internet Plug-Ins folder
+
+=item current_user_folder (cusr)
+
+The user's home folder
+
+=item stationery_folder (odst)
+
+The Stationery folder
+
+=item plugins (Änet)
+
+The Internet Plug-Ins folder
+
+=item temporary_items_folder (temp)
+
+The Temporary Items folder
+
+=item apple_menu_items (amnu)
+
+The Apple Menu Items folder
+
+=item shutdown_items (shdf)
+
+The Shutdown Items folder
+
+=item apple_menu_items_folder (amnu)
+
+The Apple Menu Items folder
+
+=item at_ease_applications_folder (apps)
+
+The At Ease Applications folder
+
+=item application_support_folder (asup)
+
+The Application Support folder
+
+=item voices_folder (fvoc)
+
+The Speech Voices folder
+
+=item at_ease_documents (docs)
+
+The At Ease Documents folder
+
+=item printer_descriptions_folder (ppdf)
+
+The Printer Descriptions folder
+
+=item printer_drivers_folder (Äprd)
+
+The Printer Drivers folder
+
+=item extensions_folder (extn)
+
+The Extensions folder
+
+=item shutdown_items_folder (shdf)
+
+The Shutdown Items folder
+
+=item preferences_folder (pref)
+
+The user's Preferences folder
+
+=item frontmost_application (egfp)
+
+The frontmost application
+
+=item startup_items_folder (empz)
+
+The StartupItems folder
+
+=item shared_documents_folder (sdat)
+
+The shared Documents folder
+
+=item control_strip_modules_folder (sdev)
+
+The Control Strip Modules folder
+
+=back
+
+=item 'afdr'
+
+=over 4
+
+=item internet_plugins (Änet)
+
+The Internet Plug-Ins folder
+
+=item folder_action_scripts (fasf)
+
+The user's Folder Action Scripts folder
+
+=item utilities_folder (utiÄ)
+
+The Utilities folder
+
+=item speakable_items (spki)
+
+The Speakable Items folder
+
+=item apple_menu (amnu)
+
+The Apple Menu Items folder
+
+=item launcher_items_folder (laun)
+
+The Launcher Items folder
+
+=item library_folder (dlib)
+
+The Library folder
+
+=item desktop_pictures_folder (dtpÄ)
+
+The Desktop Pictures folder
+
+=item movies_folder (mdoc)
+
+The user's Movies folder
+
+=item modem_scripts (Ämod)
+
+The Modem Scripts folder
+
+=item music_folder (µdoc)
+
+The user's Music folder
+
+=item voices (fvoc)
+
+The Voices folder
+
+=item home_folder (cusr)
+
+The user's home folder
+
+=item temporary_items (temp)
+
+The Temporary Items folder
+
+=item applications_folder (apps)
+
+The user's Applications folder
+
+=item shutdown_folder (shdf)
+
+The Shutdown Items folder
+
+=item application_support (asup)
+
+The Application Support folder
+
+=item startup_items (empz)
+
+The StartupItems folder
+
+=item trash (trsh)
+
+The user's Trash folder
+
+=item control_strip_modules (sdev)
+
+The Control Strip Modules folder
+
+=item preferences (pref)
+
+The user's Preferences folder
+
+=item printer_drivers (Äprd)
+
+The Printer Drivers folder
+
+=item documents_folder (docs)
+
+The user's Documents folder
+
+=item shared_documents (sdat)
+
+The shared Documents folder
+
+=item system_folder (macs)
+
+The System folder
+
+=item stationery (odst)
+
+The Stationery folder
+
+=item desktop (desk)
+
+The user's Desktop folder
+
+=item fonts (font)
+
+The Fonts folder
+
+=item extensions (extn)
+
+The Extensions folder
+
+=item workflows_folder (flow)
+
+The Workflows folder
+
+=item shared_libraries (Älib)
+
+The CFMSupport folder
+
+=item users_folder (usrs)
+
+The Users folder
+
+=item pictures_folder (pdoc)
+
+The user's Pictures folder
+
+=item public_folder (pubb)
+
+The user's Public folder
+
+=item keychain_folder (kchn)
+
+The user's Keychains folder
+
+=item help (Ählp)
+
+The Help folder
+
+=item scripting_additions (Äscr)
+
+The Scripting Additions folder
+
+=item printmonitor (prnt)
+
+The PrintMonitor Documents folder
+
+=item system_preferences (sprf)
+
+The PreferencePanes folder
+
+=item startup_disk (boot)
+
+The startup disk
+
+=item control_panels (ctrl)
+
+The Control Panels folder
+
+=item favorites_folder (favs)
+
+The user's Favorites folder
+
+=item sites_folder (site)
+
+The user's Sites folder
+
+=item printer_descriptions (ppdf)
+
+The Printer Descriptions folder
+
+=item scripts_folder (scrÄ)
+
+The user's Scripts folder
+
+=back
+
+=item 'appf'
+
+=over 4
+
+=item application__appname (agcp)
+
+=item it (agcp)
+
+=item frontmost_application (egfp)
+
+=item current_application (agcp)
+
+=item me (agcp)
+
+=back
+
+=item 'esch'
+
+=over 4
+
+=item network_file_system_url (unfs)
+
+=item launch_url (laun)
+
+=item mail_server_url (upop)
+
+=item http_url (http)
+
+=item telnet_url (tlnt)
+
+=item message_url (mess)
+
+=item afp_url (afp )
+
+=item nntp_url (nntp)
+
+=item secure_news_url (snws)
+
+=item gopher_url (gphr)
+
+=item ftp_url (ftp )
+
+=item news_url (news)
+
+=item unknown_url (url?)
+
+????
+
+=item file_url__obsolete (file)
+
+=item remote_application_url (eppc)
+
+=item secure_http_url (htps)
+
+=item mailbox_url (mbox)
+
+=item directory_server_url (uldp)
+
+=item mailbox_access_url (imap)
+
+=item mail_url (mail)
+
+=item appletalk_url (at  )
+
+=item multi_url (mult)
+
+=item streaming_multimedia_url (rtsp)
+
+=back
+
+=item 'essv'
+
+=over 4
+
+=item media_servers (esvm)
+
+=item news_servers (esvn)
+
+=item telnet_hosts (esvt)
+
+=item remote_applications (esve)
+
+=item directory_services (esvd)
+
+=item web_servers (esvw)
+
+=item file_servers (esva)
+
+=item ftp_servers (esvf)
+
+=back
+
+=item 'etpt'
+
+=over 4
+
+=item ip (eipt)
+
+via Internet Protocol
+
+=item appletalk (eatt)
+
+via AppleTalk
+
+=back
+
+=item 'fldm'
+
+=over 4
+
+=item system_domain (flds)
+
+=item classic_domain (fldc)
+
+=item network_domain (fldn)
+
+=item local_domain (fldl)
+
+=item user_domain (fldu)
+
+=back
+
+=item 'olie'
+
+=over 4
+
+=item toward_zero (rndZ)
+
+round toward zero
+
+=item down (rndD)
+
+round down
+
+=item up (rndU)
+
+round up
+
+=item as_taught_in_school (rndS)
+
+round to nearest with .5 always rounding away from zero
+
+=item to_nearest (rndN)
+
+round to nearest
+
+=back
+
+=item 'rdwr'
+
+=over 4
+
+=item boolean (bool)
+
+Boolean.
+
+=item short (shor)
+
+short integers
+
+=item eof (eof )
+
+end of file
+
+=item end_of_file (eof )
+
+end of file
+
+=back
+
+=item 'savo'
+
+=over 4
+
+=item yes (yes )
+
+overwrite existing file
+
+=item no (no  )
+
+don't overwrite existing file
+
+=item ask (ask )
+
+display save as dialog
+
+=back
+
+=item 'stic'
+
+=over 4
+
+=item caution (   )
+
+The Caution alert icon
+
+=item stop (    )
+
+The Stop alert icon
+
+=item note (   )
+
+The Note alert icon
+
+=back
+
+=back
+
+=head1 AUTHOR
+
+Glue created by root
+using F<gluemac> by Chris Nandor and the Mac::AETE modules
+by David C. Schooley.
+
+Copyright (c) 2006.  All rights reserved.  This program is
+free software; you can redistribute it and/or modify it under the terms
+of the Artistic License, distributed with Perl.
+
+=head1 SEE ALSO
+
+Mac::AppleEvents, Mac::AppleEvents::Simple, macperlcat, Inside Macintosh: 
+Interapplication Communication, Mac::Glue, Mac::AETE.
+
+=cut

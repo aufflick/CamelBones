@@ -1,0 +1,101 @@
+=head1 NAME
+
+Mac::Types - Macintosh Toolbox Types and conversions.
+
+=head1 DESCRIPTION
+
+Access to Inside Macintosh is essential for proper use of these functions.
+Explanations of terms, processes and procedures are provided there.
+Any attempt to use these functions without guidance can cause severe errors in 
+your machine, including corruption of data. B<You have been warned.>
+
+=head2 Functions
+
+=over 4
+
+=item MacPack [ CONVERTERS ...] CODE, DATA ...
+
+Convert a perl value into a Mac toolbox type. Predefined codes are:
+
+=over 4
+
+=item TEXT 
+
+Text (an identity operation).
+
+=item enum
+
+=item type 
+
+=item keyw
+
+A 4-byte string.
+
+=item bool 
+
+A boolean.
+
+=item shor 
+
+A short integer.
+
+=item long 
+
+A long integer.
+
+=item sing 
+
+A single precision float.
+
+=item doub 
+
+A double precision float.
+
+=item magn 
+
+An unsigned long.
+
+=item qdrt
+
+A QuickDraw C<Rect>.
+
+=item 'STR ' 
+
+A pascal style string.
+
+=item 'STR#' 
+
+A string list.
+
+=item 'fss '
+
+A file specification record.
+
+=back
+
+You can pass further code mappings as hash references.
+
+=item MacUnpack [ CONVERTERS ...] CODE, DATA
+
+Convert a Mac toolbox type into a perl value. Predefined codes are as for 
+C<MacPack>. You can pass further code mappings as hash references.
+
+=back
+
+=head2 XS Functions
+
+=over 4
+
+=item Debugger [ MSG ]
+
+Break into MacsBug. Don't use this if you don't know what MacsBug is.
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

@@ -1,0 +1,162 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = D2AAC045055464E500DB518D /* libffi */;
+		addToTargets = (
+			D2AAC045055464E500DB518D /* libffi */,
+		);
+		breakpoints = (
+			25FF97A70BF0457200204396 /* ppc-ffi_darwin.c:110 */,
+			25FF97C00BF04AE300204396 /* ppc-ffi_darwin.c:300 */,
+		);
+		breakpointsGroup = 253592450BE988E100FBBCF3 /* XCBreakpointsBucket */;
+		codeSenseManager = 25ED40D00BE6F11F00CABA6D /* Code sense */;
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 200209705;
+			PBXWorkspaceStateSaveDate = 200209705;
+		};
+		sourceControlManager = 25ED40CF0BE6F11F00CABA6D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	253592450BE988E100FBBCF3 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = libffi;
+		objects = (
+			25FF97A70BF0457200204396 /* ppc-ffi_darwin.c:110 */,
+			25FF97C00BF04AE300204396 /* ppc-ffi_darwin.c:300 */,
+		);
+	};
+	25ED40CF0BE6F11F00CABA6D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	25ED40D00BE6F11F00CABA6D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	25FF97A70BF0457200204396 /* ppc-ffi_darwin.c:110 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */;
+		functionName = "ffi_prep_args()";
+		hitCount = 1;
+		lineNumber = 110;
+		location = FFITest;
+		modificationTime = 200297276.299794;
+		state = 1;
+	};
+	25FF97C00BF04AE300204396 /* ppc-ffi_darwin.c:300 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */;
+		functionName = "ffi_prep_cif_machdep()";
+		hitCount = 1;
+		lineNumber = 300;
+		location = FFITest;
+		modificationTime = 200297276.301539;
+		state = 1;
+	};
+	4D615B6C0B84B5160064908B /* darwin64.S */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 5824}}";
+			sepNavSelRange = "{3209, 12}";
+			sepNavVisRect = "{{0, 1139}, {726, 313}}";
+			sepNavWindowFrame = "{{189, 43}, {589, 959}}";
+		};
+	};
+	774A68590AB08A8300FBC511 /* README */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 7014}}";
+			sepNavSelRange = "{7613, 8}";
+			sepNavVisRect = "{{0, 3005}, {726, 220}}";
+		};
+	};
+	774A68760AB08B5000FBC511 /* prep_cif.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {550, 3136}}";
+			sepNavSelRange = "{6019, 20}";
+			sepNavVisRect = "{{0, 2294}, {550, 830}}";
+			sepNavWindowFrame = "{{352, 43}, {589, 959}}";
+		};
+	};
+	774A687A0AB08B6D00FBC511 /* ppc-asm.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {550, 1764}}";
+			sepNavSelRange = "{3054, 11}";
+			sepNavVisRect = "{{0, 580}, {550, 830}}";
+			sepNavWindowFrame = "{{15, 38}, {589, 959}}";
+		};
+	};
+	774A687B0AB08B6D00FBC511 /* ppc-darwin.S */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {661, 3458}}";
+			sepNavSelRange = "{2830, 0}";
+			sepNavVisRect = "{{0, 899}, {661, 830}}";
+			sepNavWindowFrame = "{{142, 43}, {700, 959}}";
+		};
+	};
+	774A687C0AB08B6D00FBC511 /* ppc-darwin_closure.S */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {584, 4914}}";
+			sepNavSelRange = "{2061, 0}";
+			sepNavVisRect = "{{0, 518}, {584, 830}}";
+			sepNavWindowFrame = "{{465, 43}, {623, 959}}";
+		};
+	};
+	774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {614, 12572}}";
+			sepNavSelRange = "{18898, 0}";
+			sepNavVisRect = "{{0, 8089}, {614, 830}}";
+			sepNavWindowFrame = "{{202, 43}, {653, 959}}";
+		};
+	};
+	774A687F0AB08B6D00FBC511 /* ppc-ffitarget.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 1442}}";
+			sepNavSelRange = "{2417, 0}";
+			sepNavVisRect = "{{0, 1121}, {726, 220}}";
+		};
+	};
+	774A689A0AB08BEB00FBC511 /* ffi.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {550, 4606}}";
+			sepNavSelRange = "{4092, 15}";
+			sepNavVisRect = "{{0, 666}, {550, 830}}";
+			sepNavWindowFrame = "{{538, 43}, {589, 959}}";
+		};
+	};
+	774A689B0AB08BEB00FBC511 /* ffi_common.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {726, 1330}}";
+			sepNavSelRange = "{1605, 20}";
+			sepNavVisRect = "{{0, 817}, {726, 313}}";
+			sepNavWindowFrame = "{{15, 38}, {822, 959}}";
+		};
+	};
+	774A689C0AB08BEB00FBC511 /* fficonfig.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {584, 2240}}";
+			sepNavSelRange = "{892, 30}";
+			sepNavVisRect = "{{0, 0}, {584, 830}}";
+			sepNavWindowFrame = "{{15, 38}, {623, 959}}";
+		};
+	};
+	D2AAC045055464E500DB518D /* libffi */ = {
+		activeExec = 0;
+	};
+}

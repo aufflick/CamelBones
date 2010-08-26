@@ -1,0 +1,10 @@
+{
+    CFBundleGetInfoString = "CamelBones 1.1.0, Copyright 2002-2007 Sherm Pendley";
+    CFBundleIdentifier = "org.camelbones.CamelBones";
+    CFBundleName = CamelBones;
+    Classes = (
+    );
+    NSExecutable = CamelBones;
+    NSMainNibFile = "";
+    NSPrincipalClass = CBPerl;
+}

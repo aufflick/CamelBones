@@ -1,0 +1,51 @@
+# -*- Mode: makefile; -*-
+
+CB_HEADER_FILES = \
+	AppMain.h \
+	CamelBones.h \
+	CBPerl.h \
+	CBPerlArray.h \
+	CBPerlHash.h \
+	CBPerlObject.h \
+	CBPerlScalar.h \
+	Conversions.h \
+	DylibInit.h \
+	Globals.h \
+	NativeMethods.h \
+	PerlImports.h \
+	PerlMethods.h \
+	Runtime.h \
+	Structs.h \
+	Wrappers.h
+
+CB_RESOURCE_FILES = \
+	typemap \
+	CBDummyModule.pm \
+	AppKitGlobalStrings.plist \
+	FoundationGlobalStrings.plist
+
+DYLIB_OBJC_FILES = \
+	CBPerl.m \
+	CBPerlArray.m \
+	CBPerlHash.m \
+	CBPerlObject.m \
+	CBPerlObjectInternals.m \
+	CBPerlScalar.m \
+	CBPerlScalarInternals.m \
+	Conversions.m \
+	Globals.m \
+	NativeMethods.m \
+	PerlMethods.m \
+	Runtime.m \
+	Structs.m \
+	Wrappers.m
+
+DYLIB_C_FILES = \
+	perlxsi.c
+
+STUB_OBJC_FILES = \
+	AppMain.m \
+	StubInit.m \
+	DylibInit.m \
+	StubClasses.m \
+	StubFunctions.m

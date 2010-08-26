@@ -1,0 +1,204 @@
+# -*- Mode: makefile; -*-
+
+# Makefile for CamelBones on Mac OS X using Cocoa
+
+BUILD_DIR = build
+
+FRAMEWORK = $(PACKAGE_NAME).framework
+ifdef EMBEDDED
+INSTALL_DIR = /Developer/CamelBones/Frameworks
+else
+INSTALL_DIR = /Library/Frameworks
+endif
+
+all: $(BUILD_DIR) framework stub dylib headers rsrc infoplist cpan_module kits
+
+ifdef DEBUG
+CFLAGS_NOARCH += -g -DCB_DEBUG
+endif
+
+ifdef SDK
+CFLAGS_NOARCH += -isysroot$(SDK)
+LDFLAGS_NOARCH += -Wl,-syslibroot,$(SDK)
+
+# ifeq ("$(SDK)", "/Developer/SDKs/MacOSX10.4u.sdk")
+# CFLAGS_NOARCH += -D__FP__
+# endif
+
+endif
+
+CFLAGS_NOARCH += $(PERL_CFLAGS) -O3 -Wall -Wno-unused
+
+ifeq ("$(UNIVERSAL)", "YES")
+CFLAGS = -arch i386 -arch ppc $(CFLAGS_NOARCH)
+LDFLAGS = -arch i386 -arch ppc $(LDFLAGS_NOARCH)
+else
+CFLAGS = $(CFLAGS_NOARCH) $(FFCALL_CFLAGS_NOARCH)
+LDFLAGS = $(LDFLAGS_NOARCH)
+endif
+
+STUB_LDFLAGS = -dynamiclib $(LDFLAGS) -framework Cocoa -framework Carbon
+
+DYLIB_LDFLAGS = -bundle $(LDFLAGS) -framework Cocoa \
+                -bundle_loader CamelBones.framework/CamelBones
+
+DLEXT = bundle
+CB_DYLIB = $(PERL_ARCH_VER).$(DLEXT)
+
+ifdef EMBEDDED
+STUB_LDFLAGS += -install_name '@executable_path/../Frameworks/CamelBones.framework/CamelBones'
+else
+STUB_LDFLAGS += -install_name 'CamelBones.framework/CamelBones'
+endif
+
+DYLIB_CBASE = $(basename $(DYLIB_C_FILES))
+DYLIB_MBASE = $(basename $(DYLIB_OBJC_FILES))
+DYLIB_COBJ = $(DYLIB_CBASE:%=%.o)
+DYLIB_MOBJ = $(DYLIB_MBASE:%=%.o)
+DYLIB_OBJ += $(DYLIB_COBJ) $(DYLIB_MOBJ)
+
+STUB_MBASE = $(basename $(STUB_OBJC_FILES))
+STUB_OBJ = $(STUB_MBASE:%=%.o)
+
+HDRDIR = $(FRAMEWORK)/Headers
+RSRCDIR = $(FRAMEWORK)/Resources
+DYLIBDIR = $(FRAMEWORK)/Libraries
+EN_RSRCDIR = $(RSRCDIR)/English.lproj
+
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
+
+framework: $(FRAMEWORK) $(HDRDIR) $(RSRCDIR) $(DYLIBDIR)
+
+$(FRAMEWORK):
+	mkdir $(FRAMEWORK)
+
+$(HDRDIR):
+	mkdir $(HDRDIR)
+
+$(RSRCDIR):
+	mkdir $(RSRCDIR)
+
+$(DYLIBDIR):
+	mkdir $(DYLIBDIR)
+
+stub: $(FRAMEWORK)/$(PACKAGE_NAME)
+
+$(FRAMEWORK)/$(PACKAGE_NAME) : $(STUB_OBJ)
+	$(CC) $(STUB_LDFLAGS) -o $@ $(STUB_OBJ)
+ifeq ("$(DEBUG)", "")
+	strip -S $(FRAMEWORK)/$(PACKAGE_NAME)
+endif
+
+dylib: ffcall stub $(DYLIBDIR)/$(CB_DYLIB)/Contents/MacOS/$(CB_DYLIB)
+
+$(DYLIBDIR)/$(CB_DYLIB)/Contents/MacOS/$(CB_DYLIB) : $(DYLIB_OBJ)
+	cp -R Skeleton.bundle $(DYLIBDIR)/$(CB_DYLIB)
+	mkdir -p $(DYLIBDIR)/$(CB_DYLIB)/Contents/MacOS
+	perl -p -i -e 's/REPLACE_ME/$(CB_DYLIB)/' $(DYLIBDIR)/$(CB_DYLIB)/Contents/Info.plist
+	$(CC) $(DYLIB_LDFLAGS) $(PERL_LIB_DIRS) $(PERL_LIBS) -o $@ $(DYLIB_OBJ) $(PERL_OBJ)
+ifeq ("$(DEBUG)", "")
+	strip -S $@
+endif
+
+ifeq ("$(UNIVERSAL)", "YES")
+NativeMethods.o : NativeMethods.m
+	$(CC) -c -arch ppc $(CFLAGS_NOARCH) $(FFCALL_CFLAGS_PPC) -o NativeMethods-ppc.o NativeMethods.m
+	$(CC) -c -arch i386 $(CFLAGS_NOARCH) $(FFCALL_CFLAGS_I386) -o NativeMethods-i386.o NativeMethods.m
+	lipo NativeMethods-ppc.o NativeMethods-i386.o -output NativeMethods.o -create
+endif
+
+headers:
+	cp $(CB_HEADER_FILES) $(HDRDIR)
+
+rsrc:
+	cp $(CB_RESOURCE_FILES) $(RSRCDIR)
+ifdef ENABLE_PAR
+	SDK=$(SDK) $(PERL) ./build-par.pl
+	chmod -R +r $(BUILD_DIR)/PAR/*
+	cp -Rf $(BUILD_DIR)/PAR/* $(RSRCDIR)
+endif
+
+infoplist:
+	cp Info.plist $(RSRCDIR)
+
+depend:
+	$(CC) $(CFLAGS) -MM $(DYLIB_C_FILES) $(DYLIB_OBJC_FILES) $(STUB_OBJC_FILES) > depend.mk
+
+clean_depend:
+	rm depend.mk ;\
+	touch depend.mk
+
+include depend.mk
+
+test: cpan_test
+
+kits:
+ifdef ENABLE_KITS
+	SDK=$(SDK) $(PERL) ./build-devkit.pl
+	SDK=$(SDK) $(PERL) ./build-dbikit.pl
+	SDK=$(SDK) $(PERL) ./build-mpkit.pl
+	SDK=$(SDK) $(PERL) ./build-xmlkit.pl
+	SDK=$(SDK) $(PERL) ./build-catkit.pl
+	SDK=$(SDK) $(PERL) ./build-glkit.pl
+else
+	echo "Skipping kits - configure with --enable-kits to enable"
+endif
+
+install: $(DESTDIR)$(INSTALL_DIR) cpan_install install_framework
+
+$(DESTDIR)$(INSTALL_DIR):
+	mkdir -p $(DESTDIR)$(INSTALL_DIR); \
+	mkdir -p $(DESTDIR)$(INSTALL_DIR)/$(FRAMEWORK)
+
+install_framework: all
+	cp -R $(FRAMEWORK) $(DESTDIR)$(INSTALL_DIR); \
+	find $(DESTDIR)$(INSTALL_DIR)/$(FRAMEWORK) -name 'CVS' | xargs rm -rf
+
+dylibclean: cpan_clean
+	rm -f $(DYLIB_OBJ)
+
+clean: dylibclean
+	rm -f NativeMethods-ppc.o NativeMethods-i386.o ;\
+	rm -rf $(STUB_OBJ) $(FRAMEWORK) ;\
+	rm -rf $(PACKAGE_NAME).$(DLEXT)
+
+realclean: clean clean_depend cpan_distclean
+	rm -f GNUmakefile.conf ;\
+	rm -f config.h ;\
+	rm -f config.log ;\
+	rm -f config.status
+
+rmbuild:
+	rm -rf $(BUILD_DIR)
+
+ifdef EMBEDDED
+MAKEFILE_PL_ARGS = LIB=$(INSTALL_DIR)/$(DYLIBDIR)/$(CB_DYLIB)/Resources
+endif
+
+cpan_module: framework dylib CPAN/Makefile
+	cd CPAN ;\
+	make
+
+CPAN/Makefile: CPAN/Makefile.PL
+	cd CPAN ;\
+	CFLAGS='$(CFLAGS) -ObjC' LDFLAGS='$(LDFLAGS)' $(PERL) Makefile.PL $(MAKEFILE_PL_ARGS)
+
+cpan_test: cpan_module
+	cd CPAN ;\
+	DYLD_FRAMEWORK_PATH=../ make test
+
+cpan_install:
+	cd CPAN ;\
+	make install DESTDIR=$(DESTDIR)
+
+cpan_clean:
+	cd CPAN ;\
+	$(PERL) Makefile.PL ;\
+	make clean
+
+cpan_distclean:
+	cd CPAN ;\
+	$(PERL) Makefile.PL ;\
+	make distclean
+

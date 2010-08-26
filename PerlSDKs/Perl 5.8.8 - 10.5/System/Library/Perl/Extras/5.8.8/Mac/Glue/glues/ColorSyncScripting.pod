@@ -1,0 +1,446 @@
+=head1 NAME
+
+ColorSyncScripting Glue - Control ColorSyncScripting app (com.apple.ColorSyncScripting)
+
+=head1 SYNOPSIS
+
+    use Mac::Glue;
+    my $obj = new Mac::Glue 'ColorSyncScripting';
+
+=head1 DESCRIPTION
+
+See C<Mac::Glue> for complete documentation on base usage and framework.
+
+=head2 Events
+
+=over 4
+
+=item $obj->close(obj , [saving => savo, saving_in => alis])
+
+Close an object (core/clos)
+
+Parameters:
+
+    direct object (----): the objects to close
+    saving (savo): specifies whether or not changes should be saved before closing
+    saving_in (kfil): the file in which to save the object
+
+
+=item $obj->embed(imag, with_source => prof, [matching_with => pRdr, replacing => bool, saving_into => fss , using_quality => pQua])
+
+Embed an image with an ICC profile (sync/csEI)
+
+Reply type: null
+
+Parameters:
+
+    direct object (----): an image file alias
+    with_source (ePrf): the profile to embed in the image
+    matching_with (eRdr): the rendering intent for the embeded profile
+    replacing (repl): if a file with that name already exists, replace it
+    saving_into (dest): If this parameter is a file, then it specifies the resulting image.  If it is a folder, then it specifies the location of the resulting image which will have the same name as the original file.  If it is not provided, then the original file is modified.
+    using_quality (pQua): the optional quality for the embeded profile
+
+
+=item $obj->match(imag, to_destination => prof, [from_source => prof, matching_with => pRdr, replacing => bool, saving_into => fss , using_quality => pQua])
+
+Match an image (sync/csMI)
+
+Reply type: null
+
+Parameters:
+
+    direct object (----): an image file alias
+    to_destination (dPrf): the destination profile for the match
+    from_source (sPrf): the optional source profile for the match
+    matching_with (sRdr): the rendering intent for the match
+    replacing (repl): if a file with that name already exists, replace it
+    saving_into (dest): If this parameter is a file, then it specifies the resulting image.  If it is a folder, then it specifies the location of the resulting image which will have the same name as the original file.  If it is not provided, then the original file is modified.
+    using_quality (pQua): the optional quality for the match
+
+
+=item $obj->match_link(imag, through_link => prof, [matching_with => pRdr, replacing => bool, saving_into => fss , using_quality => pQua])
+
+Match an image with a device link profile (sync/csLI)
+
+Reply type: null
+
+Parameters:
+
+    direct object (----): an image file alias
+    through_link (lPrf): the device link profile for the match
+    matching_with (lRdr): the rendering intent for the match
+    replacing (repl): if a file with that name already exists, replace it
+    saving_into (dest): If this parameter is a file, then it specifies the resulting image.  If it is a folder, then it specifies the location of the resulting image which will have the same name as the original file.  If it is not provided, then the original file is modified.
+    using_quality (pQua): the optional quality for the match
+
+
+=item $obj->open(obj )
+
+Open the specified object(s) (aevt/odoc)
+
+Parameters:
+
+    direct object (----): Objects to open. Can be a list of files or an object specifier.
+
+
+=item $obj->proof(imag, onto_proof => prof, to_destination => prof, [from_source => prof, matching_with => pRdr, proofing_with => pRdr, replacing => bool, saving_into => fss , using_quality => pQua])
+
+Proof an image (sync/csPI)
+
+Reply type: null
+
+Parameters:
+
+    direct object (----): 
+    onto_proof (pPrf): the proof profile for the match
+    to_destination (dPrf): the destination profile for the match
+    from_source (sPrf): the optional source profile for the match
+    matching_with (sRdr): the rendering intent for the match between the source and destination profiles
+    proofing_with (dRdr): the rendering intent for the match between the destination and proof profiles
+    replacing (repl): if a file with that name already exists, replace it
+    saving_into (dest): If this parameter is a file, then it specifies the resulting image.  If it is a folder, then it specifies the location of the resulting image which will have the same name as the original file.  If it is not provided, then the original file is modified.
+    using_quality (pQua): the optional quality for the match
+
+
+=item $obj->quit()
+
+Quit application (aevt/quit)
+
+
+=item $obj->run()
+
+Sent to an application when it is double-clicked (aevt/oapp)
+
+
+=item $obj->save(obj , [in => alis])
+
+save a set of objects (core/save)
+
+Reply type: null
+
+Parameters:
+
+    direct object (----): Objects to save.
+    in (kfil): the file in which to save the object(s)
+
+
+=item $obj->unembed(imag, [replacing => bool, saving_into => fss ])
+
+Remove any embeded ICC profiles from an image (sync/csUI)
+
+Reply type: null
+
+Parameters:
+
+    direct object (----): an image file alias
+    replacing (repl): if a file with that name already exists, replace it
+    saving_into (dest): If this parameter is a file, then it specifies the resulting image.  If it is a folder, then it specifies the location of the resulting image which will have the same name as the original file.  If it is not provided, then the original file is modified.
+
+
+=back
+
+=head2 Classes
+
+=over 4
+
+=item application (capp)
+
+An application program.
+
+Properties:
+
+    default_cmyk_profile (CMK¹/prof): the default CMYK profile
+    default_cmyk_profile_location (CMKp/alis): the default CMYK profile location
+    default_gray_profile (GRY¹/prof): the default Gray profile
+    default_gray_profile_location (GRYp/alis): the default Gray profile location
+    default_lab_profile (Lab¹/prof): the default Lab profile
+    default_lab_profile_location (Labp/alis): the default Lab profile location
+    default_rgb_profile (RGB¹/prof): the default RGB profile
+    default_rgb_profile_location (RGBp/alis): the default RGB profile location
+    default_xyz_profile (XYZ¹/prof): the default XYZ profile
+    default_xyz_profile_location (XYZp/alis): the default XYZ profile location
+    preferred_cmm (pcmm/pCMM): ... or automatic.
+    profile_folder (pfdr/alis): the ColorSync profile folder (read-only)
+    quit_delay (qdel/long): ... or the time in seconds the application will idle before quiting
+    system_profile (sys¹/prof): the default system profile
+    system_profile_location (sysp/alis): the default system profile location
+
+Elements:
+
+    display, image, profile
+
+=item display (disp)
+
+A monitor connected to the computer
+
+Properties:
+
+    display_profile (mPrf/prof): the profile for the display
+    name (pnam/itxt): the name of the display (read-only)
+    number (mNum/long): the number of the display (read-only)
+
+=item displays (disp)
+
+Every display
+
+=item image (imag)
+
+An image file.
+
+Properties:
+
+    color_space (spac/pSpc): the color space of the image (read-only)
+    location (pLoc/alis): the file location of the image (read-only)
+    name (pnam/itxt): the name of the image (read-only)
+
+Elements:
+
+    profile
+
+=item images (imag)
+
+Every image
+
+=item profile (prof)
+
+A ColorSync ICC profile.
+
+Properties:
+
+    color_space (pSpc/pSpc): the color space of the profile (read-only)
+    connection_space (pPCS/pPCS): the connection space of the profile (read-only)
+    creation_date (ascd/ldt ): the creation date of the profile
+    creator (pCre/type): the creator type of the profile
+    device_class (pCla/pCla): the device class of the profile (read-only)
+    device_manufacturer (pMan/type): the device manufacturer of the profile
+    device_model (pMod/long): the device model of the profile
+    location (pLoc/alis): the file location of the profile (read-only)
+    name (pnam/itxt): the description text of the profile
+    platform (pPlt/type): the intended platform of the profile
+    preferred_cmm (pcmm/type): the preferred CMM of the profile
+    quality (pQal/pQua): the quality of the profile
+    rendering_intent (pRdr/pRdr): the rendering intent of the profile
+    size (size/long): the size of the profile in bytes (read-only)
+    version (pVer/itxt): the version number of the profile
+
+=item profiles (prof)
+
+Every profile
+
+=back
+
+=head2 Enumerations
+
+=over 4
+
+=item 'pCMM'
+
+=over 4
+
+=item automatic (ŠŸtš)
+
+automatic
+
+=back
+
+=item 'pCla'
+
+=over 4
+
+=item link (link)
+
+device-link profile
+
+=item named (nmcl)
+
+named color space profile
+
+=item colorspace (spac)
+
+colorspace profile
+
+=item input (scnr)
+
+input device
+
+=item abstract (abst)
+
+abstract profile
+
+=item monitor (mntr)
+
+display device
+
+=item output (prtr)
+
+output device
+
+=back
+
+=item 'pDly'
+
+=over 4
+
+=item immediate (    )
+
+immediate
+
+=item default (ÿÿÿÿ)
+
+default
+
+=item never (ÿÿÿþ)
+
+never
+
+=back
+
+=item 'pPCS'
+
+=over 4
+
+=item lab (Lab )
+
+Lab
+
+=item xyz (XYZ )
+
+XYZ
+
+=back
+
+=item 'pQua'
+
+=over 4
+
+=item draft (Qua1)
+
+draft
+
+=item normal (Qua0)
+
+normal
+
+=item best (Qua2)
+
+best
+
+=back
+
+=item 'pRdr'
+
+=over 4
+
+=item saturation_intent (Rdr2)
+
+saturation
+
+=item absolute_colorimetric_intent (Rdr3)
+
+absolute colorimetric
+
+=item perceptual_intent (Rdr0)
+
+perceptual
+
+=item relative_colorimetric_intent (Rdr1)
+
+relative colorimetric
+
+=back
+
+=item 'pSpc'
+
+=over 4
+
+=item six_color (6CLR)
+
+Six color
+
+=item eight_channel (MCH8)
+
+Eight channel
+
+=item five_channel (MCH5)
+
+Five channel
+
+=item cmyk (CMYK)
+
+CMYK
+
+=item seven_channel (MCH7)
+
+Seven channel
+
+=item five_color (5CLR)
+
+Five color
+
+=item six_channel (MCH6)
+
+Six channel
+
+=item named (NAME)
+
+Named
+
+=item eight_color (8CLR)
+
+Eight color
+
+=item rgb (RGB )
+
+RGB
+
+=item lab (Lab )
+
+Lab
+
+=item gray (GRAY)
+
+Gray
+
+=item xyz (XYZ )
+
+XYZ
+
+=item seven_color (7CLR)
+
+Seven color
+
+=back
+
+=item 'savo'
+
+=over 4
+
+=item yes (yes )
+
+Save objects now
+
+=item no (no  )
+
+Do not save objects
+
+=back
+
+=back
+
+=head1 AUTHOR
+
+Glue created by root
+using F<gluemac> by Chris Nandor and the Mac::AETE modules
+by David C. Schooley.
+
+Copyright (c) 2008.  All rights reserved.  This program is
+free software; you can redistribute it and/or modify it under the terms
+of the Artistic License, distributed with Perl.
+
+=head1 SEE ALSO
+
+Mac::AppleEvents, Mac::AppleEvents::Simple, macperlcat, Inside Macintosh: 
+Interapplication Communication, Mac::Glue, Mac::AETE.
+
+=cut

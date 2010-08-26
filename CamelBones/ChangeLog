@@ -1,0 +1,16 @@
+2002/03/30 - Created ChangeLog
+
+2002/03/30 - Merged patch from Finlay Dobbie to replace [CBPerl CBPerlMain]
+             method with CBApplicationMain() function.
+
+2002/04/14 - Merged code from Dan Sugalski to support Foundation and AppKit functions
+
+2002/04/18 - Added support for returning id from -eval in CBPerl. It was formerly
+             declared as id but always returned nil.
+
+2002/04/18 - Added support for customizing the Objective-C method signatures used to
+             represent Perl methods.
+
+2002/04/18 - Added support for CamelBones::ShowUnhandledTypeMessages flag in CBDerefSVtoID
+
+2003/12/03 - Added Panther support

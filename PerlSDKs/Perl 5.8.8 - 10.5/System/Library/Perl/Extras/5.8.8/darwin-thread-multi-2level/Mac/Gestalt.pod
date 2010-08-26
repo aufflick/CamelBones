@@ -1,0 +1,1096 @@
+=head1 NAME
+
+Mac::Gestalt - Macintosh Toolbox Interface to the Gestalt Manager
+
+=head1 SYNOPSIS
+
+
+	# Only bring in the names we want
+	use Mac::Gestalt qw(%Gestalt gestaltAppleTalkVersion);
+
+	if ( $Gestalt{gestaltAppleTalkVersion} lt "58" ) {
+		warn "Unable to use AppleTalk\n";
+	}
+
+=head1 DESCRIPTION
+
+You can use the Gestalt function or the %Gestalt tied hash to obtain information about 
+the operating environment. You specify what information you need by passing one of
+the selector codes recognized by Gestalt.
+
+=pod
+
+There is a huge list of codes. Many of them return a bitmask, so to find out 
+whether e.g. the Code Fragment Manager is present, you  write
+
+	$Gestalt{gestaltCFMAttr} & (1 << gestaltCFMPresent)
+
+=head2 Constants
+
+=over 4
+
+=item gestaltAddressingModeAttr
+
+=item gestalt32BitAddressing
+
+=item gestalt32BitSysZone
+
+=item gestalt32BitCapable
+
+Address mode.
+
+=item gestaltAliasMgrAttr
+
+=item gestaltAliasMgrPresent
+
+=item gestaltAliasMgrSupportsRemoteAppletalk
+
+Alias manager.
+
+=item gestaltAppleTalkVersion
+
+AppleTalk.
+
+=item gestaltAUXVersion
+
+A/UX.
+
+=item gestaltCloseViewAttr
+
+=item gestaltCloseViewEnabled
+
+=item gestaltCloseViewDisplayMgrFriendly
+
+CloseView.
+
+=item gestaltCFMAttr
+
+=item gestaltCFMPresent
+
+Code Fragment Manager.
+
+=item gestaltColorMatchingAttr
+
+=item gestaltHighLevelMatching
+
+=item gestaltColorMatchingLibLoaded
+
+ColorSync.
+
+=item gestaltColorMatchingVersion
+
+=item gestaltColorSync10
+
+=item gestaltColorSync11
+
+=item gestaltColorSync104
+
+=item gestaltColorSync105
+
+ColorSync version.
+
+=item gestaltConnMgrAttr
+
+=item gestaltConnMgrPresent
+
+=item gestaltConnMgrCMSearchFix
+
+=item gestaltConnMgrErrorString
+
+=item gestaltConnMgrMultiAsyncIO
+
+Communications toolbox connection manager.
+
+=item gestaltComponentMgr
+
+Component manager.
+
+=item gestaltColorPickerVersion
+
+=item gestaltColorPicker
+
+Color picker.
+
+=item gestaltNativeCPUtype
+
+=item gestaltCPU68000
+
+=item gestaltCPU68010
+
+=item gestaltCPU68020
+
+=item gestaltCPU68030
+
+=item gestaltCPU68040
+
+=item gestaltCPU601
+
+=item gestaltCPU603
+
+=item gestaltCPU604
+
+CPU type.
+
+=item gestaltCRMAttr
+
+=item gestaltCRMPresent
+
+=item gestaltCRMPersistentFix
+
+=item gestaltCRMToolRsrcCalls
+
+Communications toolbox connection resource manager.
+
+=item gestaltControlStripVersion
+
+Control strip manager.
+
+=item gestaltCTBVersion
+
+Communications toolbox.
+
+=item gestaltDBAccessMgrAttr
+
+=item gestaltDBAccessMgrPresent
+
+Database access manager.
+
+=item gestaltDictionaryMgrAttr
+
+=item gestaltDictionaryMgrPresent
+
+Dictionary manager.
+
+=item gestaltDITLExtAttr
+
+=item gestaltDITLExtPresent
+
+Dialog manager extensions.
+
+=item gestaltDisplayMgrAttr
+
+=item gestaltDisplayMgrPresent
+
+=item gestaltDisplayMgrCanSwitchMirrored
+
+=item gestaltDisplayMgrSetDepthNotifies
+
+Display manager.
+
+=item gestaltDisplayMgrVers
+
+Display manager version.
+
+=item gestaltDragMgrAttr
+
+=item gestaltDragMgrPresent
+
+=item gestaltDragMgrFloatingWind
+
+=item gestaltPPCDragLibPresent
+
+Drag manager.
+
+=item gestaltEasyAccessAttr
+
+=item gestaltEasyAccessOff
+
+=item gestaltEasyAccessOn
+
+=item gestaltEasyAccessSticky
+
+=item gestaltEasyAccessLocked
+
+Easy access.
+
+=item gestaltEditionMgrAttr
+
+=item gestaltEditionMgrPresent
+
+=item gestaltEditionMgrTranslationAware
+
+Edition manager.
+
+=item gestaltAppleEventsAttr
+
+=item gestaltAppleEventsPresent
+
+=item gestaltScriptingSupport
+
+=item gestaltOSLInSystem
+
+AppleEvent manager.
+
+=item gestaltFinderAttr
+
+=item gestaltFinderDropEvent
+
+=item gestaltFinderMagicPlacement
+
+=item gestaltFinderCallsAEProcess
+
+=item gestaltOSLCompliantFinder
+
+=item gestaltFinderSupports4GBVolumes
+
+=item gestaltFinderHasClippings
+
+Finder attributes.
+
+=item gestaltFindFolderAttr
+
+=item gestaltFindFolderPresent
+
+Folder manager.
+
+=item gestaltFontMgrAttr
+
+=item gestaltOutlineFonts
+
+Font manager.
+
+=item gestaltFPUType
+
+=item gestaltNoFPU
+
+=item gestalt68881
+
+=item gestalt68882
+
+=item gestalt68040FPU
+
+680X0 FPU.
+
+=item gestaltFSAttr
+
+=item gestaltFullExtFSDispatching
+
+=item gestaltHasFSSpecCalls
+
+=item gestaltHasFileSystemManager
+
+=item gestaltFSMDoesDynamicLoad
+
+=item gestaltFSSupports4GBVols
+
+=item gestaltFSSupports2TBVols
+
+=item gestaltHasExtendedDiskInit
+
+File system attributes.
+
+=item gestaltFSMVersion
+
+File system manager.
+
+=item gestaltFXfrMgrAttr
+
+=item gestaltFXfrMgrPresent
+
+=item gestaltFXfrMgrMultiFile
+
+=item gestaltFXfrMgrErrorString
+
+File transfer manager.
+
+=item gestaltGraphicsAttr
+
+=item gestaltGraphicsIsDebugging
+
+=item gestaltGraphicsIsLoaded
+
+=item gestaltGraphicsIsPowerPC
+
+QuickDraw GX attributes.
+
+=item gestaltGraphicsVersion
+
+=item gestaltCurrentGraphicsVersion
+
+QuickDraw GX version.
+
+=item gestaltHardwareAttr
+
+=item gestaltHasVIA1
+
+=item gestaltHasVIA2
+
+=item gestaltHasASC
+
+=item gestaltHasSCC
+
+=item gestaltHasSCSI
+
+=item gestaltHasSoftPowerOff
+
+=item gestaltHasSCSI961
+
+=item gestaltHasSCSI962
+
+=item gestaltHasUniversalROM
+
+=item gestaltHasEnhancedLtalk
+
+Hardware attributes.
+
+=item gestaltHelpMgrAttr
+
+=item gestaltHelpMgrPresent
+
+=item gestaltHelpMgrExtensions
+
+Help manager.
+
+=item gestaltCompressionMgr
+
+QuickTime image compression manager.
+
+=item gestaltIconUtilitiesAttr
+
+=item gestaltIconUtilitiesPresent
+
+Icon utilities.
+
+=item gestaltKeyboardType
+
+=item gestaltMacKbd
+
+=item gestaltMacAndPad
+
+=item gestaltMacPlusKbd
+
+=item gestaltExtADBKbd
+
+=item gestaltStdADBKbd
+
+=item gestaltPrtblADBKbd
+
+=item gestaltPrtblISOKbd
+
+=item gestaltStdISOADBKbd
+
+=item gestaltExtISOADBKbd
+
+=item gestaltADBKbdII
+
+=item gestaltADBISOKbdII
+
+=item gestaltPwrBookADBKbd
+
+=item gestaltPwrBookISOADBKbd
+
+=item gestaltAppleAdjustKeypad
+
+=item gestaltAppleAdjustADBKbd
+
+=item gestaltAppleAdjustISOKbd
+
+=item gestaltJapanAdjustADBKbd
+
+=item gestaltPwrBkExtISOKbd
+
+=item gestaltPwrBkExtJISKbd
+
+=item gestaltPwrBkExtADBKbd
+
+Keyboard types.
+
+=item gestaltLowMemorySize
+
+Size of low memory area.
+
+=item gestaltLogicalRAMSize
+
+Locical RAM size.
+
+=item gestaltMachineType
+
+=item gestaltClassic
+
+=item gestaltMacXL
+
+=item gestaltMac512KE
+
+=item gestaltMacPlus
+
+=item gestaltMacSE
+
+=item gestaltMacII
+
+=item gestaltMacIIx
+
+=item gestaltMacIIcx
+
+=item gestaltMacSE030
+
+=item gestaltPortable
+
+=item gestaltMacIIci
+
+=item gestaltMacIIfx
+
+=item gestaltMacClassic
+
+=item gestaltMacIIsi
+
+=item gestaltMacLC
+
+=item gestaltQuadra900
+
+=item gestaltPowerBook170
+
+=item gestaltQuadra700
+
+=item gestaltClassicII
+
+=item gestaltPowerBook100
+
+=item gestaltPowerBook140
+
+=item gestaltQuadra950
+
+=item gestaltMacLCIII
+
+=item gestaltPerforma450
+
+=item gestaltPowerBookDuo210
+
+=item gestaltMacCentris650
+
+=item gestaltPowerBookDuo230
+
+=item gestaltPowerBook180
+
+=item gestaltPowerBook160
+
+=item gestaltMacQuadra800
+
+=item gestaltMacQuadra650
+
+=item gestaltMacLCII
+
+=item gestaltPowerBookDuo250
+
+=item gestaltAWS9150_80
+
+=item gestaltPowerMac8100_110
+
+=item gestaltAWS8150_110
+
+=item gestaltMacIIvi
+
+=item gestaltMacIIvm
+
+=item gestaltPerforma600
+
+=item gestaltPowerMac7100_80
+
+=item gestaltMacIIvx
+
+=item gestaltMacColorClassic
+
+=item gestaltPerforma250
+
+=item gestaltPowerBook165c
+
+=item gestaltMacCentris610
+
+=item gestaltMacQuadra610
+
+=item gestaltPowerBook145
+
+=item gestaltPowerMac8100_100
+
+=item gestaltMacLC520
+
+=item gestaltAWS9150_120
+
+=item gestaltMacCentris660AV
+
+=item gestaltPerforma46x
+
+=item gestaltPowerMac8100_80
+
+=item gestaltAWS8150_80
+
+=item gestaltPowerBook180c
+
+=item gestaltPowerMac6100_60
+
+=item gestaltAWS6150_60
+
+=item gestaltPowerBookDuo270c
+
+=item gestaltMacQuadra840AV
+
+=item gestaltPerforma550
+
+=item gestaltPowerBook165
+
+=item gestaltMacTV
+
+=item gestaltMacLC475
+
+=item gestaltPerforma47x
+
+=item gestaltMacLC575
+
+=item gestaltMacQuadra605
+
+=item gestaltQuadra630
+
+=item gestaltPowerMac6100_66
+
+=item gestaltAWS6150_66
+
+=item gestaltPowerBookDuo280
+
+=item gestaltPowerBookDuo280c
+
+=item gestaltPowerMac7100_66
+
+=item gestaltPowerBook150
+
+Macintosh system type.
+
+=item kMachineNameStrID
+
+Resource ID of C<'STR '> resource containing machine type.
+
+=item gestaltMachineIcon
+
+Machine icon.
+
+=item gestaltMiscAttr
+
+=item gestaltScrollingThrottle
+
+=item gestaltSquareMenuBar
+
+Miscellaneous attributes.
+
+=item gestaltMixedModeVersion
+
+=item gestaltMixedModeAttr
+
+=item gestaltPowerPCAware
+
+Mixed mode manager.
+
+=item gestaltMMUType
+
+=item gestaltNoMMU
+
+=item gestaltAMU
+
+=item gestalt68851
+
+=item gestalt68030MMU
+
+=item gestalt68040MMU
+
+=item gestaltEMMU1
+
+680X0 MMU types.
+
+=item gestaltStdNBPAttr
+
+=item gestaltStdNBPPresent
+
+Standard NBP dialog.
+
+=item gestaltNotificationMgrAttr
+
+=item gestaltNotificationPresent
+
+Notification manager.
+
+=item gestaltNameRegistryVersion
+
+Name registry.
+
+=item gestaltNuBusSlotCount
+
+Number of NuBus solts.
+
+=item gestaltOpenFirmwareInfo
+
+Open firmware.
+
+=item gestaltOSAttr
+
+=item gestaltSysZoneGrowable
+
+=item gestaltLaunchCanReturn
+
+=item gestaltLaunchFullFileSpec
+
+=item gestaltLaunchControl
+
+=item gestaltTempMemSupport
+
+=item gestaltRealTempMemory
+
+=item gestaltTempMemTracked
+
+=item gestaltIPCSupport
+
+=item gestaltSysDebuggerSupport
+
+OS attributes.
+
+=item gestaltOSTable
+
+OS Trap table.
+
+=item gestaltPCXAttr
+
+=item gestaltPCXHas8and16BitFAT
+
+=item gestaltPCXHasProDOS
+
+PC Exchange.
+
+=item gestaltLogicalPageSize
+
+Logical memory page size.
+
+=item gestaltPopupAttr
+
+=item gestaltPopupPresent
+
+Popup menu controls.
+
+=item gestaltPowerMgrAttr
+
+=item gestaltPMgrExists
+
+=item gestaltPMgrCPUIdle
+
+=item gestaltPMgrSCC
+
+=item gestaltPMgrSound
+
+=item gestaltPMgrDispatchExists
+
+Power manager.
+
+=item gestaltPPCToolboxAttr
+
+=item gestaltPPCToolboxPresent
+
+=item gestaltPPCSupportsRealTime
+
+=item gestaltPPCSupportsIncoming
+
+=item gestaltPPCSupportsOutGoing
+
+Process-to-Process communications toolbox.
+
+=item gestaltProcessorType
+
+=item gestalt68000
+
+=item gestalt68010
+
+=item gestalt68020
+
+=item gestalt68030
+
+=item gestalt68040
+
+Processor type.
+
+=item gestaltParityAttr
+
+=item gestaltHasParityCapability
+
+=item gestaltParityEnabled
+
+Memory parity checking.
+
+=item gestaltQuickdrawVersion
+
+=item gestaltOriginalQD
+
+=item gestalt8BitQD
+
+=item gestalt32BitQD
+
+=item gestalt32BitQD11
+
+=item gestalt32BitQD12
+
+=item gestalt32BitQD13
+
+QuickDraw attributes.
+
+=item gestaltQuickdrawFeatures
+
+=item gestaltHasColor
+
+=item gestaltHasDeepGWorlds
+
+=item gestaltHasDirectPixMaps
+
+=item gestaltHasGrayishTextOr
+
+=item gestaltSupportsMirroring
+
+QuickDraw features.
+
+=item gestaltQuickTimeVersion
+
+=item gestaltQuickTime
+
+QuickTime.
+
+=item gestaltQuickTimeFeatures
+
+=item gestaltPPCQuickTimeLibPresent
+
+QuickTime features.
+
+=item gestaltPhysicalRAMSize
+
+Size of physical RAM.
+
+=item gestaltRBVAddr
+
+RBV, whatever that is.
+
+=item gestaltROMSize
+
+Size of built in ROM.
+
+=item gestaltROMVersion
+
+ROM version.
+
+=item gestaltResourceMgrAttr
+
+=item gestaltPartialRsrcs
+
+Resource manager.
+
+=item gestaltRealtimeMgrAttr
+
+=item gestaltRealtimeMgrPresent
+
+Realtime manager.
+
+=item gestaltSCCReadAddr
+
+Serial controller read address.
+
+=item gestaltSCCWriteAddr
+
+Serial controller write address.
+
+=item gestaltScrapMgrAttr
+
+=item gestaltScrapMgrTranslationAware
+
+Scrap manager.
+
+=item gestaltScriptMgrVersion
+
+Script manager.
+
+=item gestaltScriptCount
+
+Number of installed script systems.
+
+=item gestaltSCSI
+
+=item gestaltAsyncSCSI
+
+=item gestaltAsyncSCSIINROM
+
+=item gestaltSCSISlotBoot
+
+SCSI manager.
+
+=item gestaltControlStripAttr
+
+=item gestaltControlStripExists
+
+=item gestaltControlStripVersionFixed
+
+=item gestaltControlStripUserFont
+
+=item gestaltControlStripUserHotKey
+
+Control strip attributes.
+
+=item gestaltSerialAttr
+
+=item gestaltHasGPIaToDCDa
+
+=item gestaltHasGPIaToRTxCa
+
+=item gestaltHasGPIbToDCDb
+
+Serial atrributes.
+
+=item gestaltNuBusConnectors
+
+Number of NuBus connectors.
+
+=item gestaltSlotAttr
+
+=item gestaltSlotMgrExists
+
+=item gestaltNuBusPresent
+
+=item gestaltSESlotPresent
+
+=item gestaltSE30SlotPresent
+
+=item gestaltPortableSlotPresent
+
+Slot attributes.
+
+=item gestaltFirstSlotNumber
+
+Number of first slot.
+
+=item gestaltSoundAttr
+
+=item gestaltStereoCapability
+
+=item gestaltStereoMixing
+
+=item gestaltSoundIOMgrPresent
+
+=item gestaltBuiltInSoundInput
+
+=item gestaltHasSoundInputDevice
+
+=item gestaltPlayAndRecord
+
+=item gestalt16BitSoundIO
+
+=item gestaltStereoInput
+
+=item gestaltLineLevelInput
+
+=item gestaltSndPlayDoubleBuffer
+
+=item gestaltMultiChannels
+
+=item gestalt16BitAudioSupport
+
+Sound attributes.
+
+=item gestaltStandardFileAttr
+
+=item gestaltStandardFile58
+
+=item gestaltStandardFileTranslationAware
+
+=item gestaltStandardFileHasColorIcons
+
+=item gestaltStandardFileUseGenericIcons
+
+=item gestaltStandardFileHasDynamicVolumeAllocation
+
+Standard file manager attributes.
+
+=item gestaltSysArchitecture
+
+=item gestalt68k
+
+=item gestaltPowerPC
+
+System architecture.
+
+=item gestaltSystemVersion
+
+System version.
+
+=item gestaltTSMgrVersion
+
+=item gestaltTSMgr2
+
+Text system manager.
+
+=item gestaltTSMgrAttr
+
+=item gestaltTSMDisplayMgrAwareBit
+
+=item gestaltTSMdoesTSMTEBit
+
+Text system manager attributes.
+
+=item gestaltTSMTEVersion
+
+=item gestaltTSMTE1
+
+=item gestaltTSMTE2
+
+Text system manager for TextEdit.
+
+=item gestaltTSMTEAttr
+
+=item gestaltTSMTEPresent
+
+=item gestaltTSMTE
+
+Text system manager for TextEdit attributes.
+
+=item gestaltTextEditVersion
+
+=item gestaltTE1
+
+=item gestaltTE2
+
+=item gestaltTE3
+
+=item gestaltTE4
+
+=item gestaltTE5
+
+=item gestaltTE6
+
+TextEdit manager.
+
+=item gestaltTEAttr
+
+=item gestaltTEHasGetHiliteRgn
+
+=item gestaltTESupportsInlineInput
+
+=item gestaltTESupportsTextObjects
+
+TextEdit attributes.
+
+=item gestaltTeleMgrAttr
+
+=item gestaltTeleMgrPresent
+
+=item gestaltTeleMgrPowerPCSupport
+
+=item gestaltTeleMgrSoundStreams
+
+=item gestaltTeleMgrAutoAnswer
+
+=item gestaltTeleMgrIndHandset
+
+=item gestaltTeleMgrSilenceDetect
+
+=item gestaltTeleMgrNewTELNewSupport
+
+Telephone attributes.
+
+=item gestaltTermMgrAttr
+
+=item gestaltTermMgrPresent
+
+=item gestaltTermMgrErrorString
+
+Communications toolbox terminal manager.
+
+=item gestaltTimeMgrVersion
+
+=item gestaltStandardTimeMgr
+
+=item gestaltRevisedTimeMgr
+
+=item gestaltExtendedTimeMgr
+
+Time manager.
+
+=item gestaltSpeechAttr
+
+=item gestaltSpeechMgrPresent
+
+=item gestaltSpeechHasPPCGlue
+
+Speech synthesis manager.
+
+=item gestaltToolboxTable
+
+Toolbox dispatch table.
+
+=item gestaltThreadMgrAttr
+
+=item gestaltThreadMgrPresent
+
+=item gestaltSpecificMatchSupport
+
+=item gestaltThreadsLibraryPresent
+
+Thread manager.
+
+=item gestaltTVAttr
+
+=item gestaltHasTVTuner
+
+=item gestaltHasSoundFader
+
+=item gestaltHasHWClosedCaptioning
+
+=item gestaltHasIRRemote
+
+=item gestaltHasVidDecoderScaler
+
+=item gestaltHasStereoDecoder
+
+TV interface.
+
+=item gestaltVersion
+
+=item gestaltValueImplementedVers
+
+Gestalt version.
+
+=item gestaltVIA1Addr
+
+=item gestaltVIA2Addr
+
+VIA addresses.
+
+=item gestaltVMAttr
+
+=item gestaltVMPresent
+
+Virtual memory.
+
+=item gestaltTranslationAttr
+
+=item gestaltTranslationMgrExists
+
+=item gestaltTranslationMgrHintOrder
+
+=item gestaltTranslationPPCAvail
+
+=item gestaltTranslationGetPathAPIAvail
+
+Translation manager.
+
+=item gestaltExtToolboxTable
+
+Extended toolbox dispatch table.
+
+=back
+
+=head2 Functions
+
+=over 4
+
+=item Gestalt SELECTOR
+
+Implements the Gestalt query code.
+Return C<undef> if an error was detected.
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>,
+documentation by Bob Dalgleish E<lt>bob.dalgleish@sasknet.sk.caE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

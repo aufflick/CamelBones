@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                browseServices = id; 
+                serviceChanged = id; 
+                toggleDomainsList = id; 
+                transportChanged = id; 
+            }; 
+            CLASS = NetServiceBrowserController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                browseAllDomains = id; 
+                browseButton = id; 
+                domainList = id; 
+                serviceBox = id; 
+                serviceList = id; 
+                transportBox = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

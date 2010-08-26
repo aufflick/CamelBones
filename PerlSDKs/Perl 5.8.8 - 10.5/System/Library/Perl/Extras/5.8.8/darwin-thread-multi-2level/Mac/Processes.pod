@@ -1,0 +1,253 @@
+=head1 NAME
+
+Mac::Processes - Macintosh Toolbox Interface to Process Manager
+
+=head1 SYNOPSIS
+
+    use Mac::Processes;
+
+    while ( ($psn, $psi) = each(%Process) ) {
+        print "$psn\t", 
+               $psi->processName,       " ", 
+               $psi->processNumber,     " ", 
+               $psi->processType,       " ", 
+               $psi->processSignature,  " ", 
+               $psi->processSize,       " ", 
+               $psi->processMode,       " ", 
+               $psi->processLocation,   " ", 
+               $psi->processLauncher,   " ", 
+               $psi->processLaunchDate, " ", 
+               $psi->processActiveTime, " ", 
+               $psi->processAppSpec,    "\n";
+    }
+
+=head1 DESCRIPTION
+
+Access to Inside Macintosh is essential for proper use of these functions.
+Explanations of terms, processes and procedures are provided there.
+Any attempt to use these functions without guidance can cause severe errors in 
+your machine, including corruption of data. B<You have been warned.>
+
+=head2 Constants
+
+=over 4
+
+=item kNoProcess
+
+=item kSystemProcess
+
+=item kCurrentProcess
+
+Special process IDs.
+
+=item launchContinue
+
+=item launchNoFileFlags
+
+=item launchUseMinimum
+
+=item launchDontSwitch
+
+=item launchAllow24Bit
+
+=item launchInhibitDaemon
+
+Launch flags.
+
+=item modeDeskAccessory
+
+=item modeMultiLaunch
+
+=item modeNeedSuspendResume
+
+=item modeCanBackground
+
+=item modeDoesActivateOnFGSwitch
+
+=item modeOnlyBackground
+
+=item modeGetFrontClicks
+
+=item modeGetAppDiedMsg
+
+=item mode32BitCompatible
+
+=item modeHighLevelEventAware
+
+=item modeLocalAndRemoteHLEvents
+
+=item modeStationeryAware
+
+=item modeUseTextEditServices
+
+=item modeDisplayManagerAware
+
+Mode flags in SIZE resource.
+
+=back
+
+=head2 LaunchParam
+
+This Perl hash maps onto the fields of a Launch Parameter Block.
+
+The fields are: 
+
+    launchFileFlags
+    launchControlFlags
+    launchAppSpec
+    launchAvailableSize
+    launchProcessSN
+    launchPreferredSize
+    launchMinimumSize
+
+=over 4
+
+=item new LaunchParam [ARGUMENTS]
+
+Returns LaunchParam.
+
+    $launch = 
+        new LaunchParam(launchAppSpec =E<gt> "hd:apps:myapp", launchMinimumSize => 32000);
+
+=item DESTROY LPB
+
+=back
+
+=head2 ProcessInfo
+
+This Perl hash allows access to the C<ProcessInfo> structure.
+
+The field names are: 
+
+    processName
+    processNumber
+    processType
+    processSignature
+    processSize
+    processMode
+    processLocation
+    processLauncher
+    processLaunchDate
+    processActiveTime
+    processAppSpec
+
+=over 4
+
+=item DESTROY PI
+
+=back
+
+=head2 Functions
+
+=over 4
+
+=item LaunchApplication LAUNCHPARAMS
+
+The LaunchApplication function launches the application from the specified file
+and returns the process serial number if the application is successfully launched.
+Returns undef on failure.
+
+=item LaunchDeskAccessory PFILESPEC, PDANAME
+
+B<Mac OS only.>
+
+The LaunchDeskAccessory function searches the resource fork of the file specified
+by the pFileSpec parameter for the desk accessory with the 'DRVR' resource name
+specified in the pDAName parameter. If the 'DRVR' resource name is found,
+LaunchDeskAccessory launches the corresponding desk accessory. If the desk
+accessory is already open, it is brought to the front.
+Returns zero on failure.
+
+=item GetCurrentProcess
+
+The GetCurrentProcess function returns the process serial
+number of the process that is currently running, that is, the one currently
+accessing the CPU.
+Return C<undef> if an error was detected.
+
+=item GetFrontProcess
+
+The GetFrontProcess function returns the process serial
+number of the process running in the foreground.
+Return C<undef> if an error was detected.
+
+=item GetNextProcess PSN
+
+Get information about the next process, if any, in the Process Manager’s internal
+list of open processes.
+Return C<undef> if an error was detected.
+
+=item GetProcessInformation PSN
+
+The GetProcessInformation function returns, in a process information record,
+information about the specified process. The information returned in the info
+parameter includes the application’s name as it appears in the Application menu,
+the type and signature of the application, the address of the application
+partition, the number of bytes in the application partition, the number of free
+bytes in the application heap, the application that launched the application, the
+time at which the application was launched, and the location of the application
+file.
+Return C<undef> if an error was detected.
+
+=item SetFrontProcess PSN
+
+The SetFrontProcess function schedules the specified process to move to the
+foreground. The specified process moves to the foreground after the current
+foreground process makes a subsequent call to WaitNextEvent or EventAvail.
+Returns zero on failure.
+
+=item WakeUpProcess PSN
+
+The WakeUpProcess function makes a process suspended by WaitNextEvent() eligible to
+receive CPU time. A process is suspended when the value of the sleep parameter in
+the WaitNextEvent() function is not 0 and no events for that process are pending in
+the event queue. This process remains suspended until the time specified in the
+sleep parameter expires or an event becomes available for that process. You can
+use WakeUpProcess to make the process eligible for execution before the time
+specified in the sleep parameter expires.
+Returns zero on failure.
+
+=item SameProcess PSN1, PSN2
+
+The SameProcess function compares two process serial numbers and determines
+whether they refer to the same process.
+Return C<undef> if an error was detected.
+
+=item ExitToShell
+
+This function is not implemented: ExitToShell() unsupported. Use exit.
+
+=item GetProcessPID(PSN)
+
+B<Mac OS X only.>
+
+Get the UNIX process ID corresponding to a process serial number.
+
+=item GetProcessForPID(PID)
+
+B<Mac OS X only.>
+
+Get the process serial number corresponding to a UNIX process ID.
+
+=item LSFindApplicationForInfo(creator, bundleID=NULL, name=NULL)
+
+B<Mac OS X only.>
+
+Return the path to the application matching one or more of creator,
+bundleID, and name.  Pass undef or empty string for unused parameters.
+
+	$path = LSFindApplicationForInfo("R*ch");
+	$path = LSFindApplicationForInfo(undef, "com.barebones.bbedit");
+	$path = LSFindApplicationForInfo(undef, undef, "BBEdit.app");
+	$path = LSFindApplicationForInfo("R*ch", "com.barebones.bbedit", "BBEdit.app");
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>,
+documentation by Bob Dalgleish E<lt>bob.dalgleish@sasknet.sk.caE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

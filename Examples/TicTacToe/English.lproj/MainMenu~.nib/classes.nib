@@ -1,0 +1,11 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {newGame = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

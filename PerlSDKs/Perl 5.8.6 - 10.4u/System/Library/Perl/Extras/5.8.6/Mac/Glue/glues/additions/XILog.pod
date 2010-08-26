@@ -1,0 +1,249 @@
+=head1 NAME
+
+XILog Glue - Control XILog app (__APPID__)
+
+=head1 SYNOPSIS
+
+    use Mac::Glue;
+    my $obj = new Mac::Glue 'XILog';
+
+=head1 DESCRIPTION
+
+See C<Mac::Glue> for complete documentation on base usage and framework.
+
+=head2 Events
+
+=over 4
+
+=item $obj->xilogbegintestcase(XiLR, with_test_name => TEXT, [with_test_description => TEXT])
+
+begin a test case (XiLg/XiBT)
+
+Parameters:
+
+    direct object (----): a reference to an XILog object
+    with_test_name (Xi00): the identifier for the current test
+    with_test_description (Xi01): a description of the current test case
+
+
+=item $obj->xilogcloselog(XiLR, [later_append => bool])
+
+close an XILog file (XiLg/XiCL)
+
+Parameters:
+
+    direct object (----): a reference to an XILog object
+    later_append (XpAP): Partially close a log such that it can later be reopened. To be valid, the log *must* later be reopened and then closed without this flag.
+
+
+=item $obj->xilogendtestcase(XiLR)
+
+end the current test case (XiLg/XiET)
+
+Parameters:
+
+    direct object (----): a reference to an XILog object
+
+
+=item $obj->xilogerror(XiLR, with_error => TEXT, [using => XiLT])
+
+log an error to the XILog file (XiLg/XiLE)
+
+Parameters:
+
+    direct object (----): a reference to an XILog object
+    with_error (Xi03): the error
+    using (XiE_): a particular error level
+
+
+=item $obj->xilogmessage(XiLR, with_message => TEXT, [using_priority_level => XiPT])
+
+log a message to the XILog file (XiLg/XiLM)
+
+Parameters:
+
+    direct object (----): a reference to an XILog object
+    with_message (Xi02): the message
+    using_priority_level (XiP_): a particular logging priority level
+
+
+=item $obj->xilogopenlogfrompath(TEXT, [echo => bool, reopen => bool, using_style => XiST, with_build => TEXT, with_build_variant => TEXT, with_configuration => TEXT, with_owner => TEXT, with_tool => TEXT])
+
+get a reference to an XILog object (XiLg/XiLO)
+
+Reply type: XiLR
+
+Parameters:
+
+    direct object (----): the path to the XILog file
+    echo (XpEC): defaults to false; specify true to echo logging to console
+    reopen (XpRE): reopen an old log which was closed with 'later append'. Owner and tool are not required if this is given.
+    using_style (XiS_): a particular logging style
+    with_build (XpBL): defaults to build of local machine; specify the OS build of the target machine (e.g. 8A37)
+    with_build_variant (XpBV): a string descriping any additional roots or modifications added to the base OS build
+    with_configuration (XpCF): configuration for this tool; defaults to null
+    with_owner (XpON): group or sub-group who owns the tool
+    with_tool (XpTN): unique identifier for this tool or collection of tools
+
+
+=item $obj->xiperfcloselog(XpLR, [later_append => bool])
+
+close an XIPerfLog reference (XiPf/XPCL)
+
+Parameters:
+
+    direct object (----): a reference to an XIPerfLog object
+    later_append (XpAP): Partially close a log such that it can later be reopened. To be valid, the log *must* later be reopened and then closed without this flag.
+
+
+=item $obj->xiperfopenlog(TEXT, [echo => bool, reopen => bool, with_build => TEXT, with_build_variant => TEXT, with_configuration => TEXT, with_owner => TEXT, with_tool => TEXT, xml => bool])
+
+get a reference to an XIPerfLog object (XiPf/XPOL)
+
+Reply type: XpLR
+
+Parameters:
+
+    direct object (----): the path to the log file (either a directory, or a file name ending in .perflog)
+    echo (XpEC): defaults to false; specify true to echo logging to console
+    reopen (XpRE): reopen an old log which was closed with 'later append'. Owner and tool are not required if this is given.
+    with_build (XpBL): defaults to build of local machine; specify the OS build of the target machine (e.g. 8A37)
+    with_build_variant (XpBV): a string descriping any additional roots or modifications added to the base OS build
+    with_configuration (XpCF): configuration for this tool; defaults to null
+    with_owner (XpON): group or sub-group who owns the tool
+    with_tool (XpTN): unique identifier for this tool or collection of tools
+    xml (XpXM): defaults to true (XML logging); specify false for human-readable
+
+
+=item $obj->xiperfwriteerror(XpLR, with_error => TEXT, with_tag1 => TEXT, with_tag2 => TEXT, with_tag3 => TEXT)
+
+write an error to the log (XiPf/XPWE)
+
+Parameters:
+
+    direct object (----): a reference to an XIPerfLog object
+    with_error (Xi03): description of the error
+    with_tag1 (XpCL): arbitrary tag (defined by tester's schema)
+    with_tag2 (XpTL): arbitrary tag (defined by tester's schema)
+    with_tag3 (XpRL): arbitrary tag (defined by tester's schema)
+
+
+=item $obj->xiperfwritelog(XpLR, with_tag1 => TEXT, with_tag2 => TEXT, with_tag3 => TEXT, with_unit => TEXT, with_value => doub)
+
+write a data point to the log (XiPf/XPWL)
+
+Parameters:
+
+    direct object (----): a reference to an XIPerfLog object
+    with_tag1 (XpCL): arbitrary tag (defined by tester's schema)
+    with_tag2 (XpTL): arbitrary tag (defined by tester's schema)
+    with_tag3 (XpRL): arbitrary tag (defined by tester's schema)
+    with_unit (XpUN): unit of measure for the data point
+    with_value (XpVL): data point
+
+
+=item $obj->xiping(long)
+
+Ping the server, setting the cycle count. (XiPg/XpNg)
+
+Parameters:
+
+    direct object (----): The new cycle count
+
+
+=back
+
+=head2 Classes
+
+=over 4
+
+=item xilogref (XiLR)
+
+A reference to an XILog.
+
+=item xiperflogref (XpLR)
+
+A reference to an XIPerfLog
+
+=back
+
+=head2 Enumerations
+
+=over 4
+
+=item 'XiLT'
+
+=over 4
+
+=item error_level_xilogincomplete (XiE3)
+
+Test case could not be completed.  Test case does not pass or fail.
+
+=item error_level_xilognoerror (XiE0)
+
+No error.  Pass test.
+
+=item error_level_xilogwarning (XiE1)
+
+Potential problem.  Don't fail test.
+
+=item error_level_xilogerror (XiE2)
+
+Basic test failure.  Fail test.
+
+=back
+
+=item 'XiPT'
+
+=over 4
+
+=item high (XiP2)
+
+Most important logging information.  Always logged.
+
+=item medium (XiP1)
+
+The default.
+
+=item low (XiP0)
+
+Least important information.
+
+=back
+
+=item 'XiST'
+
+=over 4
+
+=item human_readable (XiS1)
+
+Human readable for interactive testing or debugging.
+
+=item xml (XiS0)
+
+XML formated log for automatic parsing and web display.
+
+=item only_errors (XiS2)
+
+Not implemented.
+
+=back
+
+=back
+
+=head1 AUTHOR
+
+Glue created by root
+using F<gluemac> by Chris Nandor and the Mac::AETE modules
+by David C. Schooley.
+
+Copyright (c) 2006.  All rights reserved.  This program is
+free software; you can redistribute it and/or modify it under the terms
+of the Artistic License, distributed with Perl.
+
+=head1 SEE ALSO
+
+Mac::AppleEvents, Mac::AppleEvents::Simple, macperlcat, Inside Macintosh: 
+Interapplication Communication, Mac::Glue, Mac::AETE.
+
+=cut

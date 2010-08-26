@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {squareClicked = id; }; 
+            CLASS = TicTacToeWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {ButtonMatrix = id; GameMessage = id; Window = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

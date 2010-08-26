@@ -1,0 +1,4 @@
+{
+	MainTemplateFile = "class.pm";
+	Description = "A Perl class which is a subclass of NSView.";
+}

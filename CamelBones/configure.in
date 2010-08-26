@@ -1,0 +1,151 @@
+#                                               -*- Autoconf -*-
+
+AC_PREREQ(2.57)
+AC_INIT(CamelBones, 1.1.0, camelbones@dot-app.org)
+AC_CONFIG_FILES([GNUmakefile.conf FoundationGlobalStrings.plist AppKitGlobalStrings.plist])
+AC_CONFIG_HEADERS([config.h])
+
+# Input arguments
+AC_ARG_ENABLE(
+    [debug],
+    AC_HELP_STRING([--enable-debug],[Leave debugging symbols in built library.]),
+    [
+        DEBUG=YES
+    ]
+)
+
+AC_ARG_ENABLE(
+	[embedded],
+	AC_HELP_STRING([--enable-embedded], [Building an embedded framework.]),
+	[
+		EMBEDDED=YES
+	]
+)
+
+AC_ARG_ENABLE(
+    [universal],
+    AC_HELP_STRING([--enable-universal], [Enable building a universal (i386 and ppc) framework.]),
+    [
+        UNIVERSAL=YES
+    ]
+)
+
+AC_ARG_ENABLE(
+	[par],
+	AC_HELP_STRING([--enable-par], [Build the PAR module and its prerequisites.]),
+	[
+		ENABLE_PAR=YES
+	]
+)
+
+AC_ARG_ENABLE(
+	[kits],
+	AC_HELP_STRING([--enable-kits], [Build the DevKit, DBIKit, MPKit, XMLKit, and CatKit PARs.]),
+	[
+		ENABLE_KITS=YES
+	]
+)
+
+AC_ARG_ENABLE(
+	[embedded],
+	AC_HELP_STRING([--enable-embedded], [Building an embedded framework.]),
+	[
+		EMBEDDED=YES
+	]
+)
+
+AC_ARG_ENABLE(
+	[clean-install],
+	AC_HELP_STRING([--enable-clean-install], [Deleting of an existing framework when installing a new one.]),
+	[
+		CLEAN_INSTALL=YES
+	]
+)
+
+AC_ARG_ENABLE(
+	[overwrite-stub],
+	AC_HELP_STRING([--enable-overwrite-stub], [Overwrite the framework stub when installing.]),
+	[
+		OVERWRITE_STUB=YES
+	]
+)
+
+AC_ARG_WITH(
+    [perl],
+    AC_HELP_STRING([--with-perl=PATH],[Path to perl.]),
+    [
+        PERL=$withval
+    ]
+)
+
+AC_ARG_WITH(
+    [libperl],
+    AC_HELP_STRING([--with-libperl=PATH], [Linker flag to link libperl. [[-lperl]].]),
+    [
+        LIBPERL=$withval
+    ],
+    [
+        LIBPERL=-lperl
+    ]
+)
+
+AC_ARG_WITH(
+    [sdk],
+    AC_HELP_STRING([--with-sdk=PATH], [Path to cross-development SDK to use.]),
+    [
+        SDK=$withval
+    ]
+)
+
+AC_ARG_WITH(
+	[install-volume],
+	AC_HELP_STRING([--with-install-volume=/VolName], [Volume to install to. [[/]].]),
+	[
+		INSTALL_VOLUME=$withval
+	]
+)
+
+if test "x$GNUSTEP_SYSTEM_ROOT" != "x"; then
+    PLIST_DTD='PUBLIC "-//GNUstep//DTD plist 0.9//EN" "http://www.gnustep.org/plist-0_9.xml"'
+    PLIST_VERSION=0.9
+else
+    PLIST_DTD='SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd"'
+    PLIST_VERSION=1.0
+fi
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_RANLIB
+AC_PATH_PROG(LIBTOOL, libtool)
+AC_PROG_PERL_VERSION(5.6.0, [], [
+    AC_MSG_ERROR([
+** ERROR - Could not find a compatible version of Perl **
+        
+Try using the --with-perl=/path/to/perl option if you have a compatible Perl, but it's not in your PATH.])
+])
+
+# Checking for headers
+AC_CHECK_HEADERS([dlfcn.h mach-o/dyld.h], [break])
+
+# Checking for functions
+AC_CHECK_LIB([avcall], [__builtin_avcall], [HAVE_LIBAVCALL=-YES-], [HAVE_LIBAVCALL=-NO-])
+
+# Output variables
+AC_SUBST(LIBPERL)
+AC_SUBST(HAVE_LIBAVCALL)
+AC_SUBST(DEBUG)
+AC_SUBST(CLEAN_INSTALL)
+AC_SUBST(OVERWRITE_STUB)
+AC_SUBST(ENABLE_PAR)
+AC_SUBST(ENABLE_KITS)
+AC_SUBST(EMBEDDED)
+AC_SUBST(UNIVERSAL)
+AC_SUBST(SDK)
+AC_SUBST(PLIST_DTD)
+AC_SUBST(PLIST_VERSION)
+AC_SUBST(INSTALL_VOLUME)
+
+AC_OUTPUT

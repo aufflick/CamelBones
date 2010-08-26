@@ -1,0 +1,22 @@
+=head2 Fri Sep 12 20:16:05 2003: C<Module> L<mod_perl|mod_perl>
+
+=over 4
+
+=item *
+
+C<installed into: /BinaryCache/apache_mod_perl/apache_mod_perl-5.root~103/System/Library/Perl/5.8.1>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.26>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

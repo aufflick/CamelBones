@@ -1,0 +1,80 @@
+=head1 NAME
+
+Digital_Hub_Scripting Glue - Control Digital_Hub_Scripting app (__APPID__)
+
+=head1 SYNOPSIS
+
+    use Mac::Glue;
+    my $obj = new Mac::Glue 'Digital_Hub_Scripting';
+
+=head1 DESCRIPTION
+
+See C<Mac::Glue> for complete documentation on base usage and framework.
+
+=head2 Events
+
+=over 4
+
+=item $obj->blank_cd_appeared(utxt)
+
+Called when a data blank CD appears on your machine (dhub/bcd )
+
+Parameters:
+
+    direct object (----): the unix device identifier for this disc
+
+
+=item $obj->blank_dvd_appeared(utxt)
+
+Called when a data blank DVD appears on your machine (dhub/bdvd)
+
+Parameters:
+
+    direct object (----): 
+
+
+=item $obj->music_cd_appeared(file)
+
+Called when a music CD appears on your machine (dhub/aucd)
+
+Parameters:
+
+    direct object (----): the disc
+
+
+=item $obj->picture_cd_appeared(file)
+
+Called when a picture CD appears on your machine (dhub/picd)
+
+Parameters:
+
+    direct object (----): the disc
+
+
+=item $obj->video_dvd_appeared(file)
+
+Called when a vided DVD appears on your machine (dhub/vdvd)
+
+Parameters:
+
+    direct object (----): the disc 
+
+
+=back
+
+=head1 AUTHOR
+
+Glue created by root
+using F<gluemac> by Chris Nandor and the Mac::AETE modules
+by David C. Schooley.
+
+Copyright (c) 2006.  All rights reserved.  This program is
+free software; you can redistribute it and/or modify it under the terms
+of the Artistic License, distributed with Perl.
+
+=head1 SEE ALSO
+
+Mac::AppleEvents, Mac::AppleEvents::Simple, macperlcat, Inside Macintosh: 
+Interapplication Communication, Mac::Glue, Mac::AETE.
+
+=cut

@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {convert = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {convert = id; }; 
+            CLASS = MyApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dollarField = id; rateField = id; totalField = id; }; 
+            SUPERCLASS = NSApplication; 
+        }, 
+        {
+            ACTIONS = {convert = id; }; 
+            CLASS = MyController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dollarField = id; rateField = id; totalField = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,52 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = SQLProxy; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "column_names" = NSArray; 
+                dsn = id; 
+                "max_rows_count" = id; 
+                password = id; 
+                rows = NSArray; 
+                "rows_count" = id; 
+                sql = id; 
+                state = id; 
+                username = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                cancelFetch = id; 
+                disconnect = id; 
+                doConnect = id; 
+                doRescan = id; 
+                go = id; 
+                sourceTypeChanged = id; 
+                terminate = id; 
+            }; 
+            CLASS = SimpleDBIController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                availablePopup = id; 
+                connectParams = id; 
+                loginSheet = id; 
+                password = id; 
+                progressBar = id; 
+                progressSheet = id; 
+                progressSpinner = id; 
+                sourceType = id; 
+                sql = id; 
+                sqlWindow = id; 
+                statusText = id; 
+                tabView = id; 
+                username = id; 
+                webview = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

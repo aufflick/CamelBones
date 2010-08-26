@@ -1,0 +1,17 @@
+{
+	FilesToRename = {
+		"CocoaDocApp_Prefix.pch" = "ÇPROJECTNAMEÈ_Prefix.pch";
+		"CocoaDocApp.xcodeproj" = "ÇPROJECTNAMEÈ.xcodeproj";
+	};
+	FilesToMacroExpand = (
+		"ÇPROJECTNAMEÈ_Prefix.pch",
+		"Info.plist",
+		"main.m",
+		"main.pl",
+		"MyDocument.pm",
+		"English.lproj/MainMenu.xib",
+		"English.lproj/MyDocument.xib",
+		"ÇPROJECTNAMEÈ.xcodeproj/project.pbxproj",
+	);
+	Description = "This project builds a Cocoa NSDocument-based application written in Perl.";
+}

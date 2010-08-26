@@ -1,0 +1,15 @@
+{
+	FilesToRename = {
+		"Cocoa Application_Prefix.pch" = "ÇPROJECTNAMEÈ_Prefix.pch";
+		"Cocoa Application.xcodeproj" = "ÇPROJECTNAMEÈ.xcodeproj";
+	};
+	FilesToMacroExpand = (
+		"ÇPROJECTNAMEÈ_Prefix.pch",
+		"Info.plist",
+		"main.m",
+		"main.pl",
+		"English.lproj/MainMenu.xib",
+		"ÇPROJECTNAMEÈ.xcodeproj/project.pbxproj",
+	);
+	Description = "This project builds a Cocoa-based application written in Perl.";
+}

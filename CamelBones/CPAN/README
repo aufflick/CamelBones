@@ -1,0 +1,12 @@
+CamelBones version 1.1.0
+======================
+
+INSTALLATION
+
+  This module should not be installed separately from the CamelBones
+  framework.
+
+DEPENDENCIES
+
+This module requires the CamelBones framework, and is installed as part
+of its installation.

@@ -1,0 +1,5 @@
+#undef HAVE_MACH_O_DYLD_H
+#if (MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_VERSION_10_3) | defined GNUSTEP
+#undef HAVE_DLFCN_H
+#endif
+#undef DEBUG
