@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -116,7 +116,6 @@
 		AA50E4FB0C87705C004DA7BD /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D00C875DB7004DA7BD /* Runtime.m */; };
 		AA50E4FC0C87705C004DA7BD /* Structs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D30C875DB7004DA7BD /* Structs.m */; };
 		AA50E4FD0C87705C004DA7BD /* Wrappers.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D90C875DB8004DA7BD /* Wrappers.m */; };
-		AA50E4FE0C877068004DA7BD /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50E21E0C8757A7004DA7BD /* libffi.a */; };
 		AA50E50F0C877196004DA7BD /* libperl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50E5090C87716B004DA7BD /* libperl.dylib */; };
 		AA50E5170C87723E004DA7BD /* DynaLoader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50E5120C877231004DA7BD /* DynaLoader.a */; };
 		AA6C321C0CCC96F200306BD7 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9142060CC98CCE0055B0E5 /* CamelBones.framework */; };
@@ -156,7 +155,7 @@
 		AA9144950CC9A4570055B0E5 /* Structs_real.h in Headers */ = {isa = PBXBuildFile; fileRef = AA50E3D10C875DB7004DA7BD /* Structs_real.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA9144960CC9A4570055B0E5 /* Wrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = AA50E3D80C875DB7004DA7BD /* Wrappers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA9144970CC9A4570055B0E5 /* Wrappers_real.h in Headers */ = {isa = PBXBuildFile; fileRef = AA50E3D70C875DB7004DA7BD /* Wrappers_real.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFA13B31105A05390046F551 /* libffi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA13B2F105A05330046F551 /* libffi.dylib */; };
+		AAD4DEB6122C63CD0072C002 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD4DE95122C62630072C002 /* libffi.a */; };
 		FFA13B73105A05730046F551 /* libperl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA13B4D105A05730046F551 /* libperl.dylib */; };
 		FFE36100105720FB00F0CA90 /* CBPerl.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */; };
 		FFE36101105720FB00F0CA90 /* CBPerlArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AE0C875DB7004DA7BD /* CBPerlArray.m */; };
@@ -174,7 +173,6 @@
 		FFE3610D105720FB00F0CA90 /* Structs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D30C875DB7004DA7BD /* Structs.m */; };
 		FFE3610E105720FB00F0CA90 /* Wrappers.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D90C875DB8004DA7BD /* Wrappers.m */; };
 		FFE36110105720FB00F0CA90 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9142060CC98CCE0055B0E5 /* CamelBones.framework */; };
-		FFE36113105720FB00F0CA90 /* libperl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE9CFE70D1378E900BB5E57 /* libperl.dylib */; };
 		FFE9CE970D13073A00BB5E57 /* CBPerl.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */; };
 		FFE9CE980D13073A00BB5E57 /* CBPerlArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AE0C875DB7004DA7BD /* CBPerlArray.m */; };
 		FFE9CE990D13073A00BB5E57 /* CBPerlHash.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3B10C875DB7004DA7BD /* CBPerlHash.m */; };
@@ -191,7 +189,6 @@
 		FFE9CEA40D13073A00BB5E57 /* Structs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D30C875DB7004DA7BD /* Structs.m */; };
 		FFE9CEA50D13073A00BB5E57 /* Wrappers.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D90C875DB8004DA7BD /* Wrappers.m */; };
 		FFE9CEA70D13073A00BB5E57 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9142060CC98CCE0055B0E5 /* CamelBones.framework */; };
-		FFE9CEAA0D13073A00BB5E57 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50E21E0C8757A7004DA7BD /* libffi.a */; };
 		FFE9CFE60D1378CD00BB5E57 /* DynaLoader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE9CFE50D1378CD00BB5E57 /* DynaLoader.a */; };
 		FFE9CFE80D1378E900BB5E57 /* libperl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE9CFE70D1378E900BB5E57 /* libperl.dylib */; };
 /* End PBXBuildFile section */
@@ -210,27 +207,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FFE9CE900D13073A00BB5E57;
 			remoteInfo = "darwin-thread-multi-2level-5.8.8";
-		};
-		AA50E21D0C8757A7004DA7BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = libffi;
-		};
-		AA50E4FF0C877084004DA7BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D;
-			remoteInfo = libffi;
-		};
-		AA6C31F00CCC93C700306BD7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D;
-			remoteInfo = libffi;
 		};
 		AA6C32040CCC95EA00306BD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -302,6 +278,20 @@
 			remoteGlobalIDString = AA6C32080CCC962000306BD7;
 			remoteInfo = Leopard;
 		};
+		AAD4DE94122C62630072C002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAD4DE8D122C62630072C002 /* libffi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259F43230C28CBD700537400;
+			remoteInfo = libffi;
+		};
+		AAD4DEA0122C62C90072C002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAD4DE8D122C62630072C002 /* libffi.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 259F43220C28CBD700537400;
+			remoteInfo = libffi;
+		};
 		FFE360FC105720FB00F0CA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
@@ -343,13 +333,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FFE360F8105720FB00F0CA90;
 			remoteInfo = "darwin-thread-multi-2level-5.8.9";
-		};
-		FFE9CE920D13073A00BB5E57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D;
-			remoteInfo = libffi;
 		};
 		FFE9CE940D13073A00BB5E57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -400,11 +383,9 @@
 		84AC1BB90D73808C00C751F7 /* CBThreadTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBThreadTests.c; sourceTree = "<group>"; };
 		84AC1BBA0D73808C00C751F7 /* Makefile.PL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = Makefile.PL; sourceTree = "<group>"; };
 		84AC1BBB0D73808C00C751F7 /* Tests.xs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tests.xs; sourceTree = "<group>"; };
-		84B5405D0DA178BD00C351C3 /* PluginInfo-5.8.1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.1.plist"; sourceTree = SOURCE_ROOT; };
 		84B5405E0DA178BD00C351C3 /* PluginInfo-5.8.6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.6.plist"; sourceTree = SOURCE_ROOT; };
 		84B5405F0DA178BD00C351C3 /* PluginInfo-5.8.8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.8.plist"; sourceTree = SOURCE_ROOT; };
 		84B5406F0DA17D3800C351C3 /* CBDummyModule.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = CBDummyModule.pm; sourceTree = "<group>"; };
-		AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffi.xcodeproj; path = libffi/libffi.xcodeproj; sourceTree = "<group>"; };
 		AA50E3A80C875DB7004DA7BD /* AppMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppMain.h; sourceTree = "<group>"; };
 		AA50E3A90C875DB7004DA7BD /* AppMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		AA50E3AA0C875DB7004DA7BD /* CamelBones.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CamelBones.h; sourceTree = "<group>"; };
@@ -424,7 +405,6 @@
 		AA50E3B80C875DB7004DA7BD /* CBPerlScalar.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CBPerlScalar.m; sourceTree = "<group>"; };
 		AA50E3B90C875DB7004DA7BD /* CBPerlScalarInternals.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CBPerlScalarInternals.h; sourceTree = "<group>"; };
 		AA50E3BA0C875DB7004DA7BD /* CBPerlScalarInternals.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CBPerlScalarInternals.m; sourceTree = "<group>"; };
-		AA50E3BB0C875DB7004DA7BD /* CBStruct.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CBStruct.h; sourceTree = "<group>"; };
 		AA50E3BD0C875DB7004DA7BD /* Conversions_real.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversions_real.h; sourceTree = "<group>"; };
 		AA50E3BE0C875DB7004DA7BD /* Conversions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Conversions.h; sourceTree = "<group>"; };
 		AA50E3BF0C875DB7004DA7BD /* Conversions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Conversions.m; sourceTree = "<group>"; };
@@ -456,12 +436,8 @@
 		AA50E3D90C875DB8004DA7BD /* Wrappers.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Wrappers.m; sourceTree = "<group>"; };
 		AA50E4240C875F90004DA7BD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		AA50E4280C875FA2004DA7BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		AA50E4BD0C876E05004DA7BD /* darwin-thread-multi-2level-5.8.6-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "darwin-thread-multi-2level-5.8.6-Info.plist"; sourceTree = "<group>"; };
 		AA50E5090C87716B004DA7BD /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		AA50E5120C877231004DA7BD /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
-		AA50E5630C877635004DA7BD /* darwin-thread-multi-2level-5.8.1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "darwin-thread-multi-2level-5.8.1-Info.plist"; sourceTree = "<group>"; };
-		AA50E58C0C8778A3004DA7BD /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
-		AA50E58E0C8778C4004DA7BD /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
 		AA50E9640C879392004DA7BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA68EB130CA9CF1200003ED0 /* AddressBook.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = AddressBook.bridgesupport; path = ../BridgeSupport/Flattened/AddressBook.bridgesupport; sourceTree = SOURCE_ROOT; };
 		AA68EB140CA9CF1200003ED0 /* AppKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = AppKit.bridgesupport; path = ../BridgeSupport/Flattened/AppKit.bridgesupport; sourceTree = SOURCE_ROOT; };
@@ -543,6 +519,7 @@
 		AA9143770CC99B2A0055B0E5 /* META.yml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = META.yml; path = CPAN/META.yml; sourceTree = "<group>"; };
 		AA9143790CC99B2A0055B0E5 /* ppport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ppport.h; path = CPAN/ppport.h; sourceTree = "<group>"; };
 		AA91437A0CC99B2A0055B0E5 /* README */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = README; path = CPAN/README; sourceTree = "<group>"; };
+		AAD4DE8D122C62630072C002 /* libffi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffi.xcodeproj; path = "libffi-15/libffi.xcodeproj"; sourceTree = "<group>"; };
 		FFA13B2F105A05330046F551 /* libffi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.dylib; path = /usr/lib/libffi.dylib; sourceTree = "<absolute>"; };
 		FFA13B4D105A05730046F551 /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		FFE360F5105720DF00F0CA90 /* PluginInfo-5.8.9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.9.plist"; sourceTree = "<group>"; };
@@ -557,10 +534,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD4DEB6122C63CD0072C002 /* libffi.a in Frameworks */,
 				AA6C321C0CCC96F200306BD7 /* CamelBones.framework in Frameworks */,
 				AA50E5170C87723E004DA7BD /* DynaLoader.a in Frameworks */,
 				AA50E50F0C877196004DA7BD /* libperl.dylib in Frameworks */,
-				AA50E4FE0C877068004DA7BD /* libffi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,9 +554,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA13B31105A05390046F551 /* libffi.dylib in Frameworks */,
 				FFE36110105720FB00F0CA90 /* CamelBones.framework in Frameworks */,
-				FFE36113105720FB00F0CA90 /* libperl.dylib in Frameworks */,
 				FFA13B73105A05730046F551 /* libperl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +564,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE9CEA70D13073A00BB5E57 /* CamelBones.framework in Frameworks */,
-				FFE9CEAA0D13073A00BB5E57 /* libffi.a in Frameworks */,
 				FFE9CFE60D1378CD00BB5E57 /* DynaLoader.a in Frameworks */,
 				FFE9CFE80D1378E900BB5E57 /* libperl.dylib in Frameworks */,
 			);
@@ -635,7 +609,6 @@
 		AA50E2030C87571F004DA7BD = {
 			isa = PBXGroup;
 			children = (
-				84B5405D0DA178BD00C351C3 /* PluginInfo-5.8.1.plist */,
 				84B5405E0DA178BD00C351C3 /* PluginInfo-5.8.6.plist */,
 				84B5405F0DA178BD00C351C3 /* PluginInfo-5.8.8.plist */,
 				FFE360F5105720DF00F0CA90 /* PluginInfo-5.8.9.plist */,
@@ -645,14 +618,6 @@
 				AA50E4130C875E1D004DA7BD /* Libraries */,
 				AA50E2330C87587B004DA7BD /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		AA50E2170C8757A7004DA7BD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AA50E21E0C8757A7004DA7BD /* libffi.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		AA50E2330C87587B004DA7BD /* Products */ = {
@@ -716,9 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				FFA13B38105A05470046F551 /* darwin-thread-multi-2level-5.8.9 */,
-				AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */,
 				FFE9CFE90D1378F200BB5E57 /* darwin-thread-multi-2level-5.8.8 */,
-				AA50E58B0C877857004DA7BD /* darwin-thread-multi-2level-5.8.1 */,
 				AA50E50B0C877181004DA7BD /* darwin-thread-multi-2level-5.8.6 */,
 				AA50E4280C875FA2004DA7BD /* Foundation.framework */,
 				AA50E4240C875F90004DA7BD /* AppKit.framework */,
@@ -736,7 +699,6 @@
 				AA50E3B00C875DB7004DA7BD /* CBPerlHash.h */,
 				AA50E3B30C875DB7004DA7BD /* CBPerlObject.h */,
 				AA50E3B70C875DB7004DA7BD /* CBPerlScalar.h */,
-				AA50E3BB0C875DB7004DA7BD /* CBStruct.h */,
 			);
 			name = Include;
 			sourceTree = "<group>";
@@ -772,21 +734,11 @@
 		AA50E50B0C877181004DA7BD /* darwin-thread-multi-2level-5.8.6 */ = {
 			isa = PBXGroup;
 			children = (
+				AAD4DE8D122C62630072C002 /* libffi.xcodeproj */,
 				AA50E5120C877231004DA7BD /* DynaLoader.a */,
 				AA50E5090C87716B004DA7BD /* libperl.dylib */,
-				AA50E4BD0C876E05004DA7BD /* darwin-thread-multi-2level-5.8.6-Info.plist */,
 			);
 			name = "darwin-thread-multi-2level-5.8.6";
-			sourceTree = "<group>";
-		};
-		AA50E58B0C877857004DA7BD /* darwin-thread-multi-2level-5.8.1 */ = {
-			isa = PBXGroup;
-			children = (
-				AA50E58E0C8778C4004DA7BD /* DynaLoader.a */,
-				AA50E58C0C8778A3004DA7BD /* libperl.dylib */,
-				AA50E5630C877635004DA7BD /* darwin-thread-multi-2level-5.8.1-Info.plist */,
-			);
-			name = "darwin-thread-multi-2level-5.8.1";
 			sourceTree = "<group>";
 		};
 		AA50E5CF0C877E37004DA7BD /* Resources */ = {
@@ -944,6 +896,14 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		AAD4DE8E122C62630072C002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAD4DE95122C62630072C002 /* libffi.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FFA13B38105A05470046F551 /* darwin-thread-multi-2level-5.8.9 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1014,8 +974,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				AA50E5000C877084004DA7BD /* PBXTargetDependency */,
 				AA6C32050CCC95EA00306BD7 /* PBXTargetDependency */,
+				AAD4DEA1122C62C90072C002 /* PBXTargetDependency */,
 			);
 			name = "darwin-thread-multi-2level-5.8.6";
 			productName = "darwin-thread-multi-2level-5.8.6";
@@ -1035,7 +995,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				AA6C31F10CCC93C700306BD7 /* PBXTargetDependency */,
 			);
 			name = CamelBones.framework;
 			productName = CamelBones.framework;
@@ -1071,7 +1030,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FFE9CE910D13073A00BB5E57 /* PBXTargetDependency */,
 				FFE9CE930D13073A00BB5E57 /* PBXTargetDependency */,
 			);
 			name = "darwin-thread-multi-2level-5.8.8";
@@ -1092,8 +1050,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = AA50E2170C8757A7004DA7BD /* Products */;
-					ProjectRef = AA50E2160C8757A7004DA7BD /* libffi.xcodeproj */;
+					ProductGroup = AAD4DE8E122C62630072C002 /* Products */;
+					ProjectRef = AAD4DE8D122C62630072C002 /* libffi.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1114,11 +1072,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AA50E21E0C8757A7004DA7BD /* libffi.a */ = {
+		AAD4DE95122C62630072C002 /* libffi.a */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
+			fileType = "compiled.mach-o.dylib";
 			path = libffi.a;
-			remoteRef = AA50E21D0C8757A7004DA7BD /* PBXContainerItemProxy */;
+			remoteRef = AAD4DE94122C62630072C002 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1289,16 +1247,6 @@
 			target = FFE9CE900D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8 */;
 			targetProxy = 849691FD0D72A87600A81045 /* PBXContainerItemProxy */;
 		};
-		AA50E5000C877084004DA7BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libffi;
-			targetProxy = AA50E4FF0C877084004DA7BD /* PBXContainerItemProxy */;
-		};
-		AA6C31F10CCC93C700306BD7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libffi;
-			targetProxy = AA6C31F00CCC93C700306BD7 /* PBXContainerItemProxy */;
-		};
 		AA6C32050CCC95EA00306BD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
@@ -1349,6 +1297,11 @@
 			target = AA6C32080CCC962000306BD7 /* Leopard */;
 			targetProxy = AA7F61810DCD028500D20E5E /* PBXContainerItemProxy */;
 		};
+		AAD4DEA1122C62C90072C002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libffi;
+			targetProxy = AAD4DEA0122C62C90072C002 /* PBXContainerItemProxy */;
+		};
 		FFE360FB105720FB00F0CA90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
@@ -1378,11 +1331,6 @@
 			isa = PBXTargetDependency;
 			target = FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */;
 			targetProxy = FFE361461057268F00F0CA90 /* PBXContainerItemProxy */;
-		};
-		FFE9CE910D13073A00BB5E57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libffi;
-			targetProxy = FFE9CE920D13073A00BB5E57 /* PBXContainerItemProxy */;
 		};
 		FFE9CE930D13073A00BB5E57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1448,7 +1396,7 @@
 				GCC_FAST_OBJC_DISPATCH = NO;
 				GCC_MODEL_TUNING = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -1469,7 +1417,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
@@ -1483,13 +1431,19 @@
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PERL_TIGER,
+					MACOSX,
+				);
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.6.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1504,8 +1458,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.6";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.4;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -1518,12 +1472,18 @@
 				DEBUG_INFORMATION_FORMAT = stabs;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PERL_TIGER,
+					MACOSX,
+				);
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.6.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1538,8 +1498,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.6";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.4;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -1559,7 +1519,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 			};
 			name = "Release-App-Embedded";
 		};
@@ -1589,12 +1549,18 @@
 				DEBUG_INFORMATION_FORMAT = stabs;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PERL_TIGER,
+					MACOSX,
+				);
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.6.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1609,8 +1575,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.6";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.4;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-App-Embedded";
@@ -1623,12 +1589,18 @@
 				DEBUG_INFORMATION_FORMAT = stabs;
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PERL_TIGER,
+					MACOSX,
+				);
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.6.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1643,8 +1615,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.6";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.4;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-Lib-Embedded";
@@ -1665,7 +1637,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = "Release-App-Embedded";
@@ -1686,7 +1658,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = "Release-Lib-Embedded";
@@ -1852,7 +1824,7 @@
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 			};
 			name = Debug;
 		};
@@ -1871,14 +1843,14 @@
 				INSTALL_PATH = /Library/Frameworks;
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.4;
 			};
 			name = Release;
 		};
 		FFE36115105720FB00F0CA90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = i386;
 				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/CamelBones";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/Libraries";
 				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
@@ -1889,13 +1861,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.9/darwin-thread-multi-2level/auto/DynaLoader\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1904,6 +1873,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -1911,8 +1881,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.9";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -1929,13 +1899,10 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.9/darwin-thread-multi-2level/auto/DynaLoader\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1944,6 +1911,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -1951,8 +1919,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.9";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -1969,13 +1937,10 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.9/darwin-thread-multi-2level/auto/DynaLoader\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -1984,6 +1949,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -1991,8 +1957,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.9";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-App-Embedded";
@@ -2009,13 +1975,10 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
-				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.9/darwin-thread-multi-2level/auto/DynaLoader\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -2024,6 +1987,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2031,8 +1995,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.9";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-Lib-Embedded";
@@ -2046,7 +2010,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "Perl Module";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
@@ -2058,7 +2022,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "Perl Module";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.5;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2068,7 +2032,7 @@
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "Perl Module";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.5;
 			};
 			name = "Release-App-Embedded";
 		};
@@ -2077,7 +2041,7 @@
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "Perl Module";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.5;
 			};
 			name = "Release-Lib-Embedded";
 		};
@@ -2130,12 +2094,13 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.8/darwin-thread-multi-2level/auto/DynaLoader\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -2144,6 +2109,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2151,8 +2117,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.8";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -2168,12 +2134,13 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.8/darwin-thread-multi-2level/auto/DynaLoader\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -2182,6 +2149,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2189,8 +2157,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.8";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -2206,12 +2174,13 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.8/darwin-thread-multi-2level/auto/DynaLoader\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -2220,6 +2189,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2227,8 +2197,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.8";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-App-Embedded";
@@ -2244,12 +2214,13 @@
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Perl/5.8.8/darwin-thread-multi-2level/auto/DynaLoader\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = (
 					"-fno-common",
 					"-DPERL_DARWIN",
@@ -2258,6 +2229,7 @@
 					"-DPERL_LEOPARD",
 				);
 				OTHER_LDFLAGS = (
+					"-lffi",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2265,8 +2237,8 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.8";
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi/include\" /System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-Lib-Embedded";

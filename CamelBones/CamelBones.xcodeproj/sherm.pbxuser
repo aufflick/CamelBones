@@ -5,7 +5,10 @@
 	};
 	AA50E2050C87571F004DA7BD /* Project object */ = {
 		activeBuildConfigurationName = Debug;
-		activeTarget = AA7F61620DCCFBA900D20E5E /* All */;
+		activeTarget = AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */;
+		addToTargets = (
+			AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */,
+		);
 		codeSenseManager = AAB4A3C01201E994005D75E3 /* Code sense */;
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -13,7 +16,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					596,
+					843,
 					20,
 					48,
 					43,
@@ -35,10 +38,10 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					556,
+					803,
 					60,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 				);
@@ -52,12 +55,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304886269;
-			PBXWorkspaceStateSaveDate = 304886269;
+			PBXPerProjectTemplateStateSaveDate = 304900201;
+			PBXWorkspaceStateSaveDate = 304900201;
 		};
 		perUserProjectItems = {
-			AACEB8CF12105492008B96DD /* PBXTextBookmark */ = AACEB8CF12105492008B96DD /* PBXTextBookmark */;
-			AAD4DC87122C33090072C002 /* PBXTextBookmark */ = AAD4DC87122C33090072C002 /* PBXTextBookmark */;
+			AAD4DEC1122C64D20072C002 /* PBXTextBookmark */ = AAD4DEC1122C64D20072C002 /* PBXTextBookmark */;
+			AAD4DEC3122C64D20072C002 /* PBXTextBookmark */ = AAD4DEC3122C64D20072C002 /* PBXTextBookmark */;
+			AAD4DEE9122C687E0072C002 /* PBXTextBookmark */ = AAD4DEE9122C687E0072C002 /* PBXTextBookmark */;
+			AAD4DEEB122C687E0072C002 /* PBXTextBookmark */ = AAD4DEEB122C687E0072C002 /* PBXTextBookmark */;
+			AAD4DEF0122C68A90072C002 /* PBXTextBookmark */ = AAD4DEF0122C68A90072C002 /* PBXTextBookmark */;
 		};
 		sourceControlManager = AAB4A3BF1201E994005D75E3 /* Source Control */;
 		userBuildSettings = {
@@ -65,9 +71,58 @@
 	};
 	AA50E3AC0C875DB7004DA7BD /* CBPerl.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {774, 7376}}";
+			sepNavIntBoundsRect = "{{0, 0}, {892, 7344}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 877}";
+			sepNavVisRange = "{0, 610}";
+		};
+	};
+	AA50E3B10C875DB7004DA7BD /* CBPerlHash.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {892, 4608}}";
+			sepNavSelRange = "{1362, 0}";
+			sepNavVisRange = "{1017, 759}";
+		};
+	};
+	AA50E3B40C875DB7004DA7BD /* CBPerlObject.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {892, 5040}}";
+			sepNavSelRange = "{5873, 0}";
+			sepNavVisRange = "{5394, 1080}";
+		};
+	};
+	AA50E3BF0C875DB7004DA7BD /* Conversions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {892, 4624}}";
+			sepNavSelRange = "{4970, 0}";
+			sepNavVisRange = "{4241, 1076}";
+		};
+	};
+	AA50E3C70C875DB7004DA7BD /* NativeMethods.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {892, 9200}}";
+			sepNavSelRange = "{451, 0}";
+			sepNavVisRange = "{104, 605}";
+		};
+	};
+	AA50E3C80C875DB7004DA7BD /* PerlImports.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 437}}";
+			sepNavSelRange = "{266, 17}";
+			sepNavVisRange = "{0, 371}";
+		};
+	};
+	AA50E3CC0C875DB7004DA7BD /* perlxsi.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {892, 455}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 154}";
+		};
+	};
+	AA50E3CD0C875DB7004DA7BD /* perlxsi.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 624}}";
+			sepNavSelRange = "{140, 0}";
+			sepNavVisRange = "{0, 436}";
 		};
 	};
 	AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */ = {
@@ -102,24 +157,68 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	AACEB8CF12105492008B96DD /* PBXTextBookmark */ = {
+	AAD4DEC1122C64D20072C002 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */;
-		name = "CBPerl.m: 1";
+		fRef = AAD4DEC2122C64D20072C002 /* stdbool.h */;
+		name = "stdbool.h: 36";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 1249;
 		rType = 0;
-		vrLen = 877;
+		vrLen = 733;
+		vrLoc = 750;
+	};
+	AAD4DEC2122C64D20072C002 /* stdbool.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = stdbool.h;
+		path = "/Developer/SDKs/MacOSX10.4u.sdk/usr/lib/gcc/i686-apple-darwin10/4.0.1/include/stdbool.h";
+		sourceTree = "<absolute>";
+	};
+	AAD4DEC3122C64D20072C002 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AAD4DEC4122C64D20072C002 /* handy.h */;
+		name = "handy.h: 85";
+		rLen = 0;
+		rLoc = 1858;
+		rType = 0;
+		vrLen = 747;
+		vrLoc = 1417;
+	};
+	AAD4DEC4122C64D20072C002 /* handy.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = handy.h;
+		path = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE/handy.h";
+		sourceTree = "<absolute>";
+	};
+	AAD4DEE9122C687E0072C002 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3C80C875DB7004DA7BD /* PerlImports.h */;
+		name = "PerlImports.h: 19";
+		rLen = 17;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 371;
 		vrLoc = 0;
 	};
-	AAD4DC87122C33090072C002 /* PBXTextBookmark */ = {
+	AAD4DEEB122C687E0072C002 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */;
-		name = "CBPerl.m: 1";
+		fRef = AA50E3CD0C875DB7004DA7BD /* perlxsi.h */;
+		name = "perlxsi.h: 12";
 		rLen = 0;
-		rLoc = 0;
+		rLoc = 140;
 		rType = 0;
-		vrLen = 877;
+		vrLen = 461;
+		vrLoc = 0;
+	};
+	AAD4DEF0122C68A90072C002 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3CD0C875DB7004DA7BD /* perlxsi.h */;
+		name = "perlxsi.h: 10";
+		rLen = 0;
+		rLoc = 140;
+		rType = 0;
+		vrLen = 436;
 		vrLoc = 0;
 	};
 	FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */ = {
