@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>darwin-thread-multi-2level-5.8.9</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.dot-app.CamelBones.PerlBundle</string>
+	<string>org.CamelBones.PerlBundle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
