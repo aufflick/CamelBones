@@ -65,6 +65,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				AA6D089A122C6D9200ED0CC7 /* PBXTargetDependency */,
 				AA7F61820DCD028500D20E5E /* PBXTargetDependency */,
 				AA7F617B0DCCFBF100D20E5E /* PBXTargetDependency */,
 			);
@@ -228,6 +229,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA6C32B50CCC9DB000306BD7;
 			remoteInfo = "Perl Module";
+		};
+		AA6D0899122C6D9200ED0CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE361381057267700F0CA90 /* Snow Leopard */;
+			remoteInfo = "Snow Leopard";
 		};
 		AA7F61300DCCFAD100D20E5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1125,7 +1133,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PERL=/usr/bin/perl5.8.6\nexport SDK=/Developer/SDKs/MacOSX10.4u.sdk\nexport CFLAGS=\"-arch i386 -arch ppc -isysroot$SDK -ObjC -F$BUILD_DIR/$CONFIGURATION\"\nexport LDFLAGS=\"-arch i386 -arch ppc -Wl,-syslibroot,$SDK\"\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.6\" ;\nelse\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n\tmake test\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+			shellScript = "export PERL=/usr/bin/perl5.8.6\nexport SDK=/Developer/SDKs/MacOSX10.4u.sdk\nexport CFLAGS=\"-arch i386 -arch ppc -isysroot$SDK -ObjC -F$BUILD_DIR/$CONFIGURATION\"\nexport LDFLAGS=\"-arch i386 -arch ppc -Wl,-syslibroot,$SDK\"\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.6\" ;\nelse\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\n\n# patch makefiles to use gcc-4.0\nfind . -name 'Makefile' | xargs perl -p -i \\\n  -e 's/CC = cc/CC = gcc-4.0/;' \\\n  -e 's/LD = env MACOSX_DEPLOYMENT_TARGET=10.3 cc/LD = env MACOSX_DEPLOYMENT_TARGET=10.3 gcc-4.0/;'\n\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n\tmake test\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
 		};
 		AA6C32B40CCC9DB000306BD7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1261,6 +1269,11 @@
 			isa = PBXTargetDependency;
 			target = AA6C32B50CCC9DB000306BD7 /* Perl Module (5.8.8) */;
 			targetProxy = AA6C32BC0CCC9DE900306BD7 /* PBXContainerItemProxy */;
+		};
+		AA6D089A122C6D9200ED0CC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE361381057267700F0CA90 /* Snow Leopard */;
+			targetProxy = AA6D0899122C6D9200ED0CC7 /* PBXContainerItemProxy */;
 		};
 		AA7F61310DCCFAD100D20E5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
