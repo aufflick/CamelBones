@@ -17,7 +17,7 @@ our %opts = (
 
     PREREQ_PM         => {},
 
-    AUTHOR         => 'Sherm Pendley <camelbones@dot-app.org>',
+    AUTHOR         => 'Sherm Pendley <sherm.pendley@gmail.com>',
 
     XSOPT           => "-typemap $CamelBones/Resources/typemap",
 
