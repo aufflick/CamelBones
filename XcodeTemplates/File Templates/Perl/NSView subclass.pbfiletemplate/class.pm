@@ -9,7 +9,7 @@
 #
 
 package «FILEBASENAMEASIDENTIFIER»;
-use CamelBones qw(:all);
+use CamelBones qw(:All);
 use strict;
 use warnings;
 
