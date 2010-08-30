@@ -19,7 +19,6 @@
 // of it should be fully expanded by now.
 #undef BYTEORDER
 
-#define MACOSX
 #include "ffi.h"
 
 typedef union {
