@@ -7,7 +7,7 @@
 	<key>CFBundleGetInfoString</key>
 	<string>CamelBones, Copyright 2005-2009 Sherm Pendley</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.dot-app.CamelBones</string>
+	<string>org.CamelBones.framework</string>
 	<key>CFBundleName</key>
 	<string>CamelBones</string>
 	<key>CFBundlePackageType</key>
