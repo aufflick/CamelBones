@@ -370,7 +370,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */;
+			remoteGlobalIDString = AAD87EFC122C8A3400756D8C;
 			remoteInfo = "darwin-thread-multi-2level-5.8.1";
 		};
 		AAD87F6D122C8D3500756D8C /* PBXContainerItemProxy */ = {
@@ -384,21 +384,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */;
+			remoteGlobalIDString = AAD87EFC122C8A3400756D8C;
 			remoteInfo = "darwin-thread-multi-2level-5.8.1";
 		};
 		AAD87F79122C8D5B00756D8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AAD87F5E122C8CE200756D8C /* Perl Module (5.8.1) */;
+			remoteGlobalIDString = AAD87F5E122C8CE200756D8C;
 			remoteInfo = "Perl Module (5.8.1)";
 		};
 		AAD87F7D122C8DC500756D8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AAD87F6B122C8D3500756D8C /* Panther */;
+			remoteGlobalIDString = AAD87F6B122C8D3500756D8C;
 			remoteInfo = Panther;
 		};
 		FFE360FC105720FB00F0CA90 /* PBXContainerItemProxy */ = {
@@ -548,60 +548,6 @@
 		AA50E5090C87716B004DA7BD /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		AA50E5120C877231004DA7BD /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.6/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
 		AA50E9640C879392004DA7BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA68EB130CA9CF1200003ED0 /* AddressBook.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = AddressBook.bridgesupport; path = ../BridgeSupport/Flattened/AddressBook.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB140CA9CF1200003ED0 /* AppKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = AppKit.bridgesupport; path = ../BridgeSupport/Flattened/AppKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB150CA9CF1200003ED0 /* AppleScriptKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = AppleScriptKit.bridgesupport; path = ../BridgeSupport/Flattened/AppleScriptKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB160CA9CF1200003ED0 /* ApplicationServices.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ApplicationServices.bridgesupport; path = ../BridgeSupport/Flattened/ApplicationServices.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB170CA9CF1200003ED0 /* Automator.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Automator.bridgesupport; path = ../BridgeSupport/Flattened/Automator.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB180CA9CF1200003ED0 /* CalendarStore.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CalendarStore.bridgesupport; path = ../BridgeSupport/Flattened/CalendarStore.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB190CA9CF1200003ED0 /* Cocoa.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Cocoa.bridgesupport; path = ../BridgeSupport/Flattened/Cocoa.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB1A0CA9CF1200003ED0 /* Collaboration.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Collaboration.bridgesupport; path = ../BridgeSupport/Flattened/Collaboration.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB1B0CA9CF1200003ED0 /* CoreAudio.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CoreAudio.bridgesupport; path = ../BridgeSupport/Flattened/CoreAudio.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB1C0CA9CF1200003ED0 /* CoreAudioKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CoreAudioKit.bridgesupport; path = ../BridgeSupport/Flattened/CoreAudioKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB1D0CA9CF1200003ED0 /* CoreData.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CoreData.bridgesupport; path = ../BridgeSupport/Flattened/CoreData.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB1E0CA9CF1200003ED0 /* CoreFoundation.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CoreFoundation.bridgesupport; path = ../BridgeSupport/Flattened/CoreFoundation.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB1F0CA9CF1200003ED0 /* CoreFoundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = CoreFoundation.dylib; path = ../BridgeSupport/Flattened/CoreFoundation.dylib; sourceTree = SOURCE_ROOT; };
-		AA68EB200CA9CF1200003ED0 /* CoreGraphics.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CoreGraphics.bridgesupport; path = ../BridgeSupport/Flattened/CoreGraphics.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB210CA9CF1200003ED0 /* CoreGraphics.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = CoreGraphics.dylib; path = ../BridgeSupport/Flattened/CoreGraphics.dylib; sourceTree = SOURCE_ROOT; };
-		AA68EB220CA9CF1200003ED0 /* CoreVideo.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = CoreVideo.bridgesupport; path = ../BridgeSupport/Flattened/CoreVideo.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB230CA9CF1200003ED0 /* DictionaryServices.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = DictionaryServices.bridgesupport; path = ../BridgeSupport/Flattened/DictionaryServices.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB240CA9CF1200003ED0 /* DirectoryService.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = DirectoryService.bridgesupport; path = ../BridgeSupport/Flattened/DirectoryService.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB250CA9CF1200003ED0 /* DiscRecording.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = DiscRecording.bridgesupport; path = ../BridgeSupport/Flattened/DiscRecording.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB260CA9CF1200003ED0 /* DiscRecordingUI.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = DiscRecordingUI.bridgesupport; path = ../BridgeSupport/Flattened/DiscRecordingUI.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB270CA9CF1200003ED0 /* DVDPlayback.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = DVDPlayback.bridgesupport; path = ../BridgeSupport/Flattened/DVDPlayback.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB280CA9CF1200003ED0 /* ExceptionHandling.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ExceptionHandling.bridgesupport; path = ../BridgeSupport/Flattened/ExceptionHandling.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB290CA9CF1200003ED0 /* Foundation.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Foundation.bridgesupport; path = ../BridgeSupport/Flattened/Foundation.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB2A0CA9CF1200003ED0 /* Foundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = Foundation.dylib; path = ../BridgeSupport/Flattened/Foundation.dylib; sourceTree = SOURCE_ROOT; };
-		AA68EB2B0CA9CF1200003ED0 /* ICADevices.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ICADevices.bridgesupport; path = ../BridgeSupport/Flattened/ICADevices.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB2C0CA9CF1200003ED0 /* ImageIO.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ImageIO.bridgesupport; path = ../BridgeSupport/Flattened/ImageIO.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB2D0CA9CF1200003ED0 /* ImageKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ImageKit.bridgesupport; path = ../BridgeSupport/Flattened/ImageKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB2E0CA9CF1200003ED0 /* InputMethodKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = InputMethodKit.bridgesupport; path = ../BridgeSupport/Flattened/InputMethodKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB2F0CA9CF1200003ED0 /* InstallerPlugins.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = InstallerPlugins.bridgesupport; path = ../BridgeSupport/Flattened/InstallerPlugins.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB300CA9CF1200003ED0 /* InstantMessage.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = InstantMessage.bridgesupport; path = ../BridgeSupport/Flattened/InstantMessage.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB310CA9CF1200003ED0 /* IOBluetooth.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = IOBluetooth.bridgesupport; path = ../BridgeSupport/Flattened/IOBluetooth.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB320CA9CF1200003ED0 /* IOBluetoothUI.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = IOBluetoothUI.bridgesupport; path = ../BridgeSupport/Flattened/IOBluetoothUI.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB330CA9CF1200003ED0 /* JavaScriptCore.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = JavaScriptCore.bridgesupport; path = ../BridgeSupport/Flattened/JavaScriptCore.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB340CA9CF1200003ED0 /* LatentSemanticMapping.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = LatentSemanticMapping.bridgesupport; path = ../BridgeSupport/Flattened/LatentSemanticMapping.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB350CA9CF1200003ED0 /* OpenGL.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = OpenGL.bridgesupport; path = ../BridgeSupport/Flattened/OpenGL.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB360CA9CF1200003ED0 /* OSAKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = OSAKit.bridgesupport; path = ../BridgeSupport/Flattened/OSAKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB370CA9CF1200003ED0 /* PDFKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = PDFKit.bridgesupport; path = ../BridgeSupport/Flattened/PDFKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB380CA9CF1200003ED0 /* PreferencePanes.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = PreferencePanes.bridgesupport; path = ../BridgeSupport/Flattened/PreferencePanes.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB390CA9CF1200003ED0 /* PubSub.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = PubSub.bridgesupport; path = ../BridgeSupport/Flattened/PubSub.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB3A0CA9CF1200003ED0 /* QTKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = QTKit.bridgesupport; path = ../BridgeSupport/Flattened/QTKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB3B0CA9CF1200003ED0 /* Quartz.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Quartz.bridgesupport; path = ../BridgeSupport/Flattened/Quartz.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB3C0CA9CF1200003ED0 /* QuartzComposer.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = QuartzComposer.bridgesupport; path = ../BridgeSupport/Flattened/QuartzComposer.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB3D0CA9CF1200003ED0 /* QuartzCore.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = QuartzCore.bridgesupport; path = ../BridgeSupport/Flattened/QuartzCore.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB3E0CA9CF1200003ED0 /* ScreenSaver.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ScreenSaver.bridgesupport; path = ../BridgeSupport/Flattened/ScreenSaver.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB3F0CA9CF1200003ED0 /* ScreenSaver.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ScreenSaver.dylib; path = ../BridgeSupport/Flattened/ScreenSaver.dylib; sourceTree = SOURCE_ROOT; };
-		AA68EB400CA9CF1200003ED0 /* ScriptingBridge.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = ScriptingBridge.bridgesupport; path = ../BridgeSupport/Flattened/ScriptingBridge.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB410CA9CF1200003ED0 /* SecurityFoundation.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = SecurityFoundation.bridgesupport; path = ../BridgeSupport/Flattened/SecurityFoundation.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB420CA9CF1200003ED0 /* SecurityInterface.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = SecurityInterface.bridgesupport; path = ../BridgeSupport/Flattened/SecurityInterface.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB430CA9CF1200003ED0 /* SpeechRecognition.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = SpeechRecognition.bridgesupport; path = ../BridgeSupport/Flattened/SpeechRecognition.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB440CA9CF1200003ED0 /* SpeechSynthesis.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = SpeechSynthesis.bridgesupport; path = ../BridgeSupport/Flattened/SpeechSynthesis.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB450CA9CF1200003ED0 /* SyncServices.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = SyncServices.bridgesupport; path = ../BridgeSupport/Flattened/SyncServices.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB460CA9CF1200003ED0 /* SystemConfiguration.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = SystemConfiguration.bridgesupport; path = ../BridgeSupport/Flattened/SystemConfiguration.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB470CA9CF1200003ED0 /* WebKit.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = WebKit.bridgesupport; path = ../BridgeSupport/Flattened/WebKit.bridgesupport; sourceTree = SOURCE_ROOT; };
-		AA68EB480CA9CF1200003ED0 /* XgridFoundation.bridgesupport */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = XgridFoundation.bridgesupport; path = ../BridgeSupport/Flattened/XgridFoundation.bridgesupport; sourceTree = SOURCE_ROOT; };
 		AA6C31C70CCC91E400306BD7 /* darwin-thread-multi-2level-5.8.6.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.8.6.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA83FE0E0CC9E9CF00E56F20 /* typemap */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = typemap; sourceTree = "<group>"; };
 		AA9142060CC98CCE0055B0E5 /* CamelBones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CamelBones.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -630,7 +576,6 @@
 		AA91437A0CC99B2A0055B0E5 /* README */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = README; path = CPAN/README; sourceTree = "<group>"; };
 		AAD4DE8D122C62630072C002 /* libffi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffi.xcodeproj; path = "libffi-15/libffi.xcodeproj"; sourceTree = "<group>"; };
 		AAD87F1C122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.8.1.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAD87F21122C8A3400756D8C /* PluginInfo-5.8.6 copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.6 copy.plist"; sourceTree = "<group>"; };
 		AAD87F2C122C8AE500756D8C /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
 		AAD87F2E122C8B1000756D8C /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o"; name = libperl.dylib; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.1.plist"; sourceTree = "<group>"; };
@@ -742,7 +687,6 @@
 				AA50E3A70C875D23004DA7BD /* CamelBones */,
 				AA50E4130C875E1D004DA7BD /* Libraries */,
 				AA50E2330C87587B004DA7BD /* Products */,
-				AAD87F21122C8A3400756D8C /* PluginInfo-5.8.6 copy.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -872,70 +816,8 @@
 		AA50E5CF0C877E37004DA7BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AA68EB120CA9CEF000003ED0 /* BridgeSupport */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		AA68EB120CA9CEF000003ED0 /* BridgeSupport */ = {
-			isa = PBXGroup;
-			children = (
-				AA68EB130CA9CF1200003ED0 /* AddressBook.bridgesupport */,
-				AA68EB140CA9CF1200003ED0 /* AppKit.bridgesupport */,
-				AA68EB150CA9CF1200003ED0 /* AppleScriptKit.bridgesupport */,
-				AA68EB160CA9CF1200003ED0 /* ApplicationServices.bridgesupport */,
-				AA68EB170CA9CF1200003ED0 /* Automator.bridgesupport */,
-				AA68EB180CA9CF1200003ED0 /* CalendarStore.bridgesupport */,
-				AA68EB190CA9CF1200003ED0 /* Cocoa.bridgesupport */,
-				AA68EB1A0CA9CF1200003ED0 /* Collaboration.bridgesupport */,
-				AA68EB1B0CA9CF1200003ED0 /* CoreAudio.bridgesupport */,
-				AA68EB1C0CA9CF1200003ED0 /* CoreAudioKit.bridgesupport */,
-				AA68EB1D0CA9CF1200003ED0 /* CoreData.bridgesupport */,
-				AA68EB1E0CA9CF1200003ED0 /* CoreFoundation.bridgesupport */,
-				AA68EB1F0CA9CF1200003ED0 /* CoreFoundation.dylib */,
-				AA68EB200CA9CF1200003ED0 /* CoreGraphics.bridgesupport */,
-				AA68EB210CA9CF1200003ED0 /* CoreGraphics.dylib */,
-				AA68EB220CA9CF1200003ED0 /* CoreVideo.bridgesupport */,
-				AA68EB230CA9CF1200003ED0 /* DictionaryServices.bridgesupport */,
-				AA68EB240CA9CF1200003ED0 /* DirectoryService.bridgesupport */,
-				AA68EB250CA9CF1200003ED0 /* DiscRecording.bridgesupport */,
-				AA68EB260CA9CF1200003ED0 /* DiscRecordingUI.bridgesupport */,
-				AA68EB270CA9CF1200003ED0 /* DVDPlayback.bridgesupport */,
-				AA68EB280CA9CF1200003ED0 /* ExceptionHandling.bridgesupport */,
-				AA68EB290CA9CF1200003ED0 /* Foundation.bridgesupport */,
-				AA68EB2A0CA9CF1200003ED0 /* Foundation.dylib */,
-				AA68EB2B0CA9CF1200003ED0 /* ICADevices.bridgesupport */,
-				AA68EB2C0CA9CF1200003ED0 /* ImageIO.bridgesupport */,
-				AA68EB2D0CA9CF1200003ED0 /* ImageKit.bridgesupport */,
-				AA68EB2E0CA9CF1200003ED0 /* InputMethodKit.bridgesupport */,
-				AA68EB2F0CA9CF1200003ED0 /* InstallerPlugins.bridgesupport */,
-				AA68EB300CA9CF1200003ED0 /* InstantMessage.bridgesupport */,
-				AA68EB310CA9CF1200003ED0 /* IOBluetooth.bridgesupport */,
-				AA68EB320CA9CF1200003ED0 /* IOBluetoothUI.bridgesupport */,
-				AA68EB330CA9CF1200003ED0 /* JavaScriptCore.bridgesupport */,
-				AA68EB340CA9CF1200003ED0 /* LatentSemanticMapping.bridgesupport */,
-				AA68EB350CA9CF1200003ED0 /* OpenGL.bridgesupport */,
-				AA68EB360CA9CF1200003ED0 /* OSAKit.bridgesupport */,
-				AA68EB370CA9CF1200003ED0 /* PDFKit.bridgesupport */,
-				AA68EB380CA9CF1200003ED0 /* PreferencePanes.bridgesupport */,
-				AA68EB390CA9CF1200003ED0 /* PubSub.bridgesupport */,
-				AA68EB3A0CA9CF1200003ED0 /* QTKit.bridgesupport */,
-				AA68EB3B0CA9CF1200003ED0 /* Quartz.bridgesupport */,
-				AA68EB3C0CA9CF1200003ED0 /* QuartzComposer.bridgesupport */,
-				AA68EB3D0CA9CF1200003ED0 /* QuartzCore.bridgesupport */,
-				AA68EB3E0CA9CF1200003ED0 /* ScreenSaver.bridgesupport */,
-				AA68EB3F0CA9CF1200003ED0 /* ScreenSaver.dylib */,
-				AA68EB400CA9CF1200003ED0 /* ScriptingBridge.bridgesupport */,
-				AA68EB410CA9CF1200003ED0 /* SecurityFoundation.bridgesupport */,
-				AA68EB420CA9CF1200003ED0 /* SecurityInterface.bridgesupport */,
-				AA68EB430CA9CF1200003ED0 /* SpeechRecognition.bridgesupport */,
-				AA68EB440CA9CF1200003ED0 /* SpeechSynthesis.bridgesupport */,
-				AA68EB450CA9CF1200003ED0 /* SyncServices.bridgesupport */,
-				AA68EB460CA9CF1200003ED0 /* SystemConfiguration.bridgesupport */,
-				AA68EB470CA9CF1200003ED0 /* WebKit.bridgesupport */,
-				AA68EB480CA9CF1200003ED0 /* XgridFoundation.bridgesupport */,
-			);
-			name = BridgeSupport;
 			sourceTree = "<group>";
 		};
 		AA91431A0CC99B010055B0E5 /* Perl Module */ = {
@@ -1765,7 +1647,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = "Release-App-Embedded";
 		};
@@ -1784,7 +1666,7 @@
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = "Release-Lib-Embedded";
 		};
@@ -2071,7 +1953,7 @@
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
@@ -2090,7 +1972,7 @@
 				INSTALL_PATH = /Library/Frameworks;
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
