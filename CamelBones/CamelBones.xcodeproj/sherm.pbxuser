@@ -4,10 +4,10 @@
 		activeExec = 0;
 	};
 	AA50E2050C87571F004DA7BD /* Project object */ = {
+		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Debug;
-		activeTarget = AA7F613A0DCCFBA300D20E5E /* Tiger */;
+		activeTarget = AA7F61620DCCFBA900D20E5E /* All */;
 		addToTargets = (
-			AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */,
 		);
 		codeSenseManager = AAB4A3C01201E994005D75E3 /* Code sense */;
 		perUserDictionary = {
@@ -55,12 +55,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304901507;
-			PBXWorkspaceStateSaveDate = 304901507;
+			PBXPerProjectTemplateStateSaveDate = 304908839;
+			PBXWorkspaceStateSaveDate = 304908839;
 		};
 		perUserProjectItems = {
-			AA6D08B6122C740200ED0CC7 /* PBXTextBookmark */ = AA6D08B6122C740200ED0CC7 /* PBXTextBookmark */;
-			AA6D08CD122C783B00ED0CC7 /* PBXTextBookmark */ = AA6D08CD122C783B00ED0CC7 /* PBXTextBookmark */;
+			AAD87F83122C8F0100756D8C /* PBXTextBookmark */ = AAD87F83122C8F0100756D8C /* PBXTextBookmark */;
+			AAD87F84122C8F0100756D8C /* PBXBookmark */ = AAD87F84122C8F0100756D8C /* PBXBookmark */;
+			AAD87F85122C8F0100756D8C /* PlistBookmark */ = AAD87F85122C8F0100756D8C /* PlistBookmark */;
 		};
 		sourceControlManager = AAB4A3BF1201E994005D75E3 /* Source Control */;
 		userBuildSettings = {
@@ -131,26 +132,6 @@
 	AA6C32B50CCC9DB000306BD7 /* Perl Module (5.8.8) */ = {
 		activeExec = 0;
 	};
-	AA6D08B6122C740200ED0CC7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AA9143580CC99B2A0055B0E5 /* cb_common.pl */;
-		name = "cb_common.pl: 22";
-		rLen = 0;
-		rLoc = 402;
-		rType = 0;
-		vrLen = 1241;
-		vrLoc = 0;
-	};
-	AA6D08CD122C783B00ED0CC7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AA9143580CC99B2A0055B0E5 /* cb_common.pl */;
-		name = "cb_common.pl: 22";
-		rLen = 0;
-		rLoc = 402;
-		rType = 0;
-		vrLen = 1241;
-		vrLoc = 0;
-	};
 	AA7F613A0DCCFBA300D20E5E /* Tiger */ = {
 		activeExec = 0;
 	};
@@ -176,9 +157,9 @@
 	};
 	AA9143580CC99B2A0055B0E5 /* cb_common.pl */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 704}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 672}}";
 			sepNavSelRange = "{402, 0}";
-			sepNavVisRange = "{0, 1241}";
+			sepNavVisRange = "{0, 790}";
 		};
 	};
 	AA9143740CC99B2A0055B0E5 /* Makefile.PL */ = {
@@ -201,6 +182,40 @@
 	AAB4A3C01201E994005D75E3 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */ = {
+		activeExec = 0;
+	};
+	AAD87F5E122C8CE200756D8C /* Perl Module (5.8.1) */ = {
+		activeExec = 0;
+	};
+	AAD87F6B122C8D3500756D8C /* Panther */ = {
+		activeExec = 0;
+	};
+	AAD87F83122C8F0100756D8C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA9143580CC99B2A0055B0E5 /* cb_common.pl */;
+		name = "cb_common.pl: 22";
+		rLen = 0;
+		rLoc = 402;
+		rType = 0;
+		vrLen = 790;
+		vrLoc = 0;
+	};
+	AAD87F84122C8F0100756D8C /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
+	};
+	AAD87F85122C8F0100756D8C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Volumes/Ice/Projects/CamelBones/CamelBones/PluginInfo-5.8.1.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */ = {
 		activeExec = 0;
