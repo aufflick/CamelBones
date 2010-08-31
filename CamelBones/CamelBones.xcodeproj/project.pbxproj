@@ -26,7 +26,6 @@
 			buildPhases = (
 			);
 			dependencies = (
-				FFE9CF480D135B8400BB5E57 /* PBXTargetDependency */,
 				849691FE0D72A87600A81045 /* PBXTargetDependency */,
 				AA6C32BD0CCC9DE900306BD7 /* PBXTargetDependency */,
 			);
@@ -52,7 +51,6 @@
 			buildPhases = (
 			);
 			dependencies = (
-				AA7F613B0DCCFBA300D20E5E /* PBXTargetDependency */,
 				AA7F613F0DCCFBA300D20E5E /* PBXTargetDependency */,
 				AA7F61450DCCFBA300D20E5E /* PBXTargetDependency */,
 			);
@@ -65,10 +63,10 @@
 			buildPhases = (
 			);
 			dependencies = (
+				AA35BF2F122D9ED0004C705B /* PBXTargetDependency */,
 				AA6D089A122C6D9200ED0CC7 /* PBXTargetDependency */,
 				AA7F61820DCD028500D20E5E /* PBXTargetDependency */,
 				AA7F617B0DCCFBF100D20E5E /* PBXTargetDependency */,
-				AAD87F7E122C8DC500756D8C /* PBXTargetDependency */,
 			);
 			name = All;
 			productName = All;
@@ -92,7 +90,6 @@
 			buildPhases = (
 			);
 			dependencies = (
-				AAD87F6C122C8D3500756D8C /* PBXTargetDependency */,
 				AAD87F78122C8D5600756D8C /* PBXTargetDependency */,
 				AAD87F7A122C8D5B00756D8C /* PBXTargetDependency */,
 			);
@@ -120,7 +117,6 @@
 			dependencies = (
 				FFE361471057268F00F0CA90 /* PBXTargetDependency */,
 				FFE361451057268B00F0CA90 /* PBXTargetDependency */,
-				FFE361391057267700F0CA90 /* PBXTargetDependency */,
 			);
 			name = "Snow Leopard";
 			productName = All;
@@ -254,6 +250,13 @@
 			remoteGlobalIDString = FFE9CE900D13073A00BB5E57;
 			remoteInfo = "darwin-thread-multi-2level-5.8.8";
 		};
+		AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
+			remoteInfo = CamelBones.framework;
+		};
 		AA6C32040CCC95EA00306BD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
@@ -295,13 +298,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA50E4E80C877030004DA7BD;
 			remoteInfo = "darwin-thread-multi-2level-5.8.6";
-		};
-		AA7F613C0DCCFBA300D20E5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
-			remoteInfo = CamelBones.framework;
 		};
 		AA7F61400DCCFBA300D20E5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -373,13 +369,6 @@
 			remoteGlobalIDString = AAD87EFC122C8A3400756D8C;
 			remoteInfo = "darwin-thread-multi-2level-5.8.1";
 		};
-		AAD87F6D122C8D3500756D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
-			remoteInfo = CamelBones.framework;
-		};
 		AAD87F77122C8D5600756D8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
@@ -393,13 +382,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AAD87F5E122C8CE200756D8C;
 			remoteInfo = "Perl Module (5.8.1)";
-		};
-		AAD87F7D122C8DC500756D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AAD87F6B122C8D3500756D8C;
-			remoteInfo = Panther;
 		};
 		FFE360FC105720FB00F0CA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -422,13 +404,6 @@
 			remoteGlobalIDString = FFE360F8105720FB00F0CA90;
 			remoteInfo = "darwin-thread-multi-2level-5.8.9";
 		};
-		FFE3613A1057267700F0CA90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
-			remoteInfo = CamelBones.framework;
-		};
 		FFE361441057268B00F0CA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
@@ -444,13 +419,6 @@
 			remoteInfo = "darwin-thread-multi-2level-5.8.9";
 		};
 		FFE9CE940D13073A00BB5E57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
-			remoteInfo = CamelBones.framework;
-		};
-		FFE9CF470D135B8400BB5E57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
@@ -1330,6 +1298,11 @@
 			target = FFE9CE900D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8 */;
 			targetProxy = 849691FD0D72A87600A81045 /* PBXContainerItemProxy */;
 		};
+		AA35BF2F122D9ED0004C705B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */;
+		};
 		AA6C32050CCC95EA00306BD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
@@ -1359,11 +1332,6 @@
 			isa = PBXTargetDependency;
 			target = AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */;
 			targetProxy = AA7F61320DCCFAE700D20E5E /* PBXContainerItemProxy */;
-		};
-		AA7F613B0DCCFBA300D20E5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
-			targetProxy = AA7F613C0DCCFBA300D20E5E /* PBXContainerItemProxy */;
 		};
 		AA7F613F0DCCFBA300D20E5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1410,11 +1378,6 @@
 			target = AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */;
 			targetProxy = AAD87F69122C8CFB00756D8C /* PBXContainerItemProxy */;
 		};
-		AAD87F6C122C8D3500756D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
-			targetProxy = AAD87F6D122C8D3500756D8C /* PBXContainerItemProxy */;
-		};
 		AAD87F78122C8D5600756D8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */;
@@ -1424,11 +1387,6 @@
 			isa = PBXTargetDependency;
 			target = AAD87F5E122C8CE200756D8C /* Perl Module (5.8.1) */;
 			targetProxy = AAD87F79122C8D5B00756D8C /* PBXContainerItemProxy */;
-		};
-		AAD87F7E122C8DC500756D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AAD87F6B122C8D3500756D8C /* Panther */;
-			targetProxy = AAD87F7D122C8DC500756D8C /* PBXContainerItemProxy */;
 		};
 		FFE360FB105720FB00F0CA90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1445,11 +1403,6 @@
 			target = FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */;
 			targetProxy = FFE3612B1057216800F0CA90 /* PBXContainerItemProxy */;
 		};
-		FFE361391057267700F0CA90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
-			targetProxy = FFE3613A1057267700F0CA90 /* PBXContainerItemProxy */;
-		};
 		FFE361451057268B00F0CA90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FFE3611F1057214100F0CA90 /* Perl Module (5.8.9) */;
@@ -1464,11 +1417,6 @@
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
 			targetProxy = FFE9CE940D13073A00BB5E57 /* PBXContainerItemProxy */;
-		};
-		FFE9CF480D135B8400BB5E57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
-			targetProxy = FFE9CF470D135B8400BB5E57 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1645,6 +1593,7 @@
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
 				SDKROOT = macosx10.5;
@@ -1664,6 +1613,7 @@
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
 				SDKROOT = macosx10.5;
@@ -1951,6 +1901,7 @@
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
 				SDKROOT = macosx10.5;
@@ -1970,6 +1921,7 @@
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Frameworks;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				PRODUCT_NAME = CamelBones;
 				SDKROOT = macosx10.5;
@@ -2009,6 +1961,8 @@
 					"-fno-strict-aliasing",
 				);
 				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
 					"-lperl",
 					"-framework",
 					Foundation,
@@ -2019,6 +1973,7 @@
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.1";
 				SDKROOT = macosx10.4;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE";
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -2054,6 +2009,8 @@
 					"-fno-strict-aliasing",
 				);
 				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
 					"-lperl",
 					"-framework",
 					Foundation,
@@ -2064,6 +2021,7 @@
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.1";
 				SDKROOT = macosx10.4;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE";
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -2099,6 +2057,8 @@
 					"-fno-strict-aliasing",
 				);
 				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
 					"-lperl",
 					"-framework",
 					Foundation,
@@ -2109,6 +2069,7 @@
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.1";
 				SDKROOT = macosx10.4;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE";
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-App-Embedded";
@@ -2144,6 +2105,8 @@
 					"-fno-strict-aliasing",
 				);
 				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
 					"-lperl",
 					"-framework",
 					Foundation,
@@ -2154,6 +2117,7 @@
 				PRODUCT_NAME = "darwin-thread-multi-2level-5.8.1";
 				SDKROOT = macosx10.4;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libffi-15/include\" /System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE";
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = "Release-Lib-Embedded";

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 44;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -294,9 +294,10 @@
 				GCC_VERSION = 4.0;
 				INSTALL_PATH = /usr/local/lib;
 				MACH_O_TYPE = staticlib;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
 				PREBINDING = NO;
 				PRODUCT_NAME = libffi_dyn;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -315,9 +316,10 @@
 				GCC_VERSION = 4.0;
 				INSTALL_PATH = /usr/lib;
 				MACH_O_TYPE = staticlib;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
 				PREBINDING = NO;
 				PRODUCT_NAME = ffi;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
 				ZERO_LINK = NO;
 			};
 			name = Release;

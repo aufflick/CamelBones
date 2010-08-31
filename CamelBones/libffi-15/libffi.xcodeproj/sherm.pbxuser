@@ -49,12 +49,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304898987;
-			PBXWorkspaceStateSaveDate = 304898987;
+			PBXPerProjectTemplateStateSaveDate = 304980349;
+			PBXWorkspaceStateSaveDate = 304980349;
 		};
 		perUserProjectItems = {
-			AAD4DEB1122C63B50072C002 /* PBXTextBookmark */ = AAD4DEB1122C63B50072C002 /* PBXTextBookmark */;
-			AAD4DEB2122C63C50072C002 /* PBXTextBookmark */ = AAD4DEB2122C63C50072C002 /* PBXTextBookmark */;
+			AA35BF41122DA195004C705B /* PBXTextBookmark */ = AA35BF41122DA195004C705B /* PBXTextBookmark */;
+			AA6818B0122D850F00D600F0 /* PBXTextBookmark */ = AA6818B0122D850F00D600F0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = AAD4DD34122C4B740072C002 /* Source Control */;
 		userBuildSettings = {
@@ -65,10 +65,30 @@
 	};
 	774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {919, 27744}}";
+			sepNavIntBoundsRect = "{{0, 0}, {919, 27776}}";
 			sepNavSelRange = "{1653, 0}";
-			sepNavVisRange = "{1546, 345}";
+			sepNavVisRange = "{1546, 287}";
 		};
+	};
+	AA35BF41122DA195004C705B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */;
+		name = "ppc-ffi_darwin.c: 41";
+		rLen = 0;
+		rLoc = 1653;
+		rType = 0;
+		vrLen = 287;
+		vrLoc = 1546;
+	};
+	AA6818B0122D850F00D600F0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */;
+		name = "ppc-ffi_darwin.c: 41";
+		rLen = 0;
+		rLoc = 1653;
+		rType = 0;
+		vrLen = 314;
+		vrLoc = 1546;
 	};
 	AAD4DD34122C4B740072C002 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -83,25 +103,5 @@
 	AAD4DD35122C4B740072C002 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	AAD4DEB1122C63B50072C002 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */;
-		name = "ppc-ffi_darwin.c: 41";
-		rLen = 0;
-		rLoc = 1653;
-		rType = 0;
-		vrLen = 345;
-		vrLoc = 1546;
-	};
-	AAD4DEB2122C63C50072C002 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 774A687E0AB08B6D00FBC511 /* ppc-ffi_darwin.c */;
-		name = "ppc-ffi_darwin.c: 41";
-		rLen = 0;
-		rLoc = 1653;
-		rType = 0;
-		vrLen = 345;
-		vrLoc = 1546;
 	};
 }
