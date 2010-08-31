@@ -21,7 +21,7 @@
     // Get the framework with the identifier we're interested in
     e = [[NSBundle allFrameworks] objectEnumerator];
     while ((theBundle = [e nextObject]) != nil) {
-        if ([[theBundle bundleIdentifier] isEqualToString:@"org.dot-app.CamelBones"]) break;
+        if ([[theBundle bundleIdentifier] isEqualToString:@"org.CamelBones.framework"]) break;
     }
 
     // Resolve the path to the dylib, and load it
@@ -29,7 +29,7 @@
 
     NSString *bundleBinPath = [NSString stringWithFormat:@"%@/Contents/MacOS/%s", bundlePath, archver];
     const char *bundleBinCPath = [bundleBinPath UTF8String];
-    void *b = dlopen(bundleBinCPath, RTLD_NOW | RTLD_GLOBAL);
+    void *b = dlopen(bundleBinCPath, RTLD_LAZY | RTLD_LOCAL);
     if (!b) {
         NSLog(@"Error loading support bundle at %s: %s", bundleBinCPath, dlerror());
     }
