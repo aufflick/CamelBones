@@ -3,9 +3,102 @@
 	84893BF80DCCF7A000B48051 /* Perl Module (5.8.6) */ = {
 		activeExec = 0;
 	};
+	AA47BF4A122D499E009C5444 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Volumes/Ice/Projects/CamelBones/CamelBones/PluginInfo-5.8.1.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	AA47BF4D122D4A13009C5444 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Volumes/Ice/Projects/CamelBones/CamelBones/PluginInfo-5.8.1.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	AA47BF9C122D4F7F009C5444 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Volumes/Ice/Projects/CamelBones/CamelBones/PluginInfo-5.8.1.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	AA47BF9D122D4F7F009C5444 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA9143570CC99B2A0055B0E5 /* CamelBones.xs */;
+		name = "CamelBones.xs: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 560;
+		vrLoc = 400;
+	};
+	AA47BF9E122D4F7F009C5444 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA9143710CC99B2A0055B0E5 /* CamelBones.pm */;
+		name = "CamelBones.pm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 907;
+		vrLoc = 0;
+	};
+	AA47BF9F122D4F7F009C5444 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3C10C875DB7004DA7BD /* DylibInit.m */;
+		name = "DylibInit.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 0;
+	};
+	AA47BFA0122D4F7F009C5444 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3C10C875DB7004DA7BD /* DylibInit.m */;
+		name = "DylibInit.m: 25";
+		rLen = 0;
+		rLoc = 738;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 349;
+	};
+	AA47BFA6122D5045009C5444 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3C10C875DB7004DA7BD /* DylibInit.m */;
+		name = "DylibInit.m: 34";
+		rLen = 0;
+		rLoc = 1152;
+		rType = 0;
+		vrLen = 1199;
+		vrLoc = 194;
+	};
+	AA47BFF5122D5DFA009C5444 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AA50E3C10C875DB7004DA7BD /* DylibInit.m */;
+		name = "DylibInit.m: 34";
+		rLen = 0;
+		rLoc = 1152;
+		rType = 0;
+		vrLen = 1182;
+		vrLoc = 314;
+	};
 	AA50E2050C87571F004DA7BD /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = "Release-App-Embedded";
 		activeTarget = AA7F61620DCCFBA900D20E5E /* All */;
 		addToTargets = (
 		);
@@ -55,13 +148,20 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304908839;
-			PBXWorkspaceStateSaveDate = 304908839;
+			PBXPerProjectTemplateStateSaveDate = 304959055;
+			PBXWorkspaceStateSaveDate = 304959055;
 		};
 		perUserProjectItems = {
-			AAD87F83122C8F0100756D8C /* PBXTextBookmark */ = AAD87F83122C8F0100756D8C /* PBXTextBookmark */;
-			AAD87F84122C8F0100756D8C /* PBXBookmark */ = AAD87F84122C8F0100756D8C /* PBXBookmark */;
-			AAD87F85122C8F0100756D8C /* PlistBookmark */ = AAD87F85122C8F0100756D8C /* PlistBookmark */;
+			AA47BF4A122D499E009C5444 = AA47BF4A122D499E009C5444 /* PlistBookmark */;
+			AA47BF4D122D4A13009C5444 = AA47BF4D122D4A13009C5444 /* PlistBookmark */;
+			AA47BF9C122D4F7F009C5444 /* PlistBookmark */ = AA47BF9C122D4F7F009C5444 /* PlistBookmark */;
+			AA47BF9D122D4F7F009C5444 /* PBXTextBookmark */ = AA47BF9D122D4F7F009C5444 /* PBXTextBookmark */;
+			AA47BF9E122D4F7F009C5444 /* PBXTextBookmark */ = AA47BF9E122D4F7F009C5444 /* PBXTextBookmark */;
+			AA47BF9F122D4F7F009C5444 /* PBXTextBookmark */ = AA47BF9F122D4F7F009C5444 /* PBXTextBookmark */;
+			AA47BFA0122D4F7F009C5444 /* PBXTextBookmark */ = AA47BFA0122D4F7F009C5444 /* PBXTextBookmark */;
+			AA47BFA6122D5045009C5444 /* PBXTextBookmark */ = AA47BFA6122D5045009C5444 /* PBXTextBookmark */;
+			AA47BFF5122D5DFA009C5444 /* PBXTextBookmark */ = AA47BFF5122D5DFA009C5444 /* PBXTextBookmark */;
+			AAD87F83122C8F0100756D8C = AAD87F83122C8F0100756D8C /* PBXTextBookmark */;
 		};
 		sourceControlManager = AAB4A3BF1201E994005D75E3 /* Source Control */;
 		userBuildSettings = {
@@ -93,6 +193,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {892, 4624}}";
 			sepNavSelRange = "{4970, 0}";
 			sepNavVisRange = "{4241, 1076}";
+		};
+	};
+	AA50E3C10C875DB7004DA7BD /* DylibInit.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1616}}";
+			sepNavSelRange = "{1152, 0}";
+			sepNavVisRange = "{314, 1182}";
 		};
 	};
 	AA50E3C70C875DB7004DA7BD /* NativeMethods.m */ = {
@@ -155,11 +262,25 @@
 			sepNavVisRange = "{0, 284}";
 		};
 	};
+	AA9143570CC99B2A0055B0E5 /* CamelBones.xs */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1264}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{400, 560}";
+		};
+	};
 	AA9143580CC99B2A0055B0E5 /* cb_common.pl */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1307, 672}}";
 			sepNavSelRange = "{402, 0}";
 			sepNavVisRange = "{0, 790}";
+		};
+	};
+	AA9143710CC99B2A0055B0E5 /* CamelBones.pm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 5856}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 907}";
 		};
 	};
 	AA9143740CC99B2A0055B0E5 /* Makefile.PL */ = {
@@ -201,21 +322,6 @@
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 0;
-	};
-	AAD87F84122C8F0100756D8C /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
-	};
-	AAD87F85122C8F0100756D8C /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Volumes/Ice/Projects/CamelBones/CamelBones/PluginInfo-5.8.1.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
 	};
 	FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */ = {
 		activeExec = 0;
