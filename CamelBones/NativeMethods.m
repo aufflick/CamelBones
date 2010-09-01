@@ -60,24 +60,28 @@ static ffi_type *nsrange_elements[3];
 void init_ffi_types() {
 	nspoint_type.size = nspoint_type.alignment = 0;
 	nspoint_type.elements = (ffi_type**)&nspoint_elements;
+    nspoint_type.type = FFI_TYPE_STRUCT;
 	nspoint_elements[0] = &ffi_type_float;
 	nspoint_elements[1] = &ffi_type_float;
 	nspoint_elements[2] = NULL;
 	
 	nssize_type.size = nssize_type.alignment = 0;
 	nssize_type.elements = (ffi_type**)&nssize_elements;
+    nssize_type.type = FFI_TYPE_STRUCT;
 	nssize_elements[0] = &ffi_type_float;
 	nssize_elements[1] = &ffi_type_float;
 	nssize_elements[2] = NULL;
 	
 	nsrect_type.size = nsrect_type.alignment = 0;
 	nsrect_type.elements = (ffi_type**)&nsrect_elements;
+    nsrect_type.type = FFI_TYPE_STRUCT;
 	nsrect_elements[0] = &nspoint_type;
 	nsrect_elements[1] = &nssize_type;
 	nsrect_elements[2] = NULL;
 
 	nsrange_type.size = nsrange_type.alignment = 0;
 	nsrange_type.elements = (ffi_type**)&nsrange_elements;
+    nsrange_type.type = FFI_TYPE_STRUCT;
 	nsrange_elements[0] = &ffi_type_uint32;
 	nsrange_elements[1] = &ffi_type_uint32;
 	nsrange_elements[2] = NULL;
@@ -100,9 +104,15 @@ void* REAL_CBMessengerFunctionForFFIType(ffi_type *theType, BOOL isSuper) {
 #endif
 
     // If this is a struct, whether to call _stret() depends on the
-    // structure size - if it won't fit in a single register, call _stret()
-    if (theType->type == FFI_TYPE_STRUCT && theType->size > sizeof(void*))
+    // structure size and platform
+#ifdef __i386__
+    if (theType->type == FFI_TYPE_STRUCT && theType->size > 8)
         return isSuper ? (void*)&objc_msgSendSuper_stret : (void*)&objc_msgSend_stret;
+#endif
+#ifdef __ppc__
+    if (theType->type == FFI_TYPE_STRUCT)
+        return isSuper ? (void*)&objc_msgSendSuper_stret : (void*)&objc_msgSend_stret;
+#endif
 
     // Otherwise, use vanilla
     return isSuper ? (void*)&objc_msgSendSuper : (void*)&objc_msgSend;
