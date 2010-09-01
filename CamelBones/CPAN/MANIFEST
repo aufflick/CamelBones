@@ -17,6 +17,7 @@ t/01-Functions.t
 t/02-Conversions.t
 t/03-Memory.t
 t/04-Pointers.t
+t/05-Structures.t
 t/10-NSString.t
 t/11-NSArray.t
 t/12-NSNumber.t
@@ -37,4 +38,9 @@ lib/CamelBones/TiedArray.pm
 lib/CamelBones/TiedDictionary.pm
 lib/CamelBones/AppKit/Constants.pm
 lib/CamelBones/Foundation/Constants.pm
+Tests/CBExceptionTests.c
+Tests/CBStructureTests.c
+Tests/CBStructureTests.h
+Tests/CBSuper.c
+Tests/CBSuper.h
 META.yml
