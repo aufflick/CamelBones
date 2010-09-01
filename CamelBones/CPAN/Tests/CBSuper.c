@@ -4,18 +4,7 @@
 */
 
 #import <Cocoa/Cocoa.h>
-
-@interface CBSuper : NSObject {
-    double f;
-    long i;
-}
-
-- (double) floatValue;
-- (long) intValue;
-
-- (void) setFloat: (double)newVal;
-- (void) setInt: (long)newInt;
-@end
+#import "CBSuper.h"
 
 @implementation CBSuper
 
