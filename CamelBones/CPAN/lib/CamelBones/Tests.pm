@@ -5,6 +5,7 @@ package CamelBones::Tests;
 use CamelBones;
 
 @CBExceptionTests::ISA = qw(NSObject);
+@CBStructureTests::ISA = qw(NSObject);
 @CBThreadTests::ISA = qw(NSObject);
 @CBSuper::ISA = qw(NSObject);
 

@@ -250,8 +250,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -289,7 +287,6 @@
 							<array>
 								<string>08FB7794FE84155DC02AAC07</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>AA35BF40122DA195004C705B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
@@ -316,7 +313,7 @@
 							<real>185</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>248 143 1187 822 0 0 1680 1028 </string>
+						<string>469 88 1187 822 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -327,12 +324,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>AAD4DD2E122C4B740072C002</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ppc-ffi_darwin.c</string>
+								<string>types.c</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -340,14 +339,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AAD4DD2F122C4B740072C002</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ppc-ffi_darwin.c</string>
+										<string>types.c</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AA35BF41122DA195004C705B</string>
+										<string>AA94931B122ECCC900FEFD01</string>
 										<key>history</key>
 										<array>
-											<string>AA6818B0122D850F00D600F0</string>
+											<string>AA949309122EC9B200FEFD01</string>
+											<string>AA94930A122EC9B200FEFD01</string>
+											<string>AA949319122ECCC900FEFD01</string>
+											<string>AA94931A122ECCC900FEFD01</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -361,18 +363,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {980, 183}}</string>
+								<string>{{0, 0}, {980, 518}}</string>
 								<key>RubberWindowFrame</key>
-								<string>248 143 1187 822 0 0 1680 1028 </string>
+								<string>469 88 1187 822 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>183pt</string>
+							<string>518pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>593pt</string>
+							<string>258pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -386,9 +388,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {980, 566}}</string>
+										<string>{{10, 27}, {980, 231}}</string>
 										<key>RubberWindowFrame</key>
-										<string>248 143 1187 822 0 0 1680 1028 </string>
+										<string>469 88 1187 822 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -470,11 +472,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AA35BF42122DA195004C705B</string>
+				<string>AA94931C122ECCC900FEFD01</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>AA35BF43122DA195004C705B</string>
+				<string>AA94931D122ECCC900FEFD01</string>
 				<string>AAD4DD2E122C4B740072C002</string>
-				<string>AA35BF44122DA195004C705B</string>
+				<string>AA94931E122ECCC900FEFD01</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -627,7 +629,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>304980373.42520601</real>
+	<real>305056969.613433</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -647,7 +649,7 @@
 		<string>/Volumes/Ice/Projects/CamelBones/CamelBones/libffi-15/libffi.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>248 143 1187 822 0 0 1680 1028 </string>
+	<string>469 88 1187 822 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

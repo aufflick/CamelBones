@@ -10,16 +10,18 @@
 #import <CamelBones/Conversions.h>
 #import <CamelBones/Structs.h>
 
-@class CBSuper;
+#import "CBSuper.h"
+#import "CBStructureTests.h"
 
 MODULE = CamelBones::Tests		PACKAGE = CamelBones::Tests
 
 PROTOTYPES: ENABLE
 
 void
-force_link_cbsuper()
+force_link()
 CODE:
     id foo = [[CBSuper alloc] init];
+    id bar = [[CBStructureTests alloc] init];
 
 
 SV*
