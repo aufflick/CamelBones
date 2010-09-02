@@ -103,7 +103,7 @@ if ($perlObject->respondsToSelector('setBar:')) {
 
 
 # Try to set/get a property
-$perlObject->takeValue_forKey('Hello', 'foo');
+$perlObject->setValue_forKey('Hello', 'foo');
 if ($perlObject->valueForKey('foo') eq 'Hello') {
 	$perlObject->sayOK(11);
 } else {
