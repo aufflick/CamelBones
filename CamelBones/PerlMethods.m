@@ -269,7 +269,7 @@ id REAL_CBPerlIMP(id self, SEL _cmd, ...) {
                 case '^':
                     // Pointer
                     typeBuf.void_p = va_arg(argptr, void*);
-                    XPUSHs(sv_2mortal(newSViv(typeBuf.ulong)));
+                    XPUSHs(sv_2mortal(newSViv(PTR2IV(typeBuf.void_p))));
                 	break;
 
                 case '#':
@@ -422,7 +422,7 @@ id REAL_CBPerlIMP(id self, SEL _cmd, ...) {
 
             case '^':
                 // pointer
-                returnValue.ulong = POPi;
+                returnValue.void_p = INT2PTR(void*, POPi);
                 break;
     
             case '#':

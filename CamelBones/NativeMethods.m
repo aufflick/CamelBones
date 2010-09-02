@@ -371,7 +371,7 @@ void* REAL_CBCallNativeMethod(void* target, SEL sel, void *args, BOOL isSuper) {
                     }
 				} else {
 					arg_ffi_types[i] = &ffi_type_pointer;
-					arg_values[i].voidp = (void*)SvIV(argSV);
+					arg_values[i].voidp = INT2PTR(void*,SvIV(argSV));
 				}
 				
 				break;
@@ -527,7 +527,7 @@ void* REAL_CBCallNativeMethod(void* target, SEL sel, void *args, BOOL isSuper) {
             break;
 			
         case '^':   // Pointer
-            sv_setiv(ret, (int)return_value.voidp);
+            sv_setiv(ret, PTR2IV(return_value.voidp));
             break;
 			
         case '#':   // Class
