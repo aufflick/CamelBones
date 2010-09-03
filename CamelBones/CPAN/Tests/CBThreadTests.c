@@ -33,7 +33,7 @@
 - (void) runTests {
     [NSThread detachNewThreadSelector:@selector(runFoo:) toTarget:self withObject:nil];
     [NSThread detachNewThreadSelector:@selector(runBar:) toTarget:self withObject:nil];
-    sleep(20); // Stupid hack - should be properly synchronized
+    sleep(5); // Stupid hack - should be properly synchronized
 }
 
 - (void) runFoo: (id)foo {
