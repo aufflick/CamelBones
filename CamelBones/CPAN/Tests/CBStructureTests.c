@@ -3,7 +3,7 @@
 //  CamelBones
 //
 //  Created by Sherm Pendley on 9/1/10.
-//  Copyright 2010 CamelBones. All rights reserved.
+//  Copyright 2010 Sherm Pendley.
 //
 
 #import <Cocoa/Cocoa.h>
