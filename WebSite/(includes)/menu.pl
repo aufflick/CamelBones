@@ -38,6 +38,7 @@ my $menu = [
 		    ]},
 		    { 'title' => 'Method Signatures', 'href' => 'docs/ref/typesigs.html', },
 		]},
+		{ 'title' => 'Subversion access', 'href' => 'docs/subversion-access.html', },
 	]},
 	{ 'title' => 'Downloads', 'href' => 'https://sourceforge.net/projects/camelbones/files/camelbones/', },
 	{ 'title' => 'Sourceforge Project', 'href' => 'https://sourceforge.net/projects/camelbones/', },
