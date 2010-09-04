@@ -67,6 +67,11 @@ id
 NSUserName ()
 
 # Point utils
+int
+NSEqualPoints (point1, point2)
+    NSPoint point1;
+    NSPoint point2;
+
 NSPoint
 NSMakePoint (x,y)
     float x;
