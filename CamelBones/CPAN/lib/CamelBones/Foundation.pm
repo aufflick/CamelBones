@@ -20,6 +20,7 @@ our @EXPORT_OK = qw(
     NSSearchPathForDirectoriesInDomains
     NSTemporaryDirectory
     NSUserName
+    NSEqualPoints
     NSMakePoint
     NSPointFromString
     NSStringFromPoint

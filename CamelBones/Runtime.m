@@ -277,15 +277,43 @@ struct objc_method_list* CBAllocateMethodList(NSArray *methods, Class class) {
     for (i=0; i < num_methods; i++) {
         const char *perlSig;
 		const char *selName;
+        unsigned int structSize;
+        unsigned int alignedSize;
+        void *impFunction;
 
 		selName = [[[methods objectAtIndex: i] objectForKey:@"name"] UTF8String];
         perlSig = [[[methods objectAtIndex:i] objectForKey:@"signature"] UTF8String];
+        NSGetSizeAndAlignment(perlSig, &structSize, &alignedSize);
 
+        switch (*perlSig) {
+            case '{':
+#ifdef __i386__
+                if (structSize > 8) {
+                    impFunction = REAL_CBPerlIMP_stret;
+                } else {
+                    impFunction = REAL_CBPerlIMP;
+                }
+#endif
+#ifdef __ppc__
+                impFunction = REAL_CBPerlIMP_stret;
+#endif
+                break;
+
+#ifdef __i386__
+            case 'f':
+            case 'd':
+                impFunction = REAL_CBPerlIMP_fpret;
+                break;
+#endif
+            default:
+                impFunction = REAL_CBPerlIMP;
+                break;
+        }
 #ifdef GNUSTEP
         GSAppendMethodToList(list,
                              GSSelectorFromName(selName),
                              perlSig,
-                             REAL_CBPerlIMP,
+                             impFunction,
                              YES);
 #else
         this_method = &list->method_list[i];
@@ -294,7 +322,7 @@ struct objc_method_list* CBAllocateMethodList(NSArray *methods, Class class) {
         this_method->method_types = malloc(strlen(perlSig)+1);
         strcpy((char*)this_method->method_types, perlSig);
         
-        this_method->method_imp = REAL_CBPerlIMP;
+        this_method->method_imp = impFunction;
 #endif
     }
 

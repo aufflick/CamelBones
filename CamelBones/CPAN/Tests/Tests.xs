@@ -12,6 +12,7 @@
 
 #import "CBSuper.h"
 #import "CBStructureTests.h"
+#import "CBPropertyTests.h"
 
 MODULE = CamelBones::Tests		PACKAGE = CamelBones::Tests
 
@@ -22,7 +23,7 @@ force_link()
 CODE:
     id foo = [[CBSuper alloc] init];
     id bar = [[CBStructureTests alloc] init];
-
+    id baz = [[CBPropertyTests alloc] init];
 
 SV*
 cbt_isNil(obj)

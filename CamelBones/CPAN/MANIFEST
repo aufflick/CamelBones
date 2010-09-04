@@ -25,6 +25,7 @@ t/13-Exceptions.t
 t/14-Threads.t
 t/15-Subclassing.t
 t/20-PerlObject.t
+t/21-Properties.t
 t/30-BundleLoader.t
 lib/CamelBones.pm
 lib/CamelBones/AppKit.pm
@@ -41,6 +42,8 @@ lib/CamelBones/Foundation/Constants.pm
 Tests/CBExceptionTests.c
 Tests/CBStructureTests.c
 Tests/CBStructureTests.h
+Tests/CBPropertyTests.c
+Tests/CBPropertyTests.h
 Tests/CBSuper.c
 Tests/CBSuper.h
 META.yml

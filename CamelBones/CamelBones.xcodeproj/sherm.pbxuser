@@ -5,9 +5,9 @@
 	};
 	84AC1B9F0D73805000C751F7 /* Tests.pm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 544}}";
-			sepNavSelRange = "{149, 0}";
-			sepNavVisRange = "{0, 610}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{187, 0}";
+			sepNavVisRange = "{0, 648}";
 		};
 	};
 	84AC1BA90D73807100C751F7 /* 00-CamelBones.t */ = {
@@ -26,16 +26,16 @@
 	};
 	84AC1BAC0D73807100C751F7 /* 03-Memory.t */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 513}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 478}";
 		};
 	};
 	84AC1BAD0D73807100C751F7 /* 05-Structures.t */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 1584}}";
-			sepNavSelRange = "{87, 0}";
-			sepNavVisRange = "{2076, 1166}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1648}}";
+			sepNavSelRange = "{302, 0}";
+			sepNavVisRange = "{983, 1334}";
 			sepNavWindowFrame = "{{15, 465}, {750, 558}}";
 		};
 	};
@@ -53,11 +53,25 @@
 			sepNavVisRange = "{0, 607}";
 		};
 	};
+	84AC1BB20D73807100C751F7 /* 14-Threads.t */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 400}";
+		};
+	};
+	84AC1BB30D73807100C751F7 /* 15-Subclassing.t */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 912}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 725}";
+		};
+	};
 	84AC1BB40D73807100C751F7 /* 20-PerlObject.t */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 1824}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{1656, 595}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1824}}";
+			sepNavSelRange = "{2106, 0}";
+			sepNavVisRange = "{23, 756}";
 		};
 	};
 	84AC1BB50D73807100C751F7 /* 30-BundleLoader.t */ = {
@@ -83,30 +97,62 @@
 	};
 	84AC1BB90D73808C00C751F7 /* CBThreadTests.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 1056}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 591}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1024}}";
+			sepNavSelRange = "{832, 0}";
+			sepNavVisRange = "{477, 941}";
 		};
 	};
 	84AC1BBA0D73808C00C751F7 /* Makefile.PL */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 513}}";
-			sepNavSelRange = "{228, 0}";
-			sepNavVisRange = "{0, 376}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{236, 0}";
+			sepNavVisRange = "{0, 394}";
 		};
 	};
 	84AC1BBB0D73808C00C751F7 /* Tests.xs */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 1232}}";
-			sepNavSelRange = "{466, 0}";
-			sepNavVisRange = "{0, 547}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1264}}";
+			sepNavSelRange = "{310, 0}";
+			sepNavVisRange = "{0, 637}";
+		};
+	};
+	AA0B1B32123179E0000AC45F /* NSGeometry.h:154 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = AA0B1B33123179E0000AC45F /* NSGeometry.h */;
+		functionName = "NSPointToCGPoint(NSPoint nspoint)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 154;
+		modificationTime = 305232352.819582;
+		originalNumberOfMultipleMatches = 0;
+		state = 1;
+	};
+	AA0B1B33123179E0000AC45F /* NSGeometry.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSGeometry.h;
+		path = /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSGeometry.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 3344}}";
+			sepNavSelRange = "{3707, 65}";
+			sepNavVisRange = "{581, 697}";
 		};
 	};
 	AA50E2050C87571F004DA7BD /* Project object */ = {
 		activeArchitecturePreference = i386;
-		activeBuildConfigurationName = "Release-App-Embedded";
-		activeTarget = AA7F61620DCCFBA900D20E5E /* All */;
+		activeBuildConfigurationName = Debug;
+		activeTarget = FFE361381057267700F0CA90 /* Snow Leopard */;
 		addToTargets = (
+		);
+		breakpoints = (
+			AA0B1B32123179E0000AC45F /* NSGeometry.h:154 */,
 		);
 		codeSenseManager = AAB4A3C01201E994005D75E3 /* Code sense */;
 		perUserDictionary = {
@@ -154,15 +200,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 305041150;
-			PBXWorkspaceStateSaveDate = 305041150;
-		};
-		perUserProjectItems = {
-			AA94932F122EE48200FEFD01 /* PBXTextBookmark */ = AA94932F122EE48200FEFD01 /* PBXTextBookmark */;
-			AA949330122EE48200FEFD01 /* PBXTextBookmark */ = AA949330122EE48200FEFD01 /* PBXTextBookmark */;
-			AA949331122EE48200FEFD01 /* PBXTextBookmark */ = AA949331122EE48200FEFD01 /* PBXTextBookmark */;
-			AA949332122EE48200FEFD01 /* PBXTextBookmark */ = AA949332122EE48200FEFD01 /* PBXTextBookmark */;
-			AA949334122EE50600FEFD01 /* PBXTextBookmark */ = AA949334122EE50600FEFD01 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 305225225;
+			PBXWorkspaceStateSaveDate = 305225225;
 		};
 		sourceControlManager = AAB4A3BF1201E994005D75E3 /* Source Control */;
 		userBuildSettings = {
@@ -182,11 +221,25 @@
 			sepNavVisRange = "{1017, 759}";
 		};
 	};
+	AA50E3B20C875DB7004DA7BD /* CBPerlHashInternals.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 531}";
+		};
+	};
 	AA50E3B40C875DB7004DA7BD /* CBPerlObject.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {892, 5040}}";
 			sepNavSelRange = "{5873, 0}";
 			sepNavVisRange = "{5394, 1080}";
+		};
+	};
+	AA50E3B50C875DB7004DA7BD /* CBPerlObjectInternals.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1056}}";
+			sepNavSelRange = "{831, 0}";
+			sepNavVisRange = "{257, 649}";
 		};
 	};
 	AA50E3BD0C875DB7004DA7BD /* Conversions_real.h */ = {
@@ -198,9 +251,16 @@
 	};
 	AA50E3BF0C875DB7004DA7BD /* Conversions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {892, 4624}}";
-			sepNavSelRange = "{4970, 0}";
-			sepNavVisRange = "{4241, 1076}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 4512}}";
+			sepNavSelRange = "{6052, 0}";
+			sepNavVisRange = "{5485, 962}";
+		};
+	};
+	AA50E3C00C875DB7004DA7BD /* DylibInit.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1088}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1158}";
 		};
 	};
 	AA50E3C10C875DB7004DA7BD /* DylibInit.m */ = {
@@ -210,11 +270,25 @@
 			sepNavVisRange = "{129, 1186}";
 		};
 	};
+	AA50E3C50C875DB7004DA7BD /* NativeMethods_real.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 266}";
+		};
+	};
+	AA50E3C60C875DB7004DA7BD /* NativeMethods.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 264}";
+		};
+	};
 	AA50E3C70C875DB7004DA7BD /* NativeMethods.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 9072}}";
-			sepNavSelRange = "{2200, 0}";
-			sepNavVisRange = "{1037, 1025}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 8976}}";
+			sepNavSelRange = "{3974, 0}";
+			sepNavVisRange = "{3409, 939}";
 		};
 	};
 	AA50E3C80C875DB7004DA7BD /* PerlImports.h */ = {
@@ -222,6 +296,28 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1021, 427}}";
 			sepNavSelRange = "{266, 17}";
 			sepNavVisRange = "{0, 371}";
+		};
+	};
+	AA50E3C90C875DB7004DA7BD /* PerlMethods_real.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{695, 0}";
+			sepNavVisRange = "{0, 695}";
+		};
+	};
+	AA50E3CA0C875DB7004DA7BD /* PerlMethods.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
+			sepNavSelRange = "{659, 0}";
+			sepNavVisRange = "{0, 659}";
+		};
+	};
+	AA50E3CB0C875DB7004DA7BD /* PerlMethods.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{449, 978}\";\n            s = 0;\n        },\n                {\n            r = \"{1510, 1085}\";\n            s = 0;\n        },\n                {\n            r = \"{2676, 1073}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 30822}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 14448}}";
+			sepNavSelRange = "{19899, 0}";
+			sepNavVisRange = "{18766, 1505}";
 		};
 	};
 	AA50E3CC0C875DB7004DA7BD /* perlxsi.c */ = {
@@ -238,11 +334,32 @@
 			sepNavVisRange = "{0, 435}";
 		};
 	};
+	AA50E3CF0C875DB7004DA7BD /* Runtime.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 592}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1198}";
+		};
+	};
+	AA50E3D00C875DB7004DA7BD /* Runtime.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 5648}}";
+			sepNavSelRange = "{8422, 0}";
+			sepNavVisRange = "{8257, 895}";
+		};
+	};
+	AA50E3D20C875DB7004DA7BD /* Structs.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 832}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1017}";
+		};
+	};
 	AA50E3D30C875DB7004DA7BD /* Structs.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 4960}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 794}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 4832}}";
+			sepNavSelRange = "{938, 0}";
+			sepNavVisRange = "{0, 818}";
 		};
 	};
 	AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */ = {
@@ -259,6 +376,13 @@
 	};
 	AA7F61620DCCFBA900D20E5E /* All */ = {
 		activeExec = 0;
+	};
+	AA83FE0E0CC9E9CF00E56F20 /* typemap */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1280}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 472}";
+		};
 	};
 	AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */ = {
 		activeExec = 0;
@@ -288,7 +412,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1307, 672}}";
 			sepNavSelRange = "{402, 0}";
-			sepNavVisRange = "{0, 1237}";
+			sepNavVisRange = "{0, 1263}";
+		};
+	};
+	AA91435D0CC99B2A0055B0E5 /* Foundation.xs */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 4256}}";
+			sepNavSelRange = "{3011, 0}";
+			sepNavVisRange = "{2902, 475}";
 		};
 	};
 	AA9143660CC99B2A0055B0E5 /* AppKit.pm */ = {
@@ -296,6 +427,27 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1245, 1200}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 737}";
+		};
+	};
+	AA9143690CC99B2A0055B0E5 /* Foundation.pm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1200}}";
+			sepNavSelRange = "{473, 0}";
+			sepNavVisRange = "{755, 591}";
+		};
+	};
+	AA91436A0CC99B2A0055B0E5 /* NSPoint.pm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 832}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 547}";
+		};
+	};
+	AA91436C0CC99B2A0055B0E5 /* NSRect.pm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1376}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 646}";
 		};
 	};
 	AA91436D0CC99B2A0055B0E5 /* NSSize.pm */ = {
@@ -307,23 +459,23 @@
 	};
 	AA9143710CC99B2A0055B0E5 /* CamelBones.pm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 5952}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 907}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 5680}}";
+			sepNavSelRange = "{3991, 0}";
+			sepNavVisRange = "{3177, 1158}";
 		};
 	};
 	AA9143740CC99B2A0055B0E5 /* Makefile.PL */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 555}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 327}";
 		};
 	};
 	AA9143750CC99B2A0055B0E5 /* MANIFEST */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1245, 752}}";
-			sepNavSelRange = "{905, 0}";
-			sepNavVisRange = "{217, 688}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 800}}";
+			sepNavSelRange = "{971, 0}";
+			sepNavVisRange = "{210, 761}";
 		};
 	};
 	AA9492AC122E927B00FEFD01 /* 04-Pointers.t */ = {
@@ -336,8 +488,8 @@
 	AA9492AD122E92F600FEFD01 /* CBStructureTests.c */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1021, 1392}}";
-			sepNavSelRange = "{859, 0}";
-			sepNavVisRange = "{704, 373}";
+			sepNavSelRange = "{121, 0}";
+			sepNavVisRange = "{0, 490}";
 		};
 	};
 	AA9492BA122E977800FEFD01 /* CBSuper.h */ = {
@@ -351,58 +503,8 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1021, 624}}";
 			sepNavSelRange = "{526, 0}";
-			sepNavVisRange = "{118, 535}";
+			sepNavVisRange = "{0, 647}";
 		};
-	};
-	AA94932F122EE48200FEFD01 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AA50E3C70C875DB7004DA7BD /* NativeMethods.m */;
-		name = "NativeMethods.m: 86";
-		rLen = 0;
-		rLoc = 2200;
-		rType = 0;
-		vrLen = 1025;
-		vrLoc = 1037;
-	};
-	AA949330122EE48200FEFD01 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AA9492AD122E92F600FEFD01 /* CBStructureTests.c */;
-		name = "CBStructureTests.c: 66";
-		rLen = 0;
-		rLoc = 859;
-		rType = 0;
-		vrLen = 373;
-		vrLoc = 704;
-	};
-	AA949331122EE48200FEFD01 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AA9492BD122E980E00FEFD01 /* CBStructureTests.h */;
-		name = "CBStructureTests.h: 30";
-		rLen = 0;
-		rLoc = 526;
-		rType = 0;
-		vrLen = 535;
-		vrLoc = 118;
-	};
-	AA949332122EE48200FEFD01 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 84AC1BAD0D73807100C751F7 /* 05-Structures.t */;
-		name = "05-Structures.t: 83";
-		rLen = 0;
-		rLoc = 3033;
-		rType = 0;
-		vrLen = 1166;
-		vrLoc = 1518;
-	};
-	AA949334122EE50600FEFD01 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 84AC1BAD0D73807100C751F7 /* 05-Structures.t */;
-		name = "05-Structures.t: 9";
-		rLen = 0;
-		rLoc = 87;
-		rType = 0;
-		vrLen = 1166;
-		vrLoc = 2076;
 	};
 	AAB4A3BF1201E994005D75E3 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -417,6 +519,27 @@
 	AAB4A3C01201E994005D75E3 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	AACE466A122FE17B009907B5 /* 21-Properties.t */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1072}}";
+			sepNavSelRange = "{2077, 0}";
+			sepNavVisRange = "{583, 1495}";
+		};
+	};
+	AACE4675122FE66D009907B5 /* CBPropertyTests.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 562}}";
+			sepNavSelRange = "{1076, 0}";
+			sepNavVisRange = "{0, 1082}";
+		};
+	};
+	AACE4676122FE66D009907B5 /* CBPropertyTests.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 2160}}";
+			sepNavSelRange = "{3447, 12}";
+			sepNavVisRange = "{2650, 1013}";
+		};
 	};
 	AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */ = {
 		activeExec = 0;

@@ -546,6 +546,9 @@
 		AA9492AD122E92F600FEFD01 /* CBStructureTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBStructureTests.c; sourceTree = "<group>"; };
 		AA9492BA122E977800FEFD01 /* CBSuper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSuper.h; sourceTree = "<group>"; };
 		AA9492BD122E980E00FEFD01 /* CBStructureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStructureTests.h; sourceTree = "<group>"; };
+		AACE466A122FE17B009907B5 /* 21-Properties.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "21-Properties.t"; sourceTree = "<group>"; };
+		AACE4675122FE66D009907B5 /* CBPropertyTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPropertyTests.h; sourceTree = "<group>"; };
+		AACE4676122FE66D009907B5 /* CBPropertyTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBPropertyTests.c; sourceTree = "<group>"; };
 		AAD4DE8D122C62630072C002 /* libffi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffi.xcodeproj; path = "libffi-15/libffi.xcodeproj"; sourceTree = "<group>"; };
 		AAD87F1C122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.8.1.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD87F2C122C8AE500756D8C /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
@@ -629,6 +632,7 @@
 				84AC1BB20D73807100C751F7 /* 14-Threads.t */,
 				84AC1BB30D73807100C751F7 /* 15-Subclassing.t */,
 				84AC1BB40D73807100C751F7 /* 20-PerlObject.t */,
+				AACE466A122FE17B009907B5 /* 21-Properties.t */,
 				84AC1BB50D73807100C751F7 /* 30-BundleLoader.t */,
 			);
 			name = t;
@@ -644,6 +648,8 @@
 				84AC1BB90D73808C00C751F7 /* CBThreadTests.c */,
 				AA9492BD122E980E00FEFD01 /* CBStructureTests.h */,
 				AA9492AD122E92F600FEFD01 /* CBStructureTests.c */,
+				AACE4675122FE66D009907B5 /* CBPropertyTests.h */,
+				AACE4676122FE66D009907B5 /* CBPropertyTests.c */,
 				84AC1BBA0D73808C00C751F7 /* Makefile.PL */,
 				84AC1BBB0D73808C00C751F7 /* Tests.xs */,
 			);

@@ -108,37 +108,33 @@ sub CBCreateAccessor {
     {
         no strict 'refs';
         
+        # If the given type is a registered class, its type is @.
+        # Otherwise, it's assumed to be an encoded Objective-C type
+        my $propType = CBIsClassRegistered($type) ? '@' : $type;
+
         # Setter
         my $setter = 'set'.ucfirst($property);
         unless ( UNIVERSAL::can($class, $setter) ) { # don't overwrite existing method
             *{ $class.'::'.$setter } = sub {
                 my ($self, $set) = @_;
-                if ($CamelBones::StrictTypeChecking != 0) {
-                    unless ($self->UNIVERSAL::isa($type)) {
-                        CamelBones::Foundation::NSLog("Can't set $property to $set - object must be a $type");
-                        if ($CamelBones::VeryStrictTypeChecking != 0) {
-                            return;
-                        }
-                    }
-                }
                 $self->{$property} = $set;
             };
         }
         
         # Export the setter to objc
-        ${$class.'::OBJC_EXPORT'}{$setter . ':'}={'args'=>'@', 'return'=>'v'};
+        ${$class.'::OBJC_EXPORT'}{$setter . ':'}={'args'=>$propType, 'return'=>'v'};
         
         # getter
         my $getter = $property;
         unless ( UNIVERSAL::can($class, $getter) ) {
             *{ $class.'::'.$getter } = sub {
                 my ($self) = @_;
-                $self->{$property};
+                return $self->{$property};
             };
         }
 
         # Export the getter to objc
-        ${$class.'::OBJC_EXPORT'}{$getter}={'args'=>'', 'return'=>'@'};
+        ${$class.'::OBJC_EXPORT'}{$getter}={'args'=>'', 'return'=>$propType};
     }
 }
 
