@@ -99,8 +99,8 @@ local *_ = \my $a;
 $_ = <<'!END!';
 archlibexp='/System/Library/Perl/5.8.6/darwin-thread-multi-2level'
 archname='darwin-thread-multi-2level'
-cc='cc'
-ccflags='-g -pipe -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -I/usr/local/include'
+cc='gcc-4.0'
+ccflags='-isysroot/Developer/SDKs/MacOSX10.4u.sdk -arch ppc -arch i386 -g -pipe -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -I/usr/local/include'
 cppflags='-no-cpp-precomp -g -pipe -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -I/usr/local/include'
 dlsrc='dl_dlopen.xs'
 dynamic_ext='B ByteLoader Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Encode Fcntl File/Glob Filter/Util/Call I18N/Langinfo IO IPC/SysV List/Util MIME/Base64 NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Time/HiRes Unicode/Normalize XS/APItest XS/Typemap attrs re threads threads/shared'
@@ -822,9 +822,9 @@ ivsize='4'
 ivtype='long'
 known_extensions='B ByteLoader Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Encode Fcntl File/Glob Filter/Util/Call GDBM_File I18N/Langinfo IO IPC/SysV List/Util MIME/Base64 NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Thread Time/HiRes Unicode/Normalize XS/APItest XS/Typemap attrs re threads threads/shared'
 ksh=''
-ld='env MACOSX_DEPLOYMENT_TARGET=10.3 cc'
-lddlflags='-bundle -undefined dynamic_lookup -L/usr/local/lib'
-ldflags='-L/usr/local/lib'
+ld='env MACOSX_DEPLOYMENT_TARGET=10.3 gcc-4.0'
+lddlflags='-Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk -arch ppc -arch i386 -bundle -undefined dynamic_lookup -L/usr/local/lib'
+ldflags='-Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk -arch ppc -arch i386 -L/usr/local/lib'
 ldflags_uselargefiles=''
 ldlibpthname='DYLD_LIBRARY_PATH'
 less='less'
@@ -1291,9 +1291,6 @@ sub DESTROY { }
 tie %Config, 'Config', {
     'archlibexp' => '/System/Library/Perl/5.8.6/darwin-thread-multi-2level',
     'archname' => 'darwin-thread-multi-2level',
-    'cc' => 'cc',
-    'ccflags' => '-g -pipe -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -I/usr/local/include',
-    'cppflags' => '-no-cpp-precomp -g -pipe -fno-common -DPERL_DARWIN -no-cpp-precomp -fno-strict-aliasing -I/usr/local/include',
     'dlsrc' => 'dl_dlopen.xs',
     'dynamic_ext' => 'B ByteLoader Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Encode Fcntl File/Glob Filter/Util/Call I18N/Langinfo IO IPC/SysV List/Util MIME/Base64 NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Time/HiRes Unicode/Normalize XS/APItest XS/Typemap attrs re threads threads/shared',
     'installarchlib' => '/System/Library/Perl/5.8.6/darwin-thread-multi-2level',

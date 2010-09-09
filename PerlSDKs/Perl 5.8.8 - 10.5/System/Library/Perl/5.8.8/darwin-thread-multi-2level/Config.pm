@@ -72,7 +72,6 @@ sub AUTOLOAD {
 tie %Config, 'Config', {
     archlibexp => '/System/Library/Perl/5.8.8/darwin-thread-multi-2level',
     archname => 'darwin-thread-multi-2level',
-    cc => 'cc',
     d_readlink => 'define',
     d_symlink => 'define',
     dlsrc => 'dl_dlopen.xs',
