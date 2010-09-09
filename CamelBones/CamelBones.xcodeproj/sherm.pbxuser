@@ -33,9 +33,9 @@
 	};
 	84AC1BAD0D73807100C751F7 /* 05-Structures.t */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 1648}}";
-			sepNavSelRange = "{302, 0}";
-			sepNavVisRange = "{983, 1334}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 1584}}";
+			sepNavSelRange = "{87, 0}";
+			sepNavVisRange = "{2075, 1167}";
 			sepNavWindowFrame = "{{15, 465}, {750, 558}}";
 		};
 	};
@@ -148,7 +148,7 @@
 	AA50E2050C87571F004DA7BD /* Project object */ = {
 		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Debug;
-		activeTarget = FFE361381057267700F0CA90 /* Snow Leopard */;
+		activeTarget = 84893BF80DCCF7A000B48051 /* Perl Module (5.8.6) */;
 		addToTargets = (
 		);
 		breakpoints = (
@@ -200,8 +200,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 305225225;
-			PBXWorkspaceStateSaveDate = 305225225;
+			PBXPerProjectTemplateStateSaveDate = 305748462;
+			PBXWorkspaceStateSaveDate = 305748462;
 		};
 		sourceControlManager = AAB4A3BF1201E994005D75E3 /* Source Control */;
 		userBuildSettings = {
@@ -286,9 +286,9 @@
 	};
 	AA50E3C70C875DB7004DA7BD /* NativeMethods.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 8976}}";
-			sepNavSelRange = "{3974, 0}";
-			sepNavVisRange = "{3409, 939}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 9072}}";
+			sepNavSelRange = "{2200, 0}";
+			sepNavVisRange = "{1066, 996}";
 		};
 	};
 	AA50E3C80C875DB7004DA7BD /* PerlImports.h */ = {
@@ -410,9 +410,9 @@
 	};
 	AA9143580CC99B2A0055B0E5 /* cb_common.pl */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 672}}";
-			sepNavSelRange = "{402, 0}";
-			sepNavVisRange = "{0, 1263}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 614}}";
+			sepNavSelRange = "{784, 0}";
+			sepNavVisRange = "{0, 784}";
 		};
 	};
 	AA91435D0CC99B2A0055B0E5 /* Foundation.xs */ = {
@@ -466,8 +466,8 @@
 	};
 	AA9143740CC99B2A0055B0E5 /* Makefile.PL */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1021, 576}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1021, 614}}";
+			sepNavSelRange = "{327, 0}";
 			sepNavVisRange = "{0, 327}";
 		};
 	};
@@ -488,8 +488,8 @@
 	AA9492AD122E92F600FEFD01 /* CBStructureTests.c */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1021, 1392}}";
-			sepNavSelRange = "{121, 0}";
-			sepNavVisRange = "{0, 490}";
+			sepNavSelRange = "{859, 0}";
+			sepNavVisRange = "{688, 391}";
 		};
 	};
 	AA9492BA122E977800FEFD01 /* CBSuper.h */ = {
@@ -503,7 +503,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1021, 624}}";
 			sepNavSelRange = "{526, 0}";
-			sepNavVisRange = "{0, 647}";
+			sepNavVisRange = "{118, 534}";
 		};
 	};
 	AAB4A3BF1201E994005D75E3 /* Source Control */ = {

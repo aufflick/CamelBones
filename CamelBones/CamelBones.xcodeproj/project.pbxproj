@@ -1155,7 +1155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PERL=/usr/bin/perl5.8.6\nexport SDK=/Developer/SDKs/MacOSX10.4u.sdk\nexport CFLAGS=\"-arch i386 -arch ppc -isysroot$SDK -ObjC -F$BUILD_DIR/$CONFIGURATION\"\nexport LDFLAGS=\"-arch i386 -arch ppc -Wl,-syslibroot,$SDK\"\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.6\" ;\nelse\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\n\n# patch makefiles to use gcc-4.0\nfind . -name 'Makefile' | xargs perl -p -i \\\n  -e 's/CC = cc/CC = gcc-4.0/;' \\\n  -e 's/LD = env MACOSX_DEPLOYMENT_TARGET=10.3 cc/LD = env MACOSX_DEPLOYMENT_TARGET=10.3 gcc-4.0/;'\n\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n\tmake test\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+			shellScript = "export PERL=/usr/bin/perl5.8.6\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.6\" ;\nelse\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\n\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    PERL_DL_NONLAZY=1 arch -ppc $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\n    PERL_DL_NONLAZY=1 arch -i386 $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
 		};
 		AA6C32B40CCC9DB000306BD7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1168,7 +1168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PERL=/usr/bin/perl5.8.8\nexport SDK=/Developer/SDKs/MacOSX10.5.sdk\nexport CFLAGS=\"-arch i386 -arch ppc -isysroot$SDK -ObjC -F$BUILD_DIR/$CONFIGURATION\"\nexport LDFLAGS=\"-arch i386 -arch ppc -Wl,-syslibroot,$SDK\"\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.8\" ;\nelse\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.8\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n\tmake test\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+			shellScript = "export PERL=/usr/bin/perl5.8.8\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.8\" ;\nelse\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.8\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    PERL_DL_NONLAZY=1 arch -ppc $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\n    PERL_DL_NONLAZY=1 arch -i386 $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
 		};
 		AAD87F63122C8CE200756D8C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1194,7 +1194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PERL=/usr/bin/perl5.8.9\nexport SDK=/Developer/SDKs/MacOSX10.5.sdk\nexport CFLAGS=\"-arch i386 -isysroot$SDK -ObjC -F$BUILD_DIR/$CONFIGURATION\"\nexport LDFLAGS=\"-arch i386 -Wl,-syslibroot,$SDK\"\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.9\" ;\nelse\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.9\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n\tmake test\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+			shellScript = "export PERL=/usr/bin/perl5.8.9\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.9\" ;\nelse\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.9\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    PERL_DL_NONLAZY=1 arch -ppc $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\n    PERL_DL_NONLAZY=1 arch -i386 $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
