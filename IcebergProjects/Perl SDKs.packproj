@@ -518,13 +518,13 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>Perl 5.8.1RC1 (Panther)</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
 							<dict>
 								<key>CFBundleGetInfoString</key>
-								<string>Perl SDKs 1.1 Package Copyright © 2007-2009 Sherm Pendley</string>
+								<string>Perl SDKs 1.1.1 Package Copyright © 2007-2010 Sherm Pendley</string>
 								<key>CFBundleIconFile</key>
 								<string></string>
 								<key>CFBundleIconFile Path Type</key>
@@ -534,7 +534,7 @@
 								<key>CFBundleName</key>
 								<string>Perl 5.8.1RC1 (Panther)</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -567,7 +567,7 @@
 						</dict>
 					</dict>
 					<key>IFPkgFlagPackageSelection</key>
-					<integer>0</integer>
+					<integer>-1</integer>
 					<key>Name</key>
 					<string>Perl 5.8.1RC1 (Panther)</string>
 					<key>Status</key>
@@ -1081,17 +1081,19 @@
 									<key>IFPkgDescriptionDeleteWarning</key>
 									<string></string>
 									<key>IFPkgDescriptionDescription</key>
-									<string>This is Perl 5.8.6, as shipped with Universal builds of Mac OS X 10.4 "Tiger".</string>
+									<string>This is Perl 5.8.6, as shipped with Universal builds of Mac OS X 10.4 "Tiger".
+
+Config.pm patched to build modules with gcc-4.0 &amp; 10.4u SDK.</string>
 									<key>IFPkgDescriptionTitle</key>
 									<string>Perl 5.8.6 (Tiger, Universal)</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.0</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
 							<dict>
 								<key>CFBundleGetInfoString</key>
-								<string>Perl SDKs 1.1 Package Copyright © 2007-2009 Sherm Pendley</string>
+								<string>Perl SDKs 1.1.1 Package Copyright © 2007-2010 Sherm Pendley</string>
 								<key>CFBundleIconFile</key>
 								<string></string>
 								<key>CFBundleIconFile Path Type</key>
@@ -1101,7 +1103,7 @@
 								<key>CFBundleName</key>
 								<string>Perl 5.8.6 (Tiger, Universal)</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -1648,17 +1650,19 @@
 									<key>IFPkgDescriptionDeleteWarning</key>
 									<string></string>
 									<key>IFPkgDescriptionDescription</key>
-									<string>This is Perl 5.8.8, as shipped with Mac OS X 10.5 "Leopard".</string>
+									<string>This is Perl 5.8.8, as shipped with Mac OS X 10.5 "Leopard".
+
+Config.pm patched to build modules with gcc-4.2 &amp; 10.5 SDK.</string>
 									<key>IFPkgDescriptionTitle</key>
 									<string>Perl 5.8.8 (Leopard, Universal)</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
 							<dict>
 								<key>CFBundleGetInfoString</key>
-								<string>Perl SDKs 1.1 Package Copyright © 2007-2009 Sherm Pendley</string>
+								<string>Perl SDKs 1.1.1 Package Copyright © 2007-2010 Sherm Pendley</string>
 								<key>CFBundleIconFile</key>
 								<string></string>
 								<key>CFBundleIconFile Path Type</key>
@@ -1668,7 +1672,7 @@
 								<key>CFBundleName</key>
 								<string>Perl 5.8.8 (Leopard, Universal)</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2215,17 +2219,17 @@
 									<key>IFPkgDescriptionDeleteWarning</key>
 									<string></string>
 									<key>IFPkgDescriptionDescription</key>
-									<string>This is Perl 5.8.9, configured and built to be binary-compatible with the Perl 5.8.9 that is shipped with Mac OS X 10.6 "Snow Leopard".</string>
+									<string>This is Perl 5.8.9, as shipped with Mac OS X 10.6 "Snow Leopard".</string>
 									<key>IFPkgDescriptionTitle</key>
-									<string>Perl 5.8.9 (Snow Leopard, Universal)</string>
+									<string>Perl 5.8.9 (Snow Leopard, i386)</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
 							<dict>
 								<key>CFBundleGetInfoString</key>
-								<string>Perl SDKs 1.1 Package Copyright © 2007-2009 Sherm Pendley</string>
+								<string>Perl SDKs 1.1.1 Package Copyright © 2007-2010 Sherm Pendley</string>
 								<key>CFBundleIconFile</key>
 								<string></string>
 								<key>CFBundleIconFile Path Type</key>
@@ -2235,7 +2239,7 @@
 								<key>CFBundleName</key>
 								<string>Perl 5.8.9 (Snow Leopard, Universal)</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2445,13 +2449,13 @@
 						<key>IFPkgDescriptionTitle</key>
 						<string>Perl SDKs</string>
 						<key>IFPkgDescriptionVersion</key>
-						<string>1.1</string>
+						<string>1.1.1</string>
 					</dict>
 				</dict>
 				<key>Display Information</key>
 				<dict>
 					<key>CFBundleGetInfoString</key>
-					<string>Perl SDKs 1.1 Package Copyright © 2007-2009 Sherm Pendley</string>
+					<string>Perl SDKs 1.1.1 Package Copyright © 2007-2010 Sherm Pendley</string>
 					<key>CFBundleIconFile</key>
 					<string></string>
 					<key>CFBundleIconFile Path Type</key>
@@ -2461,7 +2465,7 @@
 					<key>CFBundleName</key>
 					<string>Perl SDKs</string>
 					<key>CFBundleShortVersionString</key>
-					<string>1.1</string>
+					<string>1.1.1</string>
 				</dict>
 				<key>Version</key>
 				<dict>
