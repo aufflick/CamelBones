@@ -1,0 +1,91 @@
+=head1 NAME
+
+URL_Access_Scripting Glue - Control URL_Access_Scripting app (com.apple.URLAccessScripting)
+
+=head1 SYNOPSIS
+
+    use Mac::Glue;
+    my $obj = new Mac::Glue 'URL_Access_Scripting';
+
+=head1 DESCRIPTION
+
+See C<Mac::Glue> for complete documentation on base usage and framework.
+
+=head2 Events
+
+=over 4
+
+=item $obj->download(TEXT, authentication => bool, directory_listing => bool, download_directory => bool, form_data => TEXT, progress => bool, replacing => erpl, to => fss , unpacking => bool)
+
+Downloads a specified URL to a specified file (aevt/dwnl)
+
+Reply type: fss 
+
+Parameters:
+
+    direct object (----): URL to download from
+    authentication (auth): show authentication dialog (default: false)
+    directory_listing (dirl): get a directory listing? (default: false)
+    download_directory (IsDr): download as an entire directory (default: false)
+    form_data (frmd): form data
+    progress (prog): whether to display a modal progress dialog (default: false)
+    replacing (rplc): whether to replace an existing file (default: no)
+    to (fdst): the downloaded file location
+    unpacking (unpk): whether to decode or decompress the downloaded item (default: true)
+
+
+=item $obj->upload(fss , authentication => bool, binhexing => bool, progress => bool, replacing => erpl, to => TEXT, upload_directory => bool)
+
+upload the file to the URL. (aevt/upld)
+
+Reply type: bool
+
+Parameters:
+
+    direct object (----): the file to upload
+    authentication (auth): show authentication dialog (default: false)
+    binhexing (binh): whether to binhex before uploading or not (default: true)
+    progress (prog): whether to display a modal progress dialog (default: false)
+    replacing (rplc): whether to replace an existing file (default: no)
+    to (udst): the URL of the receiving server
+    upload_directory (IsDr): upload as an entire directory (default: false)
+
+
+=back
+
+=head2 Enumerations
+
+=over 4
+
+=item 'erpl'
+
+=over 4
+
+=item yes (yes )
+
+yes
+
+=item no (no  )
+
+no
+
+=back
+
+=back
+
+=head1 AUTHOR
+
+Glue created by root
+using F<gluemac> by Chris Nandor and the Mac::AETE modules
+by David C. Schooley.
+
+Copyright (c) 2010.  All rights reserved.  This program is
+free software; you can redistribute it and/or modify it under the terms
+of the Artistic License, distributed with Perl.
+
+=head1 SEE ALSO
+
+Mac::AppleEvents, Mac::AppleEvents::Simple, macperlcat, Inside Macintosh: 
+Interapplication Communication, Mac::Glue, Mac::AETE.
+
+=cut

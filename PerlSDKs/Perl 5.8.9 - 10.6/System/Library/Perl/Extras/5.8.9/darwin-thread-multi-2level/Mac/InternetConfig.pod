@@ -1,0 +1,505 @@
+=head1 NAME
+
+Mac::InternetConfig - Interface to Peter Lewis' and Quinns Internet Config system
+
+=head1 DESCRIPTION
+
+Access to the original Internet Config documentation is essential for proper use 
+of these functions.
+
+=head2 Constants
+
+=over 4
+
+=item kICRealName
+
+=item kICEmail
+
+=item kICMailAccount
+
+=item kICMailPassword
+
+=item kICNewsAuthUsername
+
+=item kICNewsAuthPassword
+
+=item kICArchiePreferred
+
+=item kICArchieAll
+
+=item kICUMichPreferred
+
+=item kICUMichAll
+
+=item kICInfoMacPreferred
+
+=item kICInfoMacAll
+
+=item kICPhHost
+
+=item kICWhoisHost
+
+=item kICFingerHost
+
+=item kICFTPHost
+
+=item kICTelnetHost
+
+=item kICSMTPHost
+
+=item kICNNTPHost
+
+=item kICGopherHost
+
+=item kICLDAPServer
+
+=item kICLDAPSearchbase
+
+=item kICWWWHomePage
+
+=item kICWAISGateway
+
+=item kICListFont
+
+=item kICScreenFont
+
+=item kICPrinterFont
+
+=item kICTextCreator
+
+=item kICBinaryTypeCreator
+
+=item kICDownloadFolder
+
+=item kICSignature
+
+=item kICOrganization
+
+=item kICPlan
+
+=item kICQuotingString
+
+=item kICMailHeaders
+
+=item kICNewsHeaders
+
+=item kICMapping
+
+=item kICCharacterSet
+
+=item kICHelper
+
+=item kICServices
+
+=item kICNewMailFlashIcon
+
+=item kICNewMailDialog
+
+=item kICNewMailPlaySound
+
+=item kICNewMailSoundName
+
+=item kICWebBackgroundColour
+
+=item kICNoProxyDomains
+
+=item kICUseSocks
+
+=item kICSocksHost
+
+=item kICUseHTTPProxy
+
+=item kICHTTPProxyHost
+
+=item kICUseFTPProxy
+
+=item kICFTPProxyHost
+
+=item kICFTPProxyUser
+
+=item kICFTPProxyPassword
+
+=item kICFTPProxyAccount
+
+Internet Config settings.
+
+=item ICmap_binary
+
+=item ICmap_resource_fork
+
+=item ICmap_data_fork
+
+=item ICmap_post
+
+=item ICmap_not_incoming
+
+=item ICmap_not_outgoing
+
+=item ICservices_tcp
+
+=item ICservices_udp
+
+=item icNoPerm
+
+=item icReadOnlyPerm
+
+=item icReadWritePerm
+
+Various constants.
+
+=back
+
+=head2 Variables
+
+=over 4
+
+=item $ICInstance
+
+The instance of the Internet Config database.
+
+=item %RawInternetConfig
+
+Access the raw, uninterpreted value of an Internet Config setting.
+
+=item %InternetConfig
+
+Access a sane Perl version of one of the more common Internet Config settings.
+
+=item %InternetConfigMap
+
+Access the Internet Config file map to:
+
+=over 4
+
+=item filename
+
+Determine the file type and creator for a newly created file:
+
+    $map = $InternetConfigMap{"output.html"};	
+
+=item type/creator
+
+Determine the extension to use for some type/creator combination:
+
+    $map = $InternetConfigMap{["WDBN", "MSWD"]};
+
+=back
+
+=back
+
+=head2 Types
+
+=over 4
+
+=item ICMapEntry
+
+An entry in the file map. Fields are:
+
+    short     version;
+    OSType    file_type;
+    OSType    file_creator;
+    OSType    post_creator;
+    long      flags;
+    Str255    extension;
+    Str255    creator_app_name;
+    Str255    post_app_name;
+    Str255    MIME_type;
+    Str255    entry_name;
+
+=back
+
+=head2 Functions
+
+=over 4
+
+=item ICStart 
+
+=item ICStart CREATOR
+
+Call this at application initialisation. Set creator to your application creator to 
+allow for future expansion of the IC system (Default is MacPerl's creator). Returns 
+a connection to the IC system.
+
+=item ICStop INST
+
+It is illegal to call this routine inside a ICBegin/End pair.
+Call this at application termination, after which INST
+is no longer valid connection to IC.
+
+=item ICGeneralFindConfigFile INST, SEARCH_PREFS, CAN_CREATE, @FOLDERS
+
+=item ICGeneralFindConfigFile INST, SEARCH_PREFS, CAN_CREATE
+
+=item ICGeneralFindConfigFile INST
+
+B<Mac OS only.>
+
+It is illegal to call this routine inside a ICBegin/End pair.
+Call to configure this connection to IC.
+This routine acts as a more general replacement for
+ICFindConfigFile and ICFindUserConfigFile.
+Set search_prefs to 1 (default) if you want it to search the preferences folder.
+Set can_create to 1 if you want it to be able to create a new config.
+Set count as the number of valid elements in folders.
+Set folders to a pointer to the folders to search.
+Setting count to 0 and folders to nil is OK.
+Searches the specified folders and then optionally the Preferences folder
+in a unspecified manner.
+
+=item ICChooseConfig INST
+
+B<Mac OS only.>
+
+Requires IC 1.2.
+It is illegal to call this routine inside a ICBegin/End pair.
+Requests the user to choose a configuration, typically using some
+sort of modal dialog. If the user cancels the dialog the configuration
+state will be unaffected.
+
+=item ICChooseNewConfig INST
+
+B<Mac OS only.>
+
+Requires IC 1.2.
+It is illegal to call this routine inside a ICBegin/End pair.
+Requests the user to choose a new configuration, typically using some
+sort of modal dialog. If the user cancels the dialog the configuration
+state will be unaffected.
+
+=item ICGetConfigName INST, LONGNAME
+
+=item ICGetConfigName INST
+
+Requires IC 1.2.
+You must specify a configuration before calling this routine.
+Returns a string that describes the current configuration at a user
+level. Set longname to 1 if you want a long name, up to 255
+characters, or 0 (default) if you want a short name, typically about 32
+characters.
+The returned string is for user display only. If you rely on the
+exact format of it, you will conflict with any future IC
+implementation that doesn't use explicit preference files.
+
+=item ICGetConfigReference INST
+
+B<Mac OS only.>
+
+Requires IC 1.2.
+You must specify a configuration before calling this routine.
+Returns a self-contained reference to the instance's current
+configuration.
+
+=item ICSetConfigReference INST, REF, FLAGS
+
+=item ICSetConfigReference INST, REF
+
+B<Mac OS only.>
+
+Requires IC 1.2.
+It is illegal to call this routine inside a ICBegin/End pair.
+Reconfigures the instance using a configuration reference that was
+got using ICGetConfigReference reference. Set the
+icNoUserInteraction_bit in flags if you require that this routine
+not present a modal dialog. Other flag bits are reserved and should
+be set to zero.
+
+=item ICGetSeed INST
+
+You do not have to specify a configuration before calling this routine.
+You do not have to be inside an ICBegin/End pair to call this routine.
+Returns the current seed for the IC prefs database.
+This seed changes each time a non-volatile preference is changed.
+You can poll this to determine if any cached preferences change.
+
+=item ICGetComponentInstance INST
+
+B<Mac OS only.>
+
+Requires IC 1.2.
+You do not have to specify a configuration before calling this routine.
+You do not have to be inside an ICBegin/End pair to call this routine.
+Returns the connection to the IC component.
+
+=item ICBegin INST, PERM
+
+You must specify a configuration before calling this routine. It is illegal to
+call this routine inside a ICBegin/End pair. Starting reading or writing
+multiple preferences. A call to this must be balanced by a call to ICEnd. Do
+not call WaitNextEvent between these calls. The perm specifies whether you
+intend to read or read/write. Only one writer is allowed per instance. Note
+that this may open resource files that are not closed until you call ICEnd. 
+
+=item ICGetPref INST, KEY
+
+You must specify a configuration before calling this routine.
+If you are getting or setting multiple preferences, you should place
+these calls within an ICBegin/ICEnd pair.
+If you call this routine outside of such a pair, it implicitly
+calls ICBegin(inst, icReadOnlyPerm).
+Reads the preference specified by key from the IC database to the
+buffer pointed to by buf and size.
+key must not be the empty string.
+If called in a scalar context, return the preference. If called in a list
+context, additionally returns the attributes.
+Returns icPrefNotFound if there is no preference for the key.
+
+=item ICSetPref INST, KEY, VALUE
+=item ICSetPref INST, KEY, VALUE, ATTR
+
+You must specify a configuration before calling this routine.
+If you are getting or setting multiple preferences, you should place
+these calls within an ICBegin/ICEnd pair.
+If you call this routine outside of such a pair, it implicitly
+calls ICBegin(inst, icReadWritePerm).
+Sets the preference specified by KEY from the IC database to the
+VALUE. If attr is ICattr_no_change (the default) then the preference attributes 
+are not set. Otherwise the preference attributes are set to attr.
+Returns icPermErr if the previous ICBegin was passed icReadOnlyPerm.
+Returns icPermErr if current attr is locked, new attr is locked.
+
+=item ICCountPref INST
+
+You must specify a configuration before calling this routine.
+You must be inside an ICBegin/End pair to call this routine.
+Counts the total number of preferences.
+
+=item ICGetIndPref	INST, N
+
+You must specify a configuration before calling this routine.
+You must be inside an ICBegin/End pair to call this routine.
+Returns the key of the Nth preference.
+n must be positive.
+Returns icPrefNotFoundErr if n is greater than the total number of preferences.
+
+=item ICDeletePref INST, KEY
+
+You must specify a configuration before calling this routine.
+You must be inside an ICBegin/End pair to call this routine.
+Deletes the preference specified by KEY.
+KEY must not be the empty string.
+Returns icPrefNotFound if the preference specified by key is not present.
+
+=item ICEnd INST
+
+You must specify a configuration before calling this routine.
+You must be inside an ICBegin/End pair to call this routine.
+Terminates a preference session, as started by ICBegin.
+You must have called ICBegin before calling this routine.
+
+=item ICEditPreferences	INST, KEY
+
+Requires IC 1.1.
+You must specify a configuration before calling this routine.
+You do not have to be inside an ICBegin/End pair to call this routine.
+Instructs IC to display the user interface associated with editing
+preferences and focusing on the preference specified by key.
+If key is the empty string then no preference should be focused upon.
+You must have specified a configuration before calling this routine.
+You do not need to call ICBegin before calling this routine.
+In the current implementation this launches the IC application
+(or brings it to the front) and displays the window containing
+the preference specified by key.
+It may have a radically different implementation in future
+IC systems.
+
+=item ICParseURL INST, HINT, DATA, START, END
+
+=item ICParseURL INST, HINT, DATA
+
+Requires IC 1.1.
+You must specify a configuration before calling this routine.
+You do not have to be inside an ICBegin/End pair to call this routine.
+Parses a URL out of the specified text and returns it in a canonical form
+in a handle.
+HINT indicates the default scheme for URLs of the form "name@address".
+If HINT is the empty string then URLs of that form are not allowed.
+DATA contains the text.
+START and END should be passed in as the current selection of
+the text. This selection is given in the same manner as TextEdit,
+ie if START == END then there is no selection only an insertion
+point. Also START ² END and 0 ² START ² length(DATA) and 0 ² END ² length(DATA).
+If START and END are omitted, the whole of DATA is assumed.
+In a scalar context, returns URL. In an array context, returns URL, START, END.
+
+=item ICLaunchURL INST, HINT, DATA, START, END
+
+=item ICLaunchURL INST, HINT, DATA
+
+Requires IC 1.1.
+You must specify a configuration before calling this routine.
+You do not have to be inside an ICBegin/End pair to call this routine.
+Parses a URL out of the specified text and feeds it off to the appropriate helper.
+HINT indicates the default scheme for URLs of the form "name@address".
+If HINT is the empty string then URLs of that form are not allowed.
+DATA contains the text.
+START and END should be passed in as the current selection of
+the text. This selection is given in the same manner as TextEdit,
+ie if START == END then there is no selection only an insertion
+point. Also START ² END and 0 ² START ² length(DATA) and 0 ² END ² length(DATA).
+If START and END are omitted, the whole of DATA is assumed.
+In a scalar context, returns URL. In an array context, returns URL, START, END.
+
+=item ICMapFileName INST, NAME
+
+Returns the C<ICMapEntry> matching best the given name.
+
+=item ICMapTypeCreator INST, TYPE, CREATOR [, NAME]
+
+Takes the type and creator (and optionally the name) of an outgoing
+file and returns the most appropriate C<ICMapEntry>.
+
+=item ICMapEntriesFileName INST, ENTRIES, NAME
+
+Returns the C<ICMapEntry> matching best the given name.
+
+=item ICMapEntriesTypeCreator INST, ENTRIES, TYPE, CREATOR [, NAME]
+
+Takes the type and creator (and optionally the name) of an outgoing
+file and returns the most appropriate C<ICMapEntry>.
+
+=item ICCountMapEntries	INST, ENTRIES
+
+Counts the number of entries in the map.
+
+=item ICGetIndMapEntry INST, ENTRIES, INDEX
+
+Returns the position of a map entry and the entry itself.
+
+    $map = ICGetIndMapEntry $inst, $entries, 5;
+    ($pos, $map) = ICGetIndMapEntry $inst, $entries, 5;
+
+=item ICGetMapEntry INST, ENTRIES, POS
+
+Returns the entry located at position pos in the mappings database.
+
+=item ICSetMapEntry INST, ENTRIES, POS, ENTRY
+
+Replace the entry at position pos
+
+=item ICDeleteMapEntry INST, ENTRIES, POS
+
+Delete the entry at position pos
+
+=item ICAddMapEntry INST, ENTRIES, ENTRY
+
+Add an entry to the database.
+
+
+
+=item GetURL URL
+
+Launch helper app with URL.  Returns undef on error.
+
+=item GetICHelper PROTOCOL
+
+Return list of creator ID and name for helper app assigned
+to PROTOCOL.  Returns only creator ID in scalar context.
+Returns undef on error.
+
+=back
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

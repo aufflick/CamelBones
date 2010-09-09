@@ -1,0 +1,125 @@
+=head1 NAME
+
+Mac::MoreFiles - Sophisticated file management routines
+
+=head1 SYNOPSIS
+
+    use Mac::MoreFiles;
+
+    $application = $Application{"MrPL"};
+
+=head1 DESCRIPTION
+
+=head2 Variables
+
+=over 4
+
+=item %Application
+
+The C<%Application> hash will return the path to the application for a given 
+signature, searching on all mounted volumes.
+
+=back
+
+=head2 Functions
+
+=over 4
+
+=item FSpCreateMinimum SPEC
+
+Create a new file with no creator or file type.
+The FSpCreateMinimum function creates a new file without attempting to set 
+the the creator and file type of the new file.  This function is needed to
+create a file in an AppleShare "dropbox" where the user can make
+changes, but cannot see folder or files. The FSSpec in SPEC is used to create
+the file.
+
+=item FSpShare SPEC
+
+Establish a local volume or directory as a share point.
+The FSpShare function establishes a local volume or directory as a
+share point. SPEC is an FSSpec record specifying the share point.
+
+=item FSpUnshare SPEC
+
+The FSpUnshare function removes a share point in SPEC.
+
+=item FSpFileCopy SRCSPEC, DSTSPEC, COPYNAME, PREFLIGHT
+
+The FSpFileCopy function duplicates a file and optionally renames it.
+Since the PBHCopyFile() routine is only available on some
+AFP server volumes under specific conditions, this routine
+either uses PBHCopyFile(), or does all of the work PBHCopyFile()
+does.  The SRCSPEC is used to
+determine the location of the file to copy.  The DSTSPEC is
+used to determine the location of the
+destination directory.  If COPYNAME E<lt>E<gt> NIL, then it points
+to the name of the new file.  
+
+=item FSpDirectoryCopy SRCSPEC, DSTSPEC, PREFLIGHT, [COPYERRHANDLER]
+
+Make a copy of a directory structure in a new location.
+The FSpDirectoryCopy function makes a copy of a directory structure in a
+new location. COPYERRHANDLER is the Perl routine name to handle an
+error, should one arise. It will be called as:
+
+    $bailout = &$COPYERRHANDLER(ERRORCODE,OPERATION,SRCSPEC,DSTSPEC);
+
+=item FSpIterateDirectory SPEC, MAXLEVELS, ITERATEFILTER, YOURDATAPTR
+
+Iterate (scan) through a directory's content.
+The FSpIterateDirectory function performs a recursive iteration (scan)
+of the specified directory and calls your ITERATEFILTER function once
+for each file and directory found.
+
+The MAXLEVELS parameter lets you control how deep the recursion goes.
+If MAXLEVELS is 1, FSpIterateDirectory only scans the specified directory;
+if MAXLEVELS is 2, FSpIterateDirectory scans the specified directory and
+one subdirectory below the specified directory; etc. Set MAXLEVELS to
+zero to scan all levels.
+
+The YOURDATAPTR parameter can point to whatever data structure you might
+want to access from within the ITERATEFILTER. Your filter function will be
+called as:
+
+    $quit = &$filterFunction(YOURDATAPTR, SPEC);
+
+=item FSpDTGetAPPL VOLUME, CREATOR
+
+The FSpDTGetAPPL function finds an application (file type 'APPL') with
+the specified CREATOR on the specified VOLUME. It first tries to get
+the application mapping from the desktop database. If that fails, then
+it tries to find an application with the specified creator using
+the File Manager's CatSearch() routine. If that fails, then it tries to
+find an application in the Desktop file.
+Returns FSSpec or C<undef> on failure.
+
+=item FSpDTSetComment SPEC, COMMENT
+
+The FSpDTSetComment function sets a file or directory's Finder comment
+field. The volume must support the Desktop Manager because you only
+have read access to the Desktop file.
+
+=item FSpDTGetComment SPEC
+
+The FSpDTGetComment function gets a file or directory's Finder comment
+field (if any) from the Desktop Manager or if the Desktop Manager is
+not available, from the Finder's Desktop file.
+Returns Str255, or C<undef> on failure.
+
+=item FSpDTCopyComment SRCSPEC, DSTSPEC
+
+The FSpDTCopyComment function copies the desktop database comment from
+the source to the destination object.  Both the source and the
+destination volumes must support the Desktop Manager.
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>,
+documentation by Bob Dalgleish E<lt>bob.dalgleish@sasknet.sk.caE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

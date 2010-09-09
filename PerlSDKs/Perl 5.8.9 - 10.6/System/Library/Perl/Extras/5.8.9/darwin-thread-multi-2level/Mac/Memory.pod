@@ -1,0 +1,551 @@
+=head1 NAME
+
+Mac::Memory - MacOS Memory Manager
+
+Provide the MacPerl interface to the memory management routines in the MacOS.
+
+Access to Inside Macintosh is essential for proper use of these functions.
+Explanations of terms, processes and procedures are provided there.
+Any attempt to use these functions without guidance can cause severe errors in 
+your machine, including corruption of data. B<You have been warned.>
+
+=head1 SYNOPSIS
+
+The Memory module defines Ptr and Handle classes, and function interfaces to the 
+memory management.
+
+    use Mac::Memory;
+    $handle = new Handle;
+    $handle2 = NewHandle;
+
+=head1 DESCRIPTION
+
+The following packages and functions provide low level access to the memory
+management functions.
+
+=head2 Handle
+
+Handle provides an object interface to do simple operations on MacOS handles.
+The interface is simpler than the more general memory management functions.
+
+=over 4
+
+=item new
+
+=item new STRING
+
+Create a new handle and return it. Copy $STRING into the handle if present.
+Return a 0 value if a handle could not be created.
+
+    $h = new Handle;
+    $hs = new Handle("This string will now exist in hyperspace");
+
+=item size
+
+Return the size of a handle (i.e., its data portion).
+
+    die unless (new Handle)->size == 0;
+    die unless $hs->size == 40;
+
+=item append DATA 
+
+Appends the DATA to the end of the handle
+and returns the success as the result.
+
+    $h->append("This string will now exist in hyperspace");
+    die unless $h->size == 40;
+
+=item set OFFSET, LENGTH, DATA 
+
+=item set OFFSET, LENGTH 
+
+=item set OFFSET 
+
+=item set
+
+Munge the contents of the handle with the $DATA (deleting if not present), for the
+$LENGTH (through to the end of the handle contents if not present), starting at
+$OFFSET (the beginning if not present).
+
+    $h->set(5, 6, "datum");
+
+yields
+
+    "This datum will now exist in hyperspace"
+
+
+=item get OFFSET, LENGTH 
+
+=item get OFFSET 
+
+=item get
+
+Return a datum which is the contents of the memory referenced by $HANDLE, 
+starting at $OFFSET (default zero), of length $LENGTH (default the rest
+of the handle).
+
+    die unless $hs->get(5, 6) eq "string";
+
+=item address 
+
+Return the address of the memory block.
+
+=item state
+
+=item state NEWSTATE 
+
+Return the (locked) state of the handle, or return TRUE if the $NEWSTATE
+of the handle is installed.
+
+    my $state = $h->state;
+    HLock($h);
+    # bunch of operations requiring $h to be locked
+    $h->state($state);	# so nested locks exit properly
+
+More than the lock state is stored here, so restoring the actual state on leaving
+a scope is required.
+
+
+=item open MODE
+
+Open a stream to a handle and return it.
+
+NOT DEFINED AT THE MOMENT
+
+SysRet
+_open(hand, mode)
+	Handle	hand
+	int		mode
+	CODE:
+	RETVAL = OpenHandle(hand, mode);
+	OUTPUT:
+	RETVAL
+
+=item dispose
+
+Disposes of the handle.
+Return zero if no error was detected.
+
+=back
+
+Almost all of the memory management needs in MacPerl can be handled by the above interface
+
+=head2 Ptr
+
+Ptr provides an object interface to do simple operations on MacOS pointers
+(nonrelocatable heap blocks). There are very few good reasons to create pointers
+like this.
+
+=over 4
+
+=item size
+
+Return the size of a pointer (i.e., its data portion).
+
+    die unless $ptr->size == 40;
+
+
+=item set OFFSET, DATA 
+
+=item get OFFSET, LENGTH 
+
+=item get OFFSET 
+
+=item get
+
+Return a datum which is the contents of the memory referenced by PTR, 
+starting at $OFFSET (default zero), of length $LENGTH (default the rest
+of the block).
+
+    die unless $ps->get(5, 6) eq "string";
+
+
+=item address 
+
+Return the address of the memory block.
+
+=item dispose
+
+Disposes of the block.
+Return zero if no error was detected.
+
+=back
+
+=head2 Functions
+
+=over 4
+
+=item GetApplLimit
+
+B<Mac OS only.>
+
+The GetApplLimit function returns the current application heap limit.
+
+
+=item TopMem
+
+Return a pointer to the top of memory for the application.
+
+
+
+=item NewHandle BYTECOUNT
+
+=item NewHandleSys BYTECOUNT
+
+=item NewHandleClear BYTECOUNT
+
+=item NewHandleSysClear BYTECOUNT
+
+B<Mac OS only.> (NewHandleSys, NewHandleSysClear)
+
+Return a handle of $BYTECOUNT size.
+
+NewHandleSys returns a handle in the system heap.
+
+The NewHandleClear and NewHandleSysClear functions work much as the NewHandle
+and NewHandleSys functions do but set
+all bytes in the new block to 0 instead of leaving the contents of the block
+undefined.
+Currently, this is quite inefficient.
+
+
+=item NewPtr BYTECOUNT
+
+=item NewPtrSys BYTECOUNT
+
+B<Mac OS only.>
+
+=item NewPtrClear BYTECOUNT
+
+=item NewPtrSysClear BYTECOUNT
+
+B<Mac OS only.> (NewPtrSys, NewPtrSysClear)
+
+Allocate a nonrelocatable block of memory of a specified size.
+
+NewPtrSys and NewPtrSysClear allocate blocks in the system heap.
+
+NewPtrClear and NewPtrSysClear allocate and zero the blocks (inefficiently).
+
+
+=item MaxBlock
+
+=item MaxBlockSys
+
+B<Mac OS only.> (MaxBlockSys)
+
+The MaxBlock function returns the maximum contiguous space, in bytes, that you
+could obtain after compacting the current heap zone. MaxBlock does not actually
+do the compaction.
+
+MaxBlockSys does the same for the system heap.
+
+
+=item StackSpace
+
+The StackSpace function returns the current amount of stack space (in bytes)
+between the current stack pointer and the application heap at the instant of
+return from the trap.
+
+
+=item NewEmptyHandle
+
+=item NewEmptyHandleSys
+
+B<Mac OS only.> (NewEmptyHandleSys)
+
+The NewEmptyHandle function initializes a new handle by allocating a master
+pointer for it, but it does not allocate any memory for the handle to control.
+NewEmptyHandle
+sets the handle's master pointer to NIL.
+
+NewEmptyHandleSys does the same for the system heap.
+
+
+=item HLock HANDLE
+
+Lock a relocatable block so that it does not move in the heap. If you plan to
+dereference a handle and then allocate, move, or purge memory (or call a routine
+that does so), then you should lock the handle before using the dereferenced
+handle.
+
+
+=item HUnlock HANDLE
+
+Unlock a relocatable block so that it is free to move in its heap zone.
+
+
+=item HPurge HANDLE
+
+Mark a relocatable block so that it can be purged if a memory request cannot be
+fulfilled after compaction.
+
+
+=item HNoPurge HANDLE
+
+Mark a relocatable block so that it cannot be purged.
+
+
+=item HLockHi HANDLE
+
+The HLockHi procedure attempts to move the relocatable block referenced by the
+handle $HANDLE upward until it reaches a nonrelocatable block, a locked relocatable
+block, or the top of the heap. Then HLockHi locks the block.
+
+
+=item TempNewHandle BYTECOUNT
+
+The TempNewHandle function returns a handle to a block of size $BYTECOUNT from
+temporary memory. If it
+cannot allocate a block of that size, the function returns NIL.
+
+
+=item TempMaxMem
+
+The TempMaxMem function compacts the current heap zone and returns the size of
+the largest contiguous block available for temporary allocation.
+
+    $SIZE = &TempMaxMem;
+
+
+=item TempFreeMem
+
+The TempFreeMem function returns the total amount of free temporary memory that
+you could allocate by calling TempNewHandle. The returned value is the total
+number of free bytes. Because these bytes might be dispersed throughout memory,
+it is ordinarily not possible to allocate a single relocatable block of that
+size.
+
+    $SIZE = &TempFreeMem;
+
+
+=item CompactMem BYTECOUNT
+
+=item CompactMemSys BYTECOUNT
+
+B<Mac OS only.> (CompactMemSys)
+
+The CompactMem function compacts the current heap zone by moving unlocked,
+relocatable blocks down until they encounter nonrelocatable blocks or locked,
+relocatable blocks, but not by purging blocks. It continues compacting until it
+either finds a contiguous block of at least $BYTECOUNT free bytes or has compacted
+the entire zone.
+
+The CompactMem function returns the size, in bytes, of the largest contiguous
+free block for which it could make room, but it does not actually allocate that
+block.
+
+CompactMemSys does the same for the system heap.
+
+
+=item PurgeMem BYTECOUNT
+
+=item PurgeMemSys BYTECOUNT
+
+B<Mac OS only.> (PurgeMemSys)
+
+The PurgeMem procedure sequentially purges blocks from the current heap zone
+until it either allocates a contiguous block of at least $BYTECOUNT free bytes or
+has purged the entire zone. If it purges the entire zone without creating a
+contiguous block of at least $BYTECOUNT free bytes, PurgeMem generates a
+memFullErr.
+
+The PurgeMem procedure purges only relocatable, unlocked, purgeable blocks.
+
+The PurgeMem procedure does not actually attempt to allocate a block of  $BYTECOUNT
+bytes.
+
+PurgeMemSys does the same for the system heap.
+
+
+=item FreeMem
+
+=item FreeMemSys
+
+B<Mac OS only.> (FreeMemSys)
+
+The FreeMem function returns the total amount of free space (in bytes) in the
+current heap zone. Note that it usually isn't possible to allocate a block of
+that size, because of heap fragmentation due to nonrelocatable or locked blocks.
+
+FreeMemSys does the same for the system heap.
+
+
+=item ReserveMem BYTECOUNT
+
+=item ReserveMemSys BYTECOUNT
+
+B<Mac OS only.> (ReserveMemSys)
+
+The ReserveMem procedure attempts to create free space for a block of $BYTECOUNT
+contiguous logical bytes at the lowest possible position in the current heap
+zone. It pursues every available means of placing the block as close as possible
+to the bottom of the zone, including moving other relocatable blocks upward,
+expanding the zone (if possible), and purging blocks from it. 
+
+ReserveMemSys does the same for the system heap.
+
+
+=item MaxMem
+
+=item MaxMemSys
+
+B<Mac OS only.> (MaxMemSys)
+
+Use the MaxMem function to compact and purge the current heap zone. The values
+returned are the amount of memory available and the amount by which the zone can
+grow.
+
+    ($SIZE, $GROW) = &MaxMem;
+
+MaxMemSys does the purge and compact of the system heap zone, and the $GROW value
+is set to zero.
+
+
+=item MoveHHi HANDLE
+
+The MoveHHi procedure attempts to move the relocatable block referenced by the
+handle $HANDLE upward until it reaches a nonrelocatable block, a locked relocatable
+block, or the top of the heap.
+
+
+=item DisposePtr PTR
+
+Releases the memory occupied by the nonrelocatable block specified by $PTR.
+
+
+=item GetPtrSize PTR
+
+The GetPtrSize function returns the logical size, in bytes, of the nonrelocatable
+block pointed to by $PTR.
+
+
+=item SetPtrSize PTR, NEWSIZE
+
+The SetPtrSize procedure attempts to change the logical size of the
+nonrelocatable block pointed to by $PTR. The new logical size is specified by
+$NEWSIZE.
+Return zero if no error was detected.
+
+
+=item DisposeHandle HANDLE
+
+The DisposeHandle procedure releases the memory occupied by the relocatable block
+whose handle is $HANDLE. It also frees the handle's master pointer for other uses.
+
+
+=item SetHandleSize HANDLE, BYTECOUNT
+
+The SetHandleSize procedure attempts to change the logical size of the
+relocatable block whose handle is $HANDLE. The new logical size is specified by
+$BYTECOUNT.
+Return zero if no error was detected.
+
+
+=item GetHandleSize HANDLE
+
+The GetHandleSize function returns the logical size, in bytes, of the relocatable
+block whose handle is $HANDLE. In case of an error, GetHandleSize returns 0.
+
+
+=item ReallocateHandle HANDLE, BYTECOUNT
+
+Allocates a new relocatable block with a logical size of $BYTECOUNT bytes. It
+updates the handle $HANDLE by setting its master pointer to point to the new block. 
+The new block is unlocked and unpurgeable.
+Return zero if no error was detected.
+
+
+=item EmptyHandle
+
+Free memory taken by a relocatable block without freeing the relocatable block's
+master pointer for other uses.
+
+
+=item MoreMasters
+
+Call the MoreMasters procedure several times at the beginning of your program to
+prevent the Memory Manager from running out of master pointers in the middle of
+application execution. If it does run out, it allocates more, possibly causing
+heap fragmentation.
+
+
+=item BlockMove SOURCEPTR, DESTPTR, BYTECOUNT
+
+=item BlockMoveData SOURCEPTR, DESTPTR, BYTECOUNT
+
+The BlockMove/BlockMoveData procedure moves a block of $BYTECOUNT consecutive bytes from the
+address designated by $SOURCEPTR to that designated by $DESTPTR.
+
+
+=item PurgeSpace
+
+Determine the total amount of free memory and the size of the largest allocatable
+block after a purge of the heap.
+
+    ($Total, $Contiguous) = &PurgeSpace;
+
+
+=item HGetState HANDLE
+
+Get the current properties of a relocatable block (perhaps so that you can change
+and then later restore those properties).
+
+
+=item HSetState HANDLE, STATE
+
+Restore properties of a block after a call to HGetState.
+
+
+=item HandToHand HANDLE
+
+The HandToHand function attempts to copy the information in the relocatable block
+to which $HANDLE is a handle.
+Return C<undef> if an error was detected.
+
+
+=item PtrToHand PTR, BYTECOUNT
+
+The PtrToHand function returns a newly created handle to a copy of
+the number of bytes specified by $BYTECOUNT, beginning at the location
+specified by $PTR.
+Return C<undef> if an error was detected.
+
+
+=item PtrToXHand HANDLE, PTR, BYTECOUNT
+
+The PtrToXHand function makes the existing handle, specified by $HANDLE, a handle
+to a copy of the number of bytes specified by $BYTECOUNT, beginning at
+the location specified by $PTR.
+Return C<undef> if an error was detected.
+
+
+=item HandAndHand AHNDLE, BHNDLE
+
+The HandAndHand function concatenates the information from the relocatable block
+to which $AHNDL is a handle onto the end of the relocatable block to which $BHNDL
+is a handle. The $AHNDL variable remains unchanged.
+Return zero if no error was detected.
+
+
+=item PtrAndHand PTR, HANDLE, BYTECOUNT
+
+The PtrAndHand function takes the number of bytes specified by $BYTECOUNT, 
+beginning at the location specified by $PTR, and concatenates them
+onto the end of the relocatable block to which $HANDLE is a handle.
+
+
+=back
+
+
+
+=pod
+
+The low level interface is not likely to be needed, except for the HLock() function.
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>,
+documentation by Bob Dalgleish E<lt>bob.dalgleish@sasknet.sk.caE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

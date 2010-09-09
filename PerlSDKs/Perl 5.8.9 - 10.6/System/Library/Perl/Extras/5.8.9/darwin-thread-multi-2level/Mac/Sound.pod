@@ -1,0 +1,165 @@
+=head1 NAME
+
+Mac::Sound - Macintosh Toolbox Interface to Sound Manager
+
+=head1 DESCRIPTION
+
+Access to Inside Macintosh is essential for proper use of these functions.
+Explanations of terms, processes and procedures are provided there.
+Any attempt to use these functions without guidance can cause severe errors in 
+your machine, including corruption of data. B<You have been warned.>
+
+=head2 Constants
+
+Not yet documented.
+
+=over 4
+
+=back
+
+=head2 Structures
+
+Not yet documented.
+
+=over 4
+
+=back
+
+=head2 Functions
+
+Not yet documented.
+
+=over 4
+
+=begin ignore
+
+MacOSRet
+SndPlayDoubleBuffer(chan, theParams)
+	SndChannel	chan
+	SndDoubleBufferHeaderPtr	theParams
+
+=end ignore
+
+=begin ignore
+
+MacOSRet
+OpenMixerSoundComponent(outputDescription, outputFlags, mixerComponent)
+	SoundComponentDataPtr	outputDescription
+	long	outputFlags
+	ComponentInstance *	mixerComponent
+
+MacOSRet
+CloseMixerSoundComponent(ci)
+	ComponentInstance	ci
+
+MacOSRet
+SndGetInfo(chan, selector, infoPtr)
+	SndChannel	chan
+	OSType	selector
+	void *	infoPtr
+
+MacOSRet
+SndSetInfo(chan, selector, infoPtr)
+	SndChannel	chan
+	OSType	selector
+	const void *	infoPtr
+
+MacOSRet
+GetSoundOutputInfo(outputDevice, selector, infoPtr)
+	Component	outputDevice
+	OSType	selector
+	void *	infoPtr
+
+MacOSRet
+SetSoundOutputInfo(outputDevice, selector, infoPtr)
+	Component	outputDevice
+	OSType	selector
+	const void *	infoPtr
+
+=end ignore
+
+=begin ignore
+
+MacOSRet
+SoundConverterOpen(inputFormat, outputFormat, sc)
+	const SoundComponentData *	inputFormat
+	const SoundComponentData *	outputFormat
+	SoundConverter *	sc
+
+MacOSRet
+SoundConverterClose(sc)
+	SoundConverter	sc
+
+MacOSRet
+SoundConverterGetBufferSizes(sc, inputBytesTarget, inputFrames, inputBytes, outputBytes)
+	SoundConverter	sc
+	unsigned long	inputBytesTarget
+	unsigned long *	inputFrames
+	unsigned long *	inputBytes
+	unsigned long *	outputBytes
+
+MacOSRet
+SoundConverterBeginConversion(sc)
+	SoundConverter	sc
+
+MacOSRet
+SoundConverterConvertBuffer(sc, inputPtr, inputFrames, outputPtr, outputFrames, outputBytes)
+	SoundConverter	sc
+	const void *	inputPtr
+	unsigned long	inputFrames
+	void *	outputPtr
+	unsigned long *	outputFrames
+	unsigned long *	outputBytes
+
+MacOSRet
+SoundConverterEndConversion(sc, outputPtr, outputFrames, outputBytes)
+	SoundConverter	sc
+	void *	outputPtr
+	unsigned long *	outputFrames
+	unsigned long *	outputBytes
+
+=end ignore
+
+=begin ignore
+
+MacOSRet
+SPBGetDeviceInfo(inRefNum, infoType, infoData)
+	long	inRefNum
+	OSType	infoType
+	void *	infoData
+
+MacOSRet
+SPBSetDeviceInfo(inRefNum, infoType, infoData)
+	long	inRefNum
+	OSType	infoType
+	void *	infoData
+
+=end ignore
+
+=begin ignore
+
+MacOSRet
+ParseAIFFHeader(fRefNum, sndInfo, numFrames, dataOffset)
+	short	fRefNum
+	SoundComponentData *	sndInfo
+	unsigned long *	numFrames
+	unsigned long *	dataOffset
+
+MacOSRet
+ParseSndHeader(sndHandle, sndInfo, numFrames, dataOffset)
+	SndListHandle	sndHandle
+	SoundComponentData *	sndInfo
+	unsigned long *	numFrames
+	unsigned long *	dataOffset
+
+=end ignore
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+

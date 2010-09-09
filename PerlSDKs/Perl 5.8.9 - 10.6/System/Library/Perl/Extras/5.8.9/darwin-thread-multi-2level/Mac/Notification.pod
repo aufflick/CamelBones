@@ -1,0 +1,56 @@
+=head1 NAME
+
+Mac::Notification - Macintosh Toolbox Interface to Notification Manager
+
+=head1 DESCRIPTION
+
+Access to Inside Macintosh is essential for proper use of these functions.
+Explanations of terms, processes and procedures are provided there.
+Any attempt to use these functions without guidance can cause severe errors in 
+your machine, including corruption of data. B<You have been warned.>
+
+=head2 Types
+
+=over 4
+
+=item NMRec
+
+The notification record. Fields are:
+
+    short     nmMark;      /* item to mark in Apple menu*/
+    Handle    nmIcon;      /* handle to small icon*/
+    Handle    nmSound;     /* handle to sound record*/
+    Str255    nmStr;       /* string to appear in alert*/
+    long      nmRefCon;    /* for application use*/
+
+=over 4
+
+=item new NMRec (KEY =E<gt> VALUE...)
+
+Create a new notification record and fill it in.
+
+=back
+
+=back
+
+=head2 Functions
+
+=over 4
+
+=item NMInstall REQUEST
+
+Install a notification.
+
+=item NMRemove REQUEST
+
+Remove a notification.
+
+=back
+
+
+
+=head1 AUTHOR
+
+Written by Matthias Ulrich Neeracher E<lt>neeracher@mac.comE<gt>.
+Currently maintained by Chris Nandor E<lt>pudge@pobox.comE<gt>.
+
