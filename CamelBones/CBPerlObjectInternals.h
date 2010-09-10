@@ -14,27 +14,6 @@
 #import <objc/objc.h>
 #endif
 
-union _CB_OBJC_RETURN_T {
-    unsigned int uint;
-    int sint;
-    unsigned long ulong;
-    long slong;
-    float sfloat;
-    double dfloat;
-    char *char_p;
-    const char *cchar_p;
-    id id_p;
-    void *void_p;
-    Class class_p;
-    SEL sel_p;
-#ifdef __i386__
-    char struct_buf[8];
-#else ifdef __ppc__
-    char struct_buf[4];
-#endif
-};
-typedef union _CB_OBJC_RETURN_T CB_ObjCReturnType;
-
 union _CB_OBJC_T {
     unsigned int uint;
     int sint;
@@ -54,6 +33,7 @@ union _CB_OBJC_T {
     NSSize size_s;
 };
 typedef union _CB_OBJC_T CB_ObjCType;
+
 
 @interface CBPerlObject (Internals)
 

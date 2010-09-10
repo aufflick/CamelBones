@@ -108,10 +108,6 @@ sub CBCreateAccessor {
     {
         no strict 'refs';
         
-        # If the given type is a registered class, its type is @.
-        # Otherwise, it's assumed to be an encoded Objective-C type
-        my $propType = CBIsClassRegistered($type) ? '@' : $type;
-
         # Setter
         my $setter = 'set'.ucfirst($property);
         unless ( UNIVERSAL::can($class, $setter) ) { # don't overwrite existing method
@@ -122,7 +118,7 @@ sub CBCreateAccessor {
         }
         
         # Export the setter to objc
-        ${$class.'::OBJC_EXPORT'}{$setter . ':'}={'args'=>$propType, 'return'=>'v'};
+        ${$class.'::OBJC_EXPORT'}{$setter . ':'}={'args'=>'@', 'return'=>'v'};
         
         # getter
         my $getter = $property;
@@ -134,7 +130,7 @@ sub CBCreateAccessor {
         }
 
         # Export the getter to objc
-        ${$class.'::OBJC_EXPORT'}{$getter}={'args'=>'', 'return'=>$propType};
+        ${$class.'::OBJC_EXPORT'}{$getter}={'args'=>'', 'return'=>'@'};
     }
 }
 
