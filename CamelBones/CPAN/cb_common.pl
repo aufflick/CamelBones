@@ -22,22 +22,11 @@ our %opts = (
     XSOPT           => "-typemap $CamelBones/Resources/typemap",
 
     LIBS              => [ '-lobjc' ],
-    INC               => ($ENV{'GNUSTEP_ROOT'} ne '') ?
-             "-xobjective-c -Wno-import -I$ENV{'GNUSTEP_SYSTEM_ROOT'}/Library/Headers -I$ENV{'GNUSTEP_LOCAL_ROOT'}/Library/Headers -DGNUSTEP -fconstant-string-class=NSConstantString " :
-             "-F$CamelBonesPath -ObjC ",
+    INC               => "-F$CamelBonesPath -ObjC ",
     dynamic_lib         => {
                         'OTHERLDFLAGS' =>
-                            ($ENV{'GNUSTEP_ROOT'} ne '') ?
-                            " -L$ENV{'GNUSTEP_SYSTEM_ROOT'}/Library/Libraries -L$ENV{'GNUSTEP_LOCAL_ROOT'}/Library/Libraries -lgnustep-base -lgnustep-gui -lCamelBones " :
                             " -framework Foundation -framework AppKit -framework CamelBones -F$CamelBonesPath -lobjc "
                         },
 );
-
-if ($ENV{'CFLAGS'}) {
-    $opts{'INC'} .= $ENV{'CFLAGS'};
-}
-if ($ENV{'LDFLAGS'}) {
-    $opts{'dynamic_lib'}->{'OTHERLDFLAGS'} .= $ENV{'LDFLAGS'};
-};
 
 1;
