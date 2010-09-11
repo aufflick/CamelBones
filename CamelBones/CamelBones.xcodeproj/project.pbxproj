@@ -20,6 +20,30 @@
 			name = "Perl Module (5.8.6)";
 			productName = "Perl Module";
 		};
+		AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AA615144123AAA56006D6979 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.8)" */;
+			buildPhases = (
+				AA615143123AAA56006D6979 /* ShellScript */,
+			);
+			dependencies = (
+				AA13A1B8123BF5EE009F9879 /* PBXTargetDependency */,
+			);
+			name = "PAR Kits (5.8.8)";
+			productName = "PAR Kits (5.8.9)";
+		};
+		AA615196123AD048006D6979 /* PAR Kits (5.8.6) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AA615198123AD048006D6979 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.6)" */;
+			buildPhases = (
+				AA615197123AD048006D6979 /* ShellScript */,
+			);
+			dependencies = (
+				AA13A1BA123BF5F2009F9879 /* PBXTargetDependency */,
+			);
+			name = "PAR Kits (5.8.6)";
+			productName = "PAR Kits (5.8.9)";
+		};
 		AA6C32080CCC962000306BD7 /* Leopard */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = AA6C32110CCC964F00306BD7 /* Build configuration list for PBXAggregateTarget "Leopard" */;
@@ -28,6 +52,7 @@
 			dependencies = (
 				849691FE0D72A87600A81045 /* PBXTargetDependency */,
 				AA6C32BD0CCC9DE900306BD7 /* PBXTargetDependency */,
+				AA13A1BC123BF617009F9879 /* PBXTargetDependency */,
 			);
 			name = Leopard;
 			productName = All;
@@ -53,6 +78,7 @@
 			dependencies = (
 				AA7F613F0DCCFBA300D20E5E /* PBXTargetDependency */,
 				AA7F61450DCCFBA300D20E5E /* PBXTargetDependency */,
+				AA13A1BE123BF61F009F9879 /* PBXTargetDependency */,
 			);
 			name = Tiger;
 			productName = All;
@@ -96,6 +122,18 @@
 			name = Panther;
 			productName = All;
 		};
+		AADB3E1E123A6F06001D0951 /* PAR Kits (5.8.9) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AADB3E25123A6F3A001D0951 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.9)" */;
+			buildPhases = (
+				AADB3E1D123A6F06001D0951 /* ShellScript */,
+			);
+			dependencies = (
+				AA13A1B2123BF5E8009F9879 /* PBXTargetDependency */,
+			);
+			name = "PAR Kits (5.8.9)";
+			productName = "PAR Kits (5.8.9)";
+		};
 		FFE3611F1057214100F0CA90 /* Perl Module (5.8.9) */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = FFE361251057214100F0CA90 /* Build configuration list for PBXAggregateTarget "Perl Module (5.8.9)" */;
@@ -117,6 +155,7 @@
 			dependencies = (
 				FFE361471057268F00F0CA90 /* PBXTargetDependency */,
 				FFE361451057268B00F0CA90 /* PBXTargetDependency */,
+				AADB3E24123A6F1C001D0951 /* PBXTargetDependency */,
 			);
 			name = "Snow Leopard";
 			productName = All;
@@ -250,6 +289,41 @@
 			remoteGlobalIDString = FFE9CE900D13073A00BB5E57;
 			remoteInfo = "darwin-thread-multi-2level-5.8.8";
 		};
+		AA13A1B1123BF5E8009F9879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			remoteInfo = CamelBones.framework;
+		};
+		AA13A1B7123BF5EE009F9879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			remoteInfo = CamelBones.framework;
+		};
+		AA13A1B9123BF5F2009F9879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			remoteInfo = CamelBones.framework;
+		};
+		AA13A1BB123BF617009F9879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */;
+			remoteInfo = "PAR Kits (5.8.8)";
+		};
+		AA13A1BD123BF61F009F9879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA615196123AD048006D6979 /* PAR Kits (5.8.6) */;
+			remoteInfo = "PAR Kits (5.8.6)";
+		};
 		AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
@@ -382,6 +456,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = AAD87F5E122C8CE200756D8C;
 			remoteInfo = "Perl Module (5.8.1)";
+		};
+		AADB3E23123A6F1C001D0951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADB3E1E123A6F06001D0951;
+			remoteInfo = "PAR Kits (5.8.9)";
 		};
 		FFE360FC105720FB00F0CA90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -554,6 +635,14 @@
 		AAD87F2C122C8AE500756D8C /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
 		AAD87F2E122C8B1000756D8C /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o"; name = libperl.dylib; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		AAD87F59122C8CB200756D8C /* PluginInfo-5.8.1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.1.plist"; sourceTree = "<group>"; };
+		AADB3E13123A6E6C001D0951 /* build-catkit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-catkit.pl"; sourceTree = "<group>"; };
+		AADB3E14123A6E6C001D0951 /* build-dbikit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-dbikit.pl"; sourceTree = "<group>"; };
+		AADB3E15123A6E6C001D0951 /* build-devkit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-devkit.pl"; sourceTree = "<group>"; };
+		AADB3E16123A6E6C001D0951 /* build-glkit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-glkit.pl"; sourceTree = "<group>"; };
+		AADB3E17123A6E6C001D0951 /* build-mpkit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-mpkit.pl"; sourceTree = "<group>"; };
+		AADB3E18123A6E6C001D0951 /* build-par.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-par.pl"; sourceTree = "<group>"; };
+		AADB3E19123A6E6C001D0951 /* build-xmlkit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-xmlkit.pl"; sourceTree = "<group>"; };
+		AADB3E1A123A6E90001D0951 /* MyConfig.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = MyConfig.pm; path = PAR/CPAN/MyConfig.pm; sourceTree = "<group>"; };
 		FFA13B2F105A05330046F551 /* libffi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.dylib; path = /usr/lib/libffi.dylib; sourceTree = "<absolute>"; };
 		FFA13B4D105A05730046F551 /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		FFE360F5105720DF00F0CA90 /* PluginInfo-5.8.9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.9.plist"; sourceTree = "<group>"; };
@@ -687,6 +776,7 @@
 		AA50E3A70C875D23004DA7BD /* CamelBones */ = {
 			isa = PBXGroup;
 			children = (
+				AADB3E12123A6E4A001D0951 /* PAR Kits */,
 				AA91431A0CC99B010055B0E5 /* Perl Module */,
 				AA50E4620C876684004DA7BD /* Private-Include */,
 				AA50E45B0C87664F004DA7BD /* Include */,
@@ -905,6 +995,21 @@
 			name = "darwin-thread-multi-2level-5.8.1";
 			sourceTree = "<group>";
 		};
+		AADB3E12123A6E4A001D0951 /* PAR Kits */ = {
+			isa = PBXGroup;
+			children = (
+				AADB3E1A123A6E90001D0951 /* MyConfig.pm */,
+				AADB3E18123A6E6C001D0951 /* build-par.pl */,
+				AADB3E15123A6E6C001D0951 /* build-devkit.pl */,
+				AADB3E17123A6E6C001D0951 /* build-mpkit.pl */,
+				AADB3E16123A6E6C001D0951 /* build-glkit.pl */,
+				AADB3E19123A6E6C001D0951 /* build-xmlkit.pl */,
+				AADB3E14123A6E6C001D0951 /* build-dbikit.pl */,
+				AADB3E13123A6E6C001D0951 /* build-catkit.pl */,
+			);
+			name = "PAR Kits";
+			sourceTree = "<group>";
+		};
 		FFA13B38105A05470046F551 /* darwin-thread-multi-2level-5.8.9 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1085,6 +1190,9 @@
 				AA6C32B50CCC9DB000306BD7 /* Perl Module (5.8.8) */,
 				84893BF80DCCF7A000B48051 /* Perl Module (5.8.6) */,
 				AAD87F5E122C8CE200756D8C /* Perl Module (5.8.1) */,
+				AADB3E1E123A6F06001D0951 /* PAR Kits (5.8.9) */,
+				AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */,
+				AA615196123AD048006D6979 /* PAR Kits (5.8.6) */,
 				FFE361381057267700F0CA90 /* Snow Leopard */,
 				AA6C32080CCC962000306BD7 /* Leopard */,
 				AA7F613A0DCCFBA300D20E5E /* Tiger */,
@@ -1157,6 +1265,34 @@
 			shellPath = /bin/sh;
 			shellScript = "export PERL=/usr/bin/perl5.8.6\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.6\" ;\nelse\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\n\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    PERL_DL_NONLAZY=1 arch -ppc $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\n    PERL_DL_NONLAZY=1 arch -i386 $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
 		};
+		AA615143123AAA56006D6979 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PERL=/usr/bin/perl5.8.8\nrm -rf $BUILD_DIR/.cpan/build\n\necho \"Installing PAR modules\"\nexport CB_PARKIT=PAR\nexport CB_PARKIT_PREREQ=\n$PERL build-par.pl\n\necho \"Installing DevKit modules\"\nexport CB_PARKIT=DevKit\nexport CB_PARKIT_PREREQ=PAR\n$PERL build-devkit.pl\n\necho \"Installing MacPerlKit modules\"\nexport CB_PARKIT=MacPerlKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-mpkit.pl\n\necho \"Installing GLKit modules\"\nexport CB_PARKIT=GLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-glkit.pl\n\necho \"Installing XMLKit modules\"\nexport CB_PARKIT=XMLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-xmlkit.pl\n\necho \"Installing DBIKit modules\"\nexport CB_PARKIT=DBIKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-dbikit.pl\n\necho \"Installing CatKit modules\"\nexport CB_PARKIT=CatKit\nexport CB_PARKIT_PREREQ='PAR DevKit MacPerlKit XMLKit DBIKit'\n$PERL build-catkit.pl\n\nif [ \"${CONFIGURATION}\" != \"Debug\" ] ; then\n    if [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n        # For release builds, create a PAR subdir to be installed in /Developer/CamelBones/Perl\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.8\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/Updates/5.8.8/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.8\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.8.8/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.8\"\n    else\n        # For embedded builds, copy into the framework's Resources subdir\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.8\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/Updates/5.8.8/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.8\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.8.8/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.8\"\n    fi\n\n    # For all non-debug builds, update the .par files\n    for kit in DevKit MacPerlKit GLKit DBIKit XMLKit CatKit; do\n        echo \"Adding 5.8.8 files to $kit.par\"\n\n        if [ -d \"$BUILD_DIR/$kit/usr/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/usr/local/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr/local\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/5.8.8\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.8.8\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/Updates/5.8.8\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl/Updates\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.8.8\n        fi\n    done\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA615197123AD048006D6979 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PERL=/usr/bin/perl5.8.6\nrm -rf $BUILD_DIR/.cpan/build\n\necho \"Installing PAR modules\"\nexport CB_PARKIT=PAR\nexport CB_PARKIT_PREREQ=\n$PERL build-par.pl\n\necho \"Installing MacPerlKit modules\"\nexport CB_PARKIT=MacPerlKit\nexport CB_PARKIT_PREREQ='PAR'\n$PERL build-mpkit.pl\n\necho \"Installing DevKit modules\"\nexport CB_PARKIT=DevKit\nexport CB_PARKIT_PREREQ='PAR MacPerl'\n$PERL build-devkit.pl\n\necho \"Installing GLKit modules\"\nexport CB_PARKIT=GLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-glkit.pl\n\necho \"Installing XMLKit modules\"\nexport CB_PARKIT=XMLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-xmlkit.pl\n\necho \"Installing DBIKit modules\"\nexport CB_PARKIT=DBIKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-dbikit.pl\n\necho \"Installing CatKit modules\"\nexport CB_PARKIT=CatKit\nexport CB_PARKIT_PREREQ='PAR DevKit MacPerlKit XMLKit DBIKit'\n$PERL build-catkit.pl\n\nif [ \"${CONFIGURATION}\" != \"Debug\" ] ; then\n    if [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n        # For release builds, create a PAR subdir to be installed in /Developer/CamelBones/Perl\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.6\"\n        cp -rf \"$BUILD_DIR/PAR/System/Library/Perl/5.8.6/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.6\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.8.6/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.6\"\n    else\n        # For embedded builds, copy into the framework's Resources subdir\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\"\n        cp -rf \"$BUILD_DIR/PAR/System/Library/Perl/5.8.6/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.8.6/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\"\n    fi\n\n    # For all non-debug builds, update the .par files\n    for kit in DevKit MacPerlKit GLKit DBIKit XMLKit CatKit; do\n        echo \"Adding 5.8.6 files to $kit.par\"\n\n        if [ -d \"$BUILD_DIR/$kit/usr/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/usr/local/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr/local\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/5.8.6\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.8.6\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/System/Library/Perl/5.8.6\" ] ; then\n            cd \"$BUILD_DIR/$kit/System/Library/Perl\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.8.6\n        fi\n    done\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		AA6C32B40CCC9DB000306BD7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1182,6 +1318,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PERL=/usr/bin/perl5.8.1\nexport SDK=/Developer/SDKs/MacOSX10.4u.sdk\nexport CFLAGS=\"-arch ppc -isysroot$SDK -ObjC -F$BUILD_DIR/$CONFIGURATION\"\nexport LDFLAGS=\"-arch ppc -Wl,-syslibroot,$SDK\"\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.1\" ;\nelse\n\texport LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.1\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\n\n# patch makefiles to use gcc-4.0\nfind . -name 'Makefile' | xargs perl -p -i \\\n  -e 's/CC = cc/CC = gcc-4.0/;' \\\n  -e 's/LD = env MACOSX_DEPLOYMENT_TARGET=10.3 cc/LD = env MACOSX_DEPLOYMENT_TARGET=10.3 gcc-4.0/;'\n\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n\tmake test\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+		};
+		AADB3E1D123A6F06001D0951 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PERL=/usr/bin/perl5.8.9\nrm -rf \"$BUILD_DIR/.cpan/build\"\n\necho \"Installing PAR modules\"\nexport CB_PARKIT=PAR\nexport CB_PARKIT_PREREQ=\n$PERL build-par.pl\n\necho \"Installing DevKit modules\"\nexport CB_PARKIT=DevKit\nexport CB_PARKIT_PREREQ=PAR\n$PERL build-devkit.pl\n\necho \"Installing MacPerlKit modules\"\nexport CB_PARKIT=MacPerlKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-mpkit.pl\n\necho \"Installing GLKit modules\"\nexport CB_PARKIT=GLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-glkit.pl\n\necho \"Installing XMLKit modules\"\nexport CB_PARKIT=XMLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-xmlkit.pl\n\necho \"Installing DBIKit modules\"\nexport CB_PARKIT=DBIKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-dbikit.pl\n\necho \"Installing CatKit modules\"\nexport CB_PARKIT=CatKit\nexport CB_PARKIT_PREREQ='PAR DevKit MacPerlKit XMLKit DBIKit'\n$PERL build-catkit.pl\n\nif [ \"${CONFIGURATION}\" != \"Debug\" ] ; then\n    if [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n        # For release builds, create a PAR subdir to be installed in /Developer/CamelBones/Perl\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.9\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/Updates/5.8.9/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.9\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.8.9/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.8.9\"\n    else\n        # For embedded builds, copy into the framework's Resources subdir\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.9\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/Updates/5.8.9/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.9\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.8.9/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.9\"\n    fi\n\n    # For all non-debug builds, update the .par files\n    for kit in DevKit MacPerlKit GLKit DBIKit XMLKit CatKit; do\n        echo \"Adding 5.8.9 files to $kit.par\"\n\n        if [ -d \"$BUILD_DIR/$kit/usr/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/usr/local/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr/local\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/5.8.9\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.8.9\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/Updates/5.8.9\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl/Updates\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.8.9\n        fi\n    done\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		FFE361241057214100F0CA90 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1312,6 +1462,31 @@
 			target = FFE9CE900D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8 */;
 			targetProxy = 849691FD0D72A87600A81045 /* PBXContainerItemProxy */;
 		};
+		AA13A1B2123BF5E8009F9879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA13A1B1123BF5E8009F9879 /* PBXContainerItemProxy */;
+		};
+		AA13A1B8123BF5EE009F9879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA13A1B7123BF5EE009F9879 /* PBXContainerItemProxy */;
+		};
+		AA13A1BA123BF5F2009F9879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA13A1B9123BF5F2009F9879 /* PBXContainerItemProxy */;
+		};
+		AA13A1BC123BF617009F9879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */;
+			targetProxy = AA13A1BB123BF617009F9879 /* PBXContainerItemProxy */;
+		};
+		AA13A1BE123BF61F009F9879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA615196123AD048006D6979 /* PAR Kits (5.8.6) */;
+			targetProxy = AA13A1BD123BF61F009F9879 /* PBXContainerItemProxy */;
+		};
 		AA35BF2F122D9ED0004C705B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
@@ -1401,6 +1576,11 @@
 			isa = PBXTargetDependency;
 			target = AAD87F5E122C8CE200756D8C /* Perl Module (5.8.1) */;
 			targetProxy = AAD87F79122C8D5B00756D8C /* PBXContainerItemProxy */;
+		};
+		AADB3E24123A6F1C001D0951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADB3E1E123A6F06001D0951 /* PAR Kits (5.8.9) */;
+			targetProxy = AADB3E23123A6F1C001D0951 /* PBXContainerItemProxy */;
 		};
 		FFE360FB105720FB00F0CA90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1593,6 +1773,92 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
+		};
+		AA615145123AAA56006D6979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "PAR Kits (5.8.8)";
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		AA615146123AAA56006D6979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "PAR Kits (5.8.8)";
+				SDKROOT = macosx10.5;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AA615147123AAA56006D6979 /* Release-App-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "PAR Kits (5.8.8)";
+				SDKROOT = macosx10.5;
+			};
+			name = "Release-App-Embedded";
+		};
+		AA615148123AAA56006D6979 /* Release-Lib-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "PAR Kits (5.8.8)";
+				SDKROOT = macosx10.5;
+			};
+			name = "Release-Lib-Embedded";
+		};
+		AA615199123AD048006D6979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "PAR Kits (5.8.6)";
+				SDKROOT = macosx10.4;
+			};
+			name = Debug;
+		};
+		AA61519A123AD048006D6979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "PAR Kits (5.8.6)";
+				SDKROOT = macosx10.4;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AA61519B123AD048006D6979 /* Release-App-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "PAR Kits (5.8.6)";
+				SDKROOT = macosx10.4;
+			};
+			name = "Release-App-Embedded";
+		};
+		AA61519C123AD048006D6979 /* Release-Lib-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PRODUCT_NAME = "PAR Kits (5.8.6)";
+				SDKROOT = macosx10.4;
+			};
+			name = "Release-Lib-Embedded";
 		};
 		AA6C31BA0CCC912D00306BD7 /* Release-App-Embedded */ = {
 			isa = XCBuildConfiguration;
@@ -2208,6 +2474,49 @@
 			};
 			name = "Release-Lib-Embedded";
 		};
+		AADB3E1F123A6F06001D0951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		AADB3E20123A6F06001D0951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AADB3E21123A6F06001D0951 /* Release-App-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+			};
+			name = "Release-App-Embedded";
+		};
+		AADB3E22123A6F06001D0951 /* Release-Lib-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+			};
+			name = "Release-Lib-Embedded";
+		};
 		FFE36115105720FB00F0CA90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2640,6 +2949,28 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AA615144123AAA56006D6979 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.8)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA615145123AAA56006D6979 /* Debug */,
+				AA615146123AAA56006D6979 /* Release */,
+				AA615147123AAA56006D6979 /* Release-App-Embedded */,
+				AA615148123AAA56006D6979 /* Release-Lib-Embedded */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA615198123AD048006D6979 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.6)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA615199123AD048006D6979 /* Debug */,
+				AA61519A123AD048006D6979 /* Release */,
+				AA61519B123AD048006D6979 /* Release-App-Embedded */,
+				AA61519C123AD048006D6979 /* Release-Lib-Embedded */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA6C32110CCC964F00306BD7 /* Build configuration list for PBXAggregateTarget "Leopard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2724,6 +3055,17 @@
 				AAD87F74122C8D3500756D8C /* Release */,
 				AAD87F75122C8D3500756D8C /* Release-App-Embedded */,
 				AAD87F76122C8D3500756D8C /* Release-Lib-Embedded */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADB3E25123A6F3A001D0951 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.9)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB3E1F123A6F06001D0951 /* Debug */,
+				AADB3E20123A6F06001D0951 /* Release */,
+				AADB3E21123A6F06001D0951 /* Release-App-Embedded */,
+				AADB3E22123A6F06001D0951 /* Release-Lib-Embedded */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

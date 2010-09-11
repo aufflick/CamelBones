@@ -1,48 +1,23 @@
 #!/usr/bin/perl
 
-use Config;
+use lib './PAR';
 use CPAN;
-use CPAN::Config;
+use CPAN::MyConfig;
 use Data::Dumper;
-use File::Path;
 
-require 5.6.2;
+my $sdk = $ENV{'SDKROOT'};
+my $libdir = $ENV{'BUILD_DIR'} . '/../../ExtLibs';
+my $version = sprintf("%vd", $^V);
 
-my $kit = 'DevKit';
-my @pre = qw( PAR );
-
-my $tmp = `pwd`;
-chomp $tmp;
-$tmp =~ s%/*$%/build%;
-
-my $dist_libs = "$tmp/../../dist-libs";
-
-my $version = sprintf('%vd', $^V);
-my $arch = $Config{'archname'};
-
-for $k ($kit, @pre) {
-    mkpath("$tmp/$k/$version/$arch", 0, 0711) unless -d "$tmp/$k/$version/$arch";
-    unshift @INC, "$tmp/$k/$version", "$tmp/$k/$version/$arch";
-    $ENV{'PERL5LIB'} .= ":$tmp/$k/$version:$tmp/$k/$version/$arch";
-}
-
-$CPAN::Config->{'makepl_arg'} .= " LIB=$tmp/$kit/$version ";
-$CPAN::Config->{'mbuildpl_arg'} = " --install_path lib=$tmp/$kit/$version --install_path arch=$tmp/$kit/$version/$arch ";
-
-$CPAN::Config->{'make_install_make_command'} = 'make';
-$CPAN::Config->{'mbuild_install_build_command'} = './Build';
-
-my $sdk = $ENV{'SDK'};
-
-if (defined $sdk && -d $sdk) {
-    my $arch = ($sdk =~ m%u\.sdk/?$%) ? '-arch i386 -arch ppc' : '';
-    $CPAN::Config->{'makepl_arg'} .= "CCFLAGS='-isysroot$sdk $arch ' LDDLFLAGS='$arch -bundle -undefined dynamic_lookup -Wl,-syslibroot,$sdk '";
-}
-
-$CPAN::Config->{'make_install_arg'} =~ s/UNINST=1//;
-$CPAN::Config->{'mbuild_install_arg'} =~ s/--uninst=1//;
+CPAN::HandleConfig->load;
+CPAN::Shell::setup_output;
+CPAN::Index->reload;
 
 # Get the latest versions of the build environment
+if ($version ne '5.8.6') {
+    install 'File::HomeDir';
+}
+
 install 'CPAN';
 install 'URI';
 install 'HTML::Tagset';
@@ -57,13 +32,67 @@ install 'ExtUtils::CBuilder';
 install 'ExtUtils::ParseXS';
 install 'IO::Zlib';
 install 'Archive::Tar';
-install 'Regexp::Common';
+
+# Regexp::Common fails a few self-tests, but install it anyway
+# Just force the frakkin thing.
+{
+    my $module = CPAN::Shell->expand('Module', 'Regexp::Common');
+    if ($module->uptodate()) {
+        print 'Regexp::Common is up to date (', $module->inst_version(), ").\n";
+    } else {
+        force('install','Regexp::Common');
+    }
+}
+
 install 'Pod::Escapes';
 install 'Pod::Simple';
 install 'Pod::Text';
 install 'Pod::Readme';
+
 install 'YAML';
-install 'Module::Build';
+install 'Test::Harness';
+install 'YAML::Tiny';
+
+# 1.54 does not install properly on 5.8.6 or 5.8.8
+if ($version eq '5.8.9') {
+    install 'ExtUtils::Install';
+} else {
+    eval {
+        require ExtUtils::Install;
+    };
+    if ($@) {
+        install 'YVES/ExtUtils-Install-1.52_03.tar.gz';
+    } else {
+        print 'ExtUtils::Install is up to date (', $ExtUtils::Install::VERSION, ").\n";
+    }
+}
+
+install 'ExtUtils::Installed';
+
+# Software::License tests require Class::C3, which isn't installed until later
+# Just force the frakkin thing.
+{
+    my $module = CPAN::Shell->expand('Module', 'Software::License');
+    if ($module->uptodate()) {
+        print 'Software::License is up to date (', $module->inst_version(), ").\n";
+    } else {
+        force('install','Software::License');
+    }
+}
+
+# A few tests fail
+# Just force the frakkin thing.
+{
+    my $module = CPAN::Shell->expand('Module', 'Module::Build');
+    if ($module->uptodate()) {
+        print 'Module::Build is up to date (', $module->inst_version(), ").\n";
+    } else {
+        force('install','Module::Build');
+    }
+}
+
+install 'Data::Section';
+install 'Text::Template';
 
 install 'UNIVERSAL::isa';
 install 'UNIVERSAL::can';
@@ -78,28 +107,13 @@ install 'Test::Deep';
 install 'Test::LongString';
 install 'Test::use::ok';
 
-install 'Test::Harness';
-install 'TAPx::Parser';
-
 install 'Storable';
 install 'Object::Signature';
-
-# 433 out of 435 tests pass on Panther - close enough for an old OS version
-if ($version eq '5.8.1') {
-    my $mod = CPAN::Shell->expand('Module', 'Set::Object');
-    if ($mod->uptodate()) {
-        my $mod_ver = $mod->inst_version();
-        print "Set::Object is up to date ($mod_ver).\n";
-    } else {
-        force 'install', 'Set::Object';
-    }
-} else {
-    install 'Set::Object';
-}
+install 'Set::Object';
 
 install 'File::Modified';
 
-install 'File::Spec'; # Module::Pluggable needs >= 3.00, Panther has 0.86
+install 'File::Spec';
 install 'Module::Pluggable';
 install 'Path::Class';
 install 'Text::SimpleTable';
@@ -117,6 +131,7 @@ install 'Class::Data::Inheritable';
 install 'Class::Trigger';
 install 'Exception::Class';
 
+install 'Attribute::Handlers';
 install 'Params::Validate';
 install 'DateTime::Locale';
 install 'Class::Singleton';
@@ -161,19 +176,58 @@ install 'Data::Dump';
 install 'Bit::Vector';
 install 'Date::Calc';
 
+install 'Tie::ToObject';
+install 'Task::Weaken';
+
+install 'Params::Util';
+install 'Tree::DAG_Node';
+install 'Test::Warn';
+install 'Sub::Install';
+install 'Package::DeprecationManager';
+install 'Test::Requires';
+install 'MRO::Compat';
+install 'Try::Tiny';
+install 'Package::Stash';
+install 'Sub::Name';
+install 'Data::OptList';
+install 'Scope::Guard';
+install 'Sub::Exporter';
+install 'Devel::GlobalDestruction';
+install 'Class::MOP';
+install 'Moose';
+
+install 'Sub::Identify';
+install 'Variable::Magic';
+install 'B::Hooks::EndOfScope';
+install 'namespace::clean';
 install 'Data::Visitor';
+
 install 'Config::Any';
 
 install 'Module::ScanDeps';
 install 'Module::CoreList';
-install 'YAML::Tiny';
 install 'Module::Install';
 
+install 'File::Remove';
+install 'Parse::CPAN::Meta';
+install 'Devel::PPPort';
+install 'common::sense';
+install 'JSON::XS';
+install 'JSON';
 install 'File::Copy::Recursive';
 
 install 'IO::LockedFile';
-install 'IO::KQueue';
+my $version = sprintf("%vd", $^V);
+
+# IO::KQueue does not build on 10.4
+if ($version ne '5.8.6') {
+    install 'IO::KQueue';
+}
 
 install 'Class::Throwable';
 
 install 'Module::Pluggable::Fast';
+
+print "\n\n";
+
+1;

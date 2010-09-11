@@ -1,81 +1,66 @@
 #!/usr/bin/perl
 
-use Config;
+use lib './PAR';
 use CPAN;
-use CPAN::Config;
+use CPAN::MyConfig;
 use Data::Dumper;
-use File::Path;
 
-require 5.6.2;
+my $sdk = $ENV{'SDKROOT'};
+my $libdir = $ENV{'BUILD_DIR'} . '/../../ExtLibs';
+my $version = sprintf("%vd", $^V);
 
-my $kit = 'XMLKit';
-my @pre = qw( PAR DevKit );
+CPAN::HandleConfig->load;
+CPAN::Shell::setup_output;
+CPAN::Index->reload;
 
-my $tmp = `pwd`;
-chomp $tmp;
-$tmp =~ s%/*$%/build%;
-
-my $dist_libs = "$tmp/../../dist-libs";
-
-my $version = sprintf('%vd', $^V);
-my $arch = $Config{'archname'};
-
-for my $k ( $kit, @pre ) {
-    mkpath("$tmp/$k/$version/$arch", 0, 0711) unless -d "$tmp/%k/$version/$arch";
-    unshift @INC, "$tmp/$k/$version", "$tmp/$k/$version/$arch";
-    $ENV{'PERL5LIB'} .= ":$tmp/$k/$version:$tmp/$k/$version/$arch";
-}
-
-$CPAN::Config->{'makepl_arg'} .= " LIB=$tmp/$kit/$version ";
-$CPAN::Config->{'mbuildpl_arg'} = " --install_path lib=$tmp/$kit/$version --install_path arch=$tmp/$kit/$version/$arch ";
-
-$CPAN::Config->{'make_install_make_command'} = 'make';
-$CPAN::Config->{'mbuild_install_build_command'} = './Build';
-
-my $sdk = $ENV{'SDK'};
-
-if (defined $sdk && -d $sdk) {
-    my $arch = ($sdk =~ m%u\.sdk/?$%) ? '-arch i386 -arch ppc' : '';
-    $CPAN::Config->{'makepl_arg'} .= "CCFLAGS='-isysroot$sdk $arch ' LDDLFLAGS='$arch -bundle -undefined dynamic_lookup -Wl,-syslibroot,$sdk '";
-}
-
-$CPAN::Config->{'make_install_arg'} =~ s/UNINST=1//;
-$CPAN::Config->{'mbuild_install_arg'} =~ s/--uninst=1//;
-
-# XML::Parser needs to find libexpat
-{
+# XML::Parser needs libexpat, which does not exist in a standard location on Mac OS X 10.4
+if (sprintf("%vd", $^V) eq '5.8.6') {
     my $arg = $CPAN::Config->{'makepl_arg'};
-    $arg .= " EXPATLIBPATH='$dist_libs/expat/$version/lib' ";
-    $arg .= " EXPATINCPATH='$dist_libs/expat/$version/include'";
+    $arg .= " EXPATLIBPATH='$libdir/lib' ";
+    $arg .= " EXPATINCPATH='$libdir/include'";
     local $CPAN::Config->{'makepl_arg'} = $arg;
-
+    install 'XML::Parser';
+} else {
     install 'XML::Parser';
 }
 
 install 'XML::NamespaceSupport';
 install 'XML::SAX';
-install 'XML::LibXML::Common';
 
-# install 'XML::LibXML';
-# 1.63 fails its self-tests, so install 1.62
+# XML::LibXML needs to know where to find xml2-config
 {
-    my $version = eval 'use XML::LibXML; $XML::LibXML::VERSION';
-    $version eq '1.62' ?
-        print "XML::LibXML is up to date (1.62).\n" :
-        install 'PAJAS/XML-LibXML-1.62.tar.gz';
-    ;
+    my $arg = $CPAN::Config->{'makepl_arg'};
+    $arg .= " XMLPREFIX=$sdk/usr";
+    local $CPAN::Config->{'makepl_arg'} = $arg;
+    install 'XML::LibXML';
 }
 
-
-# install 'XML::LibXML::Iterator'; # Fails self-tests
+install 'XML::NodeFilter';
+install 'XML::LibXML::Iterator';
 # install 'XML::LibXML::Tools'; # Fails self-tests
 install 'XML::Simple';
 install 'XML::Parser::PerlSAX';
 install 'XML::RegExp';
-install 'XML::DOM';
+# install 'XML::DOM'; # Fails self-tests
 install 'XML::XPath';
-# install 'XML::XPathScript'; # Fails self-tests
-install 'XML::LibXSLT';
+
+install 'Readonly';
+install 'XML::XPathScript'; # Fails self-tests
+
+# XML::LibXSLT needs to know where to find xslt-config, and
+# depends on a version of libxslt not found on 10.4 or 10.5
+if ($version ne '5.8.6' && $version ne '5.8.8') {
+    my $arg = $CPAN::Config->{'makepl_arg'};
+    $arg .= " XSLTPREFIX=$sdk/usr";
+    local $CPAN::Config->{'makepl_arg'} = $arg;
+    install 'XML::LibXSLT';
+}
+
 install "XML::Dumper";
 install 'XML::Writer';
+
+print "\n\n";
+
+1;
+
 
