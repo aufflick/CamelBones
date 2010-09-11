@@ -115,33 +115,66 @@
 														<array>
 															<dict>
 																<key>Children</key>
-																<array/>
+																<array>
+																	<dict>
+																		<key>Children</key>
+																		<array/>
+																		<key>GID</key>
+																		<integer>80</integer>
+																		<key>Path</key>
+																		<string>../CamelBones/build/Release/PAR/5.8.6</string>
+																		<key>Path Type</key>
+																		<integer>2</integer>
+																		<key>Privileges</key>
+																		<integer>493</integer>
+																		<key>Type</key>
+																		<integer>3</integer>
+																		<key>UID</key>
+																		<integer>0</integer>
+																	</dict>
+																	<dict>
+																		<key>Children</key>
+																		<array/>
+																		<key>GID</key>
+																		<integer>80</integer>
+																		<key>Path</key>
+																		<string>../CamelBones/build/Release/PAR/5.8.8</string>
+																		<key>Path Type</key>
+																		<integer>2</integer>
+																		<key>Privileges</key>
+																		<integer>493</integer>
+																		<key>Type</key>
+																		<integer>3</integer>
+																		<key>UID</key>
+																		<integer>0</integer>
+																	</dict>
+																	<dict>
+																		<key>Children</key>
+																		<array/>
+																		<key>GID</key>
+																		<integer>80</integer>
+																		<key>Path</key>
+																		<string>../CamelBones/build/Release/PAR/5.8.9</string>
+																		<key>Path Type</key>
+																		<integer>2</integer>
+																		<key>Privileges</key>
+																		<integer>493</integer>
+																		<key>Type</key>
+																		<integer>3</integer>
+																		<key>UID</key>
+																		<integer>0</integer>
+																	</dict>
+																</array>
 																<key>GID</key>
 																<integer>80</integer>
 																<key>Path</key>
-																<string>../CamelBones/build/PAR/5.8.9/bin</string>
+																<string>PAR</string>
 																<key>Path Type</key>
-																<integer>2</integer>
+																<integer>1</integer>
 																<key>Privileges</key>
-																<integer>493</integer>
+																<integer>509</integer>
 																<key>Type</key>
-																<integer>3</integer>
-																<key>UID</key>
-																<integer>0</integer>
-															</dict>
-															<dict>
-																<key>Children</key>
-																<array/>
-																<key>GID</key>
-																<integer>80</integer>
-																<key>Path</key>
-																<string>../CamelBones/build/PAR</string>
-																<key>Path Type</key>
 																<integer>2</integer>
-																<key>Privileges</key>
-																<integer>493</integer>
-																<key>Type</key>
-																<integer>3</integer>
 																<key>UID</key>
 																<integer>0</integer>
 															</dict>
@@ -553,7 +586,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>PAR</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -569,7 +602,7 @@
 								<key>CFBundleName</key>
 								<string>PAR</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -588,7 +621,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -715,22 +748,6 @@
 													<dict>
 														<key>Children</key>
 														<array>
-															<dict>
-																<key>Children</key>
-																<array/>
-																<key>GID</key>
-																<integer>80</integer>
-																<key>Path</key>
-																<string>../CamelBones/build/DevKit/5.8.9/bin</string>
-																<key>Path Type</key>
-																<integer>2</integer>
-																<key>Privileges</key>
-																<integer>493</integer>
-																<key>Type</key>
-																<integer>3</integer>
-																<key>UID</key>
-																<integer>0</integer>
-															</dict>
 															<dict>
 																<key>Children</key>
 																<array/>
@@ -1155,7 +1172,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>DevKit</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -1171,7 +1188,7 @@
 								<key>CFBundleName</key>
 								<string>DevKit</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -1190,7 +1207,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -1317,22 +1334,6 @@
 													<dict>
 														<key>Children</key>
 														<array>
-															<dict>
-																<key>Children</key>
-																<array/>
-																<key>GID</key>
-																<integer>80</integer>
-																<key>Path</key>
-																<string>../CamelBones/build/DBIKit/5.8.9/bin</string>
-																<key>Path Type</key>
-																<integer>2</integer>
-																<key>Privileges</key>
-																<integer>493</integer>
-																<key>Type</key>
-																<integer>3</integer>
-																<key>UID</key>
-																<integer>0</integer>
-															</dict>
 															<dict>
 																<key>Children</key>
 																<array/>
@@ -1757,7 +1758,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>DBIKit</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -1773,7 +1774,7 @@
 								<key>CFBundleName</key>
 								<string>DBIKit</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -1792,7 +1793,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -2343,7 +2344,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>GLKit</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -2359,7 +2360,7 @@
 								<key>CFBundleName</key>
 								<string>GLKit</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2378,7 +2379,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -2929,7 +2930,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>MacPerlKit</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -2945,7 +2946,7 @@
 								<key>CFBundleName</key>
 								<string>MacPerlKit</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2964,7 +2965,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -3091,22 +3092,6 @@
 													<dict>
 														<key>Children</key>
 														<array>
-															<dict>
-																<key>Children</key>
-																<array/>
-																<key>GID</key>
-																<integer>80</integer>
-																<key>Path</key>
-																<string>../CamelBones/build/XMLKit/5.8.9/bin</string>
-																<key>Path Type</key>
-																<integer>2</integer>
-																<key>Privileges</key>
-																<integer>493</integer>
-																<key>Type</key>
-																<integer>3</integer>
-																<key>UID</key>
-																<integer>0</integer>
-															</dict>
 															<dict>
 																<key>Children</key>
 																<array/>
@@ -3531,7 +3516,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>XMLKit</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -3547,7 +3532,7 @@
 								<key>CFBundleName</key>
 								<string>XMLKit</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -3566,7 +3551,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -3693,22 +3678,6 @@
 													<dict>
 														<key>Children</key>
 														<array>
-															<dict>
-																<key>Children</key>
-																<array/>
-																<key>GID</key>
-																<integer>80</integer>
-																<key>Path</key>
-																<string>../CamelBones/build/CatKit/5.8.9/bin</string>
-																<key>Path Type</key>
-																<integer>2</integer>
-																<key>Privileges</key>
-																<integer>493</integer>
-																<key>Type</key>
-																<integer>3</integer>
-																<key>UID</key>
-																<integer>0</integer>
-															</dict>
 															<dict>
 																<key>Children</key>
 																<array/>
@@ -4133,7 +4102,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>CatKit</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1</string>
+									<string>1.1.1</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -4149,7 +4118,7 @@
 								<key>CFBundleName</key>
 								<string>CatKit</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1</string>
+								<string>1.1.1</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -4168,7 +4137,7 @@
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -4359,13 +4328,13 @@
 						<key>IFPkgDescriptionTitle</key>
 						<string>PAR Kits</string>
 						<key>IFPkgDescriptionVersion</key>
-						<string>1.1</string>
+						<string>1.1.1</string>
 					</dict>
 				</dict>
 				<key>Display Information</key>
 				<dict>
 					<key>CFBundleGetInfoString</key>
-					<string>PAR Kits 1.1</string>
+					<string>PAR Kits 1.1.1</string>
 					<key>CFBundleIconFile</key>
 					<string></string>
 					<key>CFBundleIconFile Path Type</key>
@@ -4375,7 +4344,7 @@
 					<key>CFBundleName</key>
 					<string>PAR Kits</string>
 					<key>CFBundleShortVersionString</key>
-					<string>1.1</string>
+					<string>1.1.1</string>
 				</dict>
 				<key>Version</key>
 				<dict>
