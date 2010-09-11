@@ -1,0 +1,27 @@
+Changed license from LGPL, to the same as Perl itself.
+
+Corrected import tags in Xcode file templates.
+
+Dropped support for Mac OS X 10.3 "Panther."
+
+Removed homebrewed 5.8.9 from Perl SDKs package, replaced it with a real copy from Snow Leopard.
+
+10.5 and 10.6 support bundles now use /usr/lib/libffi.dylib.
+
+Pulled libffi-15 from opensource.apple.com to solve "unsupported encoding in FDE" link error when building 10.4 support bundle.
+
+Removed references to missing plist & header files from Xcode project.
+
+Added "#define HAS_BOOL", with #ifdefs to silence "bool redefined" warnings when building 10.4 support bundle.
+
+Changed CFBundleIdentifier from dot-app.org to camelbones.org for support bundle Info.plists.
+
+Fixed buggy handling of struct return types from Objective-C methods.
+
+10.4 & 10.5 Perls in Perl SDKs package now have patched Config.pms to build XS modules on Snow Leopard using the relevant GCC version & SDK, for deployment on earlier OS versions.
+
+Restored PAR and related CPAN modules that were missing from embedded frameworks in 1.1.0.
+
+Added PAR Kit build scripts and targets to Xcode project.
+
+Added ExtLibs to Subversion repository.
