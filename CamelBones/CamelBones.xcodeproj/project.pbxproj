@@ -293,35 +293,35 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
 			remoteInfo = CamelBones.framework;
 		};
 		AA13A1B7123BF5EE009F9879 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
 			remoteInfo = CamelBones.framework;
 		};
 		AA13A1B9123BF5F2009F9879 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
 			remoteInfo = CamelBones.framework;
 		};
 		AA13A1BB123BF617009F9879 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */;
+			remoteGlobalIDString = AA615142123AAA56006D6979;
 			remoteInfo = "PAR Kits (5.8.8)";
 		};
 		AA13A1BD123BF61F009F9879 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AA615196123AD048006D6979 /* PAR Kits (5.8.6) */;
+			remoteGlobalIDString = AA615196123AD048006D6979;
 			remoteInfo = "PAR Kits (5.8.6)";
 		};
 		AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */ = {
