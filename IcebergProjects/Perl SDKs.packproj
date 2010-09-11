@@ -1110,7 +1110,7 @@ Config.pm patched to build modules with gcc-4.0 &amp; 10.4u SDK.</string>
 								<key>IFPkgFlagAllowBackRev</key>
 								<false/>
 								<key>IFPkgFlagAuthorizationAction</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>IFPkgFlagFollowLinks</key>
 								<false/>
 								<key>IFPkgFlagIsRequired</key>
@@ -1122,7 +1122,7 @@ Config.pm patched to build modules with gcc-4.0 &amp; 10.4u SDK.</string>
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -1679,7 +1679,7 @@ Config.pm patched to build modules with gcc-4.2 &amp; 10.5 SDK.</string>
 								<key>IFPkgFlagAllowBackRev</key>
 								<false/>
 								<key>IFPkgFlagAuthorizationAction</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>IFPkgFlagFollowLinks</key>
 								<false/>
 								<key>IFPkgFlagIsRequired</key>
@@ -1691,7 +1691,7 @@ Config.pm patched to build modules with gcc-4.2 &amp; 10.5 SDK.</string>
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -2246,7 +2246,7 @@ Config.pm patched to build modules with gcc-4.2 &amp; 10.5 SDK.</string>
 								<key>IFPkgFlagAllowBackRev</key>
 								<false/>
 								<key>IFPkgFlagAuthorizationAction</key>
-								<integer>0</integer>
+								<integer>1</integer>
 								<key>IFPkgFlagFollowLinks</key>
 								<false/>
 								<key>IFPkgFlagIsRequired</key>
@@ -2258,7 +2258,7 @@ Config.pm patched to build modules with gcc-4.2 &amp; 10.5 SDK.</string>
 								<key>IFPkgFlagRestartAction</key>
 								<integer>0</integer>
 								<key>IFPkgFlagRootVolumeOnly</key>
-								<false/>
+								<true/>
 								<key>IFPkgFlagUpdateInstalledLanguages</key>
 								<false/>
 							</dict>
@@ -2315,7 +2315,7 @@ Config.pm patched to build modules with gcc-4.2 &amp; 10.5 SDK.</string>
 						<key>Mode</key>
 						<integer>0</integer>
 						<key>Path</key>
-						<string></string>
+						<string>/Volumes/Ice/Projects/CamelBones/PerlSDKs/readme.txt</string>
 						<key>Path Type</key>
 						<integer>1</integer>
 					</dict>
