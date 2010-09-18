@@ -169,18 +169,34 @@ void* REAL_CBCallNativeMethod(void* target, SEL sel, void *args, BOOL isSuper) {
 
 	// Set up the return type
 	switch ( return_type_string[0] ) {
-            // Return all integral types as longs
 		case 'c':   // char
+            return_type = &ffi_type_schar;
+            break;
+
 		case 'i':   // int
+            return_type = &ffi_type_sint;
+            break;
+
 		case 's':   // short
+            return_type = &ffi_type_sshort;
+            break;
+
 		case 'l':   // long
 			return_type = &ffi_type_slong;
             break;
 
-            // PPC Return all integral types as longs
 		case 'C':   // unsigned char
+            return_type = &ffi_type_schar;
+            break;
+            
 		case 'I':   // unsigned int
+            return_type = &ffi_type_sint;
+            break;
+            
 		case 'S':   // unsigned short
+            return_type = &ffi_type_sshort;
+            break;
+            
 		case 'L':   // unsigned long
 			return_type = &ffi_type_ulong;
             break;
@@ -487,19 +503,34 @@ void* REAL_CBCallNativeMethod(void* target, SEL sel, void *args, BOOL isSuper) {
 	// Handle return value
 	SV *ret = newSV(0);
     switch (*return_type_string) {
-            // Promote all integral types
         case 'c':
-        case 'i':
+            sv_setiv(ret, return_value.schar);
+            break;
+
         case 's':
+            sv_setiv(ret, return_value.sshort);
+            break;
+            
+        case 'i':
+            sv_setiv(ret, return_value.sint);
+            break;
+            
 		case 'l':
-			// char
             sv_setiv(ret, return_value.slong);
             break;
 
-            // Promote all integral types
         case 'C':
+            sv_setuv(ret, return_value.uchar);
+            break;
+            
 		case 'S':
+            sv_setuv(ret, return_value.ushort);
+            break;
+            
 		case 'I':
+            sv_setuv(ret, return_value.uint);
+            break;
+
 		case 'L':
             sv_setuv(ret, return_value.ulong);
             break;
