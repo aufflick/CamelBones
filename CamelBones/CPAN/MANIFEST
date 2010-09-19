@@ -6,7 +6,7 @@ Foundation/Foundation.xs
 Foundation/Makefile.PL
 Tests/Makefile.PL
 Tests/Tests.xs
-Tests/CBThreadTests.c
+Tests/CBThreadTests.m
 MANIFEST
 MANIFEST.SKIP
 cb_common.pl
@@ -39,11 +39,11 @@ lib/CamelBones/TiedArray.pm
 lib/CamelBones/TiedDictionary.pm
 lib/CamelBones/AppKit/Constants.pm
 lib/CamelBones/Foundation/Constants.pm
-Tests/CBExceptionTests.c
-Tests/CBStructureTests.c
+Tests/CBExceptionTests.m
+Tests/CBStructureTests.m
 Tests/CBStructureTests.h
-Tests/CBPropertyTests.c
+Tests/CBPropertyTests.m
 Tests/CBPropertyTests.h
-Tests/CBSuper.c
+Tests/CBSuper.m
 Tests/CBSuper.h
 META.yml

@@ -22,10 +22,10 @@ our %opts = (
     XSOPT           => "-typemap $CamelBones/Resources/typemap",
 
     LIBS              => [ '-lobjc' ],
-    INC               => "-F$CamelBonesPath -ObjC ",
+    INC               => "-F$CamelBonesPath ",
     dynamic_lib         => {
                         'OTHERLDFLAGS' =>
-                            " -framework Foundation -framework AppKit -framework CamelBones -F$CamelBonesPath -lobjc "
+                            " -framework Foundation -framework AppKit -framework CamelBones -F$CamelBonesPath "
                         },
 );
 

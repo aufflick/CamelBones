@@ -536,9 +536,9 @@
 		84AC1BB30D73807100C751F7 /* 15-Subclassing.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "15-Subclassing.t"; sourceTree = "<group>"; };
 		84AC1BB40D73807100C751F7 /* 20-PerlObject.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "20-PerlObject.t"; sourceTree = "<group>"; };
 		84AC1BB50D73807100C751F7 /* 30-BundleLoader.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "30-BundleLoader.t"; sourceTree = "<group>"; };
-		84AC1BB70D73808C00C751F7 /* CBExceptionTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBExceptionTests.c; sourceTree = "<group>"; };
-		84AC1BB80D73808C00C751F7 /* CBSuper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBSuper.c; sourceTree = "<group>"; };
-		84AC1BB90D73808C00C751F7 /* CBThreadTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBThreadTests.c; sourceTree = "<group>"; };
+		84AC1BB70D73808C00C751F7 /* CBExceptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBExceptionTests.m; sourceTree = "<group>"; };
+		84AC1BB80D73808C00C751F7 /* CBSuper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSuper.m; sourceTree = "<group>"; };
+		84AC1BB90D73808C00C751F7 /* CBThreadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBThreadTests.m; sourceTree = "<group>"; };
 		84AC1BBA0D73808C00C751F7 /* Makefile.PL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = Makefile.PL; sourceTree = "<group>"; };
 		84AC1BBB0D73808C00C751F7 /* Tests.xs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tests.xs; sourceTree = "<group>"; };
 		84B5405E0DA178BD00C351C3 /* PluginInfo-5.8.6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.6.plist"; sourceTree = SOURCE_ROOT; };
@@ -624,12 +624,12 @@
 		AA9143790CC99B2A0055B0E5 /* ppport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ppport.h; path = CPAN/ppport.h; sourceTree = "<group>"; };
 		AA91437A0CC99B2A0055B0E5 /* README */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; name = README; path = CPAN/README; sourceTree = "<group>"; };
 		AA9492AC122E927B00FEFD01 /* 04-Pointers.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "04-Pointers.t"; sourceTree = "<group>"; };
-		AA9492AD122E92F600FEFD01 /* CBStructureTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBStructureTests.c; sourceTree = "<group>"; };
+		AA9492AD122E92F600FEFD01 /* CBStructureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStructureTests.m; sourceTree = "<group>"; };
 		AA9492BA122E977800FEFD01 /* CBSuper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSuper.h; sourceTree = "<group>"; };
 		AA9492BD122E980E00FEFD01 /* CBStructureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStructureTests.h; sourceTree = "<group>"; };
 		AACE466A122FE17B009907B5 /* 21-Properties.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "21-Properties.t"; sourceTree = "<group>"; };
 		AACE4675122FE66D009907B5 /* CBPropertyTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPropertyTests.h; sourceTree = "<group>"; };
-		AACE4676122FE66D009907B5 /* CBPropertyTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CBPropertyTests.c; sourceTree = "<group>"; };
+		AACE4676122FE66D009907B5 /* CBPropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPropertyTests.m; sourceTree = "<group>"; };
 		AAD4DE8D122C62630072C002 /* libffi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffi.xcodeproj; path = "libffi-15/libffi.xcodeproj"; sourceTree = "<group>"; };
 		AAD87F1C122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.8.1.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD87F2C122C8AE500756D8C /* DynaLoader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = DynaLoader.a; path = "/System/Library/Perl/5.8.1/darwin-thread-multi-2level/auto/DynaLoader/DynaLoader.a"; sourceTree = "<absolute>"; };
@@ -731,14 +731,14 @@
 		84AC1BB60D73808C00C751F7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				84AC1BB70D73808C00C751F7 /* CBExceptionTests.c */,
+				84AC1BB70D73808C00C751F7 /* CBExceptionTests.m */,
 				AA9492BA122E977800FEFD01 /* CBSuper.h */,
-				84AC1BB80D73808C00C751F7 /* CBSuper.c */,
-				84AC1BB90D73808C00C751F7 /* CBThreadTests.c */,
+				84AC1BB80D73808C00C751F7 /* CBSuper.m */,
+				84AC1BB90D73808C00C751F7 /* CBThreadTests.m */,
 				AA9492BD122E980E00FEFD01 /* CBStructureTests.h */,
-				AA9492AD122E92F600FEFD01 /* CBStructureTests.c */,
+				AA9492AD122E92F600FEFD01 /* CBStructureTests.m */,
 				AACE4675122FE66D009907B5 /* CBPropertyTests.h */,
-				AACE4676122FE66D009907B5 /* CBPropertyTests.c */,
+				AACE4676122FE66D009907B5 /* CBPropertyTests.m */,
 				84AC1BBA0D73808C00C751F7 /* Makefile.PL */,
 				84AC1BBB0D73808C00C751F7 /* Tests.xs */,
 			);
@@ -895,21 +895,21 @@
 		AA91431A0CC99B010055B0E5 /* Perl Module */ = {
 			isa = PBXGroup;
 			children = (
-				84B5406F0DA17D3800C351C3 /* CBDummyModule.pm */,
-				AA83FE0E0CC9E9CF00E56F20 /* typemap */,
 				AA91431C0CC99B2A0055B0E5 /* AppKit */,
-				AA9143570CC99B2A0055B0E5 /* CamelBones.xs */,
-				AA9143580CC99B2A0055B0E5 /* cb_common.pl */,
 				AA9143590CC99B2A0055B0E5 /* Foundation */,
 				AA9143620CC99B2A0055B0E5 /* lib */,
+				84AC1BA80D73807100C751F7 /* t */,
+				84AC1BB60D73808C00C751F7 /* Tests */,
+				84B5406F0DA17D3800C351C3 /* CBDummyModule.pm */,
+				AA83FE0E0CC9E9CF00E56F20 /* typemap */,
+				AA9143570CC99B2A0055B0E5 /* CamelBones.xs */,
+				AA9143580CC99B2A0055B0E5 /* cb_common.pl */,
 				AA9143740CC99B2A0055B0E5 /* Makefile.PL */,
 				AA9143750CC99B2A0055B0E5 /* MANIFEST */,
 				AA9143760CC99B2A0055B0E5 /* MANIFEST.SKIP */,
 				AA9143770CC99B2A0055B0E5 /* META.yml */,
 				AA9143790CC99B2A0055B0E5 /* ppport.h */,
 				AA91437A0CC99B2A0055B0E5 /* README */,
-				84AC1BA80D73807100C751F7 /* t */,
-				84AC1BB60D73808C00C751F7 /* Tests */,
 			);
 			name = "Perl Module";
 			sourceTree = "<group>";
