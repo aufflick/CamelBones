@@ -86,6 +86,7 @@ install 'Class::C3::Componentised';
 install 'DBIx::Class::Loader';
 install 'Class::Unload';
 install 'Lingua::EN::Inflect::Phrase';
+install 'Lingua::EN::Tagger';
 install 'DBIx::Class::Schema::Loader';
 
 print "\n\n";
