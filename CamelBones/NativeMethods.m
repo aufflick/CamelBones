@@ -377,18 +377,22 @@ void* REAL_CBCallNativeMethod(void* target, SEL sel, void *args, BOOL isSuper) {
 				break;
 			
 			case '^':
-				// Pointer to id?
-				if (*(arg_type+1) == '@') {
-					arg_ffi_types[i] = &ffi_type_pointer;
-                    if (argSV) {
+                arg_ffi_types[i] = &ffi_type_pointer;
+
+                if (argSV) {
+                    // Pointer to id?
+                    if (*(arg_type+1) == '@') {
                         arg_values[i].voidp = &(output_values[i].voidp);
                     } else {
-                        arg_values[i].voidp = NULL;
+                        if (SvOK(argSV)) {
+                            arg_values[i].voidp = INT2PTR(void*,SvIV(argSV));
+                        } else {
+                            arg_values[i].voidp = NULL;
+                        }
                     }
-				} else {
-					arg_ffi_types[i] = &ffi_type_pointer;
-					arg_values[i].voidp = INT2PTR(void*,SvIV(argSV));
-				}
+                } else {
+                    arg_values[i].voidp = NULL;
+                }
 				
 				break;
 
@@ -493,7 +497,7 @@ void* REAL_CBCallNativeMethod(void* target, SEL sel, void *args, BOOL isSuper) {
 			
             case '^':   // Pointer
 						// Pointer to id?
-				if (*(arg_type+1) == '@' && argSV != &PL_sv_undef) {
+				if (*(arg_type+1) == '@' && argSV) {
 					sv_setsv(argSV, REAL_CBDerefIDtoSV(output_values[i].voidp));
 				}
                 break;
