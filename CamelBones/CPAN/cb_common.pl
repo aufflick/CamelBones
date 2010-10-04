@@ -13,7 +13,7 @@ $CamelBones = abs_path($CamelBones);
 $CamelBonesPath = abs_path($CamelBonesPath);
 
 our %opts = (
-    VERSION           => '1.1.1',
+    VERSION           => '1.1.2',
 
     PREREQ_PM         => {},
 
