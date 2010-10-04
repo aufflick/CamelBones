@@ -15,6 +15,19 @@ CPAN::Index->reload;
 
 # Get the latest versions of the build environment
 if ($version ne '5.8.6') {
+    # Mac::SystemDirectory uses /usr/bin/sw_vers in its self-tests, so
+    # the tests for 5.8.8 fail when building on Snow Leopard. :-(
+    if ($version eq '5.8.8') {
+        my $module = CPAN::Shell->expand('Module', 'Mac::SystemDirectory');
+        if ($module->uptodate()) {
+            print 'Mac::SystemDirectory is up to date (', $module->inst_version(), ").\n";
+        } else {
+            force('install', 'Mac::SystemDirectory');
+        }
+    } else {
+        install 'Mac::SystemDirectory';
+    }
+
     install 'File::HomeDir';
 }
 
