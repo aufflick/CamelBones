@@ -191,6 +191,9 @@ install 'DateTime::Format::Pg';
 
 install 'Mail::Sendmail';
 
+install 'DBIx::Class::WebForm';
+install 'Catalyst::Plugin::AutoCRUD';
+
 print "\n\n";
 
 1;
