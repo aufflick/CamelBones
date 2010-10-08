@@ -13,7 +13,6 @@ use Config;
 
 use BrowserController;
 use PrefController;
-use TipController;
 
 use strict;
 use warnings;
@@ -68,12 +67,6 @@ sub applicationDidFinishLaunching : Selector(applicationDidFinishLaunching:) Arg
 		NSDocumentController->sharedDocumentController()->openDocumentWithContentsOfFile_display($intro, 1);
 	}
 
-	# if ($defaults->boolForKey('ShowTip')) {
-	#	my $tip = TipController->alloc()->initWithWindowNibName('Tips');
-	#	$tip->window();
-	#	$tip->showWindow($self);
-	# }
-	
 	$notification->object()->setServicesProvider($self);
     my $stylesheet = $defaults->stringForKey('Stylesheet');
     my $stylesheetType = $defaults->integerForKey('StylesheetType');
