@@ -603,7 +603,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>Base</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1.1</string>
+									<string>1.1.2</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -619,7 +619,7 @@
 								<key>CFBundleName</key>
 								<string>Base</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1.1</string>
+								<string>1.1.2</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2015,7 +2015,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>Examples</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1.1</string>
+									<string>1.1.2</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -2031,7 +2031,7 @@
 								<key>CFBundleName</key>
 								<string>Examples</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1.1</string>
+								<string>1.1.2</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2618,7 +2618,7 @@
 									<key>IFPkgDescriptionTitle</key>
 									<string>Xcode Templates</string>
 									<key>IFPkgDescriptionVersion</key>
-									<string>1.1.1</string>
+									<string>1.1.2</string>
 								</dict>
 							</dict>
 							<key>Display Information</key>
@@ -2634,7 +2634,7 @@
 								<key>CFBundleName</key>
 								<string>Xcode Templates</string>
 								<key>CFBundleShortVersionString</key>
-								<string>1.1.1</string>
+								<string>1.1.2</string>
 							</dict>
 							<key>Options</key>
 							<dict>
@@ -2710,7 +2710,7 @@
 						<key>Mode</key>
 						<integer>1</integer>
 						<key>Path</key>
-						<string>../changes-1.1.1.txt</string>
+						<string>../changes-1.1.2.txt</string>
 						<key>Path Type</key>
 						<integer>2</integer>
 					</dict>
@@ -2842,15 +2842,15 @@
 						<key>IFPkgDescriptionDescription</key>
 						<string>CamelBones is a Cocoa/Perl bridge.</string>
 						<key>IFPkgDescriptionTitle</key>
-						<string>CamelBones-1.1.1</string>
+						<string>CamelBones-1.1.2</string>
 						<key>IFPkgDescriptionVersion</key>
-						<string>1.1.1</string>
+						<string>1.1.2</string>
 					</dict>
 				</dict>
 				<key>Display Information</key>
 				<dict>
 					<key>CFBundleGetInfoString</key>
-					<string>CamelBones 1.1.1 Copyright © 2003-2010 Sherm Pendley</string>
+					<string>CamelBones 1.1.2 Copyright © 2003-2010 Sherm Pendley</string>
 					<key>CFBundleIconFile</key>
 					<string></string>
 					<key>CFBundleIconFile Path Type</key>
@@ -2858,9 +2858,9 @@
 					<key>CFBundleIdentifier</key>
 					<string>org.camelbones</string>
 					<key>CFBundleName</key>
-					<string>CamelBones-1.1.1</string>
+					<string>CamelBones-1.1.2</string>
 					<key>CFBundleShortVersionString</key>
-					<string>1.1.1</string>
+					<string>1.1.2</string>
 				</dict>
 				<key>Version</key>
 				<dict>
@@ -2876,7 +2876,7 @@
 		<key>IFPkgFlagPackageSelection</key>
 		<integer>0</integer>
 		<key>Name</key>
-		<string>CamelBones-1.1.1</string>
+		<string>CamelBones-1.1.2</string>
 		<key>Status</key>
 		<integer>1</integer>
 		<key>Type</key>
