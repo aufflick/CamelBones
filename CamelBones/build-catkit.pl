@@ -193,6 +193,8 @@ install 'Mail::Sendmail';
 
 install 'DBIx::Class::WebForm';
 install 'Catalyst::Plugin::AutoCRUD';
+install 'Catalyst::Authentication::Credential::Facebook';
+install 'Catalyst::Plugin::Facebook';
 
 print "\n\n";
 
