@@ -89,6 +89,16 @@ div#copyright {
 	clear: both;
 }
 
+div#sflogo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: .5em;
+	max-width: 60em;
+	text-align: right;
+
+	clear: both;
+}
+
 div.screenshot {
 	margin: 0px;
 	padding: 0px;
