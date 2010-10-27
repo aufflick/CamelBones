@@ -544,6 +544,7 @@
 		84B5405E0DA178BD00C351C3 /* PluginInfo-5.8.6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.6.plist"; sourceTree = SOURCE_ROOT; };
 		84B5405F0DA178BD00C351C3 /* PluginInfo-5.8.8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.8.plist"; sourceTree = SOURCE_ROOT; };
 		84B5406F0DA17D3800C351C3 /* CBDummyModule.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = CBDummyModule.pm; sourceTree = "<group>"; };
+		AA0923C91267C44F009C8D40 /* 11-NSDictionary.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "11-NSDictionary.t"; sourceTree = "<group>"; };
 		AA50E3A80C875DB7004DA7BD /* AppMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppMain.h; sourceTree = "<group>"; };
 		AA50E3A90C875DB7004DA7BD /* AppMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		AA50E3AA0C875DB7004DA7BD /* CamelBones.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CamelBones.h; sourceTree = "<group>"; };
@@ -716,6 +717,7 @@
 				84AC1BAD0D73807100C751F7 /* 05-Structures.t */,
 				84AC1BAE0D73807100C751F7 /* 10-NSString.t */,
 				84AC1BAF0D73807100C751F7 /* 11-NSArray.t */,
+				AA0923C91267C44F009C8D40 /* 11-NSDictionary.t */,
 				84AC1BB00D73807100C751F7 /* 12-NSNumber.t */,
 				84AC1BB10D73807100C751F7 /* 13-Exceptions.t */,
 				84AC1BB20D73807100C751F7 /* 14-Threads.t */,
@@ -1168,8 +1170,15 @@
 		AA50E2050C87571F004DA7BD /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = AA50E2060C87571F004DA7BD /* Build configuration list for PBXProject "CamelBones" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = AA50E2030C87571F004DA7BD;
 			productRefGroup = AA50E2330C87587B004DA7BD /* Products */;
 			projectDirPath = "";
@@ -2530,7 +2539,6 @@
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -2568,7 +2576,6 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -2606,7 +2613,6 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -2644,7 +2650,6 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -2763,7 +2768,6 @@
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -2803,7 +2807,6 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -2843,7 +2846,6 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -2883,7 +2885,6 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
