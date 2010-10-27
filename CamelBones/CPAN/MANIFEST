@@ -20,6 +20,7 @@ t/04-Pointers.t
 t/05-Structures.t
 t/10-NSString.t
 t/11-NSArray.t
+t/11-NSDictionary.t
 t/12-NSNumber.t
 t/13-Exceptions.t
 t/14-Threads.t
