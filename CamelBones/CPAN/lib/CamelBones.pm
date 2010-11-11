@@ -313,7 +313,7 @@ sub NSObject::AUTOLOAD {
         *{$NSObject::AUTOLOAD} = $sub;
     }
    
-    retun $sub->(@_);
+    return $sub->(@_);
 }
 
 sub UNIVERSAL::MODIFY_CODE_ATTRIBUTES {
