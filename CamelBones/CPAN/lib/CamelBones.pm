@@ -56,6 +56,9 @@ our $ShowUnhandledTypeWarnings = 0;
 # Conversion options
 our $ReturnStringsAsObjects = 0;
 
+# Cache autoloaded methods
+our $CacheAutoload = 1;
+
 require XSLoader;
 XSLoader::load('CamelBones', $VERSION);
 CamelBones::CBInit($Config{'archname'}.'-'.$Config{'version'});
@@ -260,51 +263,57 @@ sub CB_BOOL {
 	return (defined($_[0]) && defined($_[0]->{'NATIVE_OBJ'}));
 }
 
-sub AUTOLOAD {
-	no strict;
-	no warnings;
+sub NSObject::AUTOLOAD {
 
     my $subName = $NSObject::AUTOLOAD;
     my $selString = $subName;
-    my $native = undef;
-    my $class = undef;
-    my $returnObject = undef;
-
+   
     $selString =~ s/^\w+:://;
     $selString =~ s/_/:/g;
     if (@_ > 1 && $selString !~ /:$/) {
         $selString .= ':';
     }
-
+   
     my $isSuperMethod = undef;
-
-    if ($selString =~ /^SUPER::/) {
-        $selString =~ s/^SUPER:://;
+   
+    if ($selString =~ s/^SUPER:://) {
         $isSuperMethod = 1;
     }
+   
+    # Strip away the class name from the selector
+    $selString =~ s/^.*::(.*)/$1/;
+   
+    my $sub = sub {
 
-	# Strip away the class name from the selector
-	$selString =~ s/^.*::(.*)/$1/;
-
-    my $self = shift;
-    $returnObject = CamelBones::CBCallNativeMethod(
-                $self, $selString, \@_, $isSuperMethod);
-
-	if (wantarray && ref($returnObject)) {
-		if ($returnObject->isa('NSArray')) {
-			my @array;
-			tie(@array, 'CamelBones::TiedArray', $returnObject);
-			return(@array);
-		} elsif ($returnObject->isa('NSDictionary')) {
-			my %hash;
-			tie(%hash, 'CamelBones::TiedDictionary', $returnObject);
-			return (%hash);
-		} else {
-			return $returnObject;
-		}
-	} else {
-		return $returnObject;
-	}
+        my $self = shift;
+       
+        my $returnObject = CamelBones::CBCallNativeMethod(
+        $self, $selString, \@_, $isSuperMethod);
+       
+        if (wantarray && ref($returnObject)) {
+            if ($returnObject->isa('NSArray')) {
+                my @array;
+                tie(@array, 'CamelBones::TiedArray', $returnObject);
+                return(@array);
+            } elsif ($returnObject->isa('NSDictionary')) {
+                my %hash;
+                tie(%hash, 'CamelBones::TiedDictionary', $returnObject);
+                return (%hash);
+            } else {
+                return $returnObject;
+            }
+        } else {
+            return $returnObject;
+        }
+    };
+   
+    if ($Camebones::CacheAutoload) {
+        # Only cache the sub if we're allowed to
+        no strict 'refs';
+        *{$NSObject::AUTOLOAD} = $sub;
+    }
+   
+    retun $sub->(@_);
 }
 
 sub UNIVERSAL::MODIFY_CODE_ATTRIBUTES {
