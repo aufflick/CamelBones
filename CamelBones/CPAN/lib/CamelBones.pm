@@ -307,7 +307,7 @@ sub NSObject::AUTOLOAD {
         }
     };
    
-    if ($Camebones::CacheAutoload) {
+    if ($CamelBones::CacheAutoload) {
         # Only cache the sub if we're allowed to
         no strict 'refs';
         *{$NSObject::AUTOLOAD} = $sub;
