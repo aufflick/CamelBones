@@ -72,6 +72,11 @@ void REAL_CBWrapObjectiveCClass(Class aClass) {
     const char *SuperName = NULL;
     AV *newIsaAV = NULL;
     SV *newParentSV = NULL;
+    
+    // Don't add NSObject to its own @ISA - Perl >= 5.10 warns about it
+    if (0 == strncmp(className, "NSObject", 8)) {
+        return;
+    }
 
     // Get the super class name; default to "NSObject" for root classes
     if (aClass->super_class != NULL) {
