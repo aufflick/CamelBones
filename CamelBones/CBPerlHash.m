@@ -14,6 +14,10 @@
 
 // Required primitive methods
 - (unsigned)count {
+    // Define a Perl context
+    PERL_SET_CONTEXT(_CBPerlInterpreter);
+    dTHX;
+
     return HvKEYS((HV *)_myHash);
 }
 - (NSEnumerator *)keyEnumerator {
