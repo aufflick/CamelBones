@@ -20,6 +20,31 @@
 			name = "Perl Module (5.8.6)";
 			productName = "Perl Module";
 		};
+		AA3D7B511298DCD700C38BA9 /* Perl Module (5.10.0) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AA3D7B571298DCD700C38BA9 /* Build configuration list for PBXAggregateTarget "Perl Module (5.10.0)" */;
+			buildPhases = (
+				AA3D7B561298DCD700C38BA9 /* ShellScript */,
+			);
+			dependencies = (
+				AA3D7B5F1298DCFA00C38BA9 /* PBXTargetDependency */,
+				AA3D7B541298DCD700C38BA9 /* PBXTargetDependency */,
+			);
+			name = "Perl Module (5.10.0)";
+			productName = "Perl Module";
+		};
+		AA3D7B891298E79500C38BA9 /* PAR Kits (5.10.0) */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AA3D7B8D1298E79500C38BA9 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.10.0)" */;
+			buildPhases = (
+				AA3D7B8C1298E79500C38BA9 /* ShellScript */,
+			);
+			dependencies = (
+				AA3D7B8A1298E79500C38BA9 /* PBXTargetDependency */,
+			);
+			name = "PAR Kits (5.10.0)";
+			productName = "PAR Kits (5.8.9)";
+		};
 		AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = AA615144123AAA56006D6979 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.8.8)" */;
@@ -153,7 +178,9 @@
 			buildPhases = (
 			);
 			dependencies = (
+				AA3D7B631298DDDD00C38BA9 /* PBXTargetDependency */,
 				FFE361471057268F00F0CA90 /* PBXTargetDependency */,
+				AA3D7B671298DDE300C38BA9 /* PBXTargetDependency */,
 				FFE361451057268B00F0CA90 /* PBXTargetDependency */,
 				AADB3E24123A6F1C001D0951 /* PBXTargetDependency */,
 			);
@@ -164,6 +191,23 @@
 
 /* Begin PBXBuildFile section */
 		84B5407B0DA17E9300C351C3 /* CBDummyModule.pm in Resources */ = {isa = PBXBuildFile; fileRef = 84B5406F0DA17D3800C351C3 /* CBDummyModule.pm */; };
+		AA3D7B291298DB1800C38BA9 /* CBPerl.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */; };
+		AA3D7B2A1298DB1800C38BA9 /* CBPerlArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AE0C875DB7004DA7BD /* CBPerlArray.m */; };
+		AA3D7B2B1298DB1800C38BA9 /* CBPerlHash.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3B10C875DB7004DA7BD /* CBPerlHash.m */; };
+		AA3D7B2C1298DB1800C38BA9 /* CBPerlObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3B40C875DB7004DA7BD /* CBPerlObject.m */; };
+		AA3D7B2D1298DB1800C38BA9 /* CBPerlObjectInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3B60C875DB7004DA7BD /* CBPerlObjectInternals.m */; };
+		AA3D7B2E1298DB1800C38BA9 /* CBPerlScalar.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3B80C875DB7004DA7BD /* CBPerlScalar.m */; };
+		AA3D7B2F1298DB1800C38BA9 /* CBPerlScalarInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3BA0C875DB7004DA7BD /* CBPerlScalarInternals.m */; };
+		AA3D7B301298DB1800C38BA9 /* Conversions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3BF0C875DB7004DA7BD /* Conversions.m */; };
+		AA3D7B311298DB1800C38BA9 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3C40C875DB7004DA7BD /* Globals.m */; };
+		AA3D7B321298DB1800C38BA9 /* NativeMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3C70C875DB7004DA7BD /* NativeMethods.m */; };
+		AA3D7B331298DB1800C38BA9 /* PerlMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3CB0C875DB7004DA7BD /* PerlMethods.m */; };
+		AA3D7B341298DB1800C38BA9 /* perlxsi.c in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3CC0C875DB7004DA7BD /* perlxsi.c */; };
+		AA3D7B351298DB1800C38BA9 /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D00C875DB7004DA7BD /* Runtime.m */; };
+		AA3D7B361298DB1800C38BA9 /* Structs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D30C875DB7004DA7BD /* Structs.m */; };
+		AA3D7B371298DB1800C38BA9 /* Wrappers.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3D90C875DB8004DA7BD /* Wrappers.m */; };
+		AA3D7B391298DB1800C38BA9 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9142060CC98CCE0055B0E5 /* CamelBones.framework */; };
+		AA3D7B3A1298DB1800C38BA9 /* libperl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA13B4D105A05730046F551 /* libperl.dylib */; };
 		AA50E4EF0C87705C004DA7BD /* CBPerl.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AC0C875DB7004DA7BD /* CBPerl.m */; };
 		AA50E4F00C87705C004DA7BD /* CBPerlArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3AE0C875DB7004DA7BD /* CBPerlArray.m */; };
 		AA50E4F10C87705C004DA7BD /* CBPerlHash.m in Sources */ = {isa = PBXBuildFile; fileRef = AA50E3B10C875DB7004DA7BD /* CBPerlHash.m */; };
@@ -325,6 +369,48 @@
 			remoteInfo = "PAR Kits (5.8.6)";
 		};
 		AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
+			remoteInfo = CamelBones.framework;
+		};
+		AA3D7B261298DB1800C38BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
+			remoteInfo = CamelBones.framework;
+		};
+		AA3D7B551298DCD700C38BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA9141B20CC98CCE0055B0E5;
+			remoteInfo = CamelBones.framework;
+		};
+		AA3D7B5E1298DCFA00C38BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */;
+			remoteInfo = "darwin-thread-multi-2level-5.10.0";
+		};
+		AA3D7B621298DDDD00C38BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */;
+			remoteInfo = "darwin-thread-multi-2level-5.10.0";
+		};
+		AA3D7B661298DDE300C38BA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3D7B511298DCD700C38BA9 /* Perl Module (5.10.0) */;
+			remoteInfo = "Perl Module (5.10.0)";
+		};
+		AA3D7B8B1298E79500C38BA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
 			proxyType = 1;
@@ -545,6 +631,8 @@
 		84B5405F0DA178BD00C351C3 /* PluginInfo-5.8.8.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.8.plist"; sourceTree = SOURCE_ROOT; };
 		84B5406F0DA17D3800C351C3 /* CBDummyModule.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = CBDummyModule.pm; sourceTree = "<group>"; };
 		AA0923C91267C44F009C8D40 /* 11-NSDictionary.t */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "11-NSDictionary.t"; sourceTree = "<group>"; };
+		AA3D7B401298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.10.0.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3D7B451298DB1800C38BA9 /* PluginInfo-5.10.0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.10.0.plist"; sourceTree = "<group>"; };
 		AA50E3A80C875DB7004DA7BD /* AppMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppMain.h; sourceTree = "<group>"; };
 		AA50E3A90C875DB7004DA7BD /* AppMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppMain.m; sourceTree = "<group>"; };
 		AA50E3AA0C875DB7004DA7BD /* CamelBones.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CamelBones.h; sourceTree = "<group>"; };
@@ -654,6 +742,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA3D7B381298DB1800C38BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3D7B391298DB1800C38BA9 /* CamelBones.framework in Frameworks */,
+				AA3D7B3A1298DB1800C38BA9 /* libperl.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA50E4E70C877030004DA7BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -755,6 +852,7 @@
 				84B5405E0DA178BD00C351C3 /* PluginInfo-5.8.6.plist */,
 				84B5405F0DA178BD00C351C3 /* PluginInfo-5.8.8.plist */,
 				FFE360F5105720DF00F0CA90 /* PluginInfo-5.8.9.plist */,
+				AA3D7B451298DB1800C38BA9 /* PluginInfo-5.10.0.plist */,
 				AA50E9640C879392004DA7BD /* Info.plist */,
 				AA50E5CF0C877E37004DA7BD /* Resources */,
 				AA50E3A70C875D23004DA7BD /* CamelBones */,
@@ -771,6 +869,7 @@
 				FFE9CEB00D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8.bundle */,
 				FFE36119105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9.bundle */,
 				AAD87F1C122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1.bundle */,
+				AA3D7B401298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1071,6 +1170,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA3D7B3B1298DB1800C38BA9 /* Build configuration list for PBXNativeTarget "darwin-thread-multi-2level-5.10.0" */;
+			buildPhases = (
+				AA3D7B271298DB1800C38BA9 /* Resources */,
+				AA3D7B281298DB1800C38BA9 /* Sources */,
+				AA3D7B381298DB1800C38BA9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA3D7B251298DB1800C38BA9 /* PBXTargetDependency */,
+			);
+			name = "darwin-thread-multi-2level-5.10.0";
+			productName = "darwin-thread-multi-2level-5.8.6";
+			productReference = AA3D7B401298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA50E4EA0C87704E004DA7BD /* Build configuration list for PBXNativeTarget "darwin-thread-multi-2level-5.8.6" */;
@@ -1191,14 +1308,17 @@
 			projectRoot = "";
 			targets = (
 				AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */,
+				AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */,
 				FFE360F8105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9 */,
 				FFE9CE900D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8 */,
 				AA50E4E80C877030004DA7BD /* darwin-thread-multi-2level-5.8.6 */,
 				AAD87EFC122C8A3400756D8C /* darwin-thread-multi-2level-5.8.1 */,
+				AA3D7B511298DCD700C38BA9 /* Perl Module (5.10.0) */,
 				FFE3611F1057214100F0CA90 /* Perl Module (5.8.9) */,
 				AA6C32B50CCC9DB000306BD7 /* Perl Module (5.8.8) */,
 				84893BF80DCCF7A000B48051 /* Perl Module (5.8.6) */,
 				AAD87F5E122C8CE200756D8C /* Perl Module (5.8.1) */,
+				AA3D7B891298E79500C38BA9 /* PAR Kits (5.10.0) */,
 				AADB3E1E123A6F06001D0951 /* PAR Kits (5.8.9) */,
 				AA615142123AAA56006D6979 /* PAR Kits (5.8.8) */,
 				AA615196123AD048006D6979 /* PAR Kits (5.8.6) */,
@@ -1227,6 +1347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B5407B0DA17E9300C351C3 /* CBDummyModule.pm in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA3D7B271298DB1800C38BA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1273,6 +1400,33 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PERL=/usr/bin/perl5.8.6\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\n\ncd ${SRCROOT}/CPAN;\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.8.6\" ;\nelse\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.8.6\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\n\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    PERL_DL_NONLAZY=1 arch -ppc $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\n    PERL_DL_NONLAZY=1 arch -i386 $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+		};
+		AA3D7B561298DCD700C38BA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PERL=/usr/bin/perl\nexport CAMELBONES_PATH=\"$BUILD_DIR/$CONFIGURATION\"\nexport ARCHFLAGS=\"-arch i386 -arch ppc\"\nexport VERSIONER_PERL_VERSION=5.10.0\nexport VERSIONER_PERL_PREFER_32_BIT=yes\n\ncd ${SRCROOT}/CPAN;\n\n\nif [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/Library/Perl/5.10.0\" ;\nelse\n    export LIBDIR=\"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.10.0\" ;\nfi\n\n$PERL Makefile.PL LIB=$LIBDIR\nmake\n\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    PERL_DL_NONLAZY=1 arch -ppc $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\n    PERL_DL_NONLAZY=1 arch -i386 $PERL \"-MExtUtils::Command::MM\" \"-e\" \"test_harness(0, 'blib/lib', 'blib/arch')\" t/*.t\nelse\n\tmake install\nfi\n\nmake distclean\n\nexit 0\n";
+		};
+		AA3D7B8C1298E79500C38BA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PERL=/usr/bin/perl\nexport ARCHFLAGS=\"-arch i386 -arch ppc\"\nexport VERSIONER_PERL_VERSION=5.10.0\nexport VERSIONER_PERL_PREFER_32_BIT=yes\n\nrm -rf \"$BUILD_DIR/.cpan/build\"\n\necho \"Installing PAR modules\"\nexport CB_PARKIT=PAR\nexport CB_PARKIT_PREREQ=\n$PERL build-par.pl\n\necho \"Installing DevKit modules\"\nexport CB_PARKIT=DevKit\nexport CB_PARKIT_PREREQ=PAR\n$PERL build-devkit.pl\n\necho \"Installing MacPerlKit modules\"\nexport CB_PARKIT=MacPerlKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-mpkit.pl\n\necho \"Installing GLKit modules\"\nexport CB_PARKIT=GLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-glkit.pl\n\necho \"Installing XMLKit modules\"\nexport CB_PARKIT=XMLKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-xmlkit.pl\n\necho \"Installing DBIKit modules\"\nexport CB_PARKIT=DBIKit\nexport CB_PARKIT_PREREQ='PAR DevKit'\n$PERL build-dbikit.pl\n\necho \"Installing CatKit modules\"\nexport CB_PARKIT=CatKit\nexport CB_PARKIT_PREREQ='PAR DevKit MacPerlKit XMLKit DBIKit'\n$PERL build-catkit.pl\n\nif [ \"${CONFIGURATION}\" != \"Debug\" ] ; then\n    if [ \"${CONFIGURATION}\" == \"Release\" ] ; then\n        # For release builds, create a PAR subdir to be installed in /Developer/CamelBones/Perl\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/PAR/5.10.0\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/Updates/5.10.0/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.10.0\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.10.0/\"* \"$BUILD_DIR/$CONFIGURATION/PAR/5.10.0\"\n    else\n        # For embedded builds, copy into the framework's Resources subdir\n        mkdir -p \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.10.0\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/Updates/5.10.0/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.10.0\"\n        cp -rf \"$BUILD_DIR/PAR/Library/Perl/5.10.0/\"* \"$BUILD_DIR/$CONFIGURATION/CamelBones.framework/Resources/5.10.0\"\n    fi\n\n    # For all non-debug builds, update the .par files\n    for kit in DevKit MacPerlKit GLKit DBIKit XMLKit CatKit; do\n        echo \"Adding 5.10.0 files to $kit.par\"\n\n        if [ -d \"$BUILD_DIR/$kit/usr/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/usr/local/bin\" ] ; then\n            cd \"$BUILD_DIR/$kit/usr/local\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" bin\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/5.10.0\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.10.0\n        fi\n\n        if [ -d \"$BUILD_DIR/$kit/Library/Perl/Updates/5.10.0\" ] ; then\n            cd \"$BUILD_DIR/$kit/Library/Perl/Updates\"\n            zip -9qr \"$BUILD_DIR/$kit.par\" 5.10.0\n        fi\n    done\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		AA615143123AAA56006D6979 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1358,6 +1512,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA3D7B281298DB1800C38BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3D7B291298DB1800C38BA9 /* CBPerl.m in Sources */,
+				AA3D7B2A1298DB1800C38BA9 /* CBPerlArray.m in Sources */,
+				AA3D7B2B1298DB1800C38BA9 /* CBPerlHash.m in Sources */,
+				AA3D7B2C1298DB1800C38BA9 /* CBPerlObject.m in Sources */,
+				AA3D7B2D1298DB1800C38BA9 /* CBPerlObjectInternals.m in Sources */,
+				AA3D7B2E1298DB1800C38BA9 /* CBPerlScalar.m in Sources */,
+				AA3D7B2F1298DB1800C38BA9 /* CBPerlScalarInternals.m in Sources */,
+				AA3D7B301298DB1800C38BA9 /* Conversions.m in Sources */,
+				AA3D7B311298DB1800C38BA9 /* Globals.m in Sources */,
+				AA3D7B321298DB1800C38BA9 /* NativeMethods.m in Sources */,
+				AA3D7B331298DB1800C38BA9 /* PerlMethods.m in Sources */,
+				AA3D7B341298DB1800C38BA9 /* perlxsi.c in Sources */,
+				AA3D7B351298DB1800C38BA9 /* Runtime.m in Sources */,
+				AA3D7B361298DB1800C38BA9 /* Structs.m in Sources */,
+				AA3D7B371298DB1800C38BA9 /* Wrappers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA50E4E60C877030004DA7BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1500,6 +1676,36 @@
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
 			targetProxy = AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */;
+		};
+		AA3D7B251298DB1800C38BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA3D7B261298DB1800C38BA9 /* PBXContainerItemProxy */;
+		};
+		AA3D7B541298DCD700C38BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA3D7B551298DCD700C38BA9 /* PBXContainerItemProxy */;
+		};
+		AA3D7B5F1298DCFA00C38BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */;
+			targetProxy = AA3D7B5E1298DCFA00C38BA9 /* PBXContainerItemProxy */;
+		};
+		AA3D7B631298DDDD00C38BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */;
+			targetProxy = AA3D7B621298DDDD00C38BA9 /* PBXContainerItemProxy */;
+		};
+		AA3D7B671298DDE300C38BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA3D7B511298DCD700C38BA9 /* Perl Module (5.10.0) */;
+			targetProxy = AA3D7B661298DDE300C38BA9 /* PBXContainerItemProxy */;
+		};
+		AA3D7B8A1298E79500C38BA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
+			targetProxy = AA3D7B8B1298E79500C38BA9 /* PBXContainerItemProxy */;
 		};
 		AA6C32050CCC95EA00306BD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1657,6 +1863,243 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "Perl Module";
+			};
+			name = "Release-Lib-Embedded";
+		};
+		AA3D7B3C1298DB1800C38BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/CamelBones";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/Libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
+				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-fno-common",
+					"-DPERL_DARWIN",
+					"-no-cpp-precomp",
+					"-fno-strict-aliasing",
+					"-DPERL_LEOPARD",
+				);
+				OTHER_LDFLAGS = (
+					"-lffi",
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "darwin-thread-multi-2level-5.10.0";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AA3D7B3D1298DB1800C38BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/CamelBones";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/Libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_MODEL_TUNING = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
+				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-fno-common",
+					"-DPERL_DARWIN",
+					"-no-cpp-precomp",
+					"-fno-strict-aliasing",
+					"-DPERL_LEOPARD",
+				);
+				OTHER_LDFLAGS = (
+					"-lffi",
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "darwin-thread-multi-2level-5.10.0";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AA3D7B3E1298DB1800C38BA9 /* Release-App-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/CamelBones";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/Libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_MODEL_TUNING = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
+				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-fno-common",
+					"-DPERL_DARWIN",
+					"-no-cpp-precomp",
+					"-fno-strict-aliasing",
+					"-DPERL_LEOPARD",
+				);
+				OTHER_LDFLAGS = (
+					"-lffi",
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "darwin-thread-multi-2level-5.10.0";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = "Release-App-Embedded";
+		};
+		AA3D7B3F1298DB1800C38BA9 /* Release-Lib-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/CamelBones";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/CamelBones.framework/Libraries";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(CONFIGURATION)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_MODEL_TUNING = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				HEADER_SEARCH_PATHS = /usr/include/ffi;
+				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
+				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-fno-common",
+					"-DPERL_DARWIN",
+					"-no-cpp-precomp",
+					"-fno-strict-aliasing",
+					"-DPERL_LEOPARD",
+				);
+				OTHER_LDFLAGS = (
+					"-lffi",
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "darwin-thread-multi-2level-5.10.0";
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = "Release-Lib-Embedded";
+		};
+		AA3D7B581298DCD700C38BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "Perl Module";
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		AA3D7B591298DCD700C38BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "Perl Module";
+				SDKROOT = macosx10.5;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AA3D7B5A1298DCD700C38BA9 /* Release-App-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "Perl Module";
+				SDKROOT = macosx10.5;
+			};
+			name = "Release-App-Embedded";
+		};
+		AA3D7B5B1298DCD700C38BA9 /* Release-Lib-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "Perl Module";
+				SDKROOT = macosx10.5;
+			};
+			name = "Release-Lib-Embedded";
+		};
+		AA3D7B8E1298E79500C38BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		AA3D7B8F1298E79500C38BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		AA3D7B901298E79500C38BA9 /* Release-App-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
+			};
+			name = "Release-App-Embedded";
+		};
+		AA3D7B911298E79500C38BA9 /* Release-Lib-Embedded */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "PAR Kits (5.8.9)";
+				SDKROOT = macosx10.6;
 			};
 			name = "Release-Lib-Embedded";
 		};
@@ -2924,6 +3367,39 @@
 				84893BFE0DCCF7A000B48051 /* Release */,
 				84893BFF0DCCF7A000B48051 /* Release-App-Embedded */,
 				84893C000DCCF7A000B48051 /* Release-Lib-Embedded */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA3D7B3B1298DB1800C38BA9 /* Build configuration list for PBXNativeTarget "darwin-thread-multi-2level-5.10.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3D7B3C1298DB1800C38BA9 /* Debug */,
+				AA3D7B3D1298DB1800C38BA9 /* Release */,
+				AA3D7B3E1298DB1800C38BA9 /* Release-App-Embedded */,
+				AA3D7B3F1298DB1800C38BA9 /* Release-Lib-Embedded */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA3D7B571298DCD700C38BA9 /* Build configuration list for PBXAggregateTarget "Perl Module (5.10.0)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3D7B581298DCD700C38BA9 /* Debug */,
+				AA3D7B591298DCD700C38BA9 /* Release */,
+				AA3D7B5A1298DCD700C38BA9 /* Release-App-Embedded */,
+				AA3D7B5B1298DCD700C38BA9 /* Release-Lib-Embedded */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA3D7B8D1298E79500C38BA9 /* Build configuration list for PBXAggregateTarget "PAR Kits (5.10.0)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA3D7B8E1298E79500C38BA9 /* Debug */,
+				AA3D7B8F1298E79500C38BA9 /* Release */,
+				AA3D7B901298E79500C38BA9 /* Release-App-Embedded */,
+				AA3D7B911298E79500C38BA9 /* Release-Lib-Embedded */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
