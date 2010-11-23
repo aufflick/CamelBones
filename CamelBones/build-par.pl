@@ -14,13 +14,17 @@ CPAN::Shell::setup_output;
 CPAN::Index->reload;
 
 install 'Scalar::Util';
-install 'IO::Compress::Base';
-install 'Compress::Raw::Bzip2';
-install 'IO::Compress::Bzip2';
-install 'Compress::Raw::Zlib';
-install 'IO::Compress::Gzip';
 
-install 'Compress::Zlib';
+install 'Compress::Raw::Zlib';
+install 'Compress::Raw::Bzip2';
+
+if ($version eq '5.10.0') {
+    # Later versions tickle an EU::MM bug in 5.10
+    install 'P/PM/PMQS/IO-Compress-2.021.tar.gz';
+} else {
+    install 'IO::Compress::Base';
+}
+
 install 'File::Which';
 install 'Test::More';
 install 'File::Temp';
