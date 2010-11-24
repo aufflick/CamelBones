@@ -193,7 +193,17 @@ install 'Mail::Sendmail';
 
 install 'DBIx::Class::WebForm';
 install 'Catalyst::Plugin::AutoCRUD';
-install 'Catalyst::Authentication::Credential::Facebook';
+
+{
+    my $module = CPAN::Shell->expand('Module', 'Catalyst::Authentication::Credential::Facebook');
+
+    if ($module->inst_version() eq '0.01') {
+        print 'Catalyst::Authentication::Credential::Facebook is up to date (', $module->inst_version(), ").\n";
+    } else {
+        install 'Catalyst::Authentication::Credential::Facebook';
+    }
+}
+
 install 'Catalyst::Plugin::Facebook';
 
 print "\n\n";

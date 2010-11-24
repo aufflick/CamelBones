@@ -19,8 +19,15 @@ install 'Compress::Raw::Zlib';
 install 'Compress::Raw::Bzip2';
 
 if ($version eq '5.10.0') {
-    # Later versions tickle an EU::MM bug in 5.10
-    install 'P/PM/PMQS/IO-Compress-2.021.tar.gz';
+    eval {
+        require IO::Compress::Base;
+    };
+    if ($@) {
+        # Later versions tickle an EU::MM bug in 5.10
+        install 'P/PM/PMQS/IO-Compress-2.021.tar.gz';
+    } else {
+        print 'IO::Compress is up to date (', $IO::Compress::Base::VERSION, ").\n";
+    }
 } else {
     install 'IO::Compress::Base';
 }

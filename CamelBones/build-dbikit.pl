@@ -83,7 +83,17 @@ install 'Class::C3::Componentised';
     }
 }
 
-install 'DBIx::Class::Loader';
+# Apparently, one of the tests are buggy on 5.10.0 ... :-(
+if ($version eq '5.10.0') {
+    my $module = CPAN::Shell->expand('Module', 'DBIx::Class::Loader');
+    if ($module->uptodate()) {
+        print 'DBIx::Class::Loader is up to date (', $module->inst_version(), ").\n";
+    } else {
+        force('install', 'DBIx::Class::Loader');
+    }
+} else {
+    install 'DBIx::Class::Loader';
+}
 install 'Class::Unload';
 install 'Lingua::EN::Inflect::Phrase';
 install 'Lingua::EN::Tagger';
