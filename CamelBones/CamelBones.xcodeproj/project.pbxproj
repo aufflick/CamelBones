@@ -182,6 +182,7 @@
 				FFE361471057268F00F0CA90 /* PBXTargetDependency */,
 				AA3D7B671298DDE300C38BA9 /* PBXTargetDependency */,
 				FFE361451057268B00F0CA90 /* PBXTargetDependency */,
+				AA34F3C012A009160088B581 /* PBXTargetDependency */,
 				AADB3E24123A6F1C001D0951 /* PBXTargetDependency */,
 			);
 			name = "Snow Leopard";
@@ -367,6 +368,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA615196123AD048006D6979;
 			remoteInfo = "PAR Kits (5.8.6)";
+		};
+		AA34F3BF12A009160088B581 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3D7B891298E79500C38BA9 /* PAR Kits (5.10.0) */;
+			remoteInfo = "PAR Kits (5.10.0)";
 		};
 		AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1672,6 +1680,11 @@
 			target = AA615196123AD048006D6979 /* PAR Kits (5.8.6) */;
 			targetProxy = AA13A1BD123BF61F009F9879 /* PBXContainerItemProxy */;
 		};
+		AA34F3C012A009160088B581 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA3D7B891298E79500C38BA9 /* PAR Kits (5.10.0) */;
+			targetProxy = AA34F3BF12A009160088B581 /* PBXContainerItemProxy */;
+		};
 		AA35BF2F122D9ED0004C705B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
@@ -1878,7 +1891,7 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
@@ -1915,7 +1928,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
@@ -1952,7 +1965,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
@@ -1989,7 +2002,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "PluginInfo-5.10.0.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE";
@@ -2156,7 +2169,7 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2196,7 +2209,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2320,7 +2333,7 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
@@ -2340,7 +2353,7 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
@@ -2362,7 +2375,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2402,7 +2415,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2628,7 +2641,7 @@
 				GCC_MODEL_TUNING = "";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
@@ -2648,7 +2661,7 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
@@ -2673,7 +2686,7 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2721,7 +2734,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2769,7 +2782,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2817,7 +2830,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PERL_TIGER,
 					MACOSX,
@@ -2981,7 +2994,7 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -3018,7 +3031,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -3055,7 +3068,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -3092,7 +3105,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "${PROJECT_DIR}/PluginInfo-5.8.9.plist";
 				LIBRARY_SEARCH_PATHS = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE";
@@ -3210,7 +3223,7 @@
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -3249,7 +3262,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -3288,7 +3301,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -3327,7 +3340,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_MODEL_TUNING = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = /usr/include/ffi;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/PluginInfo-5.8.8.plist";
 				LIBRARY_SEARCH_PATHS = (

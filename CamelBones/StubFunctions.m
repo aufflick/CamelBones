@@ -145,39 +145,56 @@ static const char *perlArchVer = NULL;
 const char *CBGetPerlArchver() {
     if (NULL != perlArchVer) return perlArchVer;
 
-    // Get the standard user defaults object
+    // Get some standard objects for future use
 	NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+	NSFileManager *fm = [NSFileManager defaultManager];
 
-	// Add the CamelBones suite
+	// Add the CamelBones & versioner suites
 	[def addSuiteNamed: @"org.camelbones"];
 
-    // Establish the registration domain
-	NSDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1];
-	NSFileManager *fm = [NSFileManager defaultManager];
-    NSString *perlPath;
-    if ([fm fileExistsAtPath:@"/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE/libperl.dylib"]) {
-        perlPath = @"/usr/bin/perl5.8.9";
-    } else if ([fm fileExistsAtPath:@"/System/Library/Perl/5.8.8/darwin-thread-multi-2level/CORE/libperl.dylib"]) {
-        perlPath = @"/usr/bin/perl5.8.8";
-    } else if ([fm fileExistsAtPath:@"/System/Library/Perl/5.8.6/darwin-thread-multi-2level/CORE/libperl.dylib"]) {
-        perlPath = @"/usr/bin/perl5.8.6";
-	} else if ([fm fileExistsAtPath:@"/System/Library/Perl/5.8.1/darwin-thread-multi-2level/CORE/libperl.dylib"]) {
-		perlPath = @"/usr/bin/perl5.8.1";
-	} else if ([fm fileExistsAtPath:@"/System/Library/Perl/darwin/CORE/libperl.dylib"]) {
-		perlPath = @"/usr/bin/perl5.6.0";
-	} else {
-		perlPath = @"/usr/bin/perl";
-	}
-
-    // Check for support for newer KVC method
-    if ([dict respondsToSelector:@selector(setValue:forKey:)]) {
-        [dict setValue:perlPath forKey:@"perl"];
-    } else {
-        [dict takeValue:perlPath forKey:@"perl"];
+    // See what Perls are supported
+    NSArray *supportedPerls = nil;
+    NSDictionary *CBPlist = [NSDictionary dictionaryWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"CamelBones" ofType:@"plist"]];
+    if (nil != CBPlist) {
+        supportedPerls = [CBPlist objectForKey:@"CBSupportedPerls"];
     }
-	[def registerDefaults:dict];
+    
+    // If the developer hasn't included a CamelBones.plist in the app, or if there
+    // is no CBSupportedPerls key in it, fall back to the default list
+    if (nil == supportedPerls) supportedPerls = [NSArray arrayWithObjects:@"5.10.0", @"5.8.9", @"5.8.8", @"5.8.6", nil];
 
-	// Get the string
+    // Check for a versioner setting
+    NSUserDefaults *versioner = [[[NSUserDefaults alloc] init] autorelease];
+    [versioner addSuiteNamed: @"com.apple.perl.versioner"];
+    NSString *versionerVersion = [versioner stringForKey:@"Version"];
+
+    // If the versioner setting is among the Perls listed as supported, prefer that
+    NSString *perlPath = nil;
+    NSString *testPath;
+    if ((nil != versionerVersion) && [supportedPerls containsObject:versionerVersion]) {
+        testPath = [NSString stringWithFormat:@"/usr/bin/perl%@", versionerVersion];
+        if ([fm fileExistsAtPath:testPath]) {
+            perlPath = testPath;
+        }
+    }
+
+    // If a Perl wasn't selected above, check the supported versions in the order listed
+    if (nil == perlPath) {
+        NSEnumerator *e = [supportedPerls objectEnumerator];
+        NSString *supportedPerl;
+        while ((nil == perlPath) && (supportedPerl = [e nextObject])) {
+            testPath = [NSString stringWithFormat:@"/usr/bin/perl%@", supportedPerl];
+            if ([fm fileExistsAtPath:testPath]) {
+                perlPath = testPath;
+            }
+        }
+    }
+
+    // Establish the registration domain & register the default
+	[def registerDefaults:[NSDictionary dictionaryWithObject:perlPath forKey:@"perl"]];
+
+	// This looks odd, but a user-defined value may not be the same as the "default default"
+	// registered above.
 	perlPath = [def stringForKey:@"perl"];
 
 	// Try to execute the preferred Perl to get the arch & version
