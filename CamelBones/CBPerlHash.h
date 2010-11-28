@@ -44,7 +44,8 @@
 
 
 @interface CBPerlHashKeyEnumerator : NSEnumerator {
-    void *_myHash;
+    NSArray *keys;
+    NSEnumerator *e;
 }
 - (NSArray *)allObjects;
 - (id)nextObject;

@@ -17,7 +17,7 @@
     // Define a Perl context
     PERL_SET_CONTEXT(_CBPerlInterpreter);
     dTHX;
-
+    
     return HvKEYS((HV *)_myHash);
 }
 - (NSEnumerator *)keyEnumerator {
@@ -221,45 +221,17 @@
 @implementation CBPerlHashKeyEnumerator (Overrides)
 
 - (NSArray *)allObjects {
-    NSMutableArray *objects;
-    id nextObject;
-    
-    objects  = [NSMutableArray array];
-    while ((nextObject = [self nextObject])) {
-        [objects addObject: nextObject];
-    }
-    
-    return objects;
+    return [e allObjects];
 }
 
 - (id)nextObject {
-    // Define a Perl context
-    PERL_SET_CONTEXT(_CBPerlInterpreter);
-    dTHX;
-
-    HE *nextEntry;
-    SV *nextKey;
-    
-    nextEntry = hv_iternext((HV*)_myHash);
-    if (NULL != nextEntry) {
-        nextKey = HeSVKEY_force(nextEntry);
-        return REAL_CBDerefSVtoID(nextKey);
-    } else {
-        return nil;
-    }
+    return [e nextObject];
 }
 
 // Destructor
 - (void) dealloc {
-    // Define a Perl context
-    PERL_SET_CONTEXT(_CBPerlInterpreter);
-    dTHX;
-
-    if (NULL != _myHash) {
-        if (SvREFCNT((SV *)_myHash) > 0) {
-            SvREFCNT_dec((SV *)_myHash);
-        }
-    }
+    [keys release];
+    [e release];
     [super dealloc];
 }
 
@@ -276,14 +248,26 @@
     // Define a Perl context
     PERL_SET_CONTEXT(_CBPerlInterpreter);
     dTHX;
+    
+    if (self = [super init]) {
 
-    self = [super init];
-    if (nil != self) {
-        _myHash = (void*)theHV;
-        SvREFCNT_inc((SV*)_myHash);
-
-        hv_iterinit((HV*)_myHash);
+        long hashSize = hv_iterinit(theHV);
+        if (0 == hashSize) {
+            keys = [NSArray array];
+        } else {
+            NSMutableArray *mKeys = [NSMutableArray arrayWithCapacity:hashSize];
+            long i;
+            for (i=0; i<hashSize; ++i) {
+                HE *nextEntry = hv_iternext(theHV);
+                long keyLen = 0;
+                [mKeys addObject:[NSString stringWithFormat:@"%s", hv_iterkey(nextEntry, &keyLen)]];
+            }
+            keys = mKeys;
+        }
+        [keys retain];
+        e = [[keys objectEnumerator] retain];
     }
+
     return self;
 }
 
