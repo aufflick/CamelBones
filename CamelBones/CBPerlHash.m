@@ -182,6 +182,10 @@
     return [[[CBPerlHash alloc] initWithHV:theHV] autorelease];
 }
 - (id) initWithHV: (HV*)theHV {
+    // Define a Perl context
+    PERL_SET_CONTEXT(_CBPerlInterpreter);
+    dTHX;
+
     self = [super init];
     if (nil != self) {
         _myHash = (void*)theHV;

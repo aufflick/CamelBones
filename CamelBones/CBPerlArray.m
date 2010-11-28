@@ -237,6 +237,10 @@
 }
 
 - (id) initWithAV: (AV*)theAV {
+    // Define a Perl context
+    PERL_SET_CONTEXT(_CBPerlInterpreter);
+    dTHX;
+
     self = [super init];
     if (nil != self) {
         _myArray = (void*)theAV;

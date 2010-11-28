@@ -151,6 +151,7 @@ const char *CBGetPerlArchver() {
 
 	// Add the CamelBones & versioner suites
 	[def addSuiteNamed: @"org.camelbones"];
+	[def addSuiteNamed: @"com.apple.versioner.perl"];
 
     // See what Perls are supported
     NSArray *supportedPerls = nil;
@@ -164,9 +165,7 @@ const char *CBGetPerlArchver() {
     if (nil == supportedPerls) supportedPerls = [NSArray arrayWithObjects:@"5.10.0", @"5.8.9", @"5.8.8", @"5.8.6", nil];
 
     // Check for a versioner setting
-    NSUserDefaults *versioner = [[[NSUserDefaults alloc] init] autorelease];
-    [versioner addSuiteNamed: @"com.apple.perl.versioner"];
-    NSString *versionerVersion = [versioner stringForKey:@"Version"];
+    NSString *versionerVersion = [def objectForKey:@"Version"];
 
     // If the versioner setting is among the Perls listed as supported, prefer that
     NSString *perlPath = nil;
