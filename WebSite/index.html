@@ -76,6 +76,34 @@
 
 <h2>Recent Happenings</h2>
 
+<h3>CamelBones 1.1.2</h3>
+
+<p>CamelBones 1.1.2 has been released through SourceForge:</p>
+
+    <p><a href="http://sourceforge.net/projects/camelbones/files/camelbones/1.1.2/" target="_blank">http://sourceforge.net/projects/camelbones/files/camelbones/1.1.2/</a></p>
+
+<p>This update features a performance enhancement patch and a few bug fixes:</p>
+
+<ul>
+<li>Added support for cacheing autoloaded ObjC methods. (Patch by Matt Sergeant)</li>
+
+<li>Fixed a bug that caused BOOL, char, and int values to be returned incorrectly from ObjC methods in some situations.</li>
+
+<li>Fixed a bug in argument passing to native methods, to correctly pass undef as NULL when the expected type is void*.</li>
+
+<li>Fixed bugs in CBPerlHash, where the Perl context was not correctly set up in several methods.</li>
+
+<li>Fixed a bug in CBWrapObjectiveCClass, where NSObject was added to its own @ISA.</li>
+
+<li>Fixed key enumerator bug in CBPerlHash - <a href="https://sourceforge.net/tracker/?func=detail&amp;aid=3087368&amp;group_id=48040&amp;atid=451755" target="_blank">SourceForge tracker ID 3087368</a>.</li>
+</ul>
+
+<p>If you find CamelBones or ShuX useful, please consider donating!</p>
+
+    <p><a href="http://sourceforge.net/donate/index.php?group_id=48040" target="_blank">http://sourceforge.net/donate/index.php?group_id=48040</a></p>
+
+<h3>New web site</h3>
+
 <p>Welcome to the new web site. Alex did a great job on the old site, but that was over five years ago. Times have changed, and the design (based on Mac OS X's original "Aqua" color scheme) was looking kind of outdated. It was also rather difficult to maintain, based around an odd XML+XSLT to HTML tool chain, because yours truly forgot one of the cardinal rules of development: <a href="http://en.wikipedia.org/wiki/KISS_principle">KISS</a>.</p>
 
 </div>
