@@ -31,16 +31,6 @@
 		AAB88EA10A18452D00990D73 /* CamelBones.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AAB88E9D0A18450D00990D73 /* CamelBones.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AACBCF040A049272006C25A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D576316048677EA00EA77CD;
-			remoteInfo = PODImporter;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		AA52384B07EA204700D012BA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -81,7 +71,6 @@
 		AA975F4607E323DC00D1F95A /* PrefController.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = PrefController.pm; sourceTree = "<group>"; };
 		AAA0622907F4632E00B95D08 /* intro.pod */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = intro.pod; sourceTree = "<group>"; };
 		AAB88E9D0A18450D00990D73 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = /Developer/CamelBones/Frameworks/CamelBones.framework; sourceTree = "<absolute>"; };
-		AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PODImporter.xcodeproj; path = PODImporter/PODImporter.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +127,6 @@
 		29B97314FDCFA39411CA2CEA /* ShuX3 */ = {
 			isa = PBXGroup;
 			children = (
-				AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				AA5D938907E3700A00B49583 /* Objective-C Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -196,14 +184,6 @@
 			name = "Objective-C Classes";
 			sourceTree = "<group>";
 		};
-		AACBCF010A049272006C25A6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AACBCF050A049272006C25A6 /* PODImporter.mdimporter */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,28 +223,12 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* ShuX3 */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = AACBCF010A049272006C25A6 /* Products */;
-					ProjectRef = AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* ShuX */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		AACBCF050A049272006C25A6 /* PODImporter.mdimporter */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PODImporter.mdimporter;
-			remoteRef = AACBCF040A049272006C25A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
