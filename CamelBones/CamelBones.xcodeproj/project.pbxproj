@@ -178,11 +178,8 @@
 			buildPhases = (
 			);
 			dependencies = (
-				AA3D7B631298DDDD00C38BA9 /* PBXTargetDependency */,
 				FFE361471057268F00F0CA90 /* PBXTargetDependency */,
-				AA3D7B671298DDE300C38BA9 /* PBXTargetDependency */,
 				FFE361451057268B00F0CA90 /* PBXTargetDependency */,
-				AA34F3C012A009160088B581 /* PBXTargetDependency */,
 				AADB3E24123A6F1C001D0951 /* PBXTargetDependency */,
 			);
 			name = "Snow Leopard";
@@ -369,13 +366,6 @@
 			remoteGlobalIDString = AA615196123AD048006D6979;
 			remoteInfo = "PAR Kits (5.8.6)";
 		};
-		AA34F3BF12A009160088B581 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA3D7B891298E79500C38BA9 /* PAR Kits (5.10.0) */;
-			remoteInfo = "PAR Kits (5.10.0)";
-		};
 		AA35BF2E122D9ED0004C705B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
@@ -403,20 +393,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AA3D7B241298DB1800C38BA9;
 			remoteInfo = "darwin-thread-multi-2level-5.10.0";
-		};
-		AA3D7B621298DDDD00C38BA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA3D7B241298DB1800C38BA9;
-			remoteInfo = "darwin-thread-multi-2level-5.10.0";
-		};
-		AA3D7B661298DDE300C38BA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA50E2050C87571F004DA7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA3D7B511298DCD700C38BA9;
-			remoteInfo = "Perl Module (5.10.0)";
 		};
 		AA3D7B8B1298E79500C38BA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -741,7 +717,7 @@
 		AADB3E19123A6E6C001D0951 /* build-xmlkit.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = "build-xmlkit.pl"; sourceTree = "<group>"; };
 		AADB3E1A123A6E90001D0951 /* MyConfig.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = MyConfig.pm; path = PAR/CPAN/MyConfig.pm; sourceTree = "<group>"; };
 		FFA13B2F105A05330046F551 /* libffi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.dylib; path = /usr/lib/libffi.dylib; sourceTree = "<absolute>"; };
-		FFA13B4D105A05730046F551 /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.8.9/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
+		FFA13B4D105A05730046F551 /* libperl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libperl.dylib; path = "/System/Library/Perl/5.10.0/darwin-thread-multi-2level/CORE/libperl.dylib"; sourceTree = "<absolute>"; };
 		FFE360F5105720DF00F0CA90 /* PluginInfo-5.8.9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PluginInfo-5.8.9.plist"; sourceTree = "<group>"; };
 		FFE36119105720FB00F0CA90 /* darwin-thread-multi-2level-5.8.9.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.8.9.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE9CEB00D13073A00BB5E57 /* darwin-thread-multi-2level-5.8.8.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "darwin-thread-multi-2level-5.8.8.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1680,11 +1656,6 @@
 			target = AA615196123AD048006D6979 /* PAR Kits (5.8.6) */;
 			targetProxy = AA13A1BD123BF61F009F9879 /* PBXContainerItemProxy */;
 		};
-		AA34F3C012A009160088B581 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA3D7B891298E79500C38BA9 /* PAR Kits (5.10.0) */;
-			targetProxy = AA34F3BF12A009160088B581 /* PBXContainerItemProxy */;
-		};
 		AA35BF2F122D9ED0004C705B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA9141B20CC98CCE0055B0E5 /* CamelBones.framework */;
@@ -1704,16 +1675,6 @@
 			isa = PBXTargetDependency;
 			target = AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */;
 			targetProxy = AA3D7B5E1298DCFA00C38BA9 /* PBXContainerItemProxy */;
-		};
-		AA3D7B631298DDDD00C38BA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA3D7B241298DB1800C38BA9 /* darwin-thread-multi-2level-5.10.0 */;
-			targetProxy = AA3D7B621298DDDD00C38BA9 /* PBXContainerItemProxy */;
-		};
-		AA3D7B671298DDE300C38BA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA3D7B511298DCD700C38BA9 /* Perl Module (5.10.0) */;
-			targetProxy = AA3D7B661298DDE300C38BA9 /* PBXContainerItemProxy */;
 		};
 		AA3D7B8A1298E79500C38BA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
