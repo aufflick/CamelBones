@@ -70,7 +70,7 @@
 		AA975F3C07E3216100D1F95A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		AA975F4607E323DC00D1F95A /* PrefController.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = PrefController.pm; sourceTree = "<group>"; };
 		AAA0622907F4632E00B95D08 /* intro.pod */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = intro.pod; sourceTree = "<group>"; };
-		AAB88E9D0A18450D00990D73 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = /Developer/CamelBones/Frameworks/CamelBones.framework; sourceTree = "<absolute>"; };
+		AAB88E9D0A18450D00990D73 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = "../CamelBones/build/Release-App-Embedded/CamelBones.framework"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
