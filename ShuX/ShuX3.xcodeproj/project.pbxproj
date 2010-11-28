@@ -11,8 +11,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AA00C15612A04D6A0041CBF6 /* CamelBones.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA00C15512A04D6A0041CBF6 /* CamelBones.plist */; };
 		AA07753F09162CBC006B7979 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA07753E09162CBC006B7979 /* WebKit.framework */; };
-		AA0AEE7E07E5E2E4009380BE /* TipController.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE7D07E5E2E4009380BE /* TipController.pm */; };
 		AA0AEE8207E5E50A009380BE /* Tips.nib in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE8007E5E50A009380BE /* Tips.nib */; };
 		AA0AEE8407E5E516009380BE /* Icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE8307E5E516009380BE /* Icon.tiff */; };
 		AA0AEE9607E61B3E009380BE /* ShuXParser.pm in Resources */ = {isa = PBXBuildFile; fileRef = AA0AEE9507E61B3E009380BE /* ShuXParser.pm */; };
@@ -29,7 +29,6 @@
 		AAA0622A07F4632E00B95D08 /* intro.pod in Resources */ = {isa = PBXBuildFile; fileRef = AAA0622907F4632E00B95D08 /* intro.pod */; };
 		AAB88E9E0A18450D00990D73 /* CamelBones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB88E9D0A18450D00990D73 /* CamelBones.framework */; };
 		AAB88EA10A18452D00990D73 /* CamelBones.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AAB88E9D0A18450D00990D73 /* CamelBones.framework */; };
-		AAE6417D07E671B800122D6D /* Tips.txt in Resources */ = {isa = PBXBuildFile; fileRef = AAE6417C07E671B800122D6D /* Tips.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +63,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ShuX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA00C15512A04D6A0041CBF6 /* CamelBones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CamelBones.plist; sourceTree = "<group>"; };
 		AA07753E09162CBC006B7979 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
-		AA0AEE7D07E5E2E4009380BE /* TipController.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = TipController.pm; sourceTree = "<group>"; };
 		AA0AEE8107E5E50A009380BE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Tips.nib; sourceTree = "<group>"; };
 		AA0AEE8307E5E516009380BE /* Icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Icon.tiff; sourceTree = "<group>"; };
 		AA0AEE9507E61B3E009380BE /* ShuXParser.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = ShuXParser.pm; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 		AAA0622907F4632E00B95D08 /* intro.pod */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = intro.pod; sourceTree = "<group>"; };
 		AAB88E9D0A18450D00990D73 /* CamelBones.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CamelBones.framework; path = /Developer/CamelBones/Frameworks/CamelBones.framework; sourceTree = "<absolute>"; };
 		AACBCF000A049272006C25A6 /* PODImporter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PODImporter.xcodeproj; path = PODImporter/PODImporter.xcodeproj; sourceTree = "<group>"; };
-		AAE6417C07E671B800122D6D /* Tips.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				AA0AEE9507E61B3E009380BE /* ShuXParser.pm */,
-				AA0AEE7D07E5E2E4009380BE /* TipController.pm */,
 				AA7D8F2D07E4B7EF005A3398 /* BrowserController.pm */,
 				AA975F4607E323DC00D1F95A /* PrefController.pm */,
 				AA975F2E07E31F3200D1F95A /* AppDelegate.pm */,
@@ -170,11 +167,11 @@
 				AA7D8F2807E4B59F005A3398 /* Browser.nib */,
 				AA0AEE8007E5E50A009380BE /* Tips.nib */,
 				AAA0622907F4632E00B95D08 /* intro.pod */,
-				AAE6417C07E671B800122D6D /* Tips.txt */,
 				AA778D2407E7483300BCB774 /* ShuX.icns */,
 				AA0AEE8307E5E516009380BE /* Icon.tiff */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				AA00C15512A04D6A0041CBF6 /* CamelBones.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -236,7 +233,14 @@
 			isa = PBXProject;
 			buildConfigurationList = AAD8D37E090E90EB00944F38 /* Build configuration list for PBXProject "ShuX3" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* ShuX3 */;
 			projectDirPath = "";
 			projectReferences = (
@@ -277,13 +281,12 @@
 				AA975F4707E323DC00D1F95A /* PrefController.pm in Resources */,
 				AA7D8F2A07E4B59F005A3398 /* Browser.nib in Resources */,
 				AA7D8F2E07E4B7EF005A3398 /* BrowserController.pm in Resources */,
-				AA0AEE7E07E5E2E4009380BE /* TipController.pm in Resources */,
 				AA0AEE8207E5E50A009380BE /* Tips.nib in Resources */,
 				AA0AEE8407E5E516009380BE /* Icon.tiff in Resources */,
 				AA0AEE9607E61B3E009380BE /* ShuXParser.pm in Resources */,
-				AAE6417D07E671B800122D6D /* Tips.txt in Resources */,
 				AA778D2507E7483300BCB774 /* ShuX.icns in Resources */,
 				AAA0622A07F4632E00B95D08 /* intro.pod in Resources */,
+				AA00C15612A04D6A0041CBF6 /* CamelBones.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
