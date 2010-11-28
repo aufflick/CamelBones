@@ -1,3 +1,11 @@
+Added support for cacheing autoloaded ObjC methods. (Patch by Matt Sergeant)
+
 Fixed a bug that caused BOOL, char, and int values to be returned incorrectly from ObjC methods in some situations.
 
 Fixed a bug in argument passing to native methods, to correctly pass undef as NULL when the expected type is void*.
+
+Fixed bugs in CBPerlHash, where the Perl context was not correctly set up in several methods.
+
+Fixed a bug in CBWrapObjectiveCClass, where NSObject was added to its own @ISA.
+
+Fixed key enumerator bug in CBPerlHash - SourceForge tracker ID 3087368.
