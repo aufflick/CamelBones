@@ -16,6 +16,7 @@ my $menu = [
 	{ 'title' => 'Home', 'href' => 'index.html', },
 	{ 'title' => 'Getting Started', 'href' => 'docs/getstarted/index.html', },
 	{ 'title' => 'Help $upport CamelBones', 'href' => 'http://sourceforge.net/donate/index.php?group_id=48040', },
+	{ 'title' => 'Books', 'href' => 'books.html', },
 	{ 'title' => 'Documentation', 'href' => 'docs/index.html', 'children' => [
 		{ 'title' => 'Getting Started', 'href' => 'docs/getstarted/index.html', 'children' => [
 			{ 'title' => 'Hello, Cocoa!', 'href' => 'docs/getstarted/index.html', },
