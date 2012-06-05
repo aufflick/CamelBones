@@ -1,0 +1,161 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../js/slimbox.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Navigating Subversion</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../index.html"><img src="../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" expand="docs" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../books.html">Books</a></li>
+    <li><a href="../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../docs/getstarted/index.html">Getting Started</a></li>
+            <li><a href="../docs/concepts/index.html">Concepts</a></li>
+            <li><a href="../docs/ref/index.html">Reference</a></li>
+            <li>Subversion access</li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../contact.html">Contact Info</a></li>
+    <li><a href="../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+<h2>Navigating the Subversion repository on Sourceforge</h2>
+
+<p>Convenient installer packages are at the Downloads page on Sourceforge, but you may want to further customize the framework you ship with your app, or work with the latest bleeding edge still-in-development versions of the source code.</p>
+
+<p>To begin with, you can check out a copy of the source from the <a href="https://sourceforge.net/scm/?type=svn&amp;group_id=48040">Subversion</a> repository at Sourceforge.net. Following those instructions, you'll find a "trunk" directory in your local copy. That's the main line of development, not an experimental tangent or other branch. In the "trunk" dir you'll find several subdirectories:</p>
+
+<dl>
+	<dt>CamelBones/</dt>
+		<dd>Xcode project & code for the CamelBones framework, CPAN module, and libffi subprojects.</dd>
+    <dt>Examples/</dt>
+        <dd>Example projects that use CamelBones.</dd>
+    <dt>ExtLibs/</dt>
+        <dd>External libraries used for building PAR Kits.</dd>
+    <dt>IcebergProjects/</dt>
+        <dd>Create installer .mpkg files with <a href="http://s.sudre.free.fr/Software/Iceberg.html">Iceberg</a>.</dd>
+    <dt>PerlSDKs/</dt>
+        <dd>Perl files from earlier Mac OS X releases. These Perls still run on Snow Leopard, thanks to binary compatibility, and they can build and test XS modules for older OS versions.</dd>
+    <dt>ShuX/</dt>
+        <dd>The CamelBones graphical pod reader.</dd>
+    <dt>WebSite/</dt>
+        <dd>You're looking at it. I use BBEdit to maintain it. Parts of pages are included from .inc files in (includes)/ subdirectory.</dd>
+    <dt>XcodeTemplates/</dt>
+        <dd>"New Project" and "New File" templates for different project types.</dd>
+</dl>
+
+<h2>What you need</h2>
+
+<p>To build your own copy of CamelBones, you'll need at least the CamelBones/ subdirectory from Subversion. If you intend to also build your own custom PAR Kits, you may need the ExtLibs/ subdir as well. CamelBones builds on Snow Leopard, using Xcode 3.2; if you intend to deploy your build on older OS releases (Leopard and Tiger are both supported), you will also need either the PerlSDKs/ subdir, or the PerlSDKs installer package from <a href="https://sourceforge.net/projects/camelbones/files/">SourceForge.net</a>.</p>
+
+<p>First, install the PerlSDKs - if you've downloaded them from Subversion, it's easiest to build and use an .mpkg installer. Go to IcebertProjects/ and open 'Perl SDKs.packproj' - you'll need <a href="http://s.sudre.free.fr/Software/Iceberg.html">Iceberg</a>. In the PerlSDKs/ directory, each subdir has the Perl and OS version. Under that, there are Library/, System/, and usr/bin/ subdirectories that mirror the file trees that are installed at /.</p>
+
+<h2>What's in CamelBones.xcodeproj</h2>
+
+<h3>Build Configurations</h3>
+
+<p>In CamelBones/, you'll find CamelBones.xcodeproj - that's where most of the fun stuff happens. It has four build configurations. All of the "Release" configurations create directory trees under "build/{$configname}", ready to be packaged for installation with Iceberg.</p>
+
+<dl>
+    <dt>Debug</dt>
+        <dd>Builds CamelBones.framework in build/Debug/, builds CamelBones.pm with it and runs its "make test".</dd>
+    <dt>Release</dt>
+        <dd>Release is the "shared" configuration, with the framework configured to be installed in /Library/Frameworks, the CamelBones.pm module in /Library/Perl/, and PAR.pm &amp; its prerequisites in /Developer/CamelBones/Perl/PAR.</dd>
+    <dt>Release-App-Embedded</dt>
+        <dd>This creates a framework that's configured to be embedded in a .app bundle. The CamelBones.pm, along with the PAR.pm module and its prerequisites, are installed in the Resources/ subdirectory within the framework. This framework is installed to /Developer/CamelBones/Frameworks/, and is meant to be embedded into an .app bundle's Frameworks/ subdirectory with a "Copy Files" build phase.</dd>
+    <dt>Release-Lib-Embedded</dt>
+        <dd>This framework is also configured to be embedded with a bundle, but not just the main application bundle. It uses a @loader_path install name instead of @application_path, so it can be used in a plugin bundle such as a preference pane or screen saver. This framework is installed to /Developer/CamelBones/Bundle-Frameworks/, and is meant to be embedded into a bundle's Frameworks/ subdirectory with a "Copy Files" build phase.</dd>
+</dl>
+
+<h3>Targets</h3>
+
+<p>There are 17 targets. Actually, variations on five targets, and an All target.</p>
+
+<dl>
+    <dt>CamelBones.framework</dt>
+        <dd>The framework. This provides the code to detect which support bundle to use and load it. Applications & bundles which link to this framework can run on any Perl for which a support bundle is included.</dd>
+    <dt>darwin-thread-multi-2level-*</dt>
+        <dd>Support bundles. Each of these is compiled and linked with the specified Perl, providing a version-specific implementation of the interface exposed by CamelBones.framework public API. These are built inside the Libraries/ subdirectory within the framework bundle.</dd>
+    <dt>Perl Module (x.y.z)</dt>
+        <dd>CamelBones.pm module for the specified Perl. This is just a "run script" build phase that uses the standard Makefile.PL incantation. For the "Debug" configuration, only the "make test" step is run. For "Release", the module is configured to be installed at "/Library/Perl" - like any CPAN module - and is staged separately under build/Release to be packaged by Iceberg. The "-App and -Lib-Embedded configs each install the module in the Resources/ subdirectory of the framework.</dd>
+    <dt>PAR Kits (x.y.z)</dt>
+        <dd>Builds the PAR kits using the specified Perl. Runs the build-*kit.pl scripts found in the CamelBones/PAR Kits group. For the "Debug" build configuration, all of the PAR Kit modules are downloaded, built, and tested, but not staged. For "Release", the PAR.pm module and its prerequisites are staged separately under build/Release, to be packaged by Iceberg. For -App- and -Lib-Embedded configurations, PAR.pm &amp; its prerequisites are bundled into the Resources/ directory of the built framework. For all three Release-* configurations, the .par bundles in build/ are updated.</dd>
+    <dt>Snow Leopard, Leopard, Tiger, Panther</dt>
+        <dd>Builds the framework, support bundle, Perl module, and PAR Kits. For the support bundle, Perl module, and PAR Kits, builds only for a single OS version.</dd>
+    <dt>All</dt>
+        <dd>The whole enchilada. Currently builds only Snow Leopard, Leopard, and Tiger support.</dd>
+</dl>
+
+<h3>Rolling your own</h3>
+
+<p>The most common reason to build your own custom CamelBones distribution is to save space - if your app uses newer APIs that are only available on Snow Leopard, then including support bundles and the PAR module for Leopard &amp; Tiger is wasted space. To do that, simply modify the "All" target, deleting its dependencies on specific OS version targets you don't need to support.</p>
+
+<p>Another common goal is to customize which CPAN modules are included in the PAR kits bundled with your app. These are built using the programmatic API to CPAN.pm. Each of the PAR Kits (x.y.z) targets has a "run script" build phase that runs the various build-*kit.pl scripts. You can add entirely new PAR bundles by cloning one of the build-*kit.pl scripts, then modifying the various "run script" build phases to include the new script. Or, you can edit one or more of the scripts to customize what modules are included. Or, if your app does not use PAR Kits at all, you can modify each of the OS version targets, removing its dependency on the associated PAR Kit (x.y.z) target.</p>
+
+<p>Naturally, you can also do both - modify which (if any) modules built into the various .par bundles, and the OS versions for which the modules are built.</p>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

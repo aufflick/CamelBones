@@ -1,0 +1,157 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - CamelBones::NSSize</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../../index.html"><img src="../../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand# = "docs, docs/ref, docs/ref/structs" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../../books.html">Books</a></li>
+    <li><a href="../../../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../../../docs/getstarted/index.html">Getting Started</a></li>
+            <li><a href="../../../docs/concepts/index.html">Concepts</a></li>
+            <li><a href="../../../docs/ref/index.html">Reference</a>
+                <ul>
+                    <li><a href="../../../docs/ref/structs/index.html">Structs</a>
+                        <ul>
+                            <li><a href="../../../docs/ref/structs/nspoint.html">CamelBones::NSPoint</a></li>
+                            <li><a href="../../../docs/ref/structs/nsrange.html">CamelBones::NSRange</a></li>
+                            <li><a href="../../../docs/ref/structs/nsrect.html">CamelBones::NSRect</a></li>
+                            <li>CamelBones::NSSize</li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../docs/ref/typesigs.html">Method Signatures</a></li>
+                </ul>
+            </li>
+            <li><a href="../../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../../contact.html">Contact Info</a></li>
+    <li><a href="../../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+<h2>CamelBones::NSSize</h2>
+
+<p>A CamelBones::NSSize object represents a two-dimensional size. It has width and height properties, both of which are floating point numbers.</p>
+
+<h3>Methods</h3>
+
+<dl>
+	<dt>getWidth()</dt>
+		<dd>Returns the value of the width property.</dd>
+	<dt>getHeight()</dt>
+		<dd>Returns the value of the height property.</dd>
+	<dt>setWidth($newWidth)</dt>
+		<dd>Stores the value of $newWidth in the width property.</dd>
+	<dt>setHeight($newHeight)</dt>
+		<dd>Stores the value of $newHeight in the height property.</dd>
+	<dt>setAll($newWidth, $newHeight)</dt>
+		<dd>Stores the value of $newWidth and $newHeight in the width and height properties, respectively.</dd>
+	<dt>$hr = getHashref()</dt>
+		<dd>Returns the size data as a reference to a hash with keys 'width' and 'height'.</dd>
+	<dt>$ar = getArrayref()</dt>
+		<dd>Returns the size data as an array reference. Properties are stored in the array in the order width, height.</dd>
+</dl>
+
+<h3>Functions</h3>
+
+<dl>
+	<dt>$isEQ = NSEqualSizes($size1, $size2)</dt>
+		<dd>Returns true if both width and height properties are the same for both sizes, false if not.</dd>
+	<dt>$size = NSMakeSize($newWidth, $newHeight)</dt>
+		<dd>Creates a new NSSize structure with the specified properties.</dd>
+	<dt>$size = NSSizeFromString($str)</dt>
+		<dd>Creates a new NSSize structure from the string representation in $str.</dd>
+	<dt>$str = NSStringFromSize($size)</dt>
+		<dd>Returns a string representation of $size</dd>
+</dl>
+
+<h3>NSSize function and method arguments</h3>
+
+<p>Naturally, a function or method that is declared as taking an NSSize structure as an argument will also take a CamelBones::NSSize object. However, a hash or array reference may be passed as well, as illustrated by these examples:</p>
+
+<pre># Create a CamelBones::NSSize object
+my $size = NSMakeSize(1.0, 1.0);
+
+# Returns zero
+my $isEQ = NSEqualSizes($size, { width => 1.0, height => 5.0 } );
+
+# Returns nonzero
+my $isEQ = NSEqualSizes($size, [1.0, 1.0]);</pre>
+
+<h3>NSSize return values</h3>
+
+<p>Cocoa functions and methods that are declared as returning NSSize structures will return CamelBones::NSSize objects to Perl.</p>
+
+<h3>See also</h3>
+
+<p><a href="http://developer.apple.com/mac/library/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_DataTypes/Reference/reference.html#//apple_ref/doc/uid/20000018-SW63">NSSize</a></p>
+
+<p><a href="http://developer.apple.com/mac/library/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_Functions/Reference/reference.html#//apple_ref/doc/uid/20000055-BCIFICGC">Managing Sizes</a></p>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

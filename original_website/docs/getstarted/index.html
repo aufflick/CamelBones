@@ -1,0 +1,139 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Getting Started - Hello, Cocoa!</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../index.html"><img src="../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand# = "docs, docs/getstarted" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../index.html">Home</a></li>
+    <li>Getting Started</li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../books.html">Books</a></li>
+    <li><a href="../../docs/index.html">Documentation</a>
+        <ul>
+            <li>Getting Started
+                <ul>
+                    <li>Hello, Cocoa!</li>
+                    <li><a href="../../docs/getstarted/events.html">Responding to Events</a></li>
+                    <li><a href="../../docs/getstarted/outlets.html">Outlets</a></li>
+                    <li><a href="../../docs/getstarted/responderchain.html">The Responder Chain</a></li>
+                    <li><a href="../../docs/getstarted/menuevents.html">Menu Events</a></li>
+                </ul>
+            </li>
+            <li><a href="../../docs/concepts/index.html">Concepts</a></li>
+            <li><a href="../../docs/ref/index.html">Reference</a></li>
+            <li><a href="../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../contact.html">Contact Info</a></li>
+    <li><a href="../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+
+<h2>Getting Started - Hello, Cocoa!</h2>
+
+<p>The classic "Hello world!" program is more than just a tired introduction - it's one of the simplest possible programs that produce output. That makes it useful for testing your installation of the CamelBones framework. A more complicated program has a greater chance of having bugs of its own, making it difficult to be certain of the cause of any problems that crop up.</p>
+
+<p>So, let's see if that copy of CamelBones you just installed is really working!</p>
+
+<h3>Xcode version</h3>
+
+<div class="callout">Note: This tutorial and its accompanying screen shots were created using Snow Leopard and Xcode 3.2.3. If you are using older versions of Mac OS X &amp; Xcode, you will need to adapt some of the details to suit.</div>
+
+<h3>1. Create a project</h3>
+
+<div class="screenshot" style="float:right;"><a href="images/hello/newproject.png" rel="lightbox" title="Xcode's New Project dialog"><img src="images/hello/newproject-sm.png" alt="" width="250" height="203"></a></div>
+
+<p>Begin by starting Xcode and creating your new project. In the "New Application" dialog box, choose "Cocoa Application" in the section "Perl" from the list of project types. After that, choose a name for your project ("Hello" would be a good choice for this one), and where you'd like to store the project files to finish the project creation.</p>
+
+<h3>2. Find and open the main window NIB</h3>
+ 
+<div class="screenshot" style="float:left; margin-right:0.5em; margin-bottom:0.5em;"><a href="images/hello/xcodegnf.png" rel="lightbox" title="Selecting MainMenu.xib in Xcode"><img src="images/hello/xcodegnf-sm.png" alt="" width="250" height="167"></a></div>
+
+<p>Expand the "Hello" item in the "Groups &amp; Files" outline to the left by clicking on its disclosure triangle. Then select the "Resources" item under "Hello" by clicking once on it. Notice that selecting items in the outline affects the list of files that appear in the main part of the window - this can be a big help as more files are added to your project. Open "MainWindow.xib" in Interface Builder by double-clicking it, either in the list or the outline.</p>
+
+<h3>3. Add a text label to the main window</h3>
+ 
+<div class="screenshot" style="float:right;"><a href="images/hello/iblibrarypanel.png" rel="lightbox" title="Interface Builder's Library panel"><img src="images/hello/iblibrarypanel-sm.png" alt="" width="79" height="200"></a></div>
+
+<p>In Interface Builder, the Library panel has a drop-down menu at the top, named "Library" by default. Choose "Cocoa -> Views &amp; Cells -> Inputs &amp; Values on this menu. The list of controls below the drop-down will change, with Label controls appearing at the top of the list. Drag and drop a label onto the empty main window.</p>
+ 
+<div class="screenshot" style="float:left; margin-right:0.5em; margin-bottom:0.5em;"><a href="images/hello/ibeditlabel.png" rel="lightbox" title="Editing the Text Label in Interface Builder"><img src="images/hello/ibeditlabel-sm.png" alt="" width="250" height="199"></a></div>
+
+<p>Double-click the text label in the main window to edit the text within it, and change the text to - wait for it - "Hello, Cocoa!" Or, change it to something else, if you're feeling particularly creative today. I won't be offended, I promise.</p>
+
+<p>Be sure to save the changes you've made before switching back to Xcode.</p>
+
+<h3>4. Build and run your application</h3>
+ 
+<div class="screenshot" style="float:right;"><a href="images/hello/xcodebuildresults.png" rel="lightbox" title="Build Results in Xcode"><img src="images/hello/xcodebuildresults-sm.png" alt="" width="250" height="167"></a></div>
+
+<p>Build your application by clicking the "hammer" button in Xcode's tool bar. It may seem odd at first that you'd have to build your application - Perl is not, after all, a compiled language. But, your Perl code is stored in the application bundle as a resource, and the build process does more than just compile code - it also checks for modified resources that need to be copied into the application bundle.</p>
+
+<p>Run your application by clicking the "Build and Run" button.</p>
+
+<p style="clear:both;"></p>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

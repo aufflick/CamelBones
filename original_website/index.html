@@ -1,0 +1,131 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="./js/mootools-core.js"></script>
+	<script type="text/javascript" src="./js/mootools-more.js"></script>
+	<script type="text/javascript" src="./js/slimbox.js"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="./styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones</title>
+</head>
+<body>
+
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="./index.html"><img src="./images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" -->
+<div id="menu">
+<ul id="menulist">
+    <li>Home</li>
+    <li><a href="./docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="./books.html">Books</a></li>
+    <li><a href="./docs/index.html">Documentation</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="./contact.html">Contact Info</a></li>
+    <li><a href="./copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+<h2>What is CamelBones?</h2>
+
+<blockquote>
+    <p>&ldquo;Freedom of choice - it's what you've got.&rdquo; <cite>Devo - Freedom of Choice</cite></p>
+</blockquote>
+
+<p>CamelBones is about giving you more options for your Cocoa development. Objective-C is really quite nice - but it's not a perfect fit for every situation. There are occasions when you might find yourself saying "this would be so much simpler in Perl," or find yourself writing functionality that already exists in <a href="http://www.cpan.org">CPAN</a>.</p>
+
+<p>Alternatively, you might want to add a little bit of Perl to an Objective-C application, but you're getting bogged down in the complexity of Perl's embedding API. Or you've waded your way through that, only to find out that now you have to ship separate versions of your application for Tiger, Leopard, and Snow Leopard as libperl isn't binary-compatible from one version to the next, and it's in a different location for each version of Mac OS X.</p>
+
+<p>CamelBones is a framework that gives you the option of using Perl when and where you need to - without taking away from you the option of using Objective-C wherever that's a better choice.</p>
+
+<h2>Recent Happenings</h2>
+
+<h3>Please support CamelBones!</h3>
+
+<p>Software may be free, but unfortunately, rent and cat food aren't! Please consider helping out. I've been accepting <a href="http://sourceforge.net/donate/index.php?group_id=48040" target="_blank">donations</a> through SourceForge for a long time now, and naturally I still do.</p>
+
+<p>I've also created an affiliate ID at Amazon.com, and <a href="books.html">a page here that links to a number of Perl- and Cocoa-related books</a>. I'll receive a small (4%) commission on the sale if you follow the links and buy those books, or in fact anything else from Amazon.com during the same browsing session. If you're a Perl and/or Cocoa developer, you'll want to own these books anyway, and you won't pay a penny more for them by buying them this way, so everybody wins!</p>
+
+<p>As a third option, I've created a <a href="http://www.dreamhost.com/r.cgi?413383/green.cgi?camelbones.org%7CCAMELBONES" target="_blank">special promo code at Dreamhost</a>. Follow the link, or just go to "http://dreamhost.com" and use the promo code "CAMELBONES" to sign up, and you'll receive up to $50 off on your web hosting. Web hosting is something you probably want anyway, and this way you get a discount too, so once again - everybody wins!</p>
+
+<p>Last, but certainly not least, you could <a href="http://www.shermpendley.com/resume" target="_blank">hire me</a>. I offer fair rates for consulting, and if you're reading this site you've probably already seen the kind of work I can do. For the right gig, and with sufficient assistance with relocation costs, I'm also willing to consider full-time employment offers.</p>
+
+<h3>CamelBones 1.1.2</h3>
+
+<p>CamelBones 1.1.2 has been released through SourceForge:</p>
+
+    <p><a href="http://sourceforge.net/projects/camelbones/files/camelbones/1.1.2/" target="_blank">http://sourceforge.net/projects/camelbones/files/camelbones/1.1.2/</a></p>
+
+<p>This update features a performance enhancement patch and a few bug fixes:</p>
+
+<ul>
+<li>Added support for cacheing autoloaded ObjC methods. (Patch by Matt Sergeant)</li>
+
+<li>Fixed a bug that caused BOOL, char, and int values to be returned incorrectly from ObjC methods in some situations.</li>
+
+<li>Fixed a bug in argument passing to native methods, to correctly pass undef as NULL when the expected type is void*.</li>
+
+<li>Fixed bugs in CBPerlHash, where the Perl context was not correctly set up in several methods.</li>
+
+<li>Fixed a bug in CBWrapObjectiveCClass, where NSObject was added to its own @ISA.</li>
+
+<li>Fixed key enumerator bug in CBPerlHash - <a href="https://sourceforge.net/tracker/?func=detail&amp;aid=3087368&amp;group_id=48040&amp;atid=451755" target="_blank">SourceForge tracker ID 3087368</a>.</li>
+</ul>
+
+<p>If you find CamelBones or ShuX useful, please consider donating!</p>
+
+    <p><a href="http://sourceforge.net/donate/index.php?group_id=48040" target="_blank">http://sourceforge.net/donate/index.php?group_id=48040</a></p>
+
+<h3>New web site</h3>
+
+<p>Welcome to the new web site. Alex did a great job on the old site, but that was over five years ago. Times have changed, and the design (based on Mac OS X's original "Aqua" color scheme) was looking kind of outdated. It was also rather difficult to maintain, based around an odd XML+XSLT to HTML tool chain, because yours truly forgot one of the cardinal rules of development: <a href="http://en.wikipedia.org/wiki/KISS_principle">KISS</a>.</p>
+
+</div>
+
+</div>
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

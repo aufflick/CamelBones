@@ -1,0 +1,159 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Getting Started - Menu Events</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../index.html"><img src="../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand# = "docs, docs/getstarted" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../books.html">Books</a></li>
+    <li><a href="../../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../../docs/getstarted/index.html">Getting Started</a>
+                <ul>
+                    <li><a href="../../docs/getstarted/index.html">Hello, Cocoa!</a></li>
+                    <li><a href="../../docs/getstarted/events.html">Responding to Events</a></li>
+                    <li><a href="../../docs/getstarted/outlets.html">Outlets</a></li>
+                    <li><a href="../../docs/getstarted/responderchain.html">The Responder Chain</a></li>
+                    <li>Menu Events</li>
+                </ul>
+            </li>
+            <li><a href="../../docs/concepts/index.html">Concepts</a></li>
+            <li><a href="../../docs/ref/index.html">Reference</a></li>
+            <li><a href="../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../contact.html">Contact Info</a></li>
+    <li><a href="../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+
+<h2>Getting Started - Menu Events</h2>
+
+<p>For this tutorial, I'll assume you've been following along with the whole "Getting Started" series. In that case, you'll have already have created a Hello project in Xcode. I'll also assume that you've created "Say Hello" and "Say Goodbye" buttons, connected them to the saySomething() method in your controller class, and used an outlet in those methods to alter the contents of a text label.</p>
+
+<p>This page describes how to add "Say Hello" and "Say Goodbye" menu items to the MainMenu.xib using Interface Builder, and how to connect it to the Responder Chain so that they're handled by the methods you've already added to your HelloController class.</p>
+
+<h3>Adding a submenu</h3>
+ 
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/menuevents/menuitems.png" rel="lightbox" title="IB's Library panel, with Menu objects listed."><img src="images/menuevents/menuitems-sm.png" alt="" width="99" height="200"></a></div>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/menuevents/addingsubmenu.png" rel="lightbox" title="Adding a submenu item to the application menu."><img src="images/menuevents/addingsubmenu-sm.png" alt="" width="200" height="57"></a></div>
+
+<p>Open MainMenu.xib in Interface Builder, and select the "Objects" pane in the Library panel. If you'd like, you can select "Library -> Cocoa -> Application -> Menus" in the drop-down menu; that will reduce the number of objects shown in the scrolling list down to a manageable number. Drag a "Submenu Menu Item" to the menu and drop it into place, in between the "View" and "Window" menus.</p>
+
+<p>You might want to experiment with this a little bit, as the static screen shots shown here can only do so much to give you the feel of it. One important thing to note is that when you drop the new submenu, its position will be determined by where it was dropped within the menu that is selected when you drop it.</p>
+
+<p>This is illustrated by one of the screen shots: The cursor is pointing to the left half of the "Window" menu. So, after that drop is completed, the new menu will appear after the "Edit" menu and before the "Window" menu, which is shown in its expanded state.</p>
+
+<h3>Renaming the submenu and its item</h3>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em"><a href="images/menuevents/editsubmenu.png" rel="lightbox" title="Editing the new menu."><img src="images/menuevents/editsubmenu-sm.png" alt="" width="200" height="18"></a></div>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em; margin-top: 0.2em; clear: left"><a href="images/menuevents/editmenuitem.png" rel="lightbox" title="Editing the new menu item."><img src="images/menuevents/editmenuitem-sm.png" alt="" width="200" height="41"></a></div>
+
+<p>When first dropped into place, the submenu is titled "Submenu", and it has a single item under it named "Item". Naturally you'll want to change these titles to something more appropriate.</p>
+ 
+<p>To retitle the submenu, double-click its title text to make it editable, and simply enter the new title text. I suggest giving the new submenu a title something like "Speak". To retitle a menu item, expand the parent menu first, then double-click the menu item and edit the title text. Let's call this one "Say Hello".</p>
+
+<p>As an alternative, you can also retitle a submenu or menu item by selecting it, choosing the "Attributes" pane in Interface Builder's "Info" panel, and editing the "Title" box that appears in that.</p>
+
+<h3>Adding menu items</h3>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/menuevents/addingmenuitem.png" rel="lightbox" title="Adding a menu item."><img src="images/menuevents/addingmenuitem-sm.png" alt="" width="200" height="38"></a></div>
+
+<p>Adding a new menu item is similar to adding a submenu. Just drag a "Item" item from the "Cocoa Menus" pane, and drop it where you want it to appear. A thin blue line will be shown while you're dragging it over an existing menu, to show will it will appear when dropped.</p>
+
+<p>Go ahead and add a new item to your "Speak" menu now, and retitle it to "Say Goodbye".</p>
+
+<h3>Assigning keyboard shortcuts</h3>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em"><a href="images/menuevents/menuattributes.png" rel="lightbox" title="Menu item attributes pane."><img src="images/menuevents/menuattributes-sm.png" alt="" width="121" height="200"></a></div>
+
+<p>Many, or perhaps most menu items have keyboard shortcuts. I've known power users who use these to the extent that referring to them as "shortcuts" isn't really all that accurate; to some, they are the primary interface to menu items. To assign a shortcut to your new menu items, first select the menu item. Then, define the shortcut key and modifiers it should use in the "Attributes" pane of Interface Builder's "Info" panel.</p>
+
+<p>Try it out - set keyboard shortcuts for your new menu items. I suggest cmd-shift-H for "Say Hello", and cmd-shift-G for "Say Goodbye".</p>
+
+<h3>Making the connection</h3>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/menuevents/connectmenuitem.png" rel="lightbox" title="Connecting the menu item."><img src="images/menuevents/connectmenuitem-sm.png" alt="" width="200" height="118"></a></div>
+
+<p>This is very similar to how you connected the button actions in the "<a href="events.html">Responding to Events</a>" tutorial, so I'll leave out most of the detail. The major difference is that, instead of connecting actions to your HelloController object, you'll connect them to the "First Responder" object instead.</p>
+
+<p>As in that tutorial, right-click on the menu item to show its inspector panel. Then, drag the connection from the "selector" connector to the "First Responder" icon, and select the "saySomething:" action.</p>
+
+<p>You should connect both "Say Hello" and "Say Goodbye" menu items to the "saySomething:" action. If you've been following along through these tutorials, you should have already implemented the Perl method to handle this action in HelloController.pm, in the earlier "<a href="outlets.html">Outlets</a>" tutorial, so there's no more code to write.</p>
+
+<h3>Setting the delegate</h3>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em"><a href="images/menuevents/connectdelegate.png" rel="lightbox" title="Connecting the window's delegate outlet."><img src="images/menuevents/connectdelegate-sm.png" alt="" width="161" height="200"></a></div>
+
+<p>If you build and run your application at this point, you'll notice something odd - the menu items you just created are present, but they're disabled. Why is that? Remember, actions that are connected to the First Responder are sent to the The Responder Chain, which means that a number of objects are checked to see if they respond to the specified action. The Responder Chain is also examined when menus are expanded, and if none of the objects in the chain respond to the action that's defined for a menu item, that item is automatically disabled.</p>
+
+<p>So, we need to add the window controller object to the Responder Chain. As you might recall, the Key and Main Windows' delegates are part of the chain. So, what you want to do is tell the Window object to treat your window controller object as its delegate. In IB, right-click the "Window" object to show its inspector panel, then drag from its "delegate" connector to the "HelloController" object.</p>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

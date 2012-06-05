@@ -1,0 +1,157 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Reading Objective-C Documentation</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../index.html"><img src="../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand#="docs, docs/concepts" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../books.html">Books</a></li>
+    <li><a href="../../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+            <li><a href="../../docs/concepts/index.html">Concepts</a>
+                <ul>
+                    <li>Reading Objective-C Documentation</li>
+                    <li><a href="../../docs/concepts/mvc.html">MVC - Model-View-Controller</a></li>
+                    <li><a href="../../docs/concepts/collections.html">Collections</a></li>
+                </ul>
+            </li>
+            <li><a href="../../docs/ref/index.html">Reference</a></li>
+            <li><a href="../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../contact.html">Contact Info</a></li>
+    <li><a href="../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+
+<h2>Reading Objective-C Documentation</h2>
+
+<p>One major obstacle that stands in the path of a Cocoa-Perl developer is the fact that most of the documentation and example code that you'll find is written with Objective-C in mind. Not to fear, however - Objective-C is not all that hard to read, and by learning a few simple rules, you'll be translating Objective-C example code into Perl in no time.</p>
+
+<h3>Objective-C Messages</h3>
+
+<p>Messages and methods are closely related in Objective-C. So closely, in fact, that many people confuse the two. In practical terms, they are similar, and the most common result of sending a message is that a method of the same name is called to handle it.</p>
+
+<p>At a very low level, Objective-C methods are similar to Perl methods. They are simply functions that take as their first argument a pointer to the object to which the message was sent, and as the second a special sort of string known as a selector, which identifies the message that was sent. These two arguments are hidden away by some "syntax sugar," both when the message is sent and in the method that handles it, but they're there nonetheless.</p>
+
+<p>A message is a much more dynamic construct than a method. The method that will be called in order to handle a given message is determined at run-time. That is why the message name is sent as the second parameter to the method - it's possible, although uncommon, for a method to be called in response to any number of messages. In such a situation, the method could use its second parameter to determine which method to call in response to the message it received. (If you're curious, CamelBones does exactly that - a single Objective-C method is registered to handle all messages destined for Perl methods. It uses the message name to decide what Perl method should be called to handle it.)</p>
+
+<h3>The Syntax of a Message</h3>
+
+<p>Because Perl is heavily influenced by C, many C constructs are virtually identical to those used by Perl. Because Objective-C is, for the most part, identical to C, you'll find these common syntax features fairly easy to read. For/while loops and if/else statements, for example - some of the most commonly-used constructs in all three languages - share virtually identical syntax in C, Objective-C, and Perl.</p>
+
+<p>One unique addition that Objective-C makes to "vanilla" C, however, is the message sending syntax, which encloses the target and the message to send to it in square brackets. Assuming that a simple message named "message", which takes no arguments, is to be sent to an object "target", the message would be written like this:</p>
+
+<pre>[target message];</pre>
+
+<p>In Perl, messages are sent to Cocoa objects using Perl's traditional method syntax. So, the above example would be coded in Perl like this:</p>
+
+<pre>$target->message();</pre>
+
+<h3>Arguments to Messages</h3>
+
+<p>Messages, like functions, can take arguments. Unlike function arguments, however, arguments sent with messages have names. Cocoa is well-designed in this regard, as well - most of them have names that are quite descriptive and consistent. Take, for example, the message you would send to an NSMutableDictionary object to add an object to it. The message takes two arguments - the object to add, and the key to associate with it. In Objective-C, it would be written like this:</p>
+
+<pre>[theDictionary setObject:theObject forKey:theKey];</pre>
+
+<p>Each parameter in the above line of code is preceded by a colon - those colons, and the names of the parameters, are part of the message name. The message being sent by this example is "setObject:forKey:". To send such a message from Perl, simply replace the colons with underscores, remove the trailing underscore (if any), and use Perl's traditional method syntax:</p>
+
+<pre>$theDictionary->setObject_forKey($theObject, $theKey);</pre>
+
+<p>When writing methods that respond to messages sent to Perl, the same translation rules are followed. For example, to respond to an action message named "okButtonClicked:", you'd define the following method:</p>
+
+<pre>sub okButtonClicked {
+        my ($self, $sender) = @_;
+}</pre>
+
+<p>"$sender" in the above example is a standard argument that is sent by all GUI widgets when they send their action messages. It is simply a reference to the widget that is sending the message.</p>
+
+<h3>Selectors</h3>
+
+<p>Above, I mentioned that selectors are specially encoded strings. Because Objective-C is such a dynamic environment, these strings can be created and used at runtime. In support of such endeavors, a selector can be sent as an argument with a message, or returned from one. For example, normally you would use Interface Builder to define what action messages are sent by a GUI widget. It is also possible to do so, however, by sending the widget a setAction: message, which takes a selector as its sole argument.</p>
+
+<p>In Objective-C, variables that will hold selectors are declared as type SEL, and the @selector() directive used to encode the selector itself. For example, in order to tell the GUI widget "myWidget" to send the action message "doSomething:" when it's activated, you would do the following:</p>
+
+<pre>SEL mySelector = @selector(doSomething:);
+[myWidget setAction:mySelector];</pre>
+
+<p>The @selector() directive is also often used "inline," without storing the selector in a variable:</p>
+
+<pre>[myWidget setAction:@selector(doSomething:)];</pre>
+
+<p>Another way you may see selectors created is with the NSSelectorFromString() function, which takes an NSString object as its one argument:</p>
+
+<pre>SEL mySelector = NSSelectorFromString(someString);
+[myWidget setAction:mySelector];</pre>
+
+<p>You can treat selectors in Perl as ordinary strings, i.e. scalars:</p>
+
+<pre>$myWidget->setAction("doSomething:");</pre>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

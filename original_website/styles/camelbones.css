@@ -1,0 +1,105 @@
+body {
+	font-family: Palatino, serif;
+	background-color: #555;
+	color: #fff;
+}
+
+code, pre {
+	font-family: Inconsolata, monospace;
+}
+
+pre {
+	margin-left: 2em;
+}
+
+h3 {
+    padding-top: 1em;
+    clear: both;
+}
+
+dl {
+    margin-left: 2em;
+}
+
+dt {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+a img {
+	border: none;
+}
+
+div#adsense {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60em;
+}
+
+div#main {
+	background-color: #fff;
+
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60em;
+	padding: 1em;
+
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	border: 2px solid #000;
+}
+
+div#content {
+	background-color: #fff;
+	color: #000;
+	min-height: 30em;
+}
+
+div.callout {
+	background-image: url(images/epoint.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	
+	padding: 1em;
+	padding-left: 23px;
+	
+	clear: both;
+
+	background-color: #ddd;
+
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	border-radius: 0.4em;
+	border: 1px solid #f00;
+}
+
+div#copyright {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: .5em;
+	max-width: 60em;
+	padding: 0.25em 1em 0.25em 1em;
+
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	border: 1px solid #fff;
+	
+	clear: both;
+}
+
+div#sflogo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: .5em;
+	max-width: 60em;
+	text-align: right;
+
+	clear: both;
+}
+
+div.screenshot {
+	margin: 0px;
+	padding: 0px;
+}

@@ -1,0 +1,22 @@
+div#logo {
+	width: 12.5em;
+	min-width: 180px;
+	float: left;
+	text-align: center;
+	background-color: #fff;
+}
+
+div#logotext {
+	font-family: Garamond, serif;
+	font-size: 125%;
+	background-color: #fff;
+	color: #000;
+}
+
+div#logotext hr {
+	clear: both;
+}
+
+span.logo {
+	font-size: 250%;
+}

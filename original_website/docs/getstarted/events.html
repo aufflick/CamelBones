@@ -1,0 +1,190 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Getting Started - Responding to Events</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../index.html"><img src="../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand# = "docs, docs/getstarted" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../books.html">Books</a></li>
+    <li><a href="../../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../../docs/getstarted/index.html">Getting Started</a>
+                <ul>
+                    <li><a href="../../docs/getstarted/index.html">Hello, Cocoa!</a></li>
+                    <li>Responding to Events</li>
+                    <li><a href="../../docs/getstarted/outlets.html">Outlets</a></li>
+                    <li><a href="../../docs/getstarted/responderchain.html">The Responder Chain</a></li>
+                    <li><a href="../../docs/getstarted/menuevents.html">Menu Events</a></li>
+                </ul>
+            </li>
+            <li><a href="../../docs/concepts/index.html">Concepts</a></li>
+            <li><a href="../../docs/ref/index.html">Reference</a></li>
+            <li><a href="../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../contact.html">Contact Info</a></li>
+    <li><a href="../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+
+<h2>Getting Started - Responding to Events</h2>
+
+<p>Events are at the heart of GUI programming. Every Cocoa application has an "event loop" that repeatedly looks for incoming events such as mouse clicks, menu selections, and key strokes, and dispatches the corresponding events to your application. A great deal of your application code - possibly even all of it - will be contained in methods that are called in response to these events.</p>
+
+<p>This page will show you how to create a controller class, add an event handler method to it, and create an instance of it in Interface Builder. You'll add a button to your application's main window and connect it to the event handler method, which will respond to the event by writing a message to the console. (We'll display the message in a GUI element in the next lesson - one thing at a time for now.) If you've already done the previous "Hello World!" HowTo, you can keep using that; if not, begin by creating a new Cocoa-Perl application project in Xcode.</p>
+
+<p>This page continues from where the <a href="index.html">previous</a> "Hello, Cocoa!" page stopped, and assumes you're using the same project, so we won't repeat those steps.</p>
+
+<h3>1. Add a button to the main window</h3>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/events/editbuttonlabel.png" rel="lightbox" title="Editing a Button Label in Interface Builder"><img src="images/events/editbuttonlabel-sm.png" alt="" width="200" height="159"></a></div>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em;"><a href="images/events/ibbuttonlist.png" rel="lightbox" title="Button Controls in Interface Builder"><img src="images/events/ibbuttonlist-sm.png" alt="" width="79" height="200"></a></div>
+
+<p>Open the MainWindow.nib in Interface Builder. In the "Library" panel, choose the Cocoa -> Views &amp; Cells -> Buttons group of controls, and drag a button onto the main window. If you want, double-click the button to change its title. You can also change the title in the Info panel, which you can open with cmd-shift-I.</p>
+
+<h3>2. Create a controller class</h3>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em"><a href="images/events/ibclasslist.png" rel="lightbox" title="NSObject selected in Interface Builder's list of classes"><img src="images/events/ibclasslist-sm.png" alt="" width="75" height="200"></a></div>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em; margin-right: 0.5em;"><a href="images/events/ibaddsubclass.png" rel="lightbox" title="Typing the name of a new class in Interface Builder"><img src="images/events/ibaddsubclass-sm.png" alt="" width="200" height="72"></a></div>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em;"><a href="images/events/ibclasslist2.png" rel="lightbox" title="HelloController selected in Interface Builder's list of classes"><img src="images/events/ibclasslist2-sm.png" alt="" width="75" height="200"></a></div>
+
+<p>Still in Interface Builder, switch to the "Classes" pane in the "Library" panel, and select the "NSObject" class. Open the "Gear" menu at the bottom left of the panel, and choose the first item, titled "New Subclass..." Enter the name of your new controller class in the dialog that appears - I'll use "HelloController" for this tutorial. Since IB does not know about Perl source, make sure the "Generate source files" checkbox is clear before proceeding.</p>
+
+<p>The "HelloController" class will now appear in the class list, and selecting it should show that it inherits from NSObject.</p>
+
+<h3>2. Create an action to handle button clicks</h3>
+ 
+<div class="screenshot" style="float:right; margin-left: 0.2em;"><a href="images/events/ibaddaction.png" rel="lightbox" title="Adding an action in Interface Builder"><img src="images/events/ibaddaction-sm.png" alt="" width="75" height="200"></a></div>
+
+<p>In Interface Builder's "Library" panel, select your "HelloController" class, then select "Actions" in the drop-down menu in the bottom half of the panel. Since it's a brand-new class and inherits from NSObject, it has no built-in actions. You'll need to create one to handle the button click. To do that, click the "+" icon below the (empty) list of actions. That will add a new row to the list, and allow you to edit the action name. Let's call this one "sayHello". (Note that IB automatically renames it to "sayHello:" when you're finished editing - this is normal, so don't panic.)</p>
+
+<h3>3. Instantiate a controller object</h3>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em;"><a href="images/events/ibcontrollerobj.png" rel="lightbox" title="HelloController object selected in Interface Builder's document window"><img src="images/events/ibcontrollerobj-sm.png" alt="" width="200" height="168"></a></div>
+
+<p>To create a new instance of your controller class, simply drag it from the class list at the top half of Interface Builder's "Library" panel, to the "MainMenu.nib" document window.</p>
+
+<h3>4. Create the connection from the button to the action</h3>
+
+<div class="screenshot" style="float:right; margin-left: 0.5em;"><a href="images/events/ibmakeconnection2.png" rel="lightbox" title="Selecting a controller action Interface Builder"><img src="images/events/ibmakeconnection2-sm.png" alt="" width="200" height="168"></a></div>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/events/ibmakeconnection.png" rel="lightbox" title="Dragging a connection in Interface Builder"><img src="images/events/ibmakeconnection-sm.png" alt="" width="200" height="245"></a></div>
+
+<p>Now, right-click (or ctrl-click) on the button you added earlier, to show its inspector panel. In that panel, you'll see a section titled "Sent Actions", with a single item shown; that item is titled "selector", because it hasn't yet been connected to an action method. To make the connection, drag from that item's target (the circle at the right) to the controller object in the document window.</p>
+
+<p>After you've finished the drag and drop, a popup will appear over the controller icon, listing all of its action methods. Choose "sayHello:" from the list.</p>
+
+<h3>5. Verify the connection</h3>
+
+<div class="screenshot" style="float:left; margin-right: 0.2em;"><a href="images/events/ibmakeconnection3.png" rel="lightbox" title="Displaying the completed connection in Interface Builder"><img src="images/events/ibmakeconnection3-sm.png" alt="" width="200" height="147"></a></div>
+
+<p>Now that the connection has been established, right-click (or ctrl-click) on the button to show its inspector panel again. It will now show the name of the action message that will be sent, and the object to which it will be sent.</p>
+
+<p>If it looks good, save your work and exit from Interface Builder - it's time to write some code!</p>
+
+<h3>6. Create a controller class - again</h3>
+
+<div class="screenshot" style="float:right; margin-left: 0.2em"><a href="images/events/xcnewfiledialog2.png" rel="lightbox" title="Choosing the name for a new file in Xcode"><img src="images/events/xcnewfiledialog2-sm.png" alt="" width="200" height="163"></a></div>
+
+<div class="screenshot" style="float:right; margin-left: 0.5em;"><a href="images/events/xcnewfiledialog.png" rel="lightbox" title="Selecting the type of a new file in Xcode"><img src="images/events/xcnewfiledialog-sm.png" alt="" width="200" height="163"></a></div>
+
+<p>No, that's not a typo! The above steps in Interface Builder didn't actually create a new class; instead, they told Interface Builder about the class and its action methods. Essentially, you're promising that the class will be available when the interface is loaded at run time. Now, it's time to fulfill that promise and implement the class by writing some Perl code.</p>
+
+<p>In Xcode, right click on the "Classes" group, and choose "Add -> New File..." from the popup menu. A dialog will appear, asking you to choose a template with which to create the new file. Select the "NSObject subclass" template from the "Perl" section, then enter its name in the next dialog: "HelloController".</p>
+
+<p>In your project's "Other Sources" group, you'll find a "main.pl" file. As its name implies, this is where everything begins. So, you need to add an additional "use" statement that will cause your HelloController class to be compiled and ready for use when your application's interface is loaded. It should read as follows:</p>
+
+<pre>use CamelBones qw(:All);
+use HelloController;</pre>
+
+<div class="callout">
+    <p>The file templates included with CamelBones 1.1.0 contain a typo. The import tag in the "use CamelBones" statement is ":all", with a lowercase "A", instead of ":All", with a capital "A". If you're using this version of CamelBones, clicking "Build and Run" at this point will produce an error; the message sent to Xcode's console says:</p>
+    
+    <pre>"all" is not defined in %CamelBones::EXPORT_TAGS at
+[...]/Hello.app/Contents/Resources/HelloController.pm line 12</pre>
+
+    <p>If your app crashes with this error, examine your newly-created class closely, and be sure that the ":All" export tag is correctly capitalized, as shown above.</p>
+</div>
+
+<h3>7. Create a Perl method to handle the action</h3>
+
+<p>CamelBones uses a lesser-known feature of Perl - method attributes - to provide information about Perl methods to the Objective-C run time. A Selector() attribute, as its name implies, is used to indicate what Objectie-C selector a Perl method will respond to. Giving the method a name that closely resembles the selector is usually a good idea, but it's not required. For this method, we'll also use an IBAction attribute to indicate that the method accepts a single object as its argument and does not return a value, as is expected of methods that handle actions sent from Interface Builder. (Additional attributes can be used to indicate other argument and/or return types, but those are beyond the scope of this tutorial.)</p>
+
+<pre># Handle the sayHello: action
+sub sayHello : Selector(sayHello:) IBAction {
+    NSLog("Hello, world!");
+}</pre>
+
+<p>Note: the NSLog() function is a Cocoa function that sends output to the console, similar to Perl's own print() function.</p>
+
+<p>Save the HelloController.pm file, and click Xcode's "Build and Run" button. The "Hello World!" message printed by the NSLog() function should appear in Xcode's console, which you can view with cmd-shift-R, or by choosing the "Run -> Console" menu item. If you run your application outside of Xcode, the output will appear in the console log, which you can use "Console.app" to view.</p>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Collections</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../index.html"><img src="../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand#="docs, docs/concepts" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../books.html">Books</a></li>
+    <li><a href="../../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+            <li><a href="../../docs/concepts/index.html">Concepts</a>
+                <ul>
+                    <li><a href="../../docs/concepts/readobjc.html">Reading Objective-C Documentation</a></li>
+                    <li><a href="../../docs/concepts/mvc.html">MVC - Model-View-Controller</a></li>
+                    <li>Collections</li>
+                </ul>
+            </li>
+            <li><a href="../../docs/ref/index.html">Reference</a></li>
+            <li><a href="../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../contact.html">Contact Info</a></li>
+    <li><a href="../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+
+<h2>Collections in Cocoa</h2>
+
+<p>Unlike Perl, which its native array and hash collection types, Cocoa defines a number of object-oriented collection classes. While support for "toll-free" bridging of Perl collections is now included in CamelBones, it's still useful to be aware of the methods used in the Cocoa collection classes.</p>
+
+<p>The Cocoa collection classes are:</p>
+
+<ul>
+	<li>NSArray</li>
+	<li>NSMutableArray</li>
+	<li>NSDictionary</li>
+	<li>NSMutableDictionary</li>
+	<li>NSSet</li>
+	<li>NSMutableSet</li>
+	<li>NSCountedSet</li>
+</ul>
+
+<p>The Cocoa collection classes each define a immutable, or read-only, class and a corresponding mutable, or read-write class. Most of them can read and write their contents to or from a file on disk, add, remove, locate, and sort their contents, compare their contents with other collection objects, or create an enumerator object for iterating over each element within the collection.</p>
+
+<h3>Creating collection objects</h3>
+
+<p>Collection objects are created with the usual alloc/init combination used to create Cocoa objects. Here are some examples:</p>
+
+<pre># Create a mutable array
+my $arr = NSMutableArray->alloc->init;
+
+# Create a mutable dictionary (hash)
+my $dict = NSMutableDictionary->alloc->init;</pre>
+
+<h3>Working with NSArray and NSMutableArray</h3>
+
+<pre># Add an item to a mutable array
+$arr->addObject("This is a string");
+
+# Count items
+my $count = $arr->count;
+
+# Insert an object into a mutable array at a specific position
+$arr->insertObject_atIndex("This is now the first string", 0);
+
+# Get the first object in an array
+my $obj = $arr->objectAtIndex(0);</pre>
+
+<h3>Working with NSDictionary and NSMutableDictionary</h3>
+
+<pre># Add an item to a mutable dictionary
+$dict->setObject_forKey("This is a string", "keyValue");
+
+# Count items
+my $count = $dict->count;
+
+# Get the object associated with a specific key
+my $obj = $dict->objectForKey("keyValue");</pre>
+
+<h3>Using enumerator objects</h3>
+
+<p>Most collection objects can create an NSEnumerator object with the objectEnumerator() method. NSDictionary also has the keyEnumerator() method, which iterates over key values. Here's a simple example that logs all the objects in an NSArray collection to the console:</p>
+
+<pre># Create an enumerator object
+my $enum = $arr->objectEnumerator;
+
+# Loop through the objects in the enumerator
+while (my $obj = $enum->nextObject) {
+    NSLog($obj);
+}</pre>
+
+<h3>Toll Free Bridging</h3>
+
+<p>As of 0.2.2, toll free bridging has been introduced for NSArrays, NSDictionaries, and their mutable variants. What this means is efficient, seamless bridging of arrays and hashes to their Cocoa equivalents.</p>
+
+<h3>Array and hash references as arguments</h3>
+
+<p>If a method is declared as taking an NSArray or NSMutableArray as one of its arguments, you can pass a reference to a Perl array instead. The same is true for NSDictionary or NSMutableDictionary arguments, where you can use a reference to a Perl hash. Some examples:</p>
+
+<pre># Create a new NSArray object from a Perl array reference
+my $arrayRef = [1,2,3];
+my $arr = NSArray->arrayWithArray($arrayRef);
+
+# Create a new NSDictionary from an anonymous hash reference
+my $dict = NSDictionary->dictionaryWithDictionary({
+    'foo' => {
+        'bar' => [ 0,2,4,6 ],
+        'baz' => [ 2,4,6,8 ],
+    },
+});</pre>
+
+<h3>Arrays and hashes as return values</h3>
+
+<p>If a method that returns an NSArray or NSMutableArray is called in list context, a Perl array is returned. Similarly, if a method that returns an NSDictionary or NSMutableDictionary is called in list context, a Perl hash is returned. In scalar context, an object reference is returned as above. Some examples:</p>
+
+<pre># Returning an NSArray as a Perl array
+my @arr = NSArray->arrayWithArray([0,1,2,NSNull->null]);
+
+# Normal Perl functions work as expected
+print 'Elements in @arr = ', scalar(@arr), "\n";
+print 'Last index in @arr = ', $#arr, "\n";
+
+print 'Elements in @arr:', "\n";
+foreach my $elem (@arr) {       # Interate over each object
+    print '  ', ref($elem) ? $elem->description : $elem, "\n";
+}
+print "\n";
+
+my $manager = NSFileManager->defaultManager;
+my %attrs = $manager->fileAttributesAtPath_traverseLink('/Applications', 0);
+
+# Normal Perl functions work as expected
+my @keys = keys(%attrs);        # Get all the key objects
+
+print 'Keys &amp; values in %attrs:', "\n";
+foreach my $key (keys %attrs) { # Iterate over the keys
+    my $obj = $attrs{$key};
+    print '  ', $key, ' = ', ref($obj) ? $obj->description : $obj, "\n";
+}</pre>
+
+<h3>Mutable vs. immutable</h3>
+
+<p>Keep in mind that Cocoa collections, unlike Perl arrays and hashes, have both mutable and immutable variants. If you try to modify an immutable collection, you'll get an error.</p>
+
+<h3>Methods and forced list context</h3>
+
+<p>Also keep in mind that function and method calls force list context for any nested function or method calls found in their arguments. For example, the following does not work as you might expect it would:</p>
+
+<pre># This DOES NOT WORK
+NSLog(NSArray->arrayWithArray([0,1,2,3]));</pre>
+
+<p>NSLog knows how to handle Cocoa objects, and for non-string objects it automatically calls their description() method to get a text representation. You might expect it to do the same for the NSArray object created here - but it doesn't. What happens is that, because its within the parameter list for NSLog, the call to arrayWithArray() is made in list context, and returns a Perl array instead of a Cocoa object.</p>
+
+<p>To work around this, you can either store the results of the method call in a scalar variable, and pass the variable to the method you want to call, or you can use Perl's scalar() function to force the inner method call to be made in scalar context:</p>
+
+<pre># Correct
+my $msg = NSArray->arrayWithArray([0,1,2,3]);
+NSLog($msg);
+
+# Correct, using scalar()
+NSLog(scalar(NSArray->arrayWithArray([0,1,2,3])));</pre>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>

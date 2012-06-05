@@ -1,0 +1,140 @@
+<!-- #bbinclude "doctype.inc" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- end bbinclude -->
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- #bbinclude "scripts.inc" -->
+	<script type="text/javascript" src="../../js/mootools-core.js"></script>
+	<script type="text/javascript" src="../../js/mootools-more.js"></script>
+	<script type="text/javascript" src="../../js/slimbox.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "styles.inc" -->
+	<link rel="stylesheet" href="../../styles/camelbones.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/fontface.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/headline.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/menu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../../styles/slimbox.css" type="text/css" media="screen">
+<!-- end bbinclude -->
+	<title>CamelBones - Type Signatures</title>
+</head>
+<body>
+
+<!-- #bbinclude "adsense.inc" -->
+<div id="adsense">
+	<script type="text/javascript">
+	google_ad_client = "pub-1236190927799379";
+	/* CamelBones */
+	google_ad_slot = "2605286934";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div> <!-- adsense -->
+<!-- end bbinclude -->
+
+<div id="main">
+
+<!-- #bbinclude "headline.inc" -->
+<div id="logo"><a href="../../index.html"><img src="../../images/camelbones_logo.gif" alt="" width="160" height="106"></a></div>
+<div id="logotext"><span class="logo">CamelBones</span><br>
+	An Objective-C/Perl Bridge<br>
+	<hr>
+</div>
+<!-- end bbinclude -->
+
+<!-- #bbinclude "menu.pl" #expand# = "docs, docs/ref" -->
+<div id="menu">
+<ul id="menulist">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=48040">Help $upport CamelBones</a></li>
+    <li><a href="../../books.html">Books</a></li>
+    <li><a href="../../docs/index.html">Documentation</a>
+        <ul>
+            <li><a href="../../docs/getstarted/index.html">Getting Started</a></li>
+            <li><a href="../../docs/concepts/index.html">Concepts</a></li>
+            <li><a href="../../docs/ref/index.html">Reference</a>
+                <ul>
+                    <li><a href="../../docs/ref/structs/index.html">Structs</a></li>
+                    <li>Method Signatures</li>
+                </ul>
+            </li>
+            <li><a href="../../docs/subversion-access.html">Subversion access</a></li>
+        </ul>
+    </li>
+    <li><a href="https://sourceforge.net/projects/camelbones/files/camelbones/">Downloads</a></li>
+    <li><a href="https://sourceforge.net/projects/camelbones/">Sourceforge Project</a></li>
+    <li><a href="../../contact.html">Contact Info</a></li>
+    <li><a href="../../copyright.html">Copyright &amp; License</a></li>
+</ul>
+<div id="menu_title">
+    <a id="toggle_menu" href="#"><span id="menu_status"></span></a>
+</div>
+</div>  <!-- menu -->
+<!-- end bbinclude -->
+
+<div id="content">
+
+<h2>Method Signatures</h2>
+
+<p>You've often seen them in use - those mysterious values used in method attributes to tell the Objective-C runtime what data types to pass to and expect back from your methods. The codes are based on Objective-C's type encoding scheme. Unless otherwise noted, all variables are scalars when used in Perl.</p>
+
+<p>Many types are fully supported, and can be declared as parameter and/or return types for Perl methods, as well as being passed to and returned from Objective-C methods.</p>
+
+<h3>Supported Type Encodings</h3>
+
+<dl>
+	<dt>c/C</dt>
+		<dd>Signed/unsigned char. Contrary to what you might think, these are not characters; they're integer values that can range from -127 to 127 (signed) or 0 to 255 (unsigned).</dd>
+	<dt>i/I</dt>
+		<dd>Signed/unsigned int. These are 32-bit integer values that can range from -2,147,483,647 to 2,147,483,647 (signed) or 0 to 4,294,967,295 (unsigned).</dd>
+	<dt>s/S</dt>
+		<dd>Signed/unsigned short. 16-bit integer values that can range from -32,767 to 32,767 (signed) or 0 to 65,535 (unsigned).</dd>
+	<dt>l/L</dt>
+		<dd>Signed/unsigned long. Integer values with the same range as signed/unsigned int above.</dd>
+	<dt>f/d</dt>
+		<dd>Float/double. Single and double-precision floating point numbers.</dd>
+	<dt>v</dt>
+		<dd>Void. Used only as a return type, to indicate that nothing is returned.</dd>
+	<dt>*</dt>
+		<dd>C strings, declared in C/Objective-C/C++ as "char*".</dd>
+	<dt>@</dt>
+		<dd>Objects. Technically speaking, an object of any class. In practice, the Cocoa documentation will specify the class (or parent class) of the objects your methods will be called with, and what object classes are expected to be passed to Cocoa methods.</dd>
+	<dt>^</dt>
+		<dd>An untyped pointer, declared in C/Objective-C/C++ as "void*". Returned to Perl as an integer value - it may be dereferenced by using pack()/unpack().</dd>
+	<dt>:</dt>
+		<dd>An Objective-C selector, which is the name of a message.</dd>
+	<dt>{</dt>
+		<dd>Structures. NSPoint, NSRange, NSRect, NSSize, and OSType structs are supported.</dd>
+</dl>
+
+<h3>Unsupported Type Encodings</h3>
+
+<dl>
+	<dt>q/Q</dt>
+		<dd>Long long/unsigned long long. 64-bit integer values.</dd>
+	<dt>#</dt>
+		<dd>An Objective-C class struct.</dd>
+	<dt>[</dt>
+		<dd>A C array.</dd>
+	<dt>(</dt>
+		<dd>A C union.</dd>
+	<dt>b</dt>
+		<dd>A C bit field</dd>
+</dl>
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+
+<!-- #bbinclude "copyright.inc" -->
+<div id="copyright">Copyright &copy; 2003-2010 Sherm Pendley. Licensed under the same terms as Perl.</div>
+
+<div id="sflogo"><a href="http://sourceforge.net/projects/camelbones"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=48040&amp;type=8" width="80" height="15" alt="Get CamelBones at SourceForge.net. Fast, secure and Free Open Source software downloads"></a></div>
+<!-- end bbinclude -->
+
+</body>
+</html>
